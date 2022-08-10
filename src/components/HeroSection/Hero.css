@@ -7,7 +7,7 @@
 }
 
 .hero-section>h1 {
-    margin-top: 77px;
+    margin-top: 120px;
     color: #fff;
     font-weight: 800;
     font-size: 4rem;
@@ -24,6 +24,7 @@
     color: #fff;
     font-weight: 800;
     font-size: 2rem;
+    margin: 50px 0;
 }
 
 .hero-section>button {
@@ -40,4 +41,5 @@
     box-sizing: border-box;
     font-size: 2rem;
     color: #fff;
+    margin-bottom: 40px;
 }
