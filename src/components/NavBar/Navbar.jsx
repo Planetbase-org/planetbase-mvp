@@ -55,8 +55,15 @@ function Navbar() {
                             Company
                         </Link>
                     </li>
-                    <li><button className="loginButton">Login</button></li>
+                    <li>
+                        <button className="loginBtnMobile" >
+                            Login
+                        </button>
+                    </li>
                 </ul>
+                <button className="loginButton" >
+                    Login
+                </button>
             </div>
         </nav>
     );

@@ -52,6 +52,16 @@
     border: #17386E;
 }
 
+.loginBtnMobile {
+    display: none;
+    background: #17386E;
+    color: #fff;
+    padding: 7px 19px;
+    border-radius: 3px;
+    border: #17386E;
+}
+
+
 .hamburger {
     border: 0;
     height: 40px;
@@ -94,6 +104,11 @@
     }
 
     .loginButton{
+        display: none;
+    }
+
+    .loginBtnMobile{
+        display: block;
         text-align: center;
         width: 20%;
         margin: auto;
