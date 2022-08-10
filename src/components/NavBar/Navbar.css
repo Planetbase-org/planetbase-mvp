@@ -7,22 +7,21 @@
     padding: 0.5rem 0rem;
     background-color: #fff;
     color: black;
-    box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
 }
 
 .brand-name {
     text-decoration: none;
     color: black;
     font-size: 1.3rem;
-    margin-left: 1rem;
-    width: 30%;
+    margin-left: 2rem;
+    width: 40%;
 }
 
 .navigation-menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 70%;
+    width: 60%;
 }
 
 .navigation-menu ul {
@@ -44,7 +43,7 @@
 }
 
 .loginButton {
-    margin-right: 1rem;
+    margin-right: 2rem;
     background: #17386E;
     color: #fff;
     padding: 7px 19px;
@@ -82,7 +81,7 @@
     background-color: #17386E;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 900px) {
     .hamburger {
         display: block;
     }
