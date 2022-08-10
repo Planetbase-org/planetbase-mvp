@@ -15,10 +15,15 @@
     color: black;
     font-size: 1.3rem;
     margin-left: 1rem;
+    width: 30%;
 }
 
 .navigation-menu {
-    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    /* margin-left: auto; */
 }
 
 .navigation-menu ul {
@@ -54,12 +59,16 @@
 }
 
 .hamburger:hover {
-    background-color: #2642af;
+    background-color: #17386E;
 }
 
 @media screen and (max-width: 550px) {
     .hamburger {
         display: block;
+    }
+
+    .navigation-menu {
+        flex-direction: column;
     }
 
     .navigation-menu ul {
@@ -74,6 +83,18 @@
         display: none;
     }
 
+    .loginButton{
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: white;
+        border-top: 1px solid black;
+        display: none;
+    }
+    
     .navigation-menu li {
         text-align: center;
         margin: 0;
