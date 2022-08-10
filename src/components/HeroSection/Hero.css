@@ -1,0 +1,7 @@
+.hero-section {
+    background: rgb(0, 191, 255);
+}
+
+.hero-section > h1 {
+    padding-bottom: 20px;
+}
