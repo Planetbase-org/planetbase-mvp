@@ -3,7 +3,13 @@ import "./Hero.css"
 
 function HeroSection() {
     return (
-        <div>HeroSection</div>
+        <div className='hero-section'>
+            <h1>Welcome To Planetbase</h1>
+            <p>A Place where events are created and sponsors can come in to Market their brands/products.</p>
+            <h4>Who Are You? <a href="#">Learn more</a></h4>
+            <button>SPONSOR</button>
+            <button>ORGANISER</button>
+        </div>
     )
 }
 
