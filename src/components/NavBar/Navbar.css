@@ -23,7 +23,6 @@
     align-items: center;
     justify-content: space-between;
     width: 70%;
-    /* margin-left: auto; */
 }
 
 .navigation-menu ul {
@@ -40,6 +39,17 @@
     text-decoration: none;
     display: block;
     width: 100%;
+    font-size: 15px;
+    color:#000;
+}
+
+.loginButton {
+    margin-right: 1rem;
+    background: #17386E;
+    color: #fff;
+    padding: 7px 19px;
+    border-radius: 3px;
+    border: #17386E;
 }
 
 .hamburger {
@@ -84,15 +94,9 @@
     }
 
     .loginButton{
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        height: calc(100vh - 60px);
-        background-color: white;
-        border-top: 1px solid black;
-        display: none;
+        text-align: center;
+        width: 20%;
+        margin: auto;
     }
     
     .navigation-menu li {
