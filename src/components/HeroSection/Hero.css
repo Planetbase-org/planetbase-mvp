@@ -1,5 +1,5 @@
 .hero-section {
-    background: rgb(0, 191, 255);
+    background: rgb(7, 48, 62);
     position: absolute;
     width: 100%;
     text-align: center;
@@ -15,9 +15,20 @@
 
 .hero-section>p {
     color: #fff;
-    line-height: 29px;
+    line-height: 40px;
     font-weight: 500;
     font-size: 1.8rem;
+}
+
+.learn-more {
+    background: #fff;
+    color: #0F255F;
+    text-decoration: none;
+    margin-left: 5px;
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 13px;
+    padding:5px
 }
 
 .hero-section>h4 {
@@ -28,7 +39,7 @@
 }
 
 .hero-section>button {
-    padding: 16px 98px;
+    padding: 10px 80px;
     margin-left: 5px;
     color: black;
     box-sizing: border-box;
@@ -37,7 +48,7 @@
 
 .hero-section>button:last-of-type {
     background: #EA0100;
-    padding: 16px 98px;
+    padding: 10px 80px;
     box-sizing: border-box;
     font-size: 2rem;
     color: #fff;
