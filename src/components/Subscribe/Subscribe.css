@@ -57,6 +57,7 @@ form {
     padding: 10px;
     font-size: 15px;
     border: none;
+    background: white;
 }
 
 form > .subscribe-btn {
