@@ -1,6 +1,6 @@
 import React from 'react';
-import Planetbase from '../../assets/planetbase.svg'
-import "./Subscribe.css"
+import Planetbase from '../../assets/planetbase.svg';
+import "./Subscribe.css";
 
 function Subscribe() {
   return (
@@ -12,7 +12,7 @@ function Subscribe() {
       <div className="subscribe-message">
         <div>
           <h4>Moving your events online really opens up the esteem of supporting it </h4>
-          <p>Become a subscriber and receive great tips on eventl regulation updates sent to your inbox!</p>
+          <p>Become a subscriber and receive great tips on event regulation updates sent to your inbox!</p>
         </div>
         <div>
           <form>
