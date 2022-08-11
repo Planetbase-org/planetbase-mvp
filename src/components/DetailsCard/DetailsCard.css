@@ -1,0 +1,8 @@
+.card {
+    display: flex;
+    align-items: center;
+}
+
+.card-details > h3{
+
+}
