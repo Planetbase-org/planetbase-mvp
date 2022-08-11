@@ -57,12 +57,23 @@ function MenuNav() {
                             Company
                         </Link>
                     </li>
-
+                    <li>
+                        <Link to="/login" activeclassname="active">
+                            Login
+                        </Link>
+                    </li>
                     <li>
                         <button className="loginBtnMobile">Create Events</button>
                     </li>
                 </ul>
-                <button className="loginButton">Create Events</button>
+                <div className="createEvents">
+                    <li>
+                        <Link to="/login" activeclassname="active">
+                            Login
+                        </Link>
+                    </li>
+                    <button className="loginButton">Create Events</button>
+                </div>
             </div>
         </nav>
     );

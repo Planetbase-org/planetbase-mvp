@@ -33,6 +33,7 @@
 .subscribe-message > div > h4 {
     font-family: "inter", sans-serif;
     font-size: 19px;
+    font-weight: 900;
 }
 
 .subscribe-message > div > p {

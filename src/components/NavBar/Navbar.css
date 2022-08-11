@@ -52,6 +52,11 @@
     font-size: 14px;
 }
 
+.createEvents{
+    display: flex;
+    align-items: center;
+}
+
 .loginBtnMobile, .menu-btn-mobile {
     display: none;
     background: #17386E;
@@ -100,6 +105,10 @@
         height: calc(100vh - 60px);
         background-color: white;
         border-top: 1px solid black;
+        display: none;
+    }
+
+    .createEvents > li{
         display: none;
     }
 
