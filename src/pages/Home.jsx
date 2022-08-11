@@ -1,12 +1,13 @@
 import React from 'react';
 import HeroSection from '../components/HeroSection/Hero';
-import Navbar from '../components/NavBar/Navbar';
 import Layout from '../layouts/landing-section';
+import Subscribe from '../components/Subscribe/Subscribe';
 
 function Home() {
     return (
         <Layout>
-            <HeroSection/>
+            <HeroSection />
+            <Subscribe/>
         </Layout>
     )
 }
