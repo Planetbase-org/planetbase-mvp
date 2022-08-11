@@ -1,5 +1,57 @@
 .subscribe {
-    height: 30vh;
-    background: red;
     overflow: hidden;
+    padding-left:50px ;
+    padding-right: 50px;
+}
+
+.subscribe-header {
+    display: flex;
+}
+
+.subscribe-header > img {
+    margin-right: 20px;
+}
+
+.subscribe-header > h4 {
+    font-family: "poppins", sans-serif;
+    font-size: 1.5rem;
+}
+
+.subscribe-message{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    bottom: 52px;
+}
+
+.subscribe-message > div {
+    width: 40%;
+}
+
+.subscribe-message > div > h4 {
+    font-family: "inter", sans-serif;
+    font-size: 1.5rem;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.subscribe-email-input {
+    border: 1px solid #ABA5A5;
+    outline: none;
+    width: 60%;
+    padding: 10px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+form > .subscribe-btn {
+    padding: 10px 20px;
+    background:#0F2560;
+    border-radius: 5px;
+    border: 1px solid #0F2560;
+    color: #fff;
 }
