@@ -39,10 +39,11 @@
     width: 100%;
     font-size: 15px;
     font-weight: 700;
-    color:#000;
+    color: #000;
 }
 
-.loginButton, .menu-btn {
+.loginButton,
+.menu-btn {
     margin-right: 2rem;
     background: #17386E;
     color: #fff;
@@ -52,12 +53,17 @@
     font-size: 14px;
 }
 
-.createEvents{
+.createEvents {
     display: flex;
     align-items: center;
 }
 
-.loginBtnMobile, .menu-btn-mobile {
+.login {
+    display: none;
+}
+
+.loginBtnMobile,
+.menu-btn-mobile {
     display: none;
     background: #17386E;
     color: #fff;
@@ -108,21 +114,26 @@
         display: none;
     }
 
-    .createEvents > li{
+    .createEvents>li {
         display: none;
     }
 
-    .loginButton{
+
+    .loginButton {
         display: none;
     }
 
-    .loginBtnMobile{
+    .loginBtnMobile {
         display: block;
         text-align: center;
         width: 20%;
         margin: auto;
     }
-    
+
+    .login {
+        display: block;
+    }
+
     .navigation-menu li {
         text-align: center;
         margin: 0;
