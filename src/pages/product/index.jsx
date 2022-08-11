@@ -1,9 +1,12 @@
 import React from 'react'
+import Layout from '../../layouts/products-layout';
 
-function index() {
+function Product() {
     return (
-        <div>index</div>
+        <Layout>
+            hello
+        </Layout>
     )
 }
 
-export default index
+export default Product;

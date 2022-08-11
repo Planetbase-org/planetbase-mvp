@@ -42,7 +42,7 @@
     color:#000;
 }
 
-.loginButton {
+.loginButton, .menu-btn {
     margin-right: 2rem;
     background: #17386E;
     color: #fff;
@@ -52,7 +52,7 @@
     font-size: 14px;
 }
 
-.loginBtnMobile {
+.loginBtnMobile, .menu-btn-mobile {
     display: none;
     background: #17386E;
     color: #fff;

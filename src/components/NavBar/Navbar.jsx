@@ -38,22 +38,22 @@ function Navbar() {
       >
         <ul>
           <li>
-            <Link to="/product" activeclassname="active">
+            <Link to="/products" activeclassname="active">
               Product
             </Link>
           </li>
           <li>
-            <Link to="/about" activeclassname="active">
+            <Link to="/solutions" activeclassname="active">
               Solutions
             </Link>
           </li>
           <li>
-            <Link to="/blog" activeclassname="active">
+            <Link to="/resources" activeclassname="active">
               Resources
             </Link>
           </li>
           <li>
-            <Link to="/contact" activeclassname="active">
+            <Link to="/company" activeclassname="active">
               Company
             </Link>
           </li>
