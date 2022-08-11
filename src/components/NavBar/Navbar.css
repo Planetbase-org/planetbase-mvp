@@ -12,7 +12,6 @@
 .brand-name {
     text-decoration: none;
     color: black;
-    font-size: 1.3rem;
     margin-left: 2rem;
     width: 40%;
 }
@@ -39,6 +38,7 @@
     display: block;
     width: 100%;
     font-size: 15px;
+    font-weight: 700;
     color:#000;
 }
 
@@ -49,6 +49,7 @@
     padding: 10px 19px;
     border-radius: 3px;
     border: #17386E;
+    font-size: 14px;
 }
 
 .loginBtnMobile {

@@ -14,7 +14,7 @@ function Subscribe() {
           <h4>Moving your events online really opens up the esteem of supporting it </h4>
           <p>Become a subscriber and receive great tips on eventl regulation updates sent to your inbox!</p>
         </div>
-        <div><br />
+        <div>
           <form>
             <input type="text" placeholder='Enter email address' className='subscribe-email-input'/>
             <button className='subscribe-btn'>Subscribe</button>

@@ -11,29 +11,29 @@
     margin-top: 100px;
     color: #fff;
     font-weight: 800;
-    font-size: 3.5rem;
+    font-size: 55px;
     line-height: 1.3;
 }
 
 .hero-section>p {
     color: #fff;
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: 30px;
 }
 
 .hero-section>h4 {
     color: #fff;
     font-weight: 800;
-    font-size: 2rem;
+    font-size: 40px;
     margin: 40px 0;
 }
 
 .hero-section>a {
-    padding: 10px 80px;
+    padding: 10px 50px;
     margin-left: 5px;
     color: black;
     box-sizing: border-box;
-    font-size: 2rem;
+    font-size: 30px;
     cursor: pointer;
     border: 1px solid black;
     background-color: #fff;
@@ -42,9 +42,9 @@
 
 .hero-section>a:last-of-type {
     background: #EA0100;
-    padding: 10px 80px;
+    padding: 10px 50px;
     box-sizing: border-box;
-    font-size: 2rem;
+    font-size: 30px;
     color: #fff;
     border: 1px solid #EA0100;
     text-decoration: none;
