@@ -9,7 +9,7 @@ function DetailsCard({ header, description, img }) {
                 <img src={img} alt={img} />
             </div>
             <div className="card-details">
-                <h1>{header}</h1>
+                <h5 className="card-title">{header}</h5>
                 <p>{description}</p>
             </div>
         </div>

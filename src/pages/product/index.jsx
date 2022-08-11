@@ -11,10 +11,10 @@ function Product() {
     return (
         <Layout>
             <div className="product-section">
-                <div>
+                <div className="product">
                     <h4>What is the latest</h4>
                     <div>
-                        <h4>Monthly Brand Update</h4>
+                        <h3>Monthly Brand Update</h3>
                         <p>Read About Planetbase brand  updates that help
                             with audience engagement, data and insights,
                             production quality, hybrid solution and more.....</p>
@@ -25,7 +25,7 @@ function Product() {
                         description="Connect planet base with your favorite applications and services"
                     />
                 </div>
-                <div className="product">
+                <div className="product-details">
                     <h4>Product</h4>
                     <DetailsCard
                         img={Product2}

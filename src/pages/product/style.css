@@ -1,3 +1,19 @@
+h4 {
+    font-size: 25px;
+    color: #8B7E7E;
+}
+
 .product-section {
     display: flex;
+    background: #fff;
+    height: 90vh;
+    overflow-y: hidden;
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-between;
 }
+
+.product-details , .product {
+    width: 45%;
+}
+
