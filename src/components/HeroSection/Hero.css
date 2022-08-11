@@ -38,6 +38,7 @@
     border: 1px solid black;
     background-color: #fff;
     text-decoration: none;
+    border-radius: 7px;
 }
 
 .hero-section>a:last-of-type {
@@ -48,4 +49,5 @@
     color: #fff;
     border: 1px solid #EA0100;
     text-decoration: none;
+    border-radius: 5px;
 }
