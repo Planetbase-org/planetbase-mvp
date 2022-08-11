@@ -68,7 +68,7 @@ form > .subscribe-btn {
 }
 
 .subscribe-message-text {
-    font-size: 12px;
+    font-size: 12px !important;
     font-weight: bold;
     font-family: "inter" , sans-serif;
 }
