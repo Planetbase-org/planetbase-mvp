@@ -6,10 +6,8 @@ h4 {
 .product-section {
     display: flex;
     background: #fff;
-    height: 90vh;
     overflow-y: hidden;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 40px 50px 0 50px;
     justify-content: space-between;
 }
 
@@ -17,3 +15,12 @@ h4 {
     width: 45%;
 }
 
+.product-card {
+    border: 2px solid #8b7e7e9e;
+    padding:15px;
+}
+
+hr {
+    color:rgba(215, 206, 206, 0.379);
+    height: 80vh;
+}

@@ -1,6 +1,8 @@
 .card {
     display: flex;
-    align-items: center;
+    align-items: center;  
+    position: relative;
+    top: -44px;
 }
 
 .card-img>img {

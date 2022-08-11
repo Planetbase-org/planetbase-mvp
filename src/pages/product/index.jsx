@@ -13,18 +13,19 @@ function Product() {
             <div className="product-section">
                 <div className="product">
                     <h4>What is the latest</h4>
-                    <div>
+                    <div className="product-card">
                         <h3>Monthly Brand Update</h3>
                         <p>Read About Planetbase brand  updates that help
                             with audience engagement, data and insights,
                             production quality, hybrid solution and more.....</p>
                     </div>
+                    <h4>Agency</h4>
                     <DetailsCard
                         img={Product1}
                         header="Integration"
                         description="Connect planet base with your favorite applications and services"
                     />
-                </div>
+                </div><hr className='line'/>
                 <div className="product-details">
                     <h4>Product</h4>
                     <DetailsCard
