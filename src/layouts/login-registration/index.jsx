@@ -5,7 +5,7 @@ import SignUpComponent from '../../components/SignUpComponent/SignUpComponent';
 
 function Layout({children}) {
     return (
-        <>
+        <div className="layout-container">
             <Nav />
             <SignUpComponent header="Welcome back!" >
                 <p className="signup-header">Sign in to access your account. <br />
@@ -14,7 +14,7 @@ function Layout({children}) {
                 </p>
             </SignUpComponent>
             {children}
-        </>
+        </div>
 
     )
 }
