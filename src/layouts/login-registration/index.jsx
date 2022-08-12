@@ -3,7 +3,11 @@ import Nav from '../../components/NavBar/Nav'
 
 function Layout({ children }) {
     return (
-        <Nav />
+        <>
+            <Nav />
+            {children}
+        </>
+
     )
 }
 
