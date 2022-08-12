@@ -1,0 +1,36 @@
+.support-section {
+    display: flex;
+    background: #fff;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 50px;
+    border-top: 1px solid rgba(128, 128, 128, 0.556);
+}
+
+.support-section>div {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.support-section>div>h1 {
+    line-height: 0;
+    font-size: 50px;
+}
+
+.support-section>div>p {
+    font-size: 30px;
+    line-height: 0;
+}
+
+.support-section>div>span {
+    line-height: 3;
+    font-size: 19px;
+}
+
+.support-section>img {
+    width: 500px;
+    margin: 0 auto;
+}

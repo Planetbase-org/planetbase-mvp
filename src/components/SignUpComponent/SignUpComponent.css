@@ -3,12 +3,6 @@ h1{
     font-size: 35px;
 }
 
-.text-muted {
-    text-align: center;
-    width: 50%;
-    margin: 0 auto;
-}
-
 .signup {
     background: #fff;
     margin: 0;
@@ -30,6 +24,7 @@ h1{
     color: #0F255F;
     text-decoration: none;
 }
+
 
 .signup-section {
     display: flex;
