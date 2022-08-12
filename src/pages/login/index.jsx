@@ -1,5 +1,4 @@
 import React from 'react';
-import "./index.css";
 import Layout from '../../layouts/login-registration';
 
 function Login() {

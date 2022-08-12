@@ -20,9 +20,65 @@ button{
 }
 
 .layout-container {
-  overflow: hidden;
+  overflow: scroll;
   height: 100vh;
   background: #fff;
 }
 
+/**input section **/
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background-color: #fff;
+}
+
+.input-container > input {
+  width: 20%;
+  margin: 8px auto;
+  padding: 10px 45px;
+  outline: none;
+  background: #D9D9D9;
+  border-radius: 4px;
+  border: 1px solid #D9D9D9;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.input-container > p{
+  font-size: 13px;
+  color: #000000;
+}
+
+.input-container > button {
+  background:  #0F255F;
+  color: #fff;
+  padding: 13px;
+  border-radius: 5px;
+  border: 1px solid  #0F255F;
+  width: 25%;
+  font-size: 13px;
+}
+
+.checkbox-container{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  width: 30%;
+  padding: 10px 0;
+}
+
+.checkbox-container> input {
+  background: #0F255F;
+  width: 20%;
+  cursor: pointer;
+}
+
+.checkbox-container > p {
+  font-size: 13px;
+  margin: 0 auto;
+  width: 80%;
+  color: #000;
+}
 
