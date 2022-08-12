@@ -14,11 +14,34 @@ h1{
 }
 
 .signup-header {
-    font-size: 18px;
+    font-size: 13px;
     font-weight: 800;
+    margin-bottom: 30px;
+    color: #000000;
 }
 
 .signup-message {
     color: #0F255F;
     text-decoration: none;
 }
+
+.signup-section {
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.signup-link > p{
+    position: relative;
+    top: -10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #000000;
+}
+
+
+
+

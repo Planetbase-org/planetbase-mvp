@@ -10,7 +10,7 @@ function Login() {
                 header="Welcome back!"
             >
                 <p className="signup-header">Sign in to access your account. <br />
-                Not registered? <Link to="/signup" className="signup-message">Create an account</Link></p>
+                Not registered?. <Link to="/signup" className="signup-message">Create an account.</Link></p>
             </SignUpComponent>
         </Layout>
     )

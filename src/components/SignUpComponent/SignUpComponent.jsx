@@ -9,7 +9,7 @@ const SignUpComponent = ({ header, children}) => {
         <div>
             <h1>{header}</h1>
             {children}
-            <div>
+            <div className="signup-section">
                 <div className='signup-link'>
                     <img src={Facebook} alt="facebook" />
                     <p>Facebook</p>
