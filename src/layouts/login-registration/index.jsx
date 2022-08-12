@@ -1,8 +1,11 @@
 import React from 'react'
+import Nav from '../../components/NavBar/Nav'
 
-function index() {
+function Layout({children}) {
     return (
-        <div>index</div>
+        <>
+           <Nav/>
+        </>
     )
 }
 
