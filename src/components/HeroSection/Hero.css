@@ -13,12 +13,14 @@
     font-weight: 800;
     font-size: 55px;
     line-height: 1.3;
+    transition: 0.5s ease-in-out;
 }
 
 .hero-section>p {
     color: #fff;
     font-weight: 500;
     font-size: 30px;
+    transition: 0.5s ease-in-out;
 }
 
 .hero-section>h4 {
@@ -26,9 +28,10 @@
     font-weight: 800;
     font-size: 40px;
     margin-top: 30px;
+    transition: 0.5s ease-in-out;
 }
 
-.hero-section>a {
+.hero-btn>a {
     padding: 10px 50px;
     margin-left: 5px;
     color: black;
@@ -41,7 +44,7 @@
     border-radius: 7px;
 }
 
-.hero-section>a:last-of-type {
+.hero-btn>a:last-of-type {
     background: #EA0100;
     padding: 10px 50px;
     box-sizing: border-box;
@@ -50,4 +53,59 @@
     border: 1px solid #EA0100;
     text-decoration: none;
     border-radius: 5px;
+}
+
+@media screen and (max-width: 900px) {
+    .hero-section>h1 {
+        font-size: 40px;
+    }
+
+    .hero-section>p {
+        font-weight: 600;
+        font-size: 23px;
+    }
+
+    .hero-section>h4 {
+        font-weight: 800;
+        font-size: 30px;
+    }
+
+    .hero-btn>a:last-of-type {
+        padding: 6px 43px;
+        font-size: 27px;
+    }
+
+    .hero-btn>a {
+        padding: 6px 43px;
+        font-size: 27px;
+    }
+}
+
+
+@media screen and (max-width:700px) {
+
+    .hero-section>h1 {
+        font-size: 30px;
+    }
+
+    .hero-section>p {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .hero-section>h4 {
+        font-weight: 800;
+        font-size: 23px;
+    }
+
+    .hero-btn {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: auto;
+    }
+
+    .hero-btn > a{
+        margin:5px;
+    }
 }

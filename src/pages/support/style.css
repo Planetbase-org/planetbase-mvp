@@ -25,12 +25,29 @@
     line-height: 0;
 }
 
-.support-section>div>span {
+.support-section>div>span > a {
     line-height: 3;
     font-size: 19px;
+    color: #000;
 }
 
 .support-section>img {
     width: 500px;
     margin: 0 auto;
+}
+
+.support-signup {
+    background: #fff;
+    overflow: hidden;
+}
+
+.support-signup > h1 {
+    width: 70%;
+    text-align: start;
+    padding: 0 50px 50px 60px;
+    font-size: 30px;
+}
+
+.btn {
+    margin-left: 20px;
 }
