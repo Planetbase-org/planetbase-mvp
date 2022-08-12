@@ -1,0 +1,30 @@
+h4 {
+    text-align: center;
+}
+
+.solution-layout {
+    background: #fff;
+    overflow: hidden;
+}
+
+.event-card {
+    border: 2px solid #8b7e7e9e;
+    padding:15px;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.event-card > h3 {
+    text-align: center;
+}
+
+.events {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+.events > .cards {
+    width: 40%;
+}
