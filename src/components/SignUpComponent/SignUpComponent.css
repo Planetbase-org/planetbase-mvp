@@ -9,6 +9,12 @@ h1{
     margin: 0 auto;
 }
 
+.signup {
+    background: #fff;
+    margin: 0;
+    overflow: hidden;
+}
+
 .signup-header {
     text-align: center;
 }

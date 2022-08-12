@@ -17,6 +17,8 @@ a{
     display: flex;
     padding: 0 50px;
     margin-top: 10px;
+    background: #fff;
+    margin: 0;
 }
 
 .nav > img {

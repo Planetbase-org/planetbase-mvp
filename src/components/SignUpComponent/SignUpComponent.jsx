@@ -6,7 +6,7 @@ import Facebook from "./../../assets/facebook.svg";
 
 const SignUpComponent = ({ header, children}) => {
     return (
-        <div>
+        <div className='signup'>
             <h1>{header}</h1>
             {children}
             <div className="signup-section">
