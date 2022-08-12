@@ -59,6 +59,7 @@ button{
   border: 1px solid  #0F255F;
   width: 25%;
   font-size: 13px;
+  font-family: "inter", sans-serif;
 }
 
 .checkbox-container{

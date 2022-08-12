@@ -13,7 +13,7 @@ function SignUp() {
                     <input type="checkbox" name="checkbox" id="checkbox"/>
                     <p>Send me product updates and marketing communications from Planetbase</p>
                 </div>
-                <button type="submit" className="input-button">Sign In</button>
+                <button type="submit" className="input-button">Sign Up</button>
             </div>
         </Layout>
     )
