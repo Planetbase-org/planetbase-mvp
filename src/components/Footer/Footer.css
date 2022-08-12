@@ -25,3 +25,9 @@
     text-decoration: none;
     color: inherit;
 }
+
+@media screen and (max-width: 767px) {
+    .footer{
+        flex-direction: column;
+    }
+}

@@ -76,5 +76,42 @@ form>.subscribe-btn {
     font-size: 12px !important;
     font-weight: bold;
     font-family: "inter", sans-serif;
+    color: rgb(37, 36, 36);
+    font-family: 800;
 }
 
+
+@media screen and (max-width:900px) {
+
+    .subscribe-message>div {
+        width: 100%;
+    }
+
+    form {
+        width: 50%;
+    }
+
+    .subscribe-message {
+        flex-direction: column;
+    }
+
+    form>.subscribe-btn {
+        width: 30%;
+    }
+
+    .subscribe-message-text {
+        width: 48%;
+        color: rgb(37, 36, 36);
+        font-family: 800;
+    }
+}
+
+@media screen and (max-width:600px) {
+    form {
+        width: 80%;
+    }
+
+    .subscribe-message-text {
+        width: 78%;
+    }
+}
