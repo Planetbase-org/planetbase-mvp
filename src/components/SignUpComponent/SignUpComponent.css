@@ -1,0 +1,24 @@
+h1{
+    text-align: center;
+}
+
+.text-muted {
+    text-align: center;
+    font-size: 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.signup-header {
+    text-align: center;
+}
+
+.signup-header {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.signup-message {
+    color: #0F255F;
+    text-decoration: none;
+}

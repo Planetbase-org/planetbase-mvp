@@ -1,13 +1,14 @@
 import React from 'react';
+import "./SignUpComponent.css"
 import LinkedIn from "./../../assets/linkedin.svg";
 import Google from "./../../assets/google.svg";
 import Facebook from "./../../assets/facebook.svg";
 
-const SignUpComponent = ({ header, text }) => {
+const SignUpComponent = ({ header, children}) => {
     return (
         <div>
             <h1>{header}</h1>
-            <p>{text}</p>
+            {children}
             <div>
                 <div className='signup-link'>
                     <img src={Facebook} alt="facebook" />
