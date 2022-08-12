@@ -9,6 +9,22 @@
     color: black;
 }
 
+.nav {
+    display: flex;
+    padding: 0 50px;
+    margin-top: 10px;
+}
+
+.nav > img {
+    margin-right: 15px;
+}
+
+.nav > p {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "poppins";
+}
+
 .brand-name {
     text-decoration: none;
     color: black;

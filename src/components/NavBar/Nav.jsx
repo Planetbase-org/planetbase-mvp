@@ -1,11 +1,12 @@
 import React from 'react';
-import Planetbase from '../../assets/planetbase.svg'
+import Planetbase from '../../assets/planetbase.svg';
+import "./Navbar.css"
 
 function Nav() {
     return (
-        <nav>
+        <nav className="nav">
             <img src={Planetbase} alt="planetbase" />
-            <h4>PLANETBASE</h4>
+            <p>PLANETBASE</p>
         </nav>
     )
 }
