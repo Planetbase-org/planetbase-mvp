@@ -4,7 +4,7 @@ import Layout from '../../layouts/login-registration'
 function Login() {
     return (
         <Layout>
-            Login
+           <SignUpComponent />
         </Layout>
     )
 }
