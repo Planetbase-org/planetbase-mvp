@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Planetbase from '../../assets/planetbase.svg'
 
 function Nav() {
     return (

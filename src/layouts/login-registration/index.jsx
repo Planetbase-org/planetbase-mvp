@@ -1,12 +1,12 @@
 import React from 'react'
 import Nav from '../../components/NavBar/Nav'
 
-function Layout({children}) {
+function Layout({ children }) {
     return (
         <>
-           <Nav/>
+            <Nav />
         </>
     )
 }
 
-export default index
+export default Layout;
