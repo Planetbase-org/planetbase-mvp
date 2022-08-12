@@ -11,8 +11,8 @@ function Subscribe() {
       </div>
       <div className="subscribe-message">
         <div>
-          <h4>Moving your events online really opens up the esteem of supporting it </h4>
-          <p>Become a subscriber and receive great tips on event regulation updates sent to your inbox!</p>
+          <h4>Moving your events online really opens up the esteem of supporting it.</h4>
+          <p>Become a subscriber and receive great tips on event regulation updates sent to your inbox!.</p>
         </div>
         <div>
           <form>
