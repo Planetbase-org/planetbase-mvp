@@ -8,7 +8,8 @@ h4 {
 }
 
 .event-card {
-    border: 2px solid #8b7e7e9e;
+    border: 2px solid #8b7e7e57;
+    border-radius: 5px;
     padding:15px;
     width: 30%;
     margin: 0 auto;
@@ -22,7 +23,8 @@ h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 50px;
+    width: 90%;
+    margin: auto;
 }
 
 .events > .cards {
