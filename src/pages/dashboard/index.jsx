@@ -1,9 +1,10 @@
 import React from 'react'
+import EventLayout from '../../layouts/events-layout'
 
 function EventProfile() {
     
     return (
-        <div>index</div>
+        <EventLayout>index</EventLayout>
     )
 }
 

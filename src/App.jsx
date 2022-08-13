@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import {Home, Product,Solution, Login, SignUp, Support} from "./pages/index";
+import {Home, Product,Solution, Login, SignUp, Support, EventProfile} from "./pages/index";
 // import Product from "./pages/product";
 // import Solution from "./pages/solution";
 
