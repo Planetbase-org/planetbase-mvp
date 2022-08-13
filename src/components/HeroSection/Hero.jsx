@@ -6,12 +6,12 @@ function HeroSection() {
     return (
         <section className='hero-section'>
             <h1>Connecting Corporate sponsors <br />
-                & Event Organisers</h1>
+                & Event Organizers</h1>
             <p>"Reach your target audience, surpass your revenue goals".</p>
             <h4>Who Are You?</h4>
             <div className='hero-btn'>
-                <Link to="/sponsor">ORGANISER</Link>
-                <Link to="/organiser">SPONSOR</Link>
+                <Link to="/organiser">ORGANIZER</Link>
+                <Link to="/sponsor">SPONSOR</Link>
             </div>
         </section>
     )
