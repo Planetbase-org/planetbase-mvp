@@ -41,7 +41,7 @@ function EventProfile() {
                     </div>
                 </div>
                 <div className="event-btn">
-                    <Link to="/events">
+                    <Link to="/create-event">
                         Create Event
                     </Link>
                 </div>

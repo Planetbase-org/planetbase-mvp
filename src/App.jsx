@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import {Home, Product,Solution, Login, SignUp, Support, EventProfile} from "./pages/index";
+import {Home, Product,Solution, Login, SignUp, Support, EventProfile, EditEvent} from "./pages/index";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
           <Route exact path="/login" element={<Login />}></Route>
           <Route exact path="/signup" element={<SignUp />}></Route>
           <Route exact path="/organizer" element={<EventProfile />}></Route>
-          <Route exact path="/edit-event" element={<EditEvent />}></Route>
+          <Route exact path="/create-event" element={<EditEvent />}></Route>
           <Route exact path="/products" element={<Product />}></Route>
           <Route exact path="/solutions" element={<Solution />}></Route>
           <Route exact path="/support" element={<Support />}></Route>
