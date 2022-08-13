@@ -4,4 +4,5 @@ export { default as Solution } from './solution/index';
 export { default as Login } from './login/index';
 export { default as SignUp } from './signup/index';
 export { default as Support } from './support/index';
-export { default as EventProfile  } from './dashboard/index';
+export { default as EventProfile } from './dashboard/index';
+export { default as EditEvent  } from './dashboard/edit';
