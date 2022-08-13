@@ -1,6 +1,7 @@
 h4 {
     font-size: 25px;
     color: #8B7E7E;
+    margin-top: 70px;
 }
 
 .product-section {
@@ -16,7 +17,8 @@ h4 {
 }
 
 .product-card {
-    border: 2px solid #8b7e7e9e;
+    border: 2px solid #8b7e7e57;
+    border-radius: 5px;
     padding:15px;
 }
 
