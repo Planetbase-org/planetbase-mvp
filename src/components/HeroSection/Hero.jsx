@@ -10,8 +10,8 @@ function HeroSection() {
             <p>"Reach your target audience, surpass your revenue goals".</p>
             <h4>Who Are You?</h4>
             <div className='hero-btn'>
-                <Link to="/organiser">ORGANIZER</Link>
-                <Link to="/sponsor">SPONSOR</Link>
+                <Link to="/organizer"> Event Organizers</Link>
+                <Link to="/sponsor">Corporate Sponsor</Link>
             </div>
         </section>
     )
