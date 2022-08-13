@@ -44,7 +44,7 @@
     font-size: 16px;
 }
 
-form {
+.subscribe-form {
     margin-top: 20px;
     display: flex;
     align-items: center;
@@ -64,7 +64,7 @@ form {
     background: white;
 }
 
-form>.subscribe-btn {
+.subscribe-form>.subscribe-btn {
     padding: 12px 20px;
     background: #0F2560;
     color: #fff;
@@ -87,7 +87,7 @@ form>.subscribe-btn {
         width: 100%;
     }
 
-    form {
+    .subscribe-form {
         width: 50%;
     }
 
@@ -95,7 +95,7 @@ form>.subscribe-btn {
         flex-direction: column;
     }
 
-    form>.subscribe-btn {
+    .subscribe-form>.subscribe-btn {
         width: 30%;
     }
 
@@ -107,7 +107,7 @@ form>.subscribe-btn {
 }
 
 @media screen and (max-width:600px) {
-    form {
+    .subscribe-form {
         width: 80%;
     }
 

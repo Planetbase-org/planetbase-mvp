@@ -15,7 +15,7 @@ function Subscribe() {
           <p>Become a subscriber and receive great tips on event regulation updates sent to your inbox!.</p>
         </div>
         <div>
-          <form>
+          <form className="subscribe-form">
             <input type="text" placeholder='Enter email address' className='subscribe-email-input'/>
             <button className='subscribe-btn'>Subscribe</button>
           </form>
