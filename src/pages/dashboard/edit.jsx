@@ -5,9 +5,9 @@ import EventLayout from '../../layouts/events-layout'
 function EditEvent() {
     return (
         <EventLayout>
-            <div>
+            <div className="event-form">
                 <h1>List Your Upcoming Event</h1>
-                <form class="event-form">
+                <form>
                     <div className="form-control">
                         <div>
                             <p>Event title</p>
@@ -28,10 +28,10 @@ function EditEvent() {
                             <input type="text" />
                         </div>
                     </div>
-                    <div className="form-control">
+                    <div className='form-number'>
                         <div>
                             <p>Expected Number of guests</p>
-                            <input type="text" />
+                            <input type="number"/>
                         </div>
                         <div>
                             <p>Scheduled data</p>

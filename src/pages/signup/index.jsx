@@ -1,9 +1,13 @@
 import React from 'react';
+import SignUpComponent from '../../components/SignUpComponent/SignUpComponent';
 import Layout from '../../layouts/signup-registation';
 
 function SignUp() {
     return (
         <Layout>
+            <SignUpComponent header="Sign up to Planetbase." >
+                <p className="signup-header">Let's setup an account for you</p>
+            </SignUpComponent>
             <div className='input-container'>
                 <input type="text" name='fname' id='fname' placeholder='First Name' />
                 <input type="text" name='lname' id='lname' placeholder='Last Name' />

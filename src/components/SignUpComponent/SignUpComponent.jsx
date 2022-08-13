@@ -8,6 +8,7 @@ const SignUpComponent = ({ header, children}) => {
     return (
         <div className='signup'>
             <h1>{header}</h1>
+            
             {children}
             <div className="signup-section">
                 <div className='signup-link'>

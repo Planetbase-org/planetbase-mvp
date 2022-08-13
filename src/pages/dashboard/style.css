@@ -51,3 +51,44 @@
     font-weight: 600;
     border-radius: 5px;
 }
+
+/**edit event*/
+
+.event-form {
+    background: #fff;
+    overflow: hidden;
+}
+
+.form-control{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.form-control > div > p {
+    font-weight: 700;
+}
+
+.form-control > div > input {
+    border: none;
+    padding: 15px 70px;
+    border-radius: 5px;
+    border: 1px solid #24242461;
+    outline: none;
+}
+
+.form-number {
+    width: 50%;
+}
+.form-number> div > p {
+    font-weight: 700;
+}
+
+.form-number> div > input {
+    border: none;
+    padding: 15px 70px;
+    border-radius: 5px;
+    border: 1px solid #24242461;
+    outline: none;
+}
