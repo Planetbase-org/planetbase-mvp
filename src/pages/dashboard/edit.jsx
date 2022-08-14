@@ -124,7 +124,7 @@ function EditEvent() {
                     </div>
                     
                     <div>
-                        <div>
+                        <div className="description">
                             <h1>Event Description</h1>
                             <textarea name="" id="" cols="30" rows="10">
                             </textarea>

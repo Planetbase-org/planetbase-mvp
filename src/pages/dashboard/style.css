@@ -1,7 +1,7 @@
 .form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 0.8fr);
+    grid-template-rows: repeat(3, 0.1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     margin: 0 auto;
@@ -80,7 +80,7 @@
     font-weight: 700;
 }
 
-.details > p {
+.details>p {
     font-weight: 700;
 }
 
@@ -140,25 +140,16 @@
     margin-right: 20px;
 }
 
-.form-checkbox>div > p {
+.form-checkbox>div>p {
     font-weight: 700;
 }
 
-.form-checkbox>div >input {
+.form-checkbox>div>input {
     cursor: pointer;
 }
 
 /**tags*/
-/* .form-tags {
-    width: 37%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
 
-*/
 .container {
     display: flex;
     flex-direction: column;
@@ -178,11 +169,11 @@
     padding-left: 14px;
 }
 
-.select-events{
+.select-events {
     border: 1px solid rgba(128, 128, 128, 0.913);
     border-radius: 5px;
     padding: 14px 31px;
-    cursor: pointer; 
+    cursor: pointer;
     font-size: 12px;
     font-family: "poppins";
     font-weight: 700;
@@ -233,4 +224,13 @@
     background-color: unset;
     cursor: pointer;
     color: white;
+}
+
+.description {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -20px;
 }
