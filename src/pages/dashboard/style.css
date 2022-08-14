@@ -96,7 +96,7 @@
 }
 
 .details>input {
-    width: 30%;
+    width: 45%;
     border: 1px solid #24242461;
     padding: 10px;
     border-radius: 5px;
@@ -121,6 +121,9 @@
     border: 1px solid #24242461;
     outline: none;
     width: 100%;
+    font-size: 12px;
+    font-family: "poppins";
+    font-weight: 700;
 }
 
 .tag {
