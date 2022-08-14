@@ -95,7 +95,7 @@
     flex-direction: column;
 }
 
-.details>input {
+.details>input,  .price input {
     width: 45%;
     border: 1px solid #24242461;
     padding: 10px;
@@ -234,3 +234,18 @@
     position: relative;
     top: -20px;
 }
+
+
+.description>textarea {
+    word-wrap: break-word;
+    resize: none;
+    width: 55%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline: none;
+    font-size: 12px;
+    font-family: "poppins";
+    font-weight: 700;
+    padding: 5px;
+}
+

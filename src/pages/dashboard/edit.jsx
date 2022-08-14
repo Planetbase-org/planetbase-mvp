@@ -113,28 +113,30 @@ function EditEvent() {
                                 </div>
                             </div>
                         </div>
-                        <div className="form-control">             
-                        <div>
-                            <div className="details">
-                                <p>Scheduled data</p>
-                                <input type="date" />
+                        <div className="form-control">
+                            <div>
+                                <div className="details">
+                                    <p>Scheduled data</p>
+                                    <input type="date" />
+                                </div>
+                                <div className='price'>
+                                    <p>Price</p>
+                                    <input type="number" placeholder='₦'/>
+                                </div>
                             </div>
                         </div>
-                        </div>
                     </div>
-                    
+
                     <div>
                         <div className="description">
                             <h1>Event Description</h1>
-                            <textarea name="" id="" cols="30" rows="10">
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Briefly describe what your event is all about">
                             </textarea>
                         </div>
-                        <div>
+                        <div className="description">
                             <h1>Sponsorship Package</h1>
-                            <textarea name="" id="" cols="30" rows="10">
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Provide sponsor's benefit here">
                             </textarea>
-                            <p>Price</p>
-                            <input type="text" />
                         </div>
                         <div className="form-upload">
                             <input type="file" name="file" id="" />
