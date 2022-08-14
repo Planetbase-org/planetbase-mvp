@@ -80,10 +80,8 @@
     font-weight: 700;
 }
 
-.form-details {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+.details > p {
+    font-weight: 700;
 }
 
 .form-details>input {
@@ -102,6 +100,10 @@
     border: 1px solid #24242461;
     padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: "poppins";
+    font-weight: 700;
 }
 
 .input-details {
@@ -125,9 +127,22 @@
     display: flex;
 }
 
+.form-checkbox {
+    display: flex;
+    align-items: center;
+}
 
 .form-checkbox>div {
     display: flex;
+    margin-right: 20px;
+}
+
+.form-checkbox>div > p {
+    font-weight: 700;
+}
+
+.form-checkbox>div >input {
+    cursor: pointer;
 }
 
 /**tags*/
@@ -160,6 +175,16 @@
     padding-left: 14px;
 }
 
+.select-events{
+    border: 1px solid rgba(128, 128, 128, 0.913);
+    border-radius: 5px;
+    padding: 14px 31px;
+    cursor: pointer; 
+    font-size: 12px;
+    font-family: "poppins";
+    font-weight: 700;
+}
+
 .form-tags {
     display: flex;
     flex-direction: column;
@@ -173,6 +198,9 @@
 .input-tag {
     width: 40%;
     outline: none;
+    font-size: 12px;
+    font-family: "poppins";
+    font-weight: 700;
 }
 
 .tag {

@@ -58,7 +58,11 @@ function EditEvent() {
                             </div>
                             <div>
                                 <p>Event Organizer/host</p>
-                                <input type="text" />
+                                <select name="file" id="" className='select-events'>
+                                    <option value="">Select a file</option>
+                                    <option value="events">Events</option>
+                                    <option value="projects">Projects</option>
+                                </select>
                             </div>
                         </div>
                         <div className="form-control">
@@ -109,14 +113,17 @@ function EditEvent() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
+                        <div className="form-control">             
                         <div>
                             <div className="details">
                                 <p>Scheduled data</p>
                                 <input type="date" />
                             </div>
                         </div>
+                        </div>
+                    </div>
+                    
+                    <div>
                         <div>
                             <h1>Event Description</h1>
                             <textarea name="" id="" cols="30" rows="10">
