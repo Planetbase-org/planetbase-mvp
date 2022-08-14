@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import EventLayout from '../../layouts/events-layout';
+import FileUpload from "../../assets/file-upload.svg"
 
 function EditEvent() {
 
@@ -139,7 +140,8 @@ function EditEvent() {
                             </textarea>
                         </div>
                         <div className="form-upload">
-                            <input type="file" name="file" id="" />
+                            <img src={FileUpload} alt="file-upload" />
+                            <input type="file" name="" id="" />
                         </div>
                     </div>
                     <Link to="/">
