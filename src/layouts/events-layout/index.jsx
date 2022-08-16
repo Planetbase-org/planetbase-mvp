@@ -15,7 +15,7 @@ function EventLayout({ children }) {
                 <div>
                     <Link to="#" className='message-btn'>
                         <FaEnvelope size="1.5em" />
-                        <span class="icon-btn-badge">2</span>
+                        <span className="icon-btn-badge">2</span>
                     </Link>
                     <div className="username">
                         <p>Elena Pena</p>
