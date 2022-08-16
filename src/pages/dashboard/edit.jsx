@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
 import EventLayout from '../../layouts/events-layout';
 import FileUpload from "../../assets/file-upload.svg";
 import ImageUploading from "react-images-uploading";
@@ -18,7 +17,6 @@ function EditEvent() {
             title: '',
             categories: '',
             events: '',
-            tags: "",
             guest: "",
             date: "",
             status1: false,
@@ -37,9 +35,12 @@ function EditEvent() {
         localStorage.setItem('event', JSON.stringify(value, null, 2));
     }, [value]);
 
+    // const history = useHistory();
+
     function handleSubmit(e) {
         e.preventDefault();
         dispatch(saveEvent(value));
+        // history.push('/');
     }
 
     const onChange = (e) => {
@@ -98,7 +99,10 @@ function EditEvent() {
                             </div>
                             <div className="form-tags">
                                 <p>Event tags</p>
-                                <TagsInput handleChange={handleChange}/>
+                                <TagsInput
+                                    handleChange={handleChange}
+                                    // value={value.tags}
+                                />
                             </div>
                         </div>
                         <div className="form-control">
