@@ -32,11 +32,6 @@ function EditEvent() {
 
 
     const [value, setValue] = useState(getFormValues);
-    const [input, setInput] = useState('');
-    const [tags, setTags] = useState([]);
-    const [isKeyReleased, setIsKeyReleased] = useState(false);
-    const [images, setImages] = React.useState([]);
-    const maxNumber = 69;
 
     useEffect(() => {
         localStorage.setItem('event', JSON.stringify(value, null, 2));
@@ -46,32 +41,6 @@ function EditEvent() {
         e.preventDefault();
         dispatch(saveEvent(value));
     }
-
-    const onKeyDown = (e) => {
-        const { key } = e;
-        const trimmedInput = input.trim();
-
-        if (key === ',' && trimmedInput.length && !tags.includes(trimmedInput)) {
-            e.preventDefault();
-            setTags(prevState => [...prevState, trimmedInput]);
-            setInput('');
-        }
-
-        if (key === "Backspace" && !value.length && tags.length && isKeyReleased) {
-            const tagsCopy = [...tags];
-            const poppedTag = tagsCopy.pop();
-            e.preventDefault();
-            setTags(tagsCopy);
-            setInput(poppedTag);
-        }
-
-        setIsKeyReleased(false);
-    };
-
-    const onKeyUp = () => {
-        setIsKeyReleased(true);
-    }
-
 
     const onChange = (e) => {
         setValue((prevValues) => ({
@@ -86,10 +55,6 @@ function EditEvent() {
         setImages(imageList);
     };
 
-    const deleteTag = (index) => {
-        setTags(prevState => prevState.filter((tag, i) => i !== index));
-        preventDefault()
-    }
     return (
         <EventLayout>
             <div className="event-form">
@@ -133,7 +98,7 @@ function EditEvent() {
                             </div>
                             <div className="form-tags">
                                 <p>Event tags</p>
-                                <TagsInput />
+                                <TagsInput handleChange={handleChange}/>
                             </div>
                         </div>
                         <div className="form-control">
@@ -227,48 +192,7 @@ function EditEvent() {
                         </div>
                         <div className="form-upload">
                             <div className="upload">
-                                <ImageUploading
-                                    multiple
-                                    value={images}
-                                    onChange={handleChange}
-                                    maxNumber={maxNumber}
-                                    dataURLKey="data_url"
-                                    acceptType={["jpg"]}
-                                >
-                                    {({
-                                        imageList,
-                                        onImageUpload,
-                                        onImageRemoveAll,
-                                        onImageUpdate,
-                                        onImageRemove,
-                                        isDragging,
-                                        dragProps
-                                    }) => (
-                                        // write your building UI
-                                        <div className="upload__image-wrapper">
-                                            <button
-                                                type='button'
-                                                style={isDragging ? { color: "red" } : null}
-                                                onClick={onImageUpload}
-                                                {...dragProps}
-                                            >
-                                                Click or Drop here
-                                            </button>
-                                            &nbsp;
-                                            <button type='button' onClick={onImageRemoveAll}>Remove all images</button>
-                                            <img src={FileUpload} alt="file-upload" />
-                                            {imageList.map((image, index) => (
-                                                <div key={index} className="image-item">
-                                                    <img src={image.data_url} alt="" width="100" />
-                                                    <div className="image-item__btn-wrapper">
-                                                        <button onClick={() => onImageUpdate(index)}>Update</button>
-                                                        <button onClick={() => onImageRemove(index)}>Remove</button>
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-                                </ImageUploading>
+                                
                             </div>
                             <div className="upload-instruction">
                                 <p>Give your event a visual expression to make it more noticeable.</p>
@@ -277,13 +201,11 @@ function EditEvent() {
                         </div>
                     </div>
                     <div className="update-event">
-                        {/* <Link to="/organizer">
                             <button
                             type='submit'
                             >
                                 <span>Save and continue</span>
                             </button>
-                        </Link> */}
                     </div>
                 </form>
             </div>

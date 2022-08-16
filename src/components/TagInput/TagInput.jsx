@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import "./TagInput.css"
 
-function TagsInput(){
+function TagsInput({handleChange}){
     const [tags, setTags] = useState([])
 
     function handleKeyDown(e){
@@ -25,7 +25,13 @@ function TagsInput(){
                     <span className="close" onClick={() => removeTag(index)}>&times;</span>
                 </div>
             )) }
-            <input onKeyDown={handleKeyDown} type="text" className="tags-input" placeholder="Type somthing" />
+            <input
+                onKeyDown={handleKeyDown}
+                type="text"
+                className="tags-input"
+                placeholder="Type something"
+                onChange={handleChange}
+            />
         </div>
     )
 }
