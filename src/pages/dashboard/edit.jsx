@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import EventLayout from "../../layouts/events-layout";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { event } from "../../redux/eventSlice";
+import { events} from "../../redux/eventSlice";
 
 function EditEvent() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   function getFormValues() {
-    const storedValues = localStorage.getItem("event");
+    const storedValues = localStorage.getItem("events");
     if (!storedValues)
       return {
         title: [],
@@ -35,7 +35,7 @@ function EditEvent() {
 
   function onSubmit(e) {
     e.preventDefault();
-    dispatch(event(value));
+    dispatch(events(value));
     navigate("/organizer");
   }
 

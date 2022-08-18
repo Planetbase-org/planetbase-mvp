@@ -10,7 +10,7 @@ function EventProfile() {
   const [firstTime, setFirstTime] = useState();
   const dispatch = useDispatch();
 
-  const { event } = useSelector((state) => state.event);
+  const { events } = useSelector((state) => state.event);
   const navigate = useNavigate();
 
   // to check to see if a vendor has created a profile page
