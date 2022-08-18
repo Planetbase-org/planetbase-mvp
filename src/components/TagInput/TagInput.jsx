@@ -2,19 +2,9 @@
 import { useState } from 'react'
 import "./TagInput.css"
 
-function TagsInput({ handleChange, value }) {
+function TagsInput({ handleChange }) {
 
-    function getFormValue() {
-        if (!storedValues) return {
-            tag: [],
-        }
-    
-        return JSON.parse(storedValues);
-    };
-
-    const [tags, setTags] = useState(getFormValue);
-    const storedValues = localStorage.getItem('event');
-
+    const [tags, setTags] = useState([]);
 
     function handleKeyDown(e) {
         if (e.key !== 'Enter') return
@@ -42,7 +32,6 @@ function TagsInput({ handleChange, value }) {
                 className="tags-input"
                 placeholder="Type something"
                 onChange={handleChange}
-            // value={value.tags}
             />
         </div>
     )

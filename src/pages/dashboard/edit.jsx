@@ -1,26 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import EventLayout from '../../layouts/events-layout';
-import FileUpload from "../../assets/file-upload.svg";
-import ImageUploading from "react-images-uploading";
-import { useDispatch } from "react-redux";
-import { saveEvent } from '../../redux/eventSlice'
-import TagsInput from '../../components/TagInput/TagInput';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { event } from '../../redux/eventSlice';
 
 
 function EditEvent() {
-
+    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     function getFormValues() {
-    const storedValues = localStorage.getItem('event');
+        const storedValues = localStorage.getItem('event');
         if (!storedValues) return {
-            title: '',
+            title: [],
             categories: '',
             events: '',
             guest: "",
             date: "",
             status1: false,
-            status2:false,
+            status2: false,
             price: "",
             description: "",
             sponsorship: "",
@@ -28,19 +26,19 @@ function EditEvent() {
         return JSON.parse(storedValues);
     };
 
-
     const [value, setValue] = useState(getFormValues);
+    const [tags, setTags] = useState([]);
 
     useEffect(() => {
         localStorage.setItem('event', JSON.stringify(value, null, 2));
-    }, [value]);
+    }, [value, dispatch, setValue]);
 
     // const history = useHistory();
 
-    function handleSubmit(e) {
+    function onSubmit(e) {
         e.preventDefault();
-        dispatch(saveEvent(value));
-        // history.push('/');
+        dispatch(event(value));
+        navigate('/organizer');
     }
 
     const onChange = (e) => {
@@ -50,17 +48,24 @@ function EditEvent() {
         }))
     }
 
-    const handleChange = (imageList, addUpdateIndex) => {
-        // data for submit
-        console.log(imageList, addUpdateIndex);
-        setImages(imageList);
-    };
+
+    function handleKeyDown(e) {
+        if (e.key !== 'Enter') return
+        const value = e.target.value
+        if (!value.trim()) return
+        setTags([...tags, value])
+        e.target.value = ''
+    }
+
+    function removeTag(index) {
+        setTags(tags.filter((el, i) => i !== index))
+    }
 
     return (
         <EventLayout>
             <div className="event-form">
                 <h1>List Your Upcoming Event</h1>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={onSubmit}>
                     <div className='form'>
                         <div className="form-control">
                             <div>
@@ -78,9 +83,8 @@ function EditEvent() {
                                 <select name="file"
                                     id="" className='select-events'
                                     onChange={onChange}
-                                    // value={value.categories}
                                 >
-                                    <option value={value.categories}>Select a file</option>
+                                    <option value={value.categories}>{value.categories}</option>
                                     <option value="events">Events</option>
                                     <option value="projects">Projects</option>
                                 </select>
@@ -97,12 +101,14 @@ function EditEvent() {
                                     value={value.events}
                                 />
                             </div>
-                            <div className="form-tags">
-                                <p>Event tags</p>
-                                <TagsInput
-                                    handleChange={handleChange}
-                                    // value={value.tags}
-                                />
+                            <div className="tags-input-container">
+                                {tags.map((tag, index) => (
+                                    <div className="tag-item" key={index}>
+                                        <span className="text">{tag}</span>
+                                        <span className="close" onClick={() => removeTag(index)}>&times;</span>
+                                    </div>
+                                ))}
+                                <input onKeyDown={handleKeyDown} type="text" className="tags-input" placeholder="Type something" />
                             </div>
                         </div>
                         <div className="form-control">
@@ -196,7 +202,7 @@ function EditEvent() {
                         </div>
                         <div className="form-upload">
                             <div className="upload">
-                                
+
                             </div>
                             <div className="upload-instruction">
                                 <p>Give your event a visual expression to make it more noticeable.</p>
@@ -205,11 +211,11 @@ function EditEvent() {
                         </div>
                     </div>
                     <div className="update-event">
-                            <button
+                        <button
                             type='submit'
-                            >
-                                <span>Save and continue</span>
-                            </button>
+                        >
+                            <span>Save and continue</span>
+                        </button>
                     </div>
                 </form>
             </div>

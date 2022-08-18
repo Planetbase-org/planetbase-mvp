@@ -4,7 +4,7 @@ const initialState = {
     title: "",
     categories: "",
     events: "",
-    tags: [],
+    tag: [],
     guest: "",
     date: "",
     status1: false,
@@ -18,11 +18,11 @@ const eventSlice = createSlice({
     name: "event",
     initialState,
     reducers: {
-        setEvent: (state, action) => {
+        event: (state, action) => {
             state.title = action.payload;
             state.categories = action.payload;
             state.events = action.payload;
-            state.tags = action.payload;
+            state.tag = action.payload;
             state.guest = action.payload;
             state.date = action.payload;
             state.status1 = true;
@@ -35,4 +35,4 @@ const eventSlice = createSlice({
 });
 
 export default eventSlice.reducer;
-export const { saveEvent } = eventSlice.actions;
+export const { event } = eventSlice.actions;
