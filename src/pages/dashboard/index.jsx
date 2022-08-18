@@ -10,11 +10,11 @@ function EventProfile() {
   const [firstTime, setFirstTime] = useState();
   const dispatch = useDispatch();
 
-  const { events } = useSelector((state) => state.event);
+  const { events } = useSelector((state) => state.events);
   const navigate = useNavigate();
 
   // to check to see if a vendor has created a profile page
-  // console.log(useSelector((store) => console.log(store)));
+  console.log(useSelector((store) => console.log(store)));
 
   return (
     <EventLayout>
@@ -30,7 +30,7 @@ function EventProfile() {
           <div>
             <h3>Events</h3>
             <div>
-              <p>{"No data" || event.title}</p>
+              <p>{"No data" || events.title}</p>
             </div>
           </div>
           <div>
