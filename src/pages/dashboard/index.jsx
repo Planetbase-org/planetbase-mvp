@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 function EventProfile() {
   const [firstTime, setFirstTime] = useState();
   const dispatch = useDispatch();
-  const { title } = useSelector((state) => state.event);
+  const { event } = useSelector((state) => state.event);
   const navigate = useNavigate();
 
   // to check to see if a vendor has created a profile page
@@ -29,7 +29,7 @@ function EventProfile() {
           <div>
             <h3>Events</h3>
             <div>
-              <p>{title}</p>
+              <p>{"No data" || event.title}</p>
             </div>
           </div>
           <div>
