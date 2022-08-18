@@ -1,8 +1,9 @@
 import React from "react";
 import { FiSearch } from "react-icons/fi";
+import SponsorCard from "../../components/SponsorCard/SponsorCard";
 import "./style.css";
 
-function Sponsor() {
+function Sponsor({cards, index}) {
   return (
     <div>
       <h1>Discover Events Where Your Target Audience Is</h1>
@@ -16,30 +17,9 @@ function Sponsor() {
         <a>Listed Events</a>
       </div>
       <div className="sponsorships">
-        <div class="sponsorships-layout">
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
-        </div>
-        <div class="sponsorships-layout">
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
-        </div>
-        <div class="sponsorships-layout">
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
-        </div>
-        <div class="sponsorships-layout">
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
-          <div>Hello</div>
-        </div>
+        <ul>
+          <SponsorCard cards={cards} index={index} />
+        </ul>
       </div>
     </div>
   );
