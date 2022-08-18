@@ -8,9 +8,7 @@ function Card() {
       {cards.map((card, index) => (
         <div key={index} className="sp-card">
           <img
-            src={
-              "https://res.cloudinary.com/dputu7z0u/image/upload/v1642677697/sample.jpg"
-            }
+            src={card.img}
             alt="image"
             className="card-image"
           />

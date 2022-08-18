@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px;
+    padding: 15px;
     background: #fff;
     width: 86%;
     border: 1px solid rgba(3, 3, 3, 0.208);
@@ -16,6 +16,12 @@
 
 .card-tag {
     width: 20px;
+    cursor: pointer;
+}
+
+.card-title {
+    font-weight: 900;
+    font-size: 18px;
 }
 
 .card-content {

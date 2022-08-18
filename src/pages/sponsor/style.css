@@ -8,11 +8,18 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-row-gap: 12px; 
+    height: 100vh;
 }
 
 
 .sponsorship-search {
     border: 1px solid black !important;
     margin: 50px auto;
+}
+
+.list-btn {
+    position: relative;
+    left: 5px;
+    cursor: pointer;
 }
