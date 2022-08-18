@@ -33,7 +33,6 @@ function EditEvent() {
         localStorage.setItem('event', JSON.stringify(value, null, 2));
     }, [value, dispatch, setValue]);
 
-    // const history = useHistory();
 
     function onSubmit(e) {
         e.preventDefault();
