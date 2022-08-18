@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   title: "",
   categories: "",
-  events: "",
+  event: "",
   tag: [],
   guest: "",
   date: "",
@@ -14,13 +14,13 @@ const initialState = {
 };
 
 const eventSlice = createSlice({
-  name: "event",
+  name: "events",
   initialState,
   reducers: {
     event: (state, action) => {
       state.title = action.payload;
       state.categories = action.payload;
-      state.events = action.payload;
+      state.event = action.payload;
       state.tag = action.payload;
       state.guest = action.payload;
       state.date = action.payload;
@@ -34,4 +34,4 @@ const eventSlice = createSlice({
 });
 
 export default eventSlice.reducer;
-export const { event } = eventSlice.actions;
+export const { events } = eventSlice.actions;

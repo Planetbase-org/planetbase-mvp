@@ -9,11 +9,12 @@ import { useNavigate } from "react-router-dom";
 function EventProfile() {
   const [firstTime, setFirstTime] = useState();
   const dispatch = useDispatch();
+
   const { event } = useSelector((state) => state.event);
   const navigate = useNavigate();
 
   // to check to see if a vendor has created a profile page
-  console.log(useSelector((store) => console.log(store)));
+  // console.log(useSelector((store) => console.log(store)));
 
   return (
     <EventLayout>
