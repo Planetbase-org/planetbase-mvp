@@ -1,14 +1,12 @@
 import React from "react";
 import Card from "../SpCard/Card";
 
-function SponsorCard({cards, index}) {
-  cards = [<Card />];
+function SponsorCard({ cards }) {
+
   return (
-    <>
-      {cards.map((card, index) => (
-        <li key={index}>{card}</li>
-      ))}
-    </>
+    <div className="sponsorships-layout">
+      <Card  cards={cards} />
+    </div>
   );
 }
 
