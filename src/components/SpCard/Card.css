@@ -1,0 +1,8 @@
+.sp-card {
+    width: 100%;
+    background: grey;
+}
+
+.sp-card > img {
+    width: 200px;
+}

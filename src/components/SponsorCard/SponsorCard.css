@@ -1,0 +1,13 @@
+.sponsorships-layout {
+    background-color: #fff;
+}
+
+.sp-card {
+    width: 86%;
+    background: grey;
+    border: 1px solid aliceblue;
+  }
+
+.sp-card > img {
+    width: 100%;
+  }

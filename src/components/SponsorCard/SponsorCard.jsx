@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../SpCard/Card";
+import "./SponsorCard.css";
 
 function SponsorCard({ cards }) {
 
