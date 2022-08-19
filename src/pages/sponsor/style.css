@@ -1,60 +1,59 @@
 .sponsors {
-    background: #fff;
-    overflow: hidden;
-    padding: 0 30px;
+  background: #fff;
+  overflow: hidden;
+  padding: 0 30px;
 }
 
 .sponsorship-search {
-    border: 1px solid black;
-    margin: 50px auto;
+  border: 1px solid black;
+  margin: 50px auto;
 }
 
 .sponsor-section {
-    padding: 0 23px;
-    background: #fff;
-    overflow: hidden;
-    border-top: 1px solid rgba(142, 128, 128, 0.461)
+  padding: 0 23px;
+  background: #fff;
+  overflow: hidden;
+  border-top: 1px solid rgba(142, 128, 128, 0.461);
 }
 
 .sponsorships-layout {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 12px;
 }
 
 .sponsor-btn {
-    background: #17386E;
-    padding: 15px;
-    margin-bottom: 20px;
-    color: #fff;
-    font-weight: 700;
+  background: #17386e;
+  padding: 15px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 700;
 }
 
 .sponsor-btn-continue {
-    margin: 0 auto;
-    text-align: right;
-    padding: 40px 0;
+  margin: 0 auto;
+  text-align: right;
+  padding: 40px 0;
 }
 
-
 .sponsor-cont {
-    display: flex;
-    margin: 0 auto;
+  display: flex;
+  margin: 0 auto;
 }
 
 .sponsor-btn-next {
-    background: #17386E;
-    border-radius: 3px;
-    padding: 20px 35px;
-    margin-top: 30px;
-    color: #fff;
-    font-weight: 700;
-    text-align: center;
+  background: #17386e;
+  border-radius: 3px;
+  padding: 20px 35px;
+  margin-top: 30px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
 }
 
 .sponsorship-search {
-    border: 1px solid black !important;
-    margin: 50px auto;
+  border: 1px solid black !important;
+  margin: 50px auto;
 }
