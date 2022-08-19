@@ -52,5 +52,24 @@ export const cards = [
         img: "https://res.cloudinary.com/dputu7z0u/image/upload/v1660863670/Rectangle_31_ad96pw.svg",
         description: "Sponsor",
         sponsoredEvent:"hello"
-    },
+  }, {
+    id: 8,
+    title: "Sponsor",
+      img: "https://res.cloudinary.com/dputu7z0u/image/upload/v1660863670/Rectangle_31_ad96pw.svg",
+      description: "Sponsor",
+      sponsoredEvent:"hello"
+}, {
+  id: 9,
+  title: "Sponsor",
+    img: "https://res.cloudinary.com/dputu7z0u/image/upload/v1660863670/Rectangle_31_ad96pw.svg",
+    description: "Sponsor",
+    sponsoredEvent:"hello"
+}, {
+  id: 10,
+  title: "Sponsor",
+    img: "https://res.cloudinary.com/dputu7z0u/image/upload/v1660863670/Rectangle_31_ad96pw.svg",
+    description: "Sponsor",
+    sponsoredEvent:"hello"
+},
+    
 ];

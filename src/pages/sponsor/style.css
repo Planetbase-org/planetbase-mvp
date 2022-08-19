@@ -3,15 +3,28 @@
     margin: 50px auto;
 }
 
+.sponsor-section {
+    padding: 0 23px;
+    background: #fff;
+    overflow: hidden;
+    border-top: 1px solid rgba(142, 128, 128, 0.461)
+  }
+
 .sponsorships-layout {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 12px; 
-    height: 100vh;
 }
 
+.sponsor-btn {
+    background: #17386E;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 700;
+}
 
 .sponsorship-search {
     border: 1px solid black !important;

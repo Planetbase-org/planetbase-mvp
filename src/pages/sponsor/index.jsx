@@ -17,14 +17,11 @@ function Sponsor({ cards, index }) {
           </span>
           <input type="text" placeholder="Search for your event" />
         </div>
-        <div>
-        <a to="/" className="loginButton list-btn">
-          Listed Events
-        </a>
-        </div>
+        <Link>
+          <button class="sponsor-btn">Listed Events</button>
+        </Link>
         <SponsorCard cards={cards} index={index} />
       </div>
-      
     </>
   );
 }
