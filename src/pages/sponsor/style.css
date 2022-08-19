@@ -60,7 +60,9 @@
 
 .sponsorship-form {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .sponsorship-form-control > div > input {
@@ -69,15 +71,19 @@
   outline: none;
 }
 
+.sponsorship-form-control > div > textarea {
+  padding: 10px 20px;
+  width: 100%;
+  outline: none;
+  resize: none;
+}
 
 .sponsor-login-btn {
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 30px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  margin: 0 auto;
+  width: 50%;
 }
 
-.sponsor-login-btn > input {
-  padding: 10px;
-  width: 70%;
-  outline: none;
-}
