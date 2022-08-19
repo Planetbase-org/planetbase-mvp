@@ -9,16 +9,16 @@
 
 .footer>div>h3 {
     font-family: 'Inter', sans-serif;
-    font-weight: 800;
-    font-size: 24px;
+    font-weight: 500;
+    font-size: 20px;
     line-height: 29px;
 }
 
 .footer > div > p {
     font-family: 'Inter', sans-serif;
-    color: #000;
-    font-weight: 600;
-    font-size: 15px;
+    color: rgba(0, 0, 0, 0.845);
+    font-weight: 100;
+    font-size: 13px;
 }
 
 .footer > div > p > a {

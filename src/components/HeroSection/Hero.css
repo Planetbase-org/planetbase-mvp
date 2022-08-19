@@ -32,13 +32,13 @@
 }
 
 .hero-btn>a {
-    padding: 10px 50px;
+    padding: 20px 10px;
     margin-left: 5px;
-    color: black;
+    color: rgb(7, 48, 62);
     box-sizing: border-box;
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
-    border: 1px solid black;
+    border: 1px solid #fff;
     background-color: #fff;
     text-decoration: none;
     border-radius: 7px;
@@ -46,13 +46,9 @@
 
 .hero-btn>a:last-of-type {
     background: #EA0100;
-    padding: 10px 50px;
-    box-sizing: border-box;
-    font-size: 30px;
     color: #fff;
     border: 1px solid #EA0100;
     text-decoration: none;
-    border-radius: 5px;
 }
 
 @media screen and (max-width: 900px) {

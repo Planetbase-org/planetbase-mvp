@@ -237,8 +237,9 @@
 
 .upload-instruction {
     background: #E8EFFF;
-    font-size: 14px;
+    font-size: 13px;
     padding: 59px 20px;
+    width: 50%;
 }
 
 .update-event {
