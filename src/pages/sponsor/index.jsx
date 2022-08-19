@@ -5,6 +5,7 @@ import './style.css'
 import Navbar from '../../components/NavBar/Navbar'
 import { Link } from 'react-router-dom'
 
+
 function Sponsor ({ cards, index }) {
   return (
     <>
