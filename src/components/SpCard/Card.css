@@ -1,11 +1,14 @@
 .sp-card {
-  display: grid;
+  /* display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 0.1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     margin: 0 auto;
-    width: 80%;
+    width: 80%; */
+    display: flex;
+    flex-direction: column;
+    width: 90%;
 }
 
 .sp-card > img {

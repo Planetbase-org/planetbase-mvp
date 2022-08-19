@@ -25,11 +25,12 @@
 }
 
 .sponsor-btn {
-  background: #17386e;
+  text-align: center;
+  /* background: #17386e;
   padding: 15px;
   margin-bottom: 20px;
   color: #fff;
-  font-weight: 700;
+  font-weight: 700; */
 }
 
 .sponsor-btn-continue {
@@ -87,8 +88,57 @@
   width: 50%;
 }
 
-.sponsor-login-btn >a> button {
-  padding: 10px;
+.btn-default {
+  padding: 20px;
   background: #17386e;
   color: #fff;
+  font-weight: 700;
+}
+
+.sponsor-bid-align {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.sponsor-bid-from > div,
+.sponsor-bid-control, .sponsor-bid-align > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sponsor-form {
+  padding:10px 25px ;
+  width: 50%;
+  margin: 50px auto;
+  background: #fff;
+}
+
+.sponsor-bid-control > div > input,
+.sponsor-bid-from > div > input
+{
+  padding: 10px 15px;
+}
+
+.sponsor-bid-control > div > textarea {
+  resize: none;
+  padding: 10px 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+ .form-text {
+  margin: 20px 0;
+  font-weight: 800;
+  font-family: "poppins", sans-serif;
+}
+
+.btn-primary {
+  background: #17386e;
+  color: #fff;
+  padding: 15px;
+  font-weight: 800;
+  font-family: "poppins", sans-serif;
 }

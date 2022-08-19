@@ -5,7 +5,6 @@ import './style.css'
 import Navbar from '../../components/NavBar/Navbar'
 import { Link } from 'react-router-dom'
 
-
 function Sponsor ({ cards, index }) {
   return (
     <>
@@ -18,12 +17,19 @@ function Sponsor ({ cards, index }) {
           </span>
           <input type='text' placeholder='Search for your event' />
         </div>
-        <Link to='/sponsor-page'>
-          <button className='sponsor-btn'>Listed Events</button>
-        </Link>
+        <div>
+          {' '}
+          <Link to='/sponsor-page'>
+            <button className='btn-primary'>
+              <span>Listed Events</span>
+            </button>
+          </Link>
+        </div><br />
         <SponsorCard cards={cards} index={index} />
         <div className='sponsor-btn-continue'>
-          <button className='sponsor-btn-next'>Continue</button>
+          <button className='btn-primary'>
+            <span>Continue</span>
+          </button>
         </div>
       </div>
     </>
