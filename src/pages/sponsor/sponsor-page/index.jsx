@@ -35,9 +35,11 @@ function SponsorPage () {
           <Link to='/login'>Login </Link>
           if you've already registered
         </p>
-        <button>
-          <span>Save and continue</span>
-        </button>
+        <Link to='/sponsor-bid'>
+          <button>
+            <span>Save and continue</span>
+          </button>
+        </Link>
       </div>
     </>
   )

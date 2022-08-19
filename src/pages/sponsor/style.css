@@ -69,6 +69,7 @@
   padding: 10px 20px;
   width: 100%;
   outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.55);
 }
 
 .sponsorship-form-control > div > textarea {
@@ -82,8 +83,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
-  margin: 0 auto;
+  margin: 18px auto;
   width: 50%;
 }
 
+.sponsor-login-btn >a> button {
+  padding: 10px;
+  background: #17386e;
+  color: #fff;
+}
