@@ -225,15 +225,6 @@
     position: absolute;
 }
 
-.upload__image-wrapper {
-    /* top: -75px;
-    position: relative;
-    display: flex;
-    background: transparent;
-    opacity: 0;
-    z-index:1111;
-    height: 37px; */
-}
 
 .upload-instruction {
     background: #E8EFFF;
