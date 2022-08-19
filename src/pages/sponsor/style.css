@@ -63,7 +63,21 @@
   justify-content: space-evenly;
 }
 
+.sponsorship-form-control > div > input {
+  padding: 10px 20px;
+  width: 100%;
+  outline: none;
+}
+
+
 .sponsor-login-btn {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.sponsor-login-btn > input {
+  padding: 10px;
+  width: 70%;
+  outline: none;
 }
