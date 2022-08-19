@@ -220,7 +220,7 @@ function EditEvent() {
             </div>
           </div>
           <div className="update-event">
-            <button type="submit">
+            <button type="submit" className="btn-primary">
               <span>Save and continue</span>
             </button>
           </div>

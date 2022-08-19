@@ -66,14 +66,14 @@
         font-size: 30px;
     }
 
-    .hero-btn>a:last-of-type {
+    /* .hero-btn>a:last-of-type {
         padding: 6px 43px;
         font-size: 27px;
-    }
+    } */
 
     .hero-btn>a {
-        padding: 6px 43px;
-        font-size: 27px;
+        padding: 10px 16px;
+        font-size: 25px;
     }
 }
 

@@ -7,6 +7,7 @@ function Home() {
     return (
         <Layout>
             <HeroSection />
+                
             <Subscribe/>
         </Layout>
     )
