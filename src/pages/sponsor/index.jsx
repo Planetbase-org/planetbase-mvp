@@ -18,7 +18,7 @@ function Sponsor ({ cards, index }) {
           </span>
           <input type='text' placeholder='Search for your event' />
         </div>
-        <Link to='/'>
+        <Link to='/sponsor-page'>
           <button className='sponsor-btn'>Listed Events</button>
         </Link>
         <SponsorCard cards={cards} index={index} />

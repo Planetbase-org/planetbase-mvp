@@ -57,3 +57,13 @@
   border: 1px solid black !important;
   margin: 50px auto;
 }
+
+.sponsorship-form {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sponsor-login-btn {
+  display: flex;
+  justify-content: space-evenly;
+}
