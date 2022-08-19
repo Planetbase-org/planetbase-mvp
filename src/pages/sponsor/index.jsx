@@ -18,9 +18,12 @@ function Sponsor({ cards, index }) {
           <input type="text" placeholder="Search for your event" />
         </div>
         <Link to="/">
-          <button class="sponsor-btn">Listed Events</button>
+          <button className="sponsor-btn">Listed Events</button>
         </Link>
         <SponsorCard cards={cards} index={index} />
+        <div className="sponsor-btn-continue">
+          <button className="sponsor-btn-next">Continue</button>
+        </div>
       </div>
     </>
   );
