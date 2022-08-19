@@ -9,7 +9,7 @@ function Sponsor({ cards, index }) {
   return (
     <>
       <Navbar />
-      <div>
+      <div class="sponsors">
         <h1>Discover Events Where Your Target Audience Is</h1>
         <div className="search-events sponsorship-search">
           <span>
@@ -17,7 +17,7 @@ function Sponsor({ cards, index }) {
           </span>
           <input type="text" placeholder="Search for your event" />
         </div>
-        <Link>
+        <Link to="/">
           <button class="sponsor-btn">Listed Events</button>
         </Link>
         <SponsorCard cards={cards} index={index} />

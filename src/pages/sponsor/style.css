@@ -1,3 +1,9 @@
+.sponsors {
+    background: #fff;
+    overflow: hidden;
+    padding: 0 30px;
+}
+
 .sponsorship-search {
     border: 1px solid black;
     margin: 50px auto;
