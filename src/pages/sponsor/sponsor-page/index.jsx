@@ -36,7 +36,7 @@ function SponsorPage () {
           if you've already registered
         </p>
         <Link to='/sponsor-bid'>
-          <button>
+          <button className='btn-primary'>
             <span>Save and continue</span>
           </button>
         </Link>
