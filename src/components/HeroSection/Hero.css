@@ -66,6 +66,14 @@
     text-decoration: none;
 }
 
+@media screen and (max-width: 1290px){
+    .hero-btn>a {
+        font-size: 17px;
+        font-weight: 800;
+        padding:20px 17px;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .hero-section>h1 {
         font-size: 40px;
@@ -80,11 +88,6 @@
         font-weight: 800;
         font-size: 30px;
     }
-
-    /* .hero-btn>a:last-of-type {
-        padding: 6px 43px;
-        font-size: 27px;
-    } */
 
     .hero-btn>a {
         padding: 10px 16px;
