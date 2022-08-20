@@ -38,7 +38,7 @@
     transition: 0.5s ease-in-out;
 }
 
-.hero-section>h4> span {
+.hero-section>h4>span {
     color: #0f6cc9;
     font-weight: 800;
     font-style: normal;
@@ -95,6 +95,10 @@
 }
 
 @media screen and (max-width: 982px) {
+
+    .hero-section {
+        height: 60vh;
+    }
 
     .hero-section>h1 {
         font-size: 37px;
@@ -156,6 +160,8 @@
 }
 
 @media screen and (max-width: 680px) {
+
+
     .hero-section>h4 {
         font-weight: 400;
         font-size: 1.8rem;
@@ -176,31 +182,34 @@
     }
 }
 
-@media screen and (max-width: 580px){
-    .hero-section > h1 {
+@media screen and (max-width: 580px) {
+
+    .hero-section>h1 {
         font-size: 5.9vw;
-      }
-      .hero-section > p {
+    }
+
+    .hero-section>p {
         font-weight: 600;
         font-size: 16px;
         width: 72%;
         margin: 19px auto;
         line-height: 146%;
-      }
-    .hero-btn {
-      flex-direction: column;
-      width: 40%;
-      margin: auto;
     }
 
-    .hero-btn > a {
+    .hero-btn {
+        flex-direction: column;
+        width: 40%;
+        margin: auto;
+    }
+
+    .hero-btn>a {
         padding: 15px;
         font-size: 12px;
-      }
+    }
 
-      .hero-btn {
+    .hero-btn {
         flex-direction: column;
         width: 42%;
         margin: auto;
-      }
+    }
 }

@@ -7,25 +7,30 @@
     margin: 30px 0;
 }
 
+.footer>div {
+    line-height: 163%;
+    margin: 14px 0;
+}
+
 .footer>div>h3 {
     font-weight: 500;
     font-size: 20px;
     line-height: 29px;
 }
 
-.footer > div > p {
+.footer>div>p {
     color: rgba(0, 0, 0, 0.845);
     font-weight: 400;
     font-size: 13px;
 }
 
-.footer > div > p > a {
+.footer>div>p>a {
     text-decoration: none;
     color: inherit;
 }
 
 @media screen and (max-width: 767px) {
-    .footer{
+    .footer {
         flex-direction: column;
     }
 }

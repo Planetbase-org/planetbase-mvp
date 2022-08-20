@@ -2,6 +2,7 @@
     overflow: hidden;
     padding-left: 50px;
     padding-right: 50px;
+    background: #fff;
   }
 
 .subscribe-header {
@@ -31,6 +32,7 @@
     width: 100%;
     position: relative;
     bottom: 22px;
+
 }
 
 .subscribe-message>div {
@@ -95,6 +97,8 @@
 
     .subscribe-message>div {
         width: 100%;
+            line-height: 123%;
+
     }
 
     .subscribe-form {
@@ -127,6 +131,7 @@
 }
 
 @media screen and (max-width:600px) {
+    
     .subscribe-form {
         width: 80%;
     }
