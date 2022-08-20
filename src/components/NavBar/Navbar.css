@@ -1,36 +1,35 @@
-a{
-    text-decoration: none;
-}
-
 .navigation {
-    position: relative;
     display: flex;
     align-items: center;
-    height: 60px;
+    position: sticky;
+    height: 70px;
     width: 100%;
     padding: 0.5rem 0rem;
     background-color: #fff;
     color: black;
 }
 
-.nav {
+.navigation {
     display: flex;
+    align-items: center;
     padding: 0 50px;
     margin-top: 10px;
     background: #fff;
     margin: 0;
+    z-index: 100;
 }
 
-.nav > img {
+/* .navigation > img {
     margin-right: 15px;
 }
 
-.nav > p {
+.navigation > p {
     font-size: 20px;
-    font-weight: 700;
-    font-family: "poppins";
-    color: #000;
-}
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Poppins";
+    color: rgb(176, 20, 20);
+} */
 
 .brand-name {
     text-decoration: none;
@@ -61,8 +60,9 @@ a{
     display: block;
     width: 100%;
     font-size: 15px;
-    font-weight: 700;
-    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: rgb(20, 19, 19);
 }
 
 .loginButton,
