@@ -6,12 +6,10 @@
     overflow: hidden;
     opacity: 3;
     background:
-    /* top, transparent black, faked with gradient */ 
     linear-gradient(
       rgba(0, 0, 0, 0.7), 
       rgba(0, 0, 0, 0.7)
     ),
-    /* bottom, image */
     url(https://res.cloudinary.com/dputu7z0u/image/upload/v1660939818/Mask_group_2_hvbvv5.jpg);
 }
 
@@ -50,10 +48,9 @@
 .hero-btn>a {
     padding: 20px 10px;
     color: rgb(7, 48, 62);
-    box-sizing: border-box;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
-    border: 1px solid #fff;
+    border: 1px solid rgb(7,48,62);
     background-color: #fff;
     text-decoration: none;
     border-radius: 7px;
@@ -74,7 +71,7 @@
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 982px) {
     .hero-section>h1 {
         font-size: 40px;
     }
@@ -90,32 +87,31 @@
     }
 
     .hero-btn>a {
-        padding: 10px 16px;
-        font-size: 25px;
+        padding: 20px 17px;
+        font-size: 14px;
     }
 }
 
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:980px) {
 
     .hero-section>h1 {
-        font-size: 30px;
+        font-size: 2.5rem;
     }
 
     .hero-section>p {
         font-weight: 600;
-        font-size: 20px;
+        font-size: 1.7rem;
     }
 
     .hero-section>h4 {
         font-weight: 800;
-        font-size: 23px;
+        font-size: 2rem;
     }
 
     .hero-btn {
-        display: flex;
         flex-direction: column;
-        width: 50%;
+        width: 24%;
         margin: auto;
     }
 
