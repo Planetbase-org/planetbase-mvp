@@ -15,6 +15,7 @@ html, body {
   min-height: 100vh;
   background: #5766901F;
   scroll-behavior: smooth;
+  height: 100vh;
 }
 
 button{

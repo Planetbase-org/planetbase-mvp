@@ -2,7 +2,7 @@
     overflow: hidden;
     padding-left: 50px;
     padding-right: 50px;
-}
+  }
 
 .subscribe-header {
     display: flex;
@@ -47,10 +47,11 @@
 }
 
 .subscribe-message>div>p {
-    font-size: 16px;
+    font-size: 20px;
     color: rgba(0, 0, 0, 0.824);
     font-weight: 400;
     font-family: "Sora", sans-serif;
+    margin: 28px 0 0;
 }
 
 .subscribe-form {
