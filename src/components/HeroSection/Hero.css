@@ -5,11 +5,9 @@
     overflow: hidden;
     opacity: 3;
     background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.7), 
-      rgba(0, 0, 0, 0.7)
-    ),
-    url(https://res.cloudinary.com/dputu7z0u/image/upload/v1660939818/Mask_group_2_hvbvv5.jpg);
+        linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)),
+        url(https://res.cloudinary.com/dputu7z0u/image/upload/v1660939818/Mask_group_2_hvbvv5.jpg);
 }
 
 .hero-section>h1 {
@@ -28,7 +26,7 @@
     font-size: 30px;
     font-family: "Sora", sans-serif;
     transition: 0.5s ease-in-out;
-    margin: 14px 0;
+    margin: 19px 0;
 }
 
 .hero-section>h4 {
@@ -36,15 +34,15 @@
     font-weight: 800;
     font-size: 40px;
     font-family: "Sora", sans-serif;
-    margin: 14px 0;
+    margin: 19px 0;
     transition: 0.5s ease-in-out;
 }
 
 .hero-btn {
-        margin: 20px auto;
-        display: flex;
-        justify-content: space-around;
-        width: 40%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    width: 37%;
 }
 
 
@@ -54,7 +52,7 @@
     color: rgb(7, 48, 62);
     font-size: 16px;
     cursor: pointer;
-    border: 1px solid rgb(7,48,62);
+    border: 1px solid rgb(7, 48, 62);
     background-color: #fff;
     text-decoration: none;
     border-radius: 7px;
@@ -68,32 +66,53 @@
     text-decoration: none;
 }
 
-@media screen and (max-width: 1290px){
+@media screen and (max-width: 1290px) {
+    .hero-section>h1 {
+        margin-top: 130px;
+        color: #fff;
+        font-weight: 500;
+        font-family: "Sora", sans-serif;
+        font-size: 45px;
+        line-height: 141.3%;
+        text-transform: uppercase;
+    }
+
+    .hero-btn {
+        width: 40%;
+      }
+
     .hero-btn>a {
         font-size: 17px;
-        padding:20px 17px;
+        padding: 20px 17px;
     }
 }
 
 @media screen and (max-width: 982px) {
+
     .hero-section>h1 {
-        font-size: 40px;
+        font-size: 37px;
     }
 
-    .hero-section>p {
+    .hero-section > p {
         font-weight: 600;
-        font-size: 23px;
-    }
+        font-size: 28px;
+        line-height: 130.5%;
+        width: 67%;
+        margin: 10px auto;
+      }
 
     .hero-section>h4 {
         font-weight: 800;
         font-size: 30px;
     }
 
+    .hero-btn {
+        width: 49%;
+      }
+
     .hero-btn>a {
-        padding: 20px 17px;
+        padding: 17px 22px;
         font-size: 14px;
-        width: 100%;
     }
 }
 
@@ -101,12 +120,15 @@
 @media screen and (max-width:780px) {
 
     .hero-section>h1 {
-        font-size: 2.5rem;
+        font-size: 4.5vw;
     }
 
     .hero-section>p {
         font-weight: 600;
-        font-size: 1.7rem;
+        font-size: 24px;
+        width: 67%;
+        margin: 19px auto;
+        line-height: 146%;
     }
 
     .hero-section>h4 {
@@ -116,11 +138,28 @@
 
     .hero-btn {
         flex-direction: column;
-        width: 24%;
+        width: 30%;
         margin: auto;
     }
 
-    .hero-btn > a {
-        margin:5px;
+    .hero-btn>a {
+        margin: 5px;
     }
+
+}
+
+@media screen and (max-width: 680px){
+.hero-btn {
+  flex-direction: column;
+  width: 34%;
+  margin: auto;
+}
+
+.hero-section > p {
+    font-weight: 600;
+    font-size: 24px;
+    width: 62%;
+    margin: 19px auto;
+    line-height: 146%;
+  }
 }

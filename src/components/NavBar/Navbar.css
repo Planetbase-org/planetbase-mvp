@@ -23,6 +23,7 @@
 
 .nav > img {
     margin-right: 15px;
+    border-radius: 100%;
 }
 
 .na > p {
@@ -83,6 +84,10 @@
 .createEvents {
     display: flex;
     align-items: center;
+}
+
+.brand-name > img {
+    border-radius: 100%;
 }
 
 .login {
