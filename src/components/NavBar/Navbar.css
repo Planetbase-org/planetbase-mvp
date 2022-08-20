@@ -9,27 +9,29 @@
     color: black;
 }
 
-.navigation {
+.nav {
+    position: sticky;
     display: flex;
     align-items: center;
-    padding: 0 50px;
+    padding: 0.5rem 0.7rem;
     margin-top: 10px;
     background: #fff;
     margin: 0;
     z-index: 100;
+    border-bottom: 1px solid rgba(101, 97, 97, 0.381);
 }
 
-/* .navigation > img {
+.nav > img {
     margin-right: 15px;
 }
 
-.navigation > p {
+.na > p {
     font-size: 20px;
     font-weight: 400;
     font-style: normal;
     font-family: "Poppins";
     color: rgb(176, 20, 20);
-} */
+}
 
 .brand-name {
     text-decoration: none;
@@ -57,9 +59,8 @@
 
 .navigation-menu li a {
     text-decoration: none;
-    display: block;
     width: 100%;
-    font-size: 15px;
+    font-size: 16px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     color: rgb(20, 19, 19);
@@ -74,8 +75,9 @@
     border-radius: 3px;
     border: #17386E;
     font-size: 14px;
-    font-weight: 800;
+    font-weight: 400;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .createEvents {
