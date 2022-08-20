@@ -29,6 +29,13 @@
     color: inherit;
 }
 
+@media screen and (max-width:900px){
+    .footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .footer {
         flex-direction: column;

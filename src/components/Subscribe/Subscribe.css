@@ -1,9 +1,10 @@
 .subscribe {
     overflow: hidden;
-    padding-left: 50px;
-    padding-right: 50px;
-    background: #fff;
-  }
+    padding-left: 16px;
+    padding-right: 16px;
+    background: #5766901F;
+    z-index:2222;
+}
 
 .subscribe-header {
     display: flex;
@@ -94,10 +95,15 @@
 
 
 @media screen and (max-width:900px) {
+    .subscribe {
+        overflow: hidden;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 
     .subscribe-message>div {
         width: 100%;
-            line-height: 123%;
+        line-height: 123%;
 
     }
 
@@ -109,6 +115,12 @@
         flex-direction: column;
     }
 
+    .subscribe-header > h4 {
+        font-size: 18px;
+        font-family: "Sora", sans-serif;
+        font-weight: 400;
+        color: rgb(49, 47, 47);
+      }
     .subscribe-form>.subscribe-btn {
         width: 30%;
     }
@@ -131,9 +143,9 @@
 }
 
 @media screen and (max-width:600px) {
-    
+
     .subscribe-form {
-        width: 80%;
+        width: 90%;
     }
 
     .subscribe-message-text {

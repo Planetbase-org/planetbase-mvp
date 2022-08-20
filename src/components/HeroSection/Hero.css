@@ -129,6 +129,9 @@
 
 
 @media screen and (max-width:780px) {
+    .hero-section {
+        height: 90vh;
+      }
 
     .hero-section>h1 {
         font-size: 4.5vw;
