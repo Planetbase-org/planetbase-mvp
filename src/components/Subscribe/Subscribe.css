@@ -13,7 +13,6 @@
 }
 
 .subscribe-header>h4 {
-    font-family: "poppins", sans-serif;
     font-size: 25px;
     color: #000;
 }
@@ -32,7 +31,6 @@
 }
 
 .subscribe-message>div>h4 {
-    font-family: "inter", sans-serif;
     font-size: 18px;
     font-weight: 900;
     text-align: start;
@@ -40,7 +38,6 @@
 }
 
 .subscribe-message>div>p {
-    font-family: "poppins", sans-serif;
     font-size: 16px;
 }
 
@@ -75,7 +72,6 @@
 .subscribe-message-text {
     font-size: 12px !important;
     font-weight: bold;
-    font-family: "inter", sans-serif;
     color: rgb(37, 36, 36);
     font-family: 800;
 }
