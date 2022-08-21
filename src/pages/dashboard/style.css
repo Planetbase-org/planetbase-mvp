@@ -32,6 +32,7 @@
     align-items: center;
     background: #EBEBEB;
     border-radius: 5px;
+    margin: 22px 0;
 }
 
 .search-events>span {
@@ -54,10 +55,15 @@
     margin-top: 20px;
 }
 
-.event-rows > div > h3 {
-    font-weight: 500;
+.event-rows>div>h3 {
+    font-weight: 400;
 }
 
+.event-rows>div>div> p {
+    font-size: 15px;
+    font-weight: 400;
+    color: ;
+}
 .event-btn {
     float: right;
     margin-top: 50px;
@@ -302,4 +308,29 @@
     font-size: 15px;
     font-weight: 800;
     color: #fff;
+}
+
+@media screen and (max-width: 1110px) {
+    .event-container>h2 {
+        font-size: 24px;
+    }
+
+    .event-btn > a {
+        padding: 10px 10px;
+        font-size: 13px;
+      }
+}
+
+@media screen and (max-width: 900px) {
+
+    .event-input {
+        display: flex;
+        justify-content: center;
+        margin: 0px auto;
+    }
+
+    .search-events {
+        margin: 22px 0;
+        color: rgba(0, 0, 0, 0.792);
+    }
 }
