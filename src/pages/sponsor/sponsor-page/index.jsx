@@ -7,7 +7,7 @@ function SponsorPage () {
   return (
     <>
       <Nav />
-      <h4>Surpass Your Marketing Goals</h4>
+      <h2 className="page-header">Surpass Your Marketing Goals</h2>
       <form className='sponsorship-form'>
         <div className='sponsorship-form-control'>
           <div>
@@ -23,7 +23,7 @@ function SponsorPage () {
           <div>
             <p>Company Phone</p>
             <input type='tel' />
-          </div>
+          </div><br />
           <div>
             <p>Company Address</p>
             <textarea type='text' rows='10' />

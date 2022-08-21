@@ -10,6 +10,12 @@
   color: rgba(0, 0, 0, 0.792);
 }
 
+.page-header {
+  text-align: center;
+  margin: 40px 0;
+  font-weight: 500;
+
+}
 
 .sponsor-section {
   padding: 0 23px;
@@ -58,8 +64,12 @@
 .sponsorship-form {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 52%;
   margin: 0 auto;
+}
+
+.sponsorship-form-control > div {
+  margin: 15px;
 }
 
 .sponsorship-form-control > div > input {
@@ -67,6 +77,7 @@
   width: 100%;
   outline: none;
   border: 1px solid rgba(0, 0, 0, 0.55);
+  margin: 10px 0;
 }
 
 .sponsorship-form-control > div > textarea {
@@ -141,12 +152,16 @@
 }
 
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:978px) {
   .sponsorships-layout {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    }
+
+    .sponsorship-form {
+      flex-direction: column;
     }
 }
