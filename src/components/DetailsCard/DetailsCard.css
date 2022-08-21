@@ -1,24 +1,23 @@
 .card {
     display: flex;
     align-items: center;  
-    position: relative;
-    top: -44px;
+    margin: 0 0 30px 0;
 }
 
 .card-img>img {
     margin-right: 20px;
+    border-radius: 5px;
 }
 
-.card-details {
+.card-details > h5{
     font-family: "poppins", sans-serif;
+    font-weight: 500;
 }
 
-.card-details > .card-title{
-    font-size: 16px;
-}
-
-.card-details>p {
+.card-details > p{
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
     font-size: 14px;
-    top: -25px;
-    position: relative;
+    line-height: 146.5%;
 }
+
