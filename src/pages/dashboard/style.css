@@ -349,4 +349,8 @@
       .event-rows > div {
         margin: 15px 0
       }
+      .event-btn {
+        float: none;
+        margin-top: 50px;
+      }
 }
