@@ -55,7 +55,7 @@ input {
 
 
 .input-container > input {
-  width: 20%;
+  width: 30%;
   margin: 8px auto;
   padding: 10px 45px;
   outline: none;
@@ -79,6 +79,7 @@ input {
   border: 1px solid  #0F255F;
   width: 25%;
   font-size: 13px;
+  margin: 10px 0;
   font-family: "inter", sans-serif;
 }
 
@@ -103,3 +104,8 @@ input {
   color: #000;
 }
 
+@media screen and (max-width: 900px) {
+  .input-container > input {
+    width: 40%;
+  }
+}

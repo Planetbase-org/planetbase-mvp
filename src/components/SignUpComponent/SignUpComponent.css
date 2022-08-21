@@ -36,11 +36,11 @@
     margin: 0 auto;
 }
 
-.sign-up-link > p{
+.sign-up-link >a > p{
     position: relative;
     top: -5px;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 400;
     color: #000000;
 }
 
