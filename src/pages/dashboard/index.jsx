@@ -18,7 +18,7 @@ function EventProfile() {
 
   return (
     <EventLayout>
-      <div className="event-container">
+      <div className="event-container"><br />
         <h2>Eleanor's Organization Events</h2>
         <div className="search-events">
           <span>

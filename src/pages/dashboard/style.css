@@ -16,7 +16,12 @@
 }
 
 .event-container>h2 {
-    margin-top: 60px;
+    margin: 20px 0 30px 0;
+    font-weight: 400;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Poppins";
+    color: rgba(0, 0, 0, 0.792);
 }
 
 .search-events {
@@ -47,6 +52,10 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+}
+
+.event-rows > div > h3 {
+    font-weight: 500;
 }
 
 .event-btn {
