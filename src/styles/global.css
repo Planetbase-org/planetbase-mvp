@@ -34,6 +34,10 @@ a{
   margin: 0;
 }
 
+input {
+  font-family: "Poppins";
+}
+
 .layout-container {
   overflow: scroll;
   height: 100vh;
@@ -48,6 +52,7 @@ a{
   justify-items: center;
   background-color: #fff;
 }
+
 
 .input-container > input {
   width: 20%;
