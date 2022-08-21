@@ -1,22 +1,22 @@
-h1{
-    text-align: center;
-    font-size: 30px;
-    margin-top: 30px;
-}
 
-.signup {
+.sign-up {
     background: #fff;
     margin: 0;
     overflow: hidden;
 }
 
-.signup-header {
+.sign-up > h1 {
     text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+    font-weight: 500;
 }
 
+
 .signup-header {
+    text-align: center;
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 500;
     margin:28px;
     color: #000000;
 }
@@ -27,20 +27,20 @@ h1{
 }
 
 
-.signup-section {
+.sign-up-section {
     display: flex;
-    width: 15%;
+    width: 20%;
     align-items: center;
     justify-content: space-between;
     text-align: center;
     margin: 0 auto;
 }
 
-.signup-link > p{
+.sign-up-link > p{
     position: relative;
-    top: -10px;
+    top: -5px;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 500;
     color: #000000;
 }
 
