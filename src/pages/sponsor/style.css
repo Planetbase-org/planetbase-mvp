@@ -10,10 +10,6 @@
   color: rgba(0, 0, 0, 0.792);
 }
 
-/* .sponsorship-search {
-  border: 1px solid black;
-  margin: 50px auto;
-} */
 
 .sponsor-section {
   padding: 0 23px;
@@ -139,7 +135,18 @@
   background: #17386e;
   color: #fff;
   padding: 15px;
-  font-weight: 800;
+  font-weight: 500;
   font-family: "poppins", sans-serif;
   border-radius: 5px;
+}
+
+
+@media screen and (max-width:600px) {
+  .sponsorships-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
 }
