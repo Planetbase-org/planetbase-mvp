@@ -1,22 +1,46 @@
-h4 {
-    text-align: center;
-}
-
 .solution-layout {
     background: #fff;
     overflow: hidden;
 }
 
+.solution-layout>h4 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 18px;
+    margin: 30px;
+    font-family: "Poppins";
+    color: rgba(0, 0, 0, 0.792);
+}
+
+.card-details>p {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px 0;
+    color: rgba(0, 0, 0, 0.792);
+    line-height: 140.5%;
+}
+
+
 .event-card {
     border: 2px solid #8b7e7e57;
     border-radius: 5px;
-    padding:15px;
+    padding: 18px 10px;
     width: 30%;
     margin: 0 auto;
 }
 
-.event-card > h3 {
+.event-text {
+    line-height: 140.5%;
+    font-size: 15px;
+    margin: 10px 0;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.792);
+}
+
+.event-card>h3 {
     text-align: center;
+    color: rgba(0, 0, 0, 0.792);
 }
 
 .events {
@@ -27,6 +51,82 @@ h4 {
     margin: auto;
 }
 
-.events > .cards {
+.events>.cards {
     width: 40%;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .event-card {
+        width: 40%;
+    }
+
+    .card-details>p {
+        font-size: 14px;
+        font-weight: 400;
+        margin: 5px 0;
+        color: rgba(0, 0, 0, 0.792);
+        width: 90%;
+    }
+
+    .card-details>h5 {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 5px 0;
+    }
+
+    .events {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .card-details>p {
+        font-size: 14px;
+        font-weight: 400;
+        margin: 5px 0;
+        color: rgba(0, 0, 0, 0.792);
+    }
+
+    .event-text {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 830px) {
+    .event-card {
+        border: 2px solid #8b7e7e57;
+        border-radius: 5px;
+        padding: 18px 10px;
+        width: 50%;
+        margin: 0 auto;
+    }
+    .event-card {
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .event-card {
+        border: 2px solid #8b7e7e57;
+        border-radius: 5px;
+        padding: 18px 10px;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
+    .event-card {
+        border: 2px solid #8b7e7e57;
+        border-radius: 5px;
+        padding: 18px 10px;
+        width: 60%;
+        margin: 0 auto;
+    }
 }

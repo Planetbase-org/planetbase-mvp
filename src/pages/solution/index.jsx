@@ -14,7 +14,7 @@ function Solution() {
                 <h4>What is the Latest</h4>
                 <div className="event-card">
                     <h3>Monthly Brand Update</h3>
-                    <p>Read About Planetbase brand  updates that help
+                    <p className="event-text">Read About Planetbase brand  updates that help
                         with audience engagement, data and insights,
                         production quality, hybrid solution and more.....</p>
                 </div>
@@ -28,7 +28,7 @@ function Solution() {
                     <DetailsCard
                         img={Product2}
                         header="In-person Events"
-                        description="Create incredible experiences for your digitalaudience"
+                        description="Create incredible experiences for your digital audience"
                     />
                 </div>
                 <div className="events">
@@ -40,7 +40,7 @@ function Solution() {
                     <DetailsCard
                         img={Product4}
                         header="Internal Events"
-                        description="Produce professional, high -quality streams withease"
+                        description="Produce professional, high -quality streams with ease"
                     />
                 </div>
             </div>
