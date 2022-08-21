@@ -85,6 +85,7 @@
   width: 100%;
   outline: none;
   resize: none;
+  margin: 10px 0;
 }
 
 .sponsor-login-btn {
