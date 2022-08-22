@@ -27,7 +27,7 @@ function Sponsor ({ cards, index }) {
         </div><br />
         <SponsorCard cards={cards} index={index} />
         <div className='sponsor-btn-continue'>
-          <button className='btn-primary'>
+          <button className='btn-primary' type="submit">
             <span>Continue</span>
           </button>
         </div>
