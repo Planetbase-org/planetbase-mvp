@@ -320,6 +320,9 @@
     .event-btn > a {
         padding: 10px 10px;
         font-size: 13px;
+        width: 54%;
+        display: block;
+        text-align: center;
       }
 }
 
@@ -351,6 +354,20 @@
       }
       .event-btn {
         float: none;
-        margin-top: 50px;
+        margin: 10px 0;
+        width: 80%;
+      }
+
+      .event-container {
+        width: 100%;
+      }
+
+      .event-rows > div > h3 {
+        font-weight: 400;
+        font-size: 16px;
+      }
+      .event-rows > div > div > p {
+        font-weight: 300;
+        font-size: 15px;
       }
 }
