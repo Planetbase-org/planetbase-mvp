@@ -133,7 +133,7 @@ function EditEvent() {
               <div className="form-checkbox">
                 <div>
                   <input
-                    type="checkbox"
+                    type="radio"
                     name="status1"
                     id="status1"
                     onChange={onChange}
@@ -143,7 +143,7 @@ function EditEvent() {
                 </div>
                 <div>
                   <input
-                    type="checkbox"
+                    type="radio"
                     name="status2"
                     id="status2"
                     onChange={onChange}

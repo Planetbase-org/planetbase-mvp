@@ -66,6 +66,14 @@
     font-weight: 400;
 }
 
+.event-form > h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Sora", sans-serif;
+    margin: 41px 0;
+}
+
+
 .event-btn {
     float: right;
     margin-top: 50px;
@@ -93,9 +101,16 @@
     margin: 0 auto;
 }
 
+
+
+.form-control > div > p {
+    margin: 20px 0;
+    font-weight: 400;
+}
+/* 
 .form-control>div>p {
     font-weight: 700;
-}
+} */
 
 .details>p {
     font-weight: 700;
@@ -315,6 +330,10 @@
 @media screen and (max-width: 1110px) {
     .event-container>h2 {
         font-size: 24px;
+    }
+
+    .event-form > h1 {
+
     }
 
     .event-btn > a {
