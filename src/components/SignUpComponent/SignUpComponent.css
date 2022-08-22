@@ -49,10 +49,20 @@
     .sign-up-section {
         width: 37%;
     }
+
+    .signup-header {
+        font-size: 15px;
+        font-weight: 400;
+      }
+
+      .input-container > input {
+        font-size: 13px;
+      }
 }
 
 @media screen and (max-width:500px) {
     .sign-up-section {
         width: 50%;
     }
+
 }

@@ -116,8 +116,9 @@ input {
   }
 
   .input-container > button {
-    width: 30%;
-  }
+    width: 40%;
+    cursor: pointer;
+  }  
  
   .checkbox-container{
     width: 70%;
