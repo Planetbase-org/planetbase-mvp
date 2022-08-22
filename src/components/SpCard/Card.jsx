@@ -1,21 +1,23 @@
 import React, { useState } from "react";
 import "./Card.css";
 import { cards } from "../../utils/sponsorslist";
-import Modal from "../Modal/SponsorModal";
+import Modal from "../Modal/Modal";
+import SponsorModal from "../Modal/SponsorModal";
 
 function Card() {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleModal = ()=> setIsOpen(!Open)
+  const toggleModal = () => setIsOpen(!isOpen);
+
   return (
     <>{
       isOpen && (
-        <Modal isOpen onClose={toggleModal}>
-          helo
+        <Modal isOpen={isOpen}  onClose={toggleModal}>
+          <SponsorModal onClose={toggleModal}/>
         </Modal>
       )
     }
       {cards.map((card, index) => (
-        <div key={index} className="sp-card">
+        <div key={index} className="sp-card" onClick={toggleModal}>
           <img
             src={card.img}
             alt="image"
