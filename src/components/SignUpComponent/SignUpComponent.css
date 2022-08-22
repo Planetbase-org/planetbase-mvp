@@ -45,5 +45,14 @@
 }
 
 
+@media screen and (max-width:900px) {
+    .sign-up-section {
+        width: 37%;
+    }
+}
 
-
+@media screen and (max-width:500px) {
+    .sign-up-section {
+        width: 50%;
+    }
+}
