@@ -8,3 +8,42 @@
     align-items: center;
     justify-content: center;
 }
+
+.modal-layout > div {
+    width: 40%;
+    line-height: 146%;
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.479);
+    
+}
+
+.modal-layout > div > h4 {
+    text-align: center;
+    margin: 10px 0;
+    font-family: "Sora", sans-serif;
+    font-weight: 600;
+}
+
+
+.modal-layout > div > .address {
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    margin: 13px 0;
+}
+
+.modal-layout > div > h5 {
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    margin: 13px 0;
+}
+
+.modal-layout > div > p {
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    margin: 13px 0;
+}

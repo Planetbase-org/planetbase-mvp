@@ -7,6 +7,7 @@
     padding: 0.5rem 0rem;
     background-color: #fff;
     color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.182);
 }
 
 .nav {
