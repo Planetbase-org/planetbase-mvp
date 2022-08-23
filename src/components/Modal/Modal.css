@@ -14,10 +14,13 @@
     line-height: 146%;
     background: #fff;
     border-radius: 5px;
-    padding: 10px;
     border: 1px solid rgba(0, 0, 0, 0.479);
-    
+    overflow-y: scroll;
 }
+
+.sponsor-image {
+    width: 100%;
+  }
 
 .modal-layout > div > h4 {
     text-align: center;
@@ -25,6 +28,15 @@
     font-family: "Sora", sans-serif;
     font-weight: 600;
 }
+
+.modal-layout > div > p {
+    text-align: center;
+    margin: 10px 0;
+    font-family: "Sora", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+}
+
 
 
 .modal-layout > div > .address {
@@ -39,6 +51,7 @@
     font-family: "Poppins", sans-serif;
     font-size: 17px;
     margin: 13px 0;
+    text-align: center;
 }
 
 .modal-layout > div > p {
