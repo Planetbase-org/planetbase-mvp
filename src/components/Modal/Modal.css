@@ -60,3 +60,24 @@
     font-size: 14px;
     margin: 13px 0;
 }
+
+@media screen and (max-width: 900px){
+    .modal-layout > div {
+        width: 50%;
+      }
+}
+
+@media screen and (max-width:600px){
+
+    .modal-layout > div > p {
+        font-weight: 400;
+        font-family: "Poppins", sans-serif;
+        font-size: 13px;
+        margin: 13px 0;
+      }
+
+      .modal-layout > div {
+        width: 60%;
+      }
+}
+
