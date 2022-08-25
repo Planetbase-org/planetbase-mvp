@@ -21,11 +21,7 @@ const eventSlice = createSlice({
       state.title = action.payload;
       state.categories = action.payload;
       state.event = action.payload;
-      // state.tag = action.payload;
-      const newTag = {
-        name: action.payload.tag
-      };
-      state.events.push(newTag);
+      state.tag = action.payload;
       state.guest = action.payload;
       state.date = action.payload;
       state.status1 = true;

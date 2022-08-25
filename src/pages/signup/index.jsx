@@ -11,7 +11,12 @@ function SignUp() {
         email: '',
         password: '',
         password2: '',
+        checkbox: false,
     })
+
+    function onChange(params) {
+        
+    }
 
     return (
         <Layout>
@@ -19,16 +24,59 @@ function SignUp() {
                 <p className="signup-header">Let's setup an account for you</p>
             </SignUpComponent>
             <div className='input-container'>
-                <input type="text" name='fname' id='fname' placeholder='First Name' />
-                <input type="text" name='lname' id='lname' placeholder='Last Name' />
-                <input type="email" name='email' id='email' placeholder='Email Address' />
-                <input type="password" name='password' id='password' placeholder='Password' />
-                <input type="password" name='password2' id='password2' placeholder='Confirm Password' />
+                <input
+                    type="text"
+                    name='fname'
+                    id='fname'
+                    placeholder='First Name'
+                    value={fname}
+                    onChange={onChange}
+                />
+                <input
+                    type="text"
+                    name='lname'
+                    id='lname'
+                    placeholder='Last Name'
+                    value={lname}
+                    onChange={onChange}
+                />
+                <input
+                    type="email"
+                    name='email'
+                    id='email'
+                    placeholder='Email Address'
+                    value={email}
+                    onChange={onChange}
+                />
+                <input
+                    type="password"
+                    name='password'
+                    id='password'
+                    placeholder='Enter Password'
+                    value={password}
+                    onChange={onChange}
+                />
+                <input
+                    type="password"
+                    name='password2'
+                    id='password2'
+                    placeholder='Confirm Password'
+                    value={password2}
+                    onChange={onChange}
+                />
                 <div className='checkbox-container'>
-                    <input type="checkbox" name="checkbox" id="checkbox"/>
+                    <input
+                        type="checkbox"
+                        name="checkbox"
+                        id="checkbox"
+                        value={checkbox}
+                        onChange={onChange}
+                    />
                     <p>Send me product updates and marketing communications from Planetbase</p>
                 </div>
-                <button type="submit" className="input-button">Sign Up</button>
+                <button
+                    type="submit"
+                    className="input-button">Sign Up</button>
             </div>
         </Layout>
     )
