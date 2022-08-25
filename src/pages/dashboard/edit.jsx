@@ -12,7 +12,7 @@ function EditEvent () {
     const storedValues = localStorage.getItem('events')
     if (!storedValues)
       return {
-        title: '',
+        title: [],
         categories: '',
         events: '',
         guest: '',
@@ -27,7 +27,7 @@ function EditEvent () {
   }
 
   const [value, setValue] = useState(getFormValues)
-  const [tags, setTags] = useState('')
+  const [tags, setTags] = useState([])
 
   useEffect(() => {
     localStorage.setItem('event', JSON.stringify(value, null, 2))
@@ -35,10 +35,7 @@ function EditEvent () {
 
   function onSubmit (e) {
     e.preventDefault()
-    dispatch(events({
-      events: value
-    }));
-    setValue(value)
+    dispatch(events(value))
     navigate('/organizer')
   }
 
@@ -60,7 +57,6 @@ function EditEvent () {
   function removeTag (index) {
     setTags(tags.filter((el, i) => i !== index))
   }
-  
 
   return (
     <EventLayout>
@@ -88,8 +84,8 @@ function EditEvent () {
                   onChange={onChange}
                 >
                   <option value={value.categories}>{value.categories}</option>
-                  <option value='events'>Events</option>
-                  <option value='projects'>Projects</option>
+                  <option value={value.events}>Events</option>
+                  <option value={value.projects}>Projects</option>
                 </select>
               </div>
             </div>
@@ -224,7 +220,7 @@ function EditEvent () {
             </div>
           </div>
           <div className='update-event'>
-            <button type='button' className='btn-primary'>
+            <button type='submit' className='btn-primary'>
               <span>Save and continue</span>
             </button>
           </div>
