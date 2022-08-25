@@ -15,11 +15,11 @@ function EditEvent() {
         title: "",
         categories: "",
         events: "",
-        guest: "",
+        guest: 0,
         date: "",
         status1: false,
         status2: false,
-        price: "",
+        price: 0,
         description: "",
         sponsorship: "",
       };
