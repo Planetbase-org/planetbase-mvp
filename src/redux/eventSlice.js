@@ -1,17 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-      title: "",
-      categories: "",
-      event: "",
-      guest: 0,
-      date: "",
-      status1: false,
-      status2: false,
-      price: 0,
-      description: "",
-  }
-
+  title: "",
+  categories: "",
+  event: "",
+  guest: 0,
+  date: "",
+  status1: false,
+  status2: false,
+  price: 0,
+  description: "",
+  sponsorship: "",
+};
 
 const eventSlice = createSlice({
   name: "events",
@@ -21,11 +21,11 @@ const eventSlice = createSlice({
       state.title = action.payload;
       state.categories = action.payload;
       state.event = action.payload;
-      state.guest = action.payload;
+      state.guest = +1;
       state.date = action.payload;
       state.status1 = true;
       state.status2 = true;
-      state.price = action.payload;
+      state.price = +1;
       state.description = action.payload;
       state.sponsorship = action.payload;
     },

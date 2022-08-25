@@ -3,7 +3,7 @@ import SignUpComponent from '../../components/SignUpComponent/SignUpComponent';
 import Layout from '../../layouts/signup-registation';
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import { register, reset} from "../../redux/auth/authSlice"
 import { useDispatch, useSelector } from 'react-redux';

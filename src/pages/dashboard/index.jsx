@@ -5,13 +5,19 @@ import './style.css'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { saveEvent } from '../../redux/eventSlice'
+
 
 function EventProfile () {
   const [firstTime, setFirstTime] = useState()
   const dispatch = useDispatch()
 
-  const { events } = useSelector(state => state.events)
-  const navigate = useNavigate()
+  const {events}  = useSelector(state => state.events)
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    dispatch(saveEvent(events))
+  }, []);
 
   // to check to see if a vendor has created a profile page
   console.log(useSelector(store => console.log(store)))
@@ -31,7 +37,7 @@ function EventProfile () {
           <div>
             <h3>Events</h3>
             <div>
-              <p>{'No data' || events.title}</p>
+              <p>{events?.guests}</p>
             </div>
           </div>
           <div>

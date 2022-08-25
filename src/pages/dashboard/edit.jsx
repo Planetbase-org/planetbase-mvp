@@ -30,8 +30,8 @@ function EditEvent() {
   // const [tags, setTags] = useState([]);
 
   useEffect(() => {
-    localStorage.setItem("event", JSON.stringify(value, null, 2));
-  }, [value, dispatch, setValue]);
+    localStorage.setItem("event", JSON.stringify(value));
+  }, [value]);
 
   function onSubmit(e) {
     e.preventDefault();
@@ -126,11 +126,11 @@ function EditEvent() {
             <div className="form-control">
               <div className="form-details">
                 <div className="details">
-                  <p>Expected Number of guests</p>
+                  <p>Expected text of guests</p>
                   <input
-                    type="number"
-                    name="number"
-                    id="number"
+                    type="text"
+                    name="guest"
+                    id="guest"
                     onChange={onChange}
                     value={value.guest}
                   />
@@ -174,7 +174,7 @@ function EditEvent() {
                 <div className="price">
                   <p>Price</p>
                   <input
-                    type="number"
+                    type="text"
                     placeholder="₦"
                     id="price"
                     name="price"
