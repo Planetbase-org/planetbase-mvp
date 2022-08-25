@@ -159,7 +159,7 @@
     outline: none;
     width: 100%;
     font-size: 12px;
-    font-family: "poppins";
+    font-family: "Poppins";
     font-weight: 700;
 }
 
@@ -212,7 +212,7 @@
     padding: 14px 31px;
     cursor: pointer;
     font-size: 12px;
-    font-family: "poppins";
+    font-family: "Poppins";
     font-weight: 700;
 }
 
@@ -234,7 +234,7 @@
     border: 1px solid gray;
     outline: none;
     font-size: 12px;
-    font-family: "poppins";
+    font-family: "Poppins";
     font-weight: 700;
     padding: 5px;
 }
