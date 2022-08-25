@@ -16,8 +16,11 @@ function SignUp() {
 
     const {fname,lname,email, password, password2, checkbox} = formData;
 
-    function onChange(params) {
-        
+    function onChange(e) {
+        setFormData((prevState) => ({
+            ...prevState,
+            [e.target.name]: e.target.value,
+        }))
     };
 
     function onSubmit(e) {
