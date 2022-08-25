@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import {Home, Product,Solution, Login, SignUp, Support, EventProfile, EditEvent, Sponsor, SponsorPage, SponsorBid} from "./pages/index";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/support" element={<Support />}></Route>
         </Routes>
       </Router>
+      <ToastContainer/>
     </>
   );
 }
