@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import { register, reset} from "../../redux/auth/authSlice"
 
 
 function SignUp() {
@@ -18,7 +19,26 @@ function SignUp() {
         checkbox: false,
     });
 
-    const {fname,lname,email, password, password2, checkbox} = formData;
+    const { fname, lname, email, password, password2, checkbox } = formData;
+    
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    const { user, isLoading, isError, isSuccess, message } = useSelector(
+        (state) => state.auth
+    );
+
+    useEffect(() => { 
+        if (isError) {
+            toast.error(message)
+        };
+
+        if (isSuccess) { 
+            navigate('/');
+        }
+        dispatch(reset());
+
+    },[user, isError, isSuccess, message, navigate, dispatch])
 
     function onChange(e) {
         setFormData((prevState) => ({
@@ -29,8 +49,22 @@ function SignUp() {
 
     function onSubmit(e) {
         e.preventDefault();
+        if (password !== password2) {
+            toast.error("Password do not match")
+        } else {
+            const userData = {
+                fname,
+                lname,
+                email,
+                password,
+            }
+            dispatch(register(userData))
+        }
     }
 
+    if (isLoading) {
+        return ("loading")
+    }
     return (
         <Layout>
             <SignUpComponent header="Sign up to Planetbase." >
