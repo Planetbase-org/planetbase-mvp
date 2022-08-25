@@ -132,7 +132,7 @@ function EditEvent() {
                     name="number"
                     id="number"
                     onChange={onChange}
-                    value={value.number}
+                    value={value.guest}
                   />
                 </div>
               </div>
