@@ -16,6 +16,10 @@ function SignUp() {
 
     function onChange(params) {
         
+    };
+
+    function onSubmit(e) {
+        e.preventDefault();
     }
 
     return (
@@ -23,7 +27,7 @@ function SignUp() {
             <SignUpComponent header="Sign up to Planetbase." >
                 <p className="signup-header">Let's setup an account for you</p>
             </SignUpComponent>
-            <div className='input-container'>
+            <form className='input-container'>
                 <input
                     type="text"
                     name='fname'
@@ -77,7 +81,7 @@ function SignUp() {
                 <button
                     type="submit"
                     className="input-button">Sign Up</button>
-            </div>
+            </form>
         </Layout>
     )
 }
