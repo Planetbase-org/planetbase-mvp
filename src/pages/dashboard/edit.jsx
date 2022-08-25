@@ -12,7 +12,7 @@ function EditEvent () {
     const storedValues = localStorage.getItem('events')
     if (!storedValues)
       return {
-        title: [],
+        title: '',
         categories: '',
         events: '',
         guest: '',
@@ -27,7 +27,7 @@ function EditEvent () {
   }
 
   const [value, setValue] = useState(getFormValues)
-  const [tags, setTags] = useState([])
+  const [tags, setTags] = useState('')
 
   useEffect(() => {
     localStorage.setItem('event', JSON.stringify(value, null, 2))
@@ -35,7 +35,10 @@ function EditEvent () {
 
   function onSubmit (e) {
     e.preventDefault()
-    dispatch(events(value))
+    dispatch(events({
+      events: value
+    }));
+    setValue(value)
     navigate('/organizer')
   }
 
@@ -57,6 +60,7 @@ function EditEvent () {
   function removeTag (index) {
     setTags(tags.filter((el, i) => i !== index))
   }
+  
 
   return (
     <EventLayout>
