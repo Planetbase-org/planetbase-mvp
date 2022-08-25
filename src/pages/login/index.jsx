@@ -5,15 +5,10 @@ import { useState, useEffect } from "react";
 function Login() {
 
     const [formData, setFormData] = useState({
-        fname: '',
-        lname: '',
         email: '',
         password: '',
-        password2: '',
-        checkbox: false,
     });
-
-    const {fname,lname,email, password, password2, checkbox} = formData;
+    const {email, password} = formData;
 
     function onChange(e) {
         setFormData((prevState) => ({
@@ -27,12 +22,27 @@ function Login() {
     }
     return (
         <Layout>
-            <div className='input-container'>
-                <input type="email" name='email' id='email' placeholder='Email Address' />
-                <input type="password" name='password' id='password' placeholder='Password' />
+            <form className='input-container' onSubmit={onSubmit}>
+                <input
+                    type="email"
+                    name='email'
+                    id='email'
+                    placeholder='Email Address'
+                    value={email}
+                    onChange={onChange}
+                />
+                <input
+                    type="password"
+                    name='password'
+                    id='password'
+                    placeholder='Password'
+                    onAbort={onChange}
+                />
                 <p>Forgot Password ?</p>
-                <button type="submit" className="input-button">Sign In</button>
-            </div>
+                <button
+                    type="submit"
+                    className="input-button">Sign In</button>
+            </form>
         </Layout>
     )
 }
