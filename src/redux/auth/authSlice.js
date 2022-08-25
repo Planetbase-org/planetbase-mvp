@@ -31,8 +31,24 @@ export const authSlice = createSlice({
             state.message = '';
         }
     },
-    extraReducers: () => {
-        
+    extraReducers: (builder) => {
+        //async thunk function
+        builder
+            .addCase(register.pending, (state) => {
+                state.isLoading = true;
+            })
+            .addCase(register.fulfilled, (state) => {
+                state.isLoading = false;
+                state.isSuccess = true;
+                state.user = action.payload
+            })
+            .addCase(() => {
+                state.isLoading = false,
+                state.isError = true,
+                state.message = action.payload,
+                state.user = null
+            }
+        )
     }
 })
 
