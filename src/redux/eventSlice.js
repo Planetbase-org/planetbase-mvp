@@ -18,7 +18,7 @@ const eventSlice = createSlice({
   name: "events",
   initialState,
   reducers: {
-    events: (state, action) => {
+    saveEvent: (state, action) => {
       state.title = action.payload;
       state.categories = action.payload;
       state.event = action.payload;
@@ -33,5 +33,5 @@ const eventSlice = createSlice({
   },
 });
 
-export const { events } = eventSlice.actions;
+export const { saveEvent } = eventSlice.actions;
 export default eventSlice.reducer;
