@@ -1,16 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  title: "",
-  categories: "",
-  event: "",
-  guest: "",
-  date: "",
-  status1: false,
-  status2: false,
-  price: "",
-  description: "",
-};
+  event: {
+      title: "",
+      categories: "",
+      event: "",
+      guest: "",
+      date: "",
+      status1: false,
+      status2: false,
+      price: "",
+      description: "",
+  }
+}
 
 const eventSlice = createSlice({
   name: "events",
