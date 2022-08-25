@@ -12,7 +12,9 @@ function SignUp() {
         password: '',
         password2: '',
         checkbox: false,
-    })
+    });
+
+    const {fname,lname,email, password, password2, checkbox} = formData;
 
     function onChange(params) {
         
@@ -27,7 +29,7 @@ function SignUp() {
             <SignUpComponent header="Sign up to Planetbase." >
                 <p className="signup-header">Let's setup an account for you</p>
             </SignUpComponent>
-            <form className='input-container'>
+            <form className='input-container' onSubmit={onSubmit}>
                 <input
                     type="text"
                     name='fname'
