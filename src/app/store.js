@@ -4,8 +4,9 @@ import eventReducer from '../redux/eventSlice';
 
 export const store = configureStore({
     reducer: {
-        events: eventReducer,
+        event: eventReducer,
         auth: authReducer
     },
 })
+
 

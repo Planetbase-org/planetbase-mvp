@@ -12,11 +12,11 @@ function EventProfile () {
   const [firstTime, setFirstTime] = useState()
   const dispatch = useDispatch()
 
-  const {events}  = useSelector(state => state.events)
+  const {event}  = useSelector(state => state.event)
   const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(saveEvent(events))
+    dispatch(saveEvent(event))
   }, []);
 
   // to check to see if a vendor has created a profile page
@@ -37,7 +37,7 @@ function EventProfile () {
           <div>
             <h3>Events</h3>
             <div>
-              <p>{events?.guests}</p>
+              <p>{event?.title|| "no update"}</p>
             </div>
           </div>
           <div>
