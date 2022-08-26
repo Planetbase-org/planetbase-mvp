@@ -49,7 +49,7 @@ function EventProfile () {
           <div>
             <h3>Status</h3>
             <div>
-              <p>No Event</p>
+              <p>{ event?.categories || "No Events"}</p>
             </div>
           </div>
         </div>

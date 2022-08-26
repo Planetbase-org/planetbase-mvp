@@ -6,12 +6,12 @@ import "./Navbar.css"
 function Nav() {
     return (
         <nav>
-            <Link to="/">
                 <div  className="nav">
+            <Link to="/" className="navbar-brand">
                     <img src={Planetbase} alt="planetbase" />
                     <p>PLANETBASE</p>
-                </div>
             </Link>
+                </div>
         </nav>
     )
 }

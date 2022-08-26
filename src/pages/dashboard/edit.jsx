@@ -90,8 +90,8 @@ function EditEvent() {
                   onChange={onChange}
                 >
                   <option value={value.categories}>{value.categories}</option>
-                  <option value={value.events}>Events</option>
-                  <option value={value.projects}>Projects</option>
+                  <option>Events</option>
+                  <option>Projects</option>
                 </select>
               </div>
             </div>
