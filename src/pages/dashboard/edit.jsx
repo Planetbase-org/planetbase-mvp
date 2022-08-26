@@ -27,7 +27,7 @@ function EditEvent() {
   }
 
   const [value, setValue] = useState(getFormValues);
-  
+
   useEffect(() => {
     localStorage.setItem("event", JSON.stringify(value));
   }, [value]);
@@ -44,12 +44,11 @@ function EditEvent() {
       [e.target.name]: e.target.value,
     }));
   }
-  console.log('====================================')
+  console.log("====================================");
   console.log(value.categories);
-  console.log('====================================')
+  console.log("====================================");
 
- 
-  const options = ['Event', 'Project'];
+  const options = ["Event", "Project"];
 
   return (
     <EventLayout>
@@ -77,11 +76,9 @@ function EditEvent() {
                   onChange={onChange}
                 >
                   <option>Please choose one option</option>
-                    {options.map((option, index) => {
-                        return <option key={index}>
-                            {option} 
-                        </option>
-                    })}
+                  {options.map((option, index) => {
+                    return <option key={index}>{option}</option>;
+                  })}
                 </select>
               </div>
             </div>
@@ -95,62 +92,57 @@ function EditEvent() {
                   onChange={onChange}
                   value={value.events}
                 />
-              </div> <div className="details">
-                  <p>Scheduled date</p>
-                  <input
-                    type="date"
-                    id="date"
-                    name="date"
-                    onChange={onChange}
-                    value={value.date}
-                  />
-                </div>
-              <div className="form-checkbox">
-                <div>
-                  <input
-                    type="radio"
-                    name="status1"
-                    id="status1"
-                    onChange={onChange}
-                    checked={value.status1}
-                  />
+              </div>{" "}
+              <div className="details">
+                <p>Scheduled date</p>
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  onChange={onChange}
+                  value={value.date}
+                />
+              </div>
+            </div>
+            <div className="form-control">
+              <div className="radio">
+                <label>
+                  {/* <input
+                      type="radio"
+                      name="status1"
+                      id="status1"
+                      onChange={onChange}
+                      checked={value.status1}
+                    /> */}
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
                   <p>Online</p>
-                </div>
-                <div>
-                  <input
+                </label>
+                <label>
+                  {/* <input
                     type="radio"
                     name="status2"
                     id="status2"
                     onChange={onChange}
                     checked={value.status2}
-                  />
+                  /> */}
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
                   <p>Physical</p>
-                </div>
+                </label>
               </div>
             </div>
             <div className="form-control">
-              <div>
-                <div className="details">
-                  <p>Scheduled date</p>
-                  <input
-                    type="date"
-                    id="date"
-                    name="date"
-                    onChange={onChange}
-                    value={value.date}
-                  />
-                </div>
-                <div className="price">
-                  <p>Price</p>
-                  <input
-                    type="text"
-                    placeholder="₦"
-                    id="price"
-                    name="price"
-                    onChange={onChange}
-                    value={value.price}
-                  />
-                </div>
+              <div className="price">
+                <p>Price</p>
+                <input
+                  type="text"
+                  placeholder="₦"
+                  id="price"
+                  name="price"
+                  onChange={onChange}
+                  value={value.price}
+                />
               </div>
             </div>
           </div>
@@ -195,9 +187,7 @@ function EditEvent() {
             </div>
           </div>
           <div className="update-event">
-            <button
-              type="submit"
-              className="btn-primary">
+            <button type="submit" className="btn-primary">
               <span>Save and continue</span>
             </button>
           </div>

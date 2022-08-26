@@ -5,7 +5,7 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
 }
 
 .event-container {
@@ -15,7 +15,7 @@
     height: 100vh;
     width: 70%;
     margin: 0 auto;
-  }
+}
 
 .event-container>h2 {
     margin: 20px 0 30px 0;
@@ -61,12 +61,12 @@
     font-weight: 400;
 }
 
-.event-rows>div>div> p {
+.event-rows>div>div>p {
     font-size: 15px;
     font-weight: 400;
 }
 
-.event-form > h1 {
+.event-form>h1 {
     text-align: center;
     font-size: 30px;
     font-family: "Sora", sans-serif;
@@ -76,13 +76,13 @@
 
 
 .event-btn {
-        float: right;
-        margin-top: 50px;
-        width: 100%;
-        display: flex;
-        align-items: end;
-        justify-content: flex-end;
-      }
+    float: right;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+}
 
 
 .event-btn>a {
@@ -109,7 +109,7 @@
 
 
 
-.form-control > div > p {
+.form-control>div>p {
     margin: 15px 0;
     font-weight: 600;
     font-size: 19px;
@@ -178,22 +178,24 @@
     display: flex;
 }
 
-.form-checkbox {
+.radio {
     display: flex;
     align-items: center;
+    margin: 15px 
 }
 
-.form-checkbox>div {
+.radio>label {
     display: flex;
     margin-right: 20px;
 }
 
-.form-checkbox>div>p {
+.radio>label>p {
     font-weight: 700;
 }
 
-.form-checkbox>div>input {
+.radio>label>input {
     cursor: pointer;
+    margin-right: 10px;
 }
 
 /**tags*/
@@ -218,13 +220,15 @@
 }
 
 .select-events {
-    border: 1px solid rgba(128, 128, 128, 0.913);
+    padding: 15px 30px;
     border-radius: 5px;
-    padding: 14px 31px;
-    cursor: pointer;
-    font-size: 12px;
+    border: 1px solid #24242461;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
     font-family: "Poppins";
-    font-weight: 700;
+    font-weight: 500;
+    margin-bottom: 15px;
 }
 
 .description {
@@ -347,17 +351,15 @@
         font-size: 24px;
     }
 
-    .event-form > h1 {
+    .event-form>h1 {}
 
-    }
-
-    .event-btn > a {
+    .event-btn>a {
         padding: 10px 10px;
         font-size: 13px;
         width: 30%;
         display: block;
         text-align: center;
-      }
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -375,33 +377,35 @@
 
     .event-container {
         width: 86%;
-      }
+    }
 }
 
 @media screen and (max-width: 600px) {
     .event-rows {
         flex-direction: column;
-      }
+    }
 
-      .event-rows > div {
+    .event-rows>div {
         margin: 15px 0
-      }
-      .event-btn {
+    }
+
+    .event-btn {
         float: none;
         margin: 10px 0;
         width: 80%;
-      }
+    }
 
-      .event-container {
+    .event-container {
         width: 100%;
-      }
+    }
 
-      .event-rows > div > h3 {
+    .event-rows>div>h3 {
         font-weight: 400;
         font-size: 16px;
-      }
-      .event-rows > div > div > p {
+    }
+
+    .event-rows>div>div>p {
         font-weight: 300;
         font-size: 15px;
-      }
+    }
 }
