@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   title: "",
-  categories: "",
+  categories: [],
   event: "",
   guest: 0,
   date: "",
@@ -21,11 +21,11 @@ const eventSlice = createSlice({
       state.title = action.payload;
       state.categories = action.payload;
       state.event = action.payload;
-      // state.guest = +1;e
-      // state.date = action.payload;
-      // state.status1 = true;
-      // state.status2 = true;
-      // state.price = +1;
+      state.guest = +1;
+      state.date = action.payload;
+      state.status1 = true;
+      state.status2 = true;
+      state.price = +1;
       state.description = action.payload;
       state.sponsorship = action.payload;
     },

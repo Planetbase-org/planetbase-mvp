@@ -43,13 +43,13 @@ function EventProfile () {
           <div>
             <h3>Date</h3>
             <div>
-              <p>{event?.date||"No Event"}</p>
+              <p>{event?.date||"No Date"}</p>
             </div>
           </div>
           <div>
-            <h3>Status</h3>
+            <h3>Categories</h3>
             <div>
-              <p>{ event?.categories || "No Events"}</p>
+              <p>{ event?.categories || "No Categories"}</p>
             </div>
           </div>
         </div>

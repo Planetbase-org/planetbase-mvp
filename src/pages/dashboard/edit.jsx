@@ -13,8 +13,8 @@ function EditEvent() {
     if (!storedValues)
       return {
         title: "",
-        categories: "",
-        events: "",
+        categories: {},
+        event: "",
         guest: 0,
         date: "",
         status1: false,
@@ -27,8 +27,7 @@ function EditEvent() {
   }
 
   const [value, setValue] = useState(getFormValues);
-  // const [tags, setTags] = useState([]);
-
+  
   useEffect(() => {
     localStorage.setItem("event", JSON.stringify(value));
   }, [value]);
@@ -39,30 +38,18 @@ function EditEvent() {
     navigate("/organizer");
   }
 
-  // const onChange = e => {
-  //   setValue(prevValues => ({
-  //     ...prevValues,
-  //     [e.target.name]: e.target.value
-  //   }))
-  // }
   function onChange(e) {
     setValue((prevValues) => ({
       ...prevValues,
       [e.target.name]: e.target.value,
     }));
   }
+  console.log('====================================')
+  console.log(value.categories);
+  console.log('====================================')
 
-  // function handleKeyDown (e) {
-  //   if (e.key !== 'Enter') return
-  //   const value = e.target.value
-  //   if (!value.trim()) return
-  //   setTags([...tags, value])
-  //   e.target.value = ''
-  // }
-
-  // function removeTag (index) {
-  //   setTags(tags.filter((el, i) => i !== index))
-  // }
+ 
+  const options = ['Event', 'Project'];
 
   return (
     <EventLayout>
@@ -84,14 +71,17 @@ function EditEvent() {
               <div>
                 <p>Event Organizer/host</p>
                 <select
-                  name="file"
-                  id=""
+                  name="categories"
+                  id="categories"
                   className="select-events"
                   onChange={onChange}
                 >
-                  <option value={value.categories}>{value.categories}</option>
-                  <option>Events</option>
-                  <option>Projects</option>
+                  <option>Please choose one option</option>
+                    {options.map((option, index) => {
+                        return <option key={index}>
+                            {option} 
+                        </option>
+                    })}
                 </select>
               </div>
             </div>
@@ -105,13 +95,16 @@ function EditEvent() {
                   onChange={onChange}
                   value={value.events}
                 />
-              </div>
-              <div className="tags-input-container">
-                  <div className='tag-item'>
-                    <span className='text'>kks</span>
-      
+              </div> <div className="details">
+                  <p>Scheduled date</p>
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    onChange={onChange}
+                    value={value.date}
+                  />
                 </div>
-              </div>
               <div className="form-checkbox">
                 <div>
                   <input
