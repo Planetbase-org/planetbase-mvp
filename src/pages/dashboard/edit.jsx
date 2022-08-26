@@ -107,33 +107,9 @@ function EditEvent() {
                 />
               </div>
               <div className="tags-input-container">
-                {/* {tags.map((tag, index) => (
-                  <div className='tag-item' key={index}>
-                    <span className='text'>{tag}</span>
-                    <span className='close' onClick={() => removeTag(index)}>
-                      &times;
-                    </span>
-                  </div>
-                ))} */}
-                {/* <input
-                  onKeyDown={handleKeyDown}
-                  type='text'
-                  className='tags-input'
-                  placeholder='Type something'
-                /> */}
-              </div>
-            </div>
-            <div className="form-control">
-              <div className="form-details">
-                <div className="details">
-                  <p>Expected text of guests</p>
-                  <input
-                    type="text"
-                    name="guest"
-                    id="guest"
-                    onChange={onChange}
-                    value={value.guest}
-                  />
+                  <div className='tag-item'>
+                    <span className='text'>kks</span>
+      
                 </div>
               </div>
               <div className="form-checkbox">
