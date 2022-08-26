@@ -43,7 +43,7 @@ function EventProfile () {
           <div>
             <h3>Date</h3>
             <div>
-              <p>No Event</p>
+              <p>{event?.date||"No Event"}</p>
             </div>
           </div>
           <div>
