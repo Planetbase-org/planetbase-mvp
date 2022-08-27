@@ -1,36 +1,43 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  title: "",
-  categories: [],
-  event: "",
-  guest: 0,
-  date: "",
-  status1: false,
-  status2: false,
-  price: 0,
-  description: "",
-  sponsorship: "",
-};
+// const initialState = {
+//   title: "",
+//   categories: [],
+//   event: "",
+//   guest: 0,
+//   date: "",
+//   status1: false,
+//   status2: false,
+//   price: 0,
+//   description: "",
+//   sponsorship: "",
+// };
 
 const eventSlice = createSlice({
   name: "event",
-  initialState,
+  initialState:[],
   reducers: {
-    saveEvent: (state, action) => {
-      state.title = action.payload;
-      state.categories = action.payload;
-      state.event = action.payload;
-      state.guest = +1;
-      state.date = action.payload;
-      state.status1 = action.payload;
-      state.status2 = action.payload;
-      state.price = +1;
-      state.description = action.payload;
-      state.sponsorship = action.payload;
+    saveEvent: ((state={ event: [] }, action) => {
+      const newEvent = {
+        id: new Date(),
+        title : action.payload.event,
+        categories : action.payload.event,
+        event : action.payload.event,
+        guest : +1,
+        date : action.payload.event,
+        status1 : action.payload.event,
+        status2 : action.payload.event,
+        price : +1,
+        description : action.payload.event,
+        sponsorship : action.payload.event,
+      }
+      state.push(newEvent);
     },
+    deleteTask: (state, action) => {
+      return state.filter((event) => event.id !== action.payload.id)
+    }
   },
 });
 
-export const { saveEvent } = eventSlice.actions;
+export const { saveEvent, deleteTask } = eventSlice.actions;
 export default eventSlice.reducer;
