@@ -27,6 +27,8 @@ function EditEvent() {
   }
 
   const [value, setValue] = useState(getFormValues);
+  const [checked, setChecked] = useState(false); 
+  const [checked2, setChecked2] = useState(false); 
 
   useEffect(() => {
     localStorage.setItem("event", JSON.stringify(value));
@@ -43,9 +45,11 @@ function EditEvent() {
       ...prevValues,
       [e.target.name]: e.target.value,
     }));
+    setChecked(!checked); 
+    setChecked2(!checked2); 
   }
   console.log("====================================");
-  console.log(value.categories);
+  console.log(value.status1);
   console.log("====================================");
 
   const options = ["Event", "Project"];
@@ -106,30 +110,32 @@ function EditEvent() {
             </div>
             <div className="form-control">
               <div className="radio">
-                <label>
-                  {/* <input
-                      type="radio"
-                      name="status1"
-                      id="status1"
-                      onChange={onChange}
-                      checked={value.status1}
-                    /> */}
-                  <input type="checkbox" />
+                {/* <label>
+                  <input
+                    type="checkbox"
+                    name="status1"
+                    id="status1"
+                    onChange={onChange}
+                    checked={checked === true ? true : false} 
+                  />
                   <span class="checkmark"></span>
                   <p>Online</p>
                 </label>
                 <label>
-                  {/* <input
-                    type="radio"
+                  <input
+                    type="checkbox"
                     name="status2"
                     id="status2"
                     onChange={onChange}
-                    checked={value.status2}
-                  /> */}
-                  <input type="checkbox" />
+                    checked={checked2 === true ? true : false} 
+                  />
                   <span class="checkmark"></span>
                   <p>Physical</p>
-                </label>
+                </label> */}
+                /**
+                put your lighters to the heaven
+                stars have fallen, but
+                 */
               </div>
             </div>
             <div className="form-control">
