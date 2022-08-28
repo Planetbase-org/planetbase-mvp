@@ -16,19 +16,24 @@
 }
 
 .support-section>div>h1 {
-    line-height: 0;
+    line-height: 143%;
     font-size: 50px;
+    font-family: "Sora";
+    font-weight: 500;
 }
 
 .support-section>div>p {
     font-size: 30px;
-    line-height: 0;
+    line-height: 143%;
+    font-family: "Sora";
+    color: rgba(33, 31, 31, 0.83);
 }
 
-.support-section>div>span > a {
-    line-height: 3;
+.support-section>div>span>a {
+    line-height: 203%;
     font-size: 19px;
-    color: #000;
+    color: rgba(33, 31, 31, 0.83);
+    font-family: "Sora";
 }
 
 .support-section>img {
@@ -41,13 +46,72 @@
     overflow: hidden;
 }
 
-.support-signup > h1 {
+.support-signup>h1 {
     width: 70%;
     text-align: start;
     padding: 0 50px 50px 60px;
     font-size: 30px;
+    font-weight: 500;
 }
 
 .btn {
     margin-left: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .support-section>img {
+        width: 400px;
+    }
+
+    .support-section>div>h1 {
+        font-size: 40px;
+    }
+
+    .support-section>div>p {
+        font-size: 20px;
+    }
+
+    .support-signup>h1>span {
+        color:rgb(21, 64, 132)
+    }
+
+    .support-signup>h1 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .support-section>div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .support-section {
+        flex-direction: column;
+    }
+
+    .support-section>img {
+        width: 400px;
+        margin: 0;
+    }
+
+    .support-section>div>h1 {
+        font-size: 45px;
+        margin-top: 60px;
+    }
+
+    .support-section>div>p {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .support-signup>h1 {
+        width: 100%;
+        font-size: 23px;
+    }
 }
