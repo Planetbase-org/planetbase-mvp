@@ -115,3 +115,20 @@
         font-size: 23px;
     }
 }
+
+
+@media screen and (max-width: 400px) {
+
+    .support-section > div > h1 {
+        font-size: 28px;
+        margin-top: 60px;
+        text-align: center;
+      }
+
+      
+    .support-section > img {
+        width: 250px;
+        margin: 0;
+      }
+
+}

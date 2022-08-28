@@ -9,7 +9,6 @@ function Nav() {
                 <div  className="nav">
             <Link to="/" className="navbar-brand">
                     <img src={Planetbase} alt="planetbase" />
-                    <p>PLANETBASE</p>
             </Link>
                 </div>
         </nav>

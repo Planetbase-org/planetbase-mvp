@@ -10,7 +10,7 @@ function Sponsor ({ cards, index }) {
     <>
       <Navbar />
       <div class='sponsors'>
-        <h1>Discover Events Where Your Target Audience Is</h1>
+        <h2>Discover Events Where Your Target Audience Is</h2>
         <div className='search-events sponsorship-search'>
           <span>
             <FiSearch />

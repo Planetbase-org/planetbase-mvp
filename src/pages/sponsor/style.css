@@ -4,7 +4,7 @@
   padding: 0 30px;
 }
 
-.sponsors > h1 {
+.sponsors > h2 {
   font-weight: 500;
   font-size: 30px;
   color: rgba(0, 0, 0, 0.792);
@@ -172,4 +172,13 @@
       margin: 15px 0;
       width: 107%;
     }
+}
+
+@media screen and (max-width:580px) {
+  .sponsors > h2 {
+    font-size: 5.9vw;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.792);
+    margin: 50px 0;
+  }
 }

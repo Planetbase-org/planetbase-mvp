@@ -379,6 +379,15 @@
 }
 
 @media screen and (max-width: 600px) {
+    .event-container {
+        padding: 0 20px;
+      }
+
+      event-container > h2 {
+        font-size: 5.9vw;
+        margin-top: 36px;
+      }
+
     .event-rows {
         flex-direction: column;
     }
@@ -388,10 +397,16 @@
     }
 
     .event-btn {
-        float: none;
         margin: 10px 0;
-        width: 80%;
     }
+
+    .event-btn > a {
+        padding: 10px 10px;
+        font-size: 13px;
+        width: 50%;
+        display: block;
+        text-align: center;
+      }
 
     .event-container {
         width: 100%;

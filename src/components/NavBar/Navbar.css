@@ -90,7 +90,8 @@
 
 .navbar-brand > img {
     margin-right: 10px;
-}
+    width: 140px;
+  }
 
 .brand-name > img {
      width: 150px;
