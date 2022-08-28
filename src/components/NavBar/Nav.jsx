@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Planetbase from '../../assets/planetbase.svg';
+import Planetbase from '../../assets/planetbase.png';
 import "./Navbar.css"
 
 function Nav() {

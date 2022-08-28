@@ -14,7 +14,7 @@
 
 .subscribe-header>img {
     margin-right: 15px;
-    border-radius: 100%;
+    width: 150px;
 }
 
 .subscribe-header>h4 {

@@ -132,10 +132,6 @@ function EditEvent() {
                   <span class="checkmark"></span>
                   <p>Physical</p>
                 </label> */}
-                /**
-                put your lighters to the heaven
-                stars have fallen, but
-                 */
               </div>
             </div>
             <div className="form-control">

@@ -17,7 +17,7 @@
 }
 
 .planetbase>img {
-    border-radius: 100%;
+    width: 150px;
 }
 
 .planetbase>p {

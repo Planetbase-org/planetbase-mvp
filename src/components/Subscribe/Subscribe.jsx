@@ -1,5 +1,5 @@
 import React from 'react';
-import Planetbase from '../../assets/planetbase.svg';
+import Planetbase from '../../assets/planetbase.png';
 import "./Subscribe.css";
 
 function Subscribe() {
@@ -7,7 +7,6 @@ function Subscribe() {
     <section className="subscribe">
       <div className="subscribe-header">
         <img src={Planetbase} alt="" />
-        <h4>PLANETBASE</h4>
       </div>
       <div className="subscribe-message">
         <div>

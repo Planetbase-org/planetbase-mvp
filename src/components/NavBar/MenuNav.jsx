@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
-import Planetbase from '../../assets/planetbase.svg'
+import Planetbase from '../../assets/planetbase.png'
 
 function MenuNav () {
   const [isNavExpanded, setIsNavExpanded] = useState(false)
