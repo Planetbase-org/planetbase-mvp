@@ -57,6 +57,10 @@
     margin: 36px 0;
 }
 
+.event-rows > img {
+    width: 40%;
+}
+
 .event-rows>div>h3 {
     font-weight: 400;
 }
@@ -359,6 +363,7 @@
         display: block;
         text-align: center;
     }
+
 }
 
 @media screen and (max-width: 900px) {
@@ -377,6 +382,10 @@
     .event-container {
         width: 86%;
     }
+
+    .event-rows > img {
+        width: 31%;
+      }
 }
 
 @media screen and (max-width: 600px) {
@@ -392,6 +401,11 @@
     .event-rows {
         flex-direction: column;
     }
+
+    .event-rows > img {
+        width: 64%;
+        margin: 0 auto;
+      }
 
     .event-rows>div {
         margin: 15px 0
