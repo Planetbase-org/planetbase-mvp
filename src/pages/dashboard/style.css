@@ -120,7 +120,7 @@
 }
 
 
-.form-control>div>input {
+.form-control > div > input {
     padding: 15px 30px;
     border-radius: 5px;
     border: 1px solid #24242461;
@@ -129,8 +129,8 @@
     font-size: 15px;
     font-family: "Poppins";
     font-weight: 500;
-    margin-bottom: 15px;
-}
+    margin: 15px 10px 30px auto;
+  }
 
 
 .form-details>input {
@@ -232,8 +232,10 @@
     width: 100%;
     font-size: 13px;
     font-family: "Poppins";
-    font-weight: 500;
-    margin-bottom: 15px;
+    font-weight: 500;   
+    margin: 15px 10px 30px auto;
+    cursor: pointer;
+    background: #fff;
 }
 
 .description {
