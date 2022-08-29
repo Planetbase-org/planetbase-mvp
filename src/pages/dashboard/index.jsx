@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom'
 import { saveEvent } from '../../redux/eventSlice'
 
 
+
 function EventProfile () {
   const [firstTime, setFirstTime] = useState()
   const dispatch = useDispatch()
@@ -34,10 +35,11 @@ function EventProfile () {
           </div>
         </div>
         <div className='event-rows'>
+          <img src={"https://res.cloudinary.com/dputu7z0u/image/upload/v1660863670/Rectangle_31_ad96pw.svg"} alt="a picture of an event image" />
           <div>
             <h3>Events</h3>
             <div>
-              <p>{event?.title|| "no update"}</p>
+              <p>{event?.title|| "No Update"}</p>
             </div>
           </div>
           <div>
@@ -47,9 +49,9 @@ function EventProfile () {
             </div>
           </div>
           <div>
-            <h3>Categories</h3>
+            <h3>Status</h3>
             <div>
-              <p>{ event?.categories || "No Categories"}</p>
+              <p>{ event?.categories || "No Status"}</p>
             </div>
           </div>
         </div>

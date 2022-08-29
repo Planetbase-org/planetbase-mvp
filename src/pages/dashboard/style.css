@@ -110,7 +110,7 @@
 
 
 .form-control>div>p {
-    margin: 15px 0;
+    /* margin: 15px 0; */
     font-weight: 600;
     font-size: 19px;
 }
@@ -128,10 +128,6 @@
     margin-bottom: 15px;
 }
 
-
-.details>p {
-    font-weight: 700;
-}
 
 .form-details>input {
     width: 100%;
@@ -154,6 +150,11 @@
     font-size: 12px;
     font-weight: 700;
 }
+
+#price {
+    width: 35%;
+  }
+
 
 .input-details {
     background: #fff;

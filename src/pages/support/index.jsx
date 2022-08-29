@@ -17,7 +17,7 @@ function Support() {
             </div>
             <div className='support-signup'>
                 <h1>
-                    Not a Planetbase organizer yet?<br /> <span>Sign up</span> to create event
+                    Not a Planetbase organizer yet?<br /> Sign up<span><Link to="/signup" className="support-signup-link">Sign up</Link></span> to create event
                     <Link to="/signup" className="loginButton btn">Sign up</Link>
                 </h1>
             </div>

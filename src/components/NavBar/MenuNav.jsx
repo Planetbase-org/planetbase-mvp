@@ -48,12 +48,12 @@ function MenuNav () {
             </Link>
           </li>
           <li>
-            <Link to='/resources' activeclassname='active'>
+            <Link to='#' activeclassname='active'>
               Resources
             </Link>
           </li>
           <li>
-            <Link to='/company' activeclassname='active'>
+            <Link to='#' activeclassname='active'>
               Company
             </Link>
           </li>

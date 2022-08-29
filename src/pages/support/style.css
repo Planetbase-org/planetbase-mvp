@@ -7,6 +7,10 @@
     border-top: 1px solid rgba(128, 128, 128, 0.556);
 }
 
+.support-signup-link{
+    display: none;
+}
+
 .support-section>div {
     width: 60%;
     display: flex;
