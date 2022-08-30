@@ -10,7 +10,7 @@ const SignUpComponent = ({ header, children }) => {
       <h1>{header}</h1>
 
       {children}
-      <div className='sign-up-section'>
+      {/* <div className='sign-up-section'>
         <div className='sign-up-link'>
           <a href='#'>
             <img src={Facebook} alt='facebook' />
@@ -29,7 +29,7 @@ const SignUpComponent = ({ header, children }) => {
             <p>LinkedIn</p>
           </a>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
