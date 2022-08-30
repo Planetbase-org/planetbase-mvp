@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import EventLayout from "../../layouts/events-layout";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { saveEvent } from "../../redux/eventSlice";
+
 
 function EditEvent() {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   function getFormValues() {
     const storedValues = localStorage.getItem("events");
@@ -27,16 +25,15 @@ function EditEvent() {
   }
 
   const [value, setValue] = useState(getFormValues);
-  const [checked, setChecked] = useState(false); 
+  const [checked1, setChecked1] = useState(false); 
   const [checked2, setChecked2] = useState(false); 
 
   useEffect(() => {
-    localStorage.setItem("event", JSON.stringify(value));
-  }, [value]);
+    localStorage.setItem("event", JSON.stringify(checked1));
+  }, [checked1]);
 
   function onSubmit(e) {
     e.preventDefault();
-    dispatch(saveEvent(value));
     navigate("/organizer");
   }
 
@@ -45,11 +42,23 @@ function EditEvent() {
       ...prevValues,
       [e.target.name]: e.target.value,
     }));
-    setChecked(!checked); 
-    setChecked2(!checked2); 
   }
+
+  function onCheck1(e) { 
+    console.log('====================================')
+    console.log(setChecked1(!checked1))
+    console.log('====================================')
+  }
+
+  function onCheck2(e) {
+    console.log('====================================');
+    console.log(setChecked2(!checked2));
+    console.log('===================================='); 
+  }
+
   console.log("====================================");
-  console.log(value.status1);
+  console.log(checked1.status1);
+  console.log(checked2.status2);
   console.log("====================================");
 
   const options = ["Event", "Project"];
@@ -110,13 +119,13 @@ function EditEvent() {
             </div>
             <div className="form-control">
               <div className="radio">
-                {/* <label>
+                <label>         
                   <input
                     type="checkbox"
                     name="status1"
                     id="status1"
-                    onChange={onChange}
-                    checked={checked === true ? true : false} 
+                    value={checked1}
+                    onChange={onCheck1}
                   />
                   <span class="checkmark"></span>
                   <p>Online</p>
@@ -126,12 +135,12 @@ function EditEvent() {
                     type="checkbox"
                     name="status2"
                     id="status2"
-                    onChange={onChange}
-                    checked={checked2 === true ? true : false} 
+                    value={checked2}
+                    onChange={onCheck2}
                   />
                   <span class="checkmark"></span>
                   <p>Physical</p>
-                </label> */}
+                </label>
               </div>
             </div>
             <div className="form-control">
