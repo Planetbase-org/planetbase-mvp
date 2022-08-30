@@ -1,18 +1,18 @@
 import React from "react";
-import Nav from "../../../components/NavBar/Nav";
-import Navbar from "../../../components/NavBar/Navbar";
 import SponsoredECard from "../../../components/SponsoredEvent/sponsoredEventCard";
 import EventLayout from "../../../layouts/events-layout";
 
 function SponsoredEvents() {
-    return (
-            <EventLayout>
-            <h4>Sponsored Events</h4>
-            <div>
-                <SponsoredECard/>
-            </div>
-            </EventLayout>
-    )
+  return (
+    <EventLayout>
+      <div className="event-container">
+        <h2>Sponsored Events</h2>
+      <div>
+        <SponsoredECard />
+      </div>
+      </div>
+    </EventLayout>
+  );
 }
 
 export default SponsoredEvents;
