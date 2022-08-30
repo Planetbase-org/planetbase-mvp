@@ -19,7 +19,7 @@ function Sponsor ({ cards, index }) {
         </div>
         <div>
           {' '}
-          <Link to='/sponsor-page'>
+          <Link to='/sponsored-events'>
             <button className='btn-primary'>
               <span>Listed Events</span>
             </button>
