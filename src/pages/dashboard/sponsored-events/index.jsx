@@ -9,11 +9,11 @@ function SponsoredEvents() {
       <div className="event-container">
         <h2>Sponsored Events</h2>
         <div>
-          <a href="/sponsored-events">
+          <Link to="/payment">
             <button class="btn-primary">
               <span>Selected Events</span>
             </button>
-          </a>
+          </Link>
           <SponsoredECard />
         </div>
       </div>
