@@ -5,7 +5,7 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     margin: 0 auto;
-    width: 100%;
+    width: 70%;
 }
 
 .event-container {
@@ -57,7 +57,7 @@
     margin: 36px 0;
 }
 
-.event-rows > img {
+.event-rows>img {
     width: 40%;
 }
 
@@ -120,7 +120,7 @@
 }
 
 
-.form-control > div > input {
+.form-control>div>input {
     padding: 15px 30px;
     border-radius: 5px;
     border: 1px solid #24242461;
@@ -130,7 +130,7 @@
     font-family: "Poppins";
     font-weight: 500;
     margin: 15px 10px 30px auto;
-  }
+}
 
 
 .form-details>input {
@@ -157,7 +157,7 @@
 
 #price {
     width: 35%;
-  }
+}
 
 
 .input-details {
@@ -186,7 +186,7 @@
 .radio {
     display: flex;
     align-items: center;
-    margin: 15px 
+    margin: 15px
 }
 
 .radio>label {
@@ -232,7 +232,7 @@
     width: 100%;
     font-size: 13px;
     font-family: "Poppins";
-    font-weight: 500;   
+    font-weight: 500;
     margin: 15px 10px 30px auto;
     cursor: pointer;
     background: #fff;
@@ -247,7 +247,7 @@
     top: -20px;
 }
 
-.description>p{
+.description>p {
     font-weight: 600;
     font-size: 19px;
 }
@@ -293,7 +293,7 @@
     background: #E8EFFF;
     font-size: 13px;
     padding: 59px 20px;
-    width: 50%;
+    max-width: 50%;
 }
 
 .update-event {
@@ -390,29 +390,43 @@
         width: 86%;
     }
 
-    .event-rows > img {
+    .event-rows>img {
         width: 31%;
+    }
+
+    .upload-instruction {
+        background: #E8EFFF;
+        font-size: 13px;
+        padding: 59px 20px;
+        max-width: 70%;
+    }
+
+    .form-upload {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: 0 auto;
       }
 }
 
 @media screen and (max-width: 600px) {
     .event-container {
         padding: 0 20px;
-      }
+    }
 
-      event-container > h2 {
+    event-container>h2 {
         font-size: 5.9vw;
         margin-top: 36px;
-      }
+    }
 
     .event-rows {
         flex-direction: column;
     }
 
-    .event-rows > img {
+    .event-rows>img {
         width: 64%;
         margin: 0 auto;
-      }
+    }
 
     .event-rows>div {
         margin: 15px 0
@@ -422,13 +436,13 @@
         margin: 10px 0;
     }
 
-    .event-btn > a {
+    .event-btn>a {
         padding: 10px 10px;
         font-size: 13px;
         width: 50%;
         display: block;
         text-align: center;
-      }
+    }
 
     .event-container {
         width: 100%;
