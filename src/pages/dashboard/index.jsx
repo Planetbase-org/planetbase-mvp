@@ -4,16 +4,13 @@ import { FiSearch } from "react-icons/all";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { saveEvent } from "../../redux/eventSlice";
 
 function EventProfile() {
-  const [firstTime, setFirstTime] = useState();
   const dispatch = useDispatch();
 
   const { event } = useSelector((state) => state.event);
   const { user } = useSelector((state) => state.auth);
-  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(saveEvent(event));
@@ -21,12 +18,12 @@ function EventProfile() {
 
   // to check to see if a vendor has created a profile page
   console.log(useSelector((store) => console.log(store)));
-  console.log(user.firstname)
+
   return (
     <EventLayout>
       <div className="event-container">
         <br />
-        <h2>{user && user.message.firstname}'s Organization Events</h2>
+        <h2>{user.message.firstname}'s Organization Events</h2>
         <div className="event-input">
           <div className="search-events">
             <FiSearch />
