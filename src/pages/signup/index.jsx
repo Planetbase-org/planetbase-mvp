@@ -12,14 +12,15 @@ import { useDispatch, useSelector } from 'react-redux';
 function SignUp() {
 
     const [formData, setFormData] = useState({
-        fname: '',
-        lname: '',
+        firstname: '',
+        lastname: '',
         email: '',
         password: '',
         password2: '',
+        productUpdates: false,
     });
 
-    const { fname, lname, email, password, password2, checkbox } = formData;
+    const { firstname, lastname, email, password, password2, productUpdates } = formData;
     
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -33,7 +34,7 @@ function SignUp() {
             toast.error(message)
         };
 
-        if (isSuccess) { 
+        if (isSuccess || user) { 
             navigate('/');
         }
         dispatch(reset());
@@ -53,15 +54,16 @@ function SignUp() {
             toast.error("Password do not match")
         } else {
             const userData = {
-                fname,
-                lname,
+                firstname,
+                lastname,
                 email,
                 password,
+                productUpdates
             }
             dispatch(register(userData))
         }
     }
-    console.log(fname, lname, email, password);
+     
     if (isLoading) {
         return ("loading...")
     }
@@ -73,18 +75,18 @@ function SignUp() {
             <form className='input-container' onSubmit={onSubmit}>
                 <input
                     type="text"
-                    name='fname'
-                    id='fname'
+                    name='firstname'
+                    id='firstname'
                     placeholder='First Name'
-                    value={fname}
+                    value={firstname}
                     onChange={onChange}
                 />
                 <input
                     type="text"
-                    name='lname'
-                    id='lname'
+                    name='lastname'
+                    id='lastname'
                     placeholder='Last Name'
-                    value={lname}
+                    value={lastname}
                     onChange={onChange}
                 />
                 <input
@@ -111,16 +113,16 @@ function SignUp() {
                     value={password2}
                     onChange={onChange}
                 />
-                {/* <div className='checkbox-container'>
+                <div className='checkbox-container'>
                     <input
                         type="checkbox"
-                        name="checkbox"
-                        id="checkbox"
-                        value={checkbox}
+                        name="productUpdates"
+                        id="productUpdates"
+                        value={productUpdates}
                         onChange={onChange}
                     />
                     <p>Send me product updates and marketing communications from Planetbase</p>
-                </div> */}
+                </div>
                 <button
                     type="submit"
                     className="input-button">Sign Up</button>
