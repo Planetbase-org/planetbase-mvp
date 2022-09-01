@@ -1,10 +1,22 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import Planetbase from "../../assets/planetbase.png";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, reset } from "../../redux/auth/authSlice";
 
 function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.auth);
+  console.log(user)
+
+  const onLogout = () => {
+    dispatch(logout()); 
+    dispatch(reset());
+    navigate('/signup')
+  }
 
   return (
     <nav className="navigation">
@@ -58,12 +70,18 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/login">
+           {user ? ( <Link to="/login">
+              <button className="loginBtnMobile">Logout </button>
+            </Link>): ( <Link to="/login">
               <button className="loginBtnMobile">Login </button>
-            </Link>
+            </Link>)}
           </li>
         </ul>
-        <Link to="/login" className="loginButton">Login</Link>
+        {user ? (
+        <Link to="/" className="loginButton" onClick={onLogout}>Logout</Link>
+        ) : (
+          <Link to="/login" className="loginButton">Login</Link>
+        )}
       </div>
     </nav>
   );

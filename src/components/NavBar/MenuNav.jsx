@@ -1,10 +1,21 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
-import Planetbase from '../../assets/planetbase.png'
+import Planetbase from '../../assets/planetbase.png';
+import { useSelector, useDispatch } from 'react-redux';
+import { logout, reset } from "../../redux/auth/authSlice"
 
 function MenuNav () {
   const [isNavExpanded, setIsNavExpanded] = useState(false)
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { user } = useSelector(() => (state) => state.auth);
+
+  const onLogout = () => {
+    dispatch(logout()); 
+    dispatch(reset());
+    navigate('/signup')
+  }
 
   return (
     <nav className='navigation'>
@@ -59,9 +70,15 @@ function MenuNav () {
           </li>
           <div>
             <li className='login'>
-              <Link to='/login' activeclassname='active'>
+              {user ? (
+                <Link to='/login' activeclassname='active' onClick={onLogout}>
+                Logout
+                </Link>
+              ) : (
+                <Link to='/login' activeclassname='active'>
                 Login
-              </Link>
+                </Link>
+              )}
             </li>
             <li>
               <button className='loginBtnMobile'>Create Events</button>
