@@ -29,6 +29,11 @@ function SignUp() {
         (state) => state.auth
     );
 
+         
+    if (isLoading) {
+        return ("loading...")
+    }
+
     useEffect(() => { 
         if (isError) {
             toast.error(message)
@@ -63,10 +68,7 @@ function SignUp() {
             dispatch(register(userData))
         }
     }
-     
-    if (isLoading) {
-        return ("loading...")
-    }
+
     return (
         <Layout>
             <SignUpComponent header="Sign up to Planetbase." >

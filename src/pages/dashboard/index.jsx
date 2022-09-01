@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useTransition } from "react";
 import EventLayout from "../../layouts/events-layout";
 import { FiSearch } from "react-icons/all";
 import "./style.css";
@@ -12,6 +12,7 @@ function EventProfile() {
   const dispatch = useDispatch();
 
   const { event } = useSelector((state) => state.event);
+  const { user } = useSelector((state) => state.auth);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -20,12 +21,12 @@ function EventProfile() {
 
   // to check to see if a vendor has created a profile page
   console.log(useSelector((store) => console.log(store)));
-
+  console.log(user.firstname)
   return (
     <EventLayout>
       <div className="event-container">
         <br />
-        <h2>{localStorage.getItem("firstname")}'s Organization Events</h2>
+        <h2>{user && user.message.firstname}'s Organization Events</h2>
         <div className="event-input">
           <div className="search-events">
             <FiSearch />
