@@ -1,0 +1,33 @@
+.payment-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.payments-container {
+    width: 40%;
+  }
+
+.payments-cards {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.payment-method {
+    width: 208px;
+    cursor: pointer;
+  }
+
+  .payment-method2 {
+    width: 70px;
+    cursor: pointer;
+  }
+
+  .payments-methods{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: red;
+    width: 100%;
+  }

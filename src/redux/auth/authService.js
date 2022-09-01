@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = '/api/users/'
+const API_URL = 'https://planetbase-api.onrender.com/api/auth/signup/'
 
 //register user
 const register = async (userData) => {

@@ -17,7 +17,6 @@ function SignUp() {
         email: '',
         password: '',
         password2: '',
-        checkbox: false,
     });
 
     const { fname, lname, email, password, password2, checkbox } = formData;
@@ -62,9 +61,9 @@ function SignUp() {
             dispatch(register(userData))
         }
     }
-
+    console.log(fname, lname, email, password);
     if (isLoading) {
-        return ("loading")
+        return ("loading...")
     }
     return (
         <Layout>
@@ -112,7 +111,7 @@ function SignUp() {
                     value={password2}
                     onChange={onChange}
                 />
-                <div className='checkbox-container'>
+                {/* <div className='checkbox-container'>
                     <input
                         type="checkbox"
                         name="checkbox"
@@ -121,7 +120,7 @@ function SignUp() {
                         onChange={onChange}
                     />
                     <p>Send me product updates and marketing communications from Planetbase</p>
-                </div>
+                </div> */}
                 <button
                     type="submit"
                     className="input-button">Sign Up</button>

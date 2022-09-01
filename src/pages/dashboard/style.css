@@ -11,7 +11,7 @@
 .event-container {
     padding: 0 50px;
     background: #fff;
-    overflow: hidden;
+    overflow: scroll;
     height: 100vh;
     width: 90%;
     margin: 0 auto;
@@ -58,7 +58,7 @@
 }
 
 .event-rows>img {
-    width: 40%;
+    width: 30%;
 }
 
 .event-rows>div>h3 {
@@ -366,7 +366,7 @@
     .event-btn>a {
         padding: 10px 10px;
         font-size: 13px;
-        width: 30%;
+        width: 25%;
         display: block;
         text-align: center;
     }
@@ -374,6 +374,9 @@
 }
 
 @media screen and (max-width: 900px) {
+    .event-container {
+        overflow: scroll;
+    }
 
     .event-input {
         display: flex;
@@ -436,13 +439,13 @@
         margin: 10px 0;
     }
 
-    .event-btn>a {
+    /* .event-btn>a {
         padding: 10px 10px;
         font-size: 13px;
         width: 50%;
         display: block;
         text-align: center;
-    }
+    } */
 
     .event-container {
         width: 100%;
