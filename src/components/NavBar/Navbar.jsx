@@ -2,21 +2,21 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import Planetbase from "../../assets/planetbase.png";
-import { useDispatch, useSelector } from "react-redux";
-import { logout, reset } from "../../redux/auth/authSlice";
+// import { useDispatch, useSelector } from "react-redux";
+// import { logout, reset } from "../../redux/auth/authSlice";
 
 function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const user = localStorage.getItem("firstname");
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const { user } = useSelector((state) => state.auth);
-  console.log(user)
+  // const dispatch = useDispatch();
+  // const { user } = useSelector((state) => state.auth);
+  // console.log(user);
 
   const onLogout = () => {
-    dispatch(logout()); 
-    dispatch(reset());
-    navigate('/signup')
-  }
+    localStorage.clear();
+    navigate("/");
+  };
 
   return (
     <nav className="navigation">
@@ -70,17 +70,25 @@ function Navbar() {
             </Link>
           </li>
           <li>
-           {user ? ( <Link to="/login">
-              <button className="loginBtnMobile">Logout </button>
-            </Link>): ( <Link to="/login">
-              <button className="loginBtnMobile">Login </button>
-            </Link>)}
+            {user ? (
+              <button className="loginBtnMobile" onClick={onLogout}>
+                Logout{" "}
+              </button>
+            ) : (
+              <Link to="/login">
+                <button className="loginBtnMobile">Login</button>
+              </Link>
+            )}
           </li>
         </ul>
         {user ? (
-        <Link to="/" className="loginButton" onClick={onLogout}>Logout</Link>
+          <button className="loginButton" onClick={onLogout}>
+            Logout
+          </button>
         ) : (
-          <Link to="/login" className="loginButton">Login</Link>
+          <Link to="/login" className="loginButton">
+            Login
+          </Link>
         )}
       </div>
     </nav>
