@@ -3,8 +3,14 @@ import { Link } from "react-router-dom";
 import PlanetBase from "../../assets/planetbase.png";
 import { FaEnvelope } from "react-icons/fa";
 import "./style.css";
+import { useSelector } from "react-redux";
 
 function EventLayout({ children }) {
+  const { user } = useSelector((state) => state.auth);
+
+  // to check to see if a vendor has created a profile page
+  console.log(useSelector((store) => console.log(store)));
+
   return (
     <>
       <div className="events-layout">
@@ -19,10 +25,11 @@ function EventLayout({ children }) {
           </Link>
           <div className="username">
             <p>
-              {localStorage.getItem("firstname")}{" "}
-              {localStorage.getItem("lastname")}
+              {/* {localStorage.getItem("firstname")}{" "}
+              {localStorage.getItem("lastname")} */}
+              {user && user.message.firstname}
             </p>
-            {/* <img src={} alt="" /> */}
+          
           </div>
         </div>
       </div>
