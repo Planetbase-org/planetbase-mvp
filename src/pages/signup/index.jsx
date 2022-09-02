@@ -8,35 +8,27 @@ import "react-toastify/dist/ReactToastify.css";
 
 
 function SignUp() {
-
-    const [formData, setFormData] = useState({
-        firstname: '',
-        lastname: '',
-        email: '',
-        password: '',
-        password2: '',
-    });
-
-    const { firstname, lastname, email, password, password2 } = formData;
+    const [firstname, setFirstName] = useState("")
+    const [lastname, setLastName] = useState("")
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState("");
+    const [password2, setPassword2] = useState("");
+    const [productUpdates, setProductUpdates] = useState(false);
     
     const navigate = useNavigate();
 
          
-    if (isLoading) {
-        return ("loading...")
-    }
+    // useEffect(() => { 
+    //     // if (isError) {
+    //     //     toast.error(message)
+    //     // };
 
-    useEffect(() => { 
-        if (isError) {
-            toast.error(message)
-        };
-
-        if (isSuccess || user) { 
-            navigate('/');
-        }
+    //     // if (isSuccess || user) { 
+    //     //     navigate('/');
+    //     // }
      
 
-    },[user, isError, isSuccess, message, navigate])
+    // },[isSuccess, message, navigate])
 
     function onChange(e) {
         setFormData((prevState) => ({
@@ -54,8 +46,7 @@ function SignUp() {
                 firstname,
                 lastname,
                 email,
-                password,
-                // productUpdates
+                password
             }
         }
     }
@@ -72,7 +63,7 @@ function SignUp() {
                     id='firstname'
                     placeholder='First Name'
                     value={firstname}
-                    onChange={onChange}
+                    onChange={(e)=> setFirstName(e.target.value)}
                 />
                 <input
                     type="text"
@@ -80,7 +71,7 @@ function SignUp() {
                     id='lastname'
                     placeholder='Last Name'
                     value={lastname}
-                    onChange={onChange}
+                    onChange={(e)=> setLastName(e.target.value)}
                 />
                 <input
                     type="email"
@@ -88,7 +79,7 @@ function SignUp() {
                     id='email'
                     placeholder='Email Address'
                     value={email}
-                    onChange={onChange}
+                    onChange={(e)=> setEmail(e.target.value)}
                 />
                 <input
                     type="password"
@@ -96,7 +87,7 @@ function SignUp() {
                     id='password'
                     placeholder='Enter Password'
                     value={password}
-                    onChange={onChange}
+                    onChange={(e)=> setPassword((e.target.value))}
                 />
                 <input
                     type="password"
@@ -104,13 +95,15 @@ function SignUp() {
                     id='password2'
                     placeholder='Confirm Password'
                     value={password2}
-                    onChange={onChange}
+                    onChange={(e)=> setPassword2(e.target.value)}
                 />
                 <div className='checkbox-container'>
                     <input
                         type="checkbox"
                         name="productUpdates"
                         id="productUpdates"
+                        value={productUpdates}
+                        onChange={(e)=> setProductUpdates(e.target.value)}
                     />
                     <p>Send me product updates and marketing communications from Planetbase</p>
                 </div>
