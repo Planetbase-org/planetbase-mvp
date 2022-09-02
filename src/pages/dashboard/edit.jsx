@@ -44,23 +44,6 @@ function EditEvent() {
     }));
   }
 
-  function onCheck1(e) { 
-    console.log('====================================')
-    console.log(setChecked1(!checked1))
-    console.log('====================================')
-  }
-
-  function onCheck2(e) {
-    console.log('====================================');
-    console.log(setChecked2(!checked2));
-    console.log('===================================='); 
-  }
-
-  console.log("====================================");
-  console.log(checked1.status1);
-  console.log(checked2.status2);
-  console.log("====================================");
-
   const options = ["Event", "Project"];
 
   return (
