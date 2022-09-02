@@ -5,14 +5,20 @@ import "./style.css";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { saveEvent } from "../../redux/eventSlice";
+import { useNavigate } from "react-router-dom";
 
 function EventProfile() {
   const dispatch = useDispatch();
 
   const { event } = useSelector((state) => state.event);
   const { user } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/login");
+    }
     dispatch(saveEvent(event));
   }, []);
 
@@ -23,7 +29,7 @@ function EventProfile() {
     <EventLayout>
       <div className="event-container">
         <br />
-        <h2>{user.message.firstname&&"User"}'s Organization Events</h2>
+        <h2>{user.message.firstname || "User"}'s Organization Events</h2>
         <div className="event-input">
           <div className="search-events">
             <FiSearch />
