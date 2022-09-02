@@ -30,12 +30,12 @@ function SignUp() {
 
     // },[isSuccess, message, navigate])
 
-    function onChange(e) {
-        setFormData((prevState) => ({
-            ...prevState,
-            [e.target.name]: e.target.value,
-        }))
-    };
+    // function onChange(e) {
+    //     setFormData((prevState) => ({
+    //         ...prevState,
+    //         [e.target.name]: e.target.value,
+    //     }))
+    // };
 
     function onSubmit(e) {
         e.preventDefault();
@@ -46,11 +46,13 @@ function SignUp() {
                 firstname,
                 lastname,
                 email,
-                password
+                password,
+                productUpdates
             }
+            return userData;
         }
     }
-
+    
     return (
         <Layout>
             <SignUpComponent header="Sign up to Planetbase." >
