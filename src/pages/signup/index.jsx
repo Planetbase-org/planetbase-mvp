@@ -3,10 +3,8 @@ import SignUpComponent from '../../components/SignUpComponent/SignUpComponent';
 import Layout from '../../layouts/signup-registation';
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-import { register, reset} from "../../redux/auth/authSlice"
-import { useDispatch, useSelector } from 'react-redux';
 
 
 function SignUp() {
@@ -22,11 +20,6 @@ function SignUp() {
     const { firstname, lastname, email, password, password2 } = formData;
     
     const navigate = useNavigate();
-    const dispatch = useDispatch();
-
-    const { user, isLoading, isError, isSuccess, message } = useSelector(
-        (state) => state.auth
-    );
 
          
     if (isLoading) {
@@ -41,9 +34,9 @@ function SignUp() {
         if (isSuccess || user) { 
             navigate('/');
         }
-        dispatch(reset());
+     
 
-    },[user, isError, isSuccess, message, navigate, dispatch])
+    },[user, isError, isSuccess, message, navigate])
 
     function onChange(e) {
         setFormData((prevState) => ({
@@ -64,7 +57,6 @@ function SignUp() {
                 password,
                 // productUpdates
             }
-            dispatch(register(userData))
         }
     }
 
