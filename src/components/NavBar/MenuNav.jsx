@@ -2,21 +2,11 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './Navbar.css'
 import Planetbase from '../../assets/planetbase.png';
-import { useSelector, useDispatch } from 'react-redux';
-import { logout, reset } from "../../redux/auth/authSlice"
 
 function MenuNav () {
   const [isNavExpanded, setIsNavExpanded] = useState(false)
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const { user } = useSelector((state) => state.auth);
-  console.log(user)
+  // const navigate = useNavigate();
 
-  const onLogout = () => {
-    dispatch(logout()); 
-    dispatch(reset());
-    navigate('/signup')
-  }
   return (
     <nav className='navigation'>
       <Link to='/' className='brand-name'>
@@ -28,7 +18,6 @@ function MenuNav () {
           setIsNavExpanded(!isNavExpanded)
         }}
       >
-        {/* icon from Heroicons.com */}
         <svg
           xmlns='http://www.w3.org/2000/svg'
           className='h-5 w-5'
@@ -70,8 +59,8 @@ function MenuNav () {
           </li>
           <div>
             <li className='login'>
-              {user ? (
-                <Link to='/login' activeclassname='active' onClick={onLogout}>
+              {"user" ? (
+                <Link to='/login' activeclassname='active'>
                 Logout
                 </Link>
               ) : (
@@ -87,8 +76,8 @@ function MenuNav () {
         </ul>
         <div className='createEvents'>
           <li>
-            {user ? (
-              <Link to='/login' activeclassname='active'  onClick={onLogout}>
+            {"user" ? (
+              <Link to='/login' activeclassname='active'>
               Logout
             </Link>
             ) : (

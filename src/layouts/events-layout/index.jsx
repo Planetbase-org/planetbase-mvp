@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import PlanetBase from "../../assets/planetbase.png";
 import { FaEnvelope } from "react-icons/fa";
 import "./style.css";
-// import { useSelector } from "react-redux";
 
 function EventLayout({ children }) {
   const user = localStorage.getItem("firstname");

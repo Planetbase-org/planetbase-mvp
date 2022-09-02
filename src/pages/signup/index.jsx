@@ -29,7 +29,7 @@ function SignUp() {
       [e.target.name]: e.target.value,
     }));
   }
-
+  
   function onSubmit(e) {
     e.preventDefault();
     // if (password !== password2) {

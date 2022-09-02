@@ -3,16 +3,13 @@ import Layout from "../../layouts/login-registration";
 import { useState } from "react";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
-// import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
-// import {login, reset} from "../../redux/auth/authSlice"
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };

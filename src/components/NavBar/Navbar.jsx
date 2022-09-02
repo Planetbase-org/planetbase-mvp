@@ -2,21 +2,11 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import Planetbase from "../../assets/planetbase.png";
-// import { useDispatch, useSelector } from "react-redux";
-// import { logout, reset } from "../../redux/auth/authSlice";
 
 function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const user = localStorage.getItem("firstname");
   const navigate = useNavigate();
-  // const dispatch = useDispatch();
-  // const { user } = useSelector((state) => state.auth);
-  // console.log(user);
-
-  const onLogout = () => {
-    localStorage.clear();
-    navigate("/");
-  };
 
   return (
     <nav className="navigation">
