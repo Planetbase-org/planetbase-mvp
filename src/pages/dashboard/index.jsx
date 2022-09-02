@@ -23,7 +23,7 @@ function EventProfile() {
     <EventLayout>
       <div className="event-container">
         <br />
-        <h2>{user.message.firstname||"User"}'s Organization Events</h2>
+        <h2>{user.message.firstname&&"User"}'s Organization Events</h2>
         <div className="event-input">
           <div className="search-events">
             <FiSearch />

@@ -17,10 +17,9 @@ function SignUp() {
         email: '',
         password: '',
         password2: '',
-        productUpdates: false,
     });
 
-    const { firstname, lastname, email, password, password2, productUpdates } = formData;
+    const { firstname, lastname, email, password, password2 } = formData;
     
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -63,7 +62,7 @@ function SignUp() {
                 lastname,
                 email,
                 password,
-                productUpdates
+                // productUpdates
             }
             dispatch(register(userData))
         }
@@ -120,8 +119,6 @@ function SignUp() {
                         type="checkbox"
                         name="productUpdates"
                         id="productUpdates"
-                        value={productUpdates}
-                        onChange={onChange}
                     />
                     <p>Send me product updates and marketing communications from Planetbase</p>
                 </div>
