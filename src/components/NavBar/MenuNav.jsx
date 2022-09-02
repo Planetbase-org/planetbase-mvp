@@ -2,19 +2,12 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './Navbar.css'
 import Planetbase from '../../assets/planetbase.png';
-import { useSelector, useDispatch } from 'react-redux';
-import { logout, reset } from "../../redux/auth/authSlice"
 
 function MenuNav () {
   const [isNavExpanded, setIsNavExpanded] = useState(false)
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const { user } = useSelector((state) => state.auth);
-  console.log(user)
 
   const onLogout = () => {
-    dispatch(logout()); 
-    dispatch(reset());
     navigate('/signup')
   }
   return (
@@ -28,7 +21,6 @@ function MenuNav () {
           setIsNavExpanded(!isNavExpanded)
         }}
       >
-        {/* icon from Heroicons.com */}
         <svg
           xmlns='http://www.w3.org/2000/svg'
           className='h-5 w-5'
@@ -71,7 +63,7 @@ function MenuNav () {
           <div>
             <li className='login'>
               {user ? (
-                <Link to='/login' activeclassname='active' onClick={onLogout}>
+                <Link to='/login' activeclassname='active'>
                 Logout
                 </Link>
               ) : (

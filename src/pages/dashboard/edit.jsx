@@ -25,12 +25,12 @@ function EditEvent() {
   }
 
   const [value, setValue] = useState(getFormValues);
-  const [checked1, setChecked1] = useState(false); 
-  const [checked2, setChecked2] = useState(false); 
+  // const [checked1, setChecked1] = useState(false); 
+  // const [checked2, setChecked2] = useState(false); 
 
-  useEffect(() => {
-    localStorage.setItem("event", JSON.stringify(checked1));
-  }, [checked1]);
+  // useEffect(() => {
+  //   localStorage.setItem("event", JSON.stringify(checked1));
+  // }, [checked1]);
 
   function onSubmit(e) {
     e.preventDefault();
@@ -107,8 +107,8 @@ function EditEvent() {
                     type="checkbox"
                     name="status1"
                     id="status1"
-                    value={checked1}
-                    onChange={onCheck1}
+                    // value={checked1}
+                    // onChange={onCheck1}
                   />
                   <span class="checkmark"></span>
                   <p>Online</p>
@@ -118,8 +118,8 @@ function EditEvent() {
                     type="checkbox"
                     name="status2"
                     id="status2"
-                    value={checked2}
-                    onChange={onCheck2}
+                    // value={checked2}
+                    // onChange={onCheck2}
                   />
                   <span class="checkmark"></span>
                   <p>Physical</p>
