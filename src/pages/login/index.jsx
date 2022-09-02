@@ -8,21 +8,24 @@ import { toast } from "react-toastify";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
-  
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
   const handlePassword = (e) => {
     setPassword(e.target.value);
   };
-
+  // const onChange = (e) => {
+  //   setFormData((prevState) => ({
+  //     ...prevState,
+  //     [e.target.name]: e.target.value,
+  //   }));
+  // };
+  //The onchange function above does not pass in data correctly
 
   function onSubmit(e) {
     e.preventDefault();
-
     Axios.post("https://planetbase-api.onrender.com/api/auth/login", {
       email,
       password,
@@ -31,11 +34,12 @@ function Login() {
         console.log(res.data);
         navigate("/organizer");
         localStorage.setItem("token", res.data.token);
-        const { firstname, lastname } = res.data.organizer;
+        const { firstname, lastname } = res.data.message;
         localStorage.setItem("firstname", firstname);
         localStorage.setItem("lastname", lastname);
       })
       .catch((error) => {
+        localStorage.clear();
         const { message } = error.response.data;
         console.error(message);
         setTimeout(() => {
@@ -44,7 +48,6 @@ function Login() {
         setError(message);
       });
   }
-
 
   return (
     <Layout>

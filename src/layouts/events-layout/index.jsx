@@ -5,6 +5,7 @@ import { FaEnvelope } from "react-icons/fa";
 import "./style.css";
 
 function EventLayout({ children }) {
+  const user = localStorage.getItem("firstname");
 
   return (
     <>
@@ -22,9 +23,8 @@ function EventLayout({ children }) {
             <p>
               {/* {localStorage.getItem("firstname")}{" "}
               {localStorage.getItem("lastname")} */}
-              {"user name"}
+              {user}
             </p>
-          
           </div>
         </div>
       </div>

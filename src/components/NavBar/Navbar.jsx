@@ -5,13 +5,8 @@ import Planetbase from "../../assets/planetbase.png";
 
 function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const user = localStorage.getItem("firstname");
   const navigate = useNavigate();
-
-
-  const onLogout = () => {
-    navigate('/signup')
-  };
-
 
   return (
     <nav className="navigation">
@@ -65,17 +60,25 @@ function Navbar() {
             </Link>
           </li>
           <li>
-           {"user" ? ( <Link to="/login">
-              <button className="loginBtnMobile">Logout </button>
-            </Link>): ( <Link to="/login">
-              <button className="loginBtnMobile">Login </button>
-            </Link>)}
+            {user ? (
+              <button className="loginBtnMobile" onClick={onLogout}>
+                Logout{" "}
+              </button>
+            ) : (
+              <Link to="/login">
+                <button className="loginBtnMobile">Login</button>
+              </Link>
+            )}
           </li>
         </ul>
-        {"user" ? (
-        <Link to="/" className="loginButton">Logout</Link>
+        {user ? (
+          <button className="loginButton" onClick={onLogout}>
+            Logout
+          </button>
         ) : (
-          <Link to="/login" className="loginButton">Login</Link>
+          <Link to="/login" className="loginButton">
+            Login
+          </Link>
         )}
       </div>
     </nav>

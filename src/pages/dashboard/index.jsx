@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import EventLayout from "../../layouts/events-layout";
 import { FiSearch } from "react-icons/all";
 import "./style.css";
-import { Link, useNavigate } from "react-router-dom";
-function EventProfile() {
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
+function EventProfile() {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -14,12 +15,11 @@ function EventProfile() {
     }
   }, []);
 
-
   return (
     <EventLayout>
       <div className="event-container">
         <br />
-        <h2>{ "User"}'s Organization Events</h2>
+        <h2>{localStorage.getItem("firstname")}'s Organization Events</h2>
         <div className="event-input">
           <div className="search-events">
             <FiSearch />
