@@ -9,7 +9,7 @@ function EventProfile() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
+    const token = localStorageI.getItem("token");
     if (!token) {
       navigate("/login");
     }
