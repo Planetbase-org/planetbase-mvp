@@ -19,10 +19,12 @@ function Login() {
 
   function onSubmit(e) {
     e.preventDefault();
-    Axios.post("https://planetbase-api.onrender.com/api/auth/login", {
+    const body = {
       email,
       password,
-    })
+    }
+    
+    Axios.post("https://planetbase-api.onrender.com/api/auth/login", body)
       .then((res) => {
         console.log(res.data);
         navigate("/organizer");

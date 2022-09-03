@@ -4,8 +4,24 @@ import SponsorCard from '../../components/SponsorCard/SponsorCard'
 import './style.css'
 import Navbar from '../../components/NavBar/Navbar'
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import Axios from 'axios'
 
 function Sponsor ({ cards, index }) {
+
+  const url = "https://planetbase-api.onrender.com/api/events/all-events"
+
+  const [events, setEvents] = useState([])
+
+  useEffect(() => {
+    Axios.get(url)
+      .then(res => {
+        setEvents(res.data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }, [])
   return (
     <>
       <Navbar />
@@ -25,7 +41,17 @@ function Sponsor ({ cards, index }) {
             </button>
           </Link>
         </div><br />
-        <SponsorCard cards={cards} index={index} />
+        {
+          events.leghth > 0 ? <div>
+          events.map((event, index) => 
+              <SponsorCard
+                key={index}
+               {...event}
+              />
+          </div> 
+         : <SponsorCard cards={cards} index={index} />
+        }
+        
         <div className='sponsor-btn-continue'>
           <button className='btn-primary' type="submit">
             <span>Continue</span>
