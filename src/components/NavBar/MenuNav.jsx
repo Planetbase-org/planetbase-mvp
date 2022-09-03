@@ -5,13 +5,10 @@ import Planetbase from "../../assets/planetbase.png";
 
 function MenuNav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-  const user = localStorage.getItem("token");
-  const navigate = useNavigate();
+  const token = localStorage.getItem("token");
   const onLogout = () => {
-    localStorage.clear();
-    navigate("/");
+    localStorage.removeItem("token");
   };
-
   return (
     <nav className="navigation">
       <Link to="/" className="brand-name">
@@ -53,23 +50,23 @@ function MenuNav() {
             </Link>
           </li>
           <li>
-            <Link to="#" activeclassname="active">
+            <Link to="/resources" activeclassname="active">
               Resources
             </Link>
           </li>
           <li>
-            <Link to="#" activeclassname="active">
+            <Link to="/company" activeclassname="active">
               Company
             </Link>
           </li>
           <div>
             <li className="login">
-              {user ? (
-                <button activeclassname="active" onClick={onLogout}>
+              {token ? (
+                <Link to="/login" activeclassname="active">
                   Logout
-                </button>
+                </Link>
               ) : (
-                <Link to="/" activeclassname="active">
+                <Link to="/login" activeclassname="active">
                   Login
                 </Link>
               )}
@@ -81,12 +78,12 @@ function MenuNav() {
         </ul>
         <div className="createEvents">
           <li>
-            {user ? (
-              <button activeClassName="active" onClick={onLogout}>
+            {token ? (
+              <Link to="/login" activeclassname="active" onClick={onLogout}>
                 Logout
-              </button>
+              </Link>
             ) : (
-              <Link to="/" activeClassName="active">
+              <Link to="/login" activeclassname="active">
                 Login
               </Link>
             )}

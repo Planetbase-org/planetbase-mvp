@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import {Home, Product,Solution, Login, SignUp, Support, EventProfile, EditEvent, Sponsor, SponsorPage, SponsorBid, SponsoredEvent, Payment} from "./pages/index";
+import {Home, Product,Solution, Login, SignUp, Support, EventProfile, EditEvent, Sponsor, SponsorPage, SponsorBid, SponsoredEvent, Payment, Resources, Company} from "./pages/index";
+
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
           <Route exact path="/support" element={<Support />}></Route>
           <Route exact path="/payment" element={<Payment />}></Route>
           <Route exact path="/products" element={<Product />}></Route>
+          <Route exact path="/resources" element={<Resources />}></Route>
+          <Route exact path="/company" element={<Company />}></Route>
         </Routes>
       </Router>
       <ToastContainer/>
