@@ -6,9 +6,9 @@ import Product1 from "../../assets/product-icon1.svg";
 import Product2 from "../../assets/product-icon2.svg";
 import Product3 from "../../assets/product-icon3.svg";
 import Product4 from "../../assets/product-icon4.svg";
-import Subscribe from '../../components/Subscribe/Subscribe';
-import ModalVideo from '../../components/Video/Video';
-import Footer from '../../components/Footer/Footer'
+import Subscribe from "../../components/Subscribe/Subscribe";
+import ModalVideo from "../../components/Video/Video";
+import Footer from "../../components/Footer/Footer";
 
 function Solution() {
   return (
@@ -16,11 +16,10 @@ function Solution() {
       <div className="solution-layout">
         <h4>What is the Latest</h4>
         <div className="event-card">
-          <h3>Monthly Brand Update</h3>
+          <h3>2022 Guide to all Events</h3>
           <p className="event-text">
-            Read About Planetbase brand updates that help with audience
-            engagement, data and insights, production quality, hybrid solution
-            and more.....
+            Planetbase 2022 guide to best-in-class Events, what they are, why
+            they are important and how to ensure they are successful.
           </p>
         </div>
         <h4>Event Type</h4>
@@ -48,7 +47,7 @@ function Solution() {
             description="Produce professional, high -quality streams with ease"
           />
         </div>
-      </div>
+      </div><br />
       <ModalVideo />
       <Subscribe />
       <Footer />
