@@ -16,13 +16,6 @@ function Login() {
   const handlePassword = (e) => {
     setPassword(e.target.value);
   };
-  // const onChange = (e) => {
-  //   setFormData((prevState) => ({
-  //     ...prevState,
-  //     [e.target.name]: e.target.value,
-  //   }));
-  // };
-  //The onchange function above does not pass in data correctly
 
   function onSubmit(e) {
     e.preventDefault();

@@ -50,7 +50,7 @@ function SignUp() {
           const { token } = res.data;
           localStorage.setItem("firstname", firstname);
           localStorage.setItem("token", token);
-          navigate("/organizers");
+          navigate("/organizer");
         })
         .catch((error) => {
           localStorage.clear();

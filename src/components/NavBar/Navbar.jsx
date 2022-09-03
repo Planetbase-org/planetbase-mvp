@@ -61,8 +61,8 @@ function Navbar() {
           </li>
           <li>
             {user ? (
-              <button className="loginBtnMobile" onClick={onLogout}>
-                Logout{" "}
+              <button className="loginBtnMobile">
+                Logout
               </button>
             ) : (
               <Link to="/login">
@@ -72,7 +72,7 @@ function Navbar() {
           </li>
         </ul>
         {user ? (
-          <button className="loginButton" onClick={onLogout}>
+          <button className="loginButton">
             Logout
           </button>
         ) : (

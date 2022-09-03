@@ -4,8 +4,8 @@ import './Navbar.css'
 import Planetbase from '../../assets/planetbase.png';
 
 function MenuNav () {
-  const [isNavExpanded, setIsNavExpanded] = useState(false)
-  // const navigate = useNavigate();
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const user = localStorage.getItem("firstname");
 
   return (
     <nav className='navigation'>
@@ -59,7 +59,7 @@ function MenuNav () {
           </li>
           <div>
             <li className='login'>
-              {"user" ? (
+              {user ? (
                 <Link to='/login' activeclassname='active'>
                 Logout
                 </Link>
@@ -76,8 +76,8 @@ function MenuNav () {
         </ul>
         <div className='createEvents'>
           <li>
-            {"user" ? (
-              <Link to='/login' activeclassname='active'>
+            {user ? (
+              <Link to='/login' activeclassname='active'  onClick={onLogout}>
               Logout
             </Link>
             ) : (
