@@ -47,7 +47,7 @@ function Solution() {
             description="Produce professional, high -quality streams with ease"
           />
         </div>
-      </div><br />
+      </div>
       <ModalVideo />
       <Subscribe />
       <Footer />
