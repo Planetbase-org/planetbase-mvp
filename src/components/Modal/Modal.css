@@ -10,12 +10,14 @@
 }
 
 .modal-layout > div {
-    width: 40%;
+    width: 90%;
     line-height: 146%;
+    height: 80vh;
+    padding: 20px;
     background: #fff;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.479);
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .sponsor-image {
