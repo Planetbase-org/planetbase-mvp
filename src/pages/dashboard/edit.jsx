@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import EventLayout from "../../layouts/events-layout";
 import { useNavigate } from "react-router-dom";
+import Axios from "axios";
 
 function EditEvent() {
   const navigate = useNavigate();
@@ -31,9 +32,38 @@ function EditEvent() {
   //   localStorage.setItem("event", JSON.stringify(checked1));
   // }, [checked1]);
 
-  function onSubmit(e) {
+  async function onSubmit(e) {
     e.preventDefault();
     navigate("/organizer");
+    //Create event api call
+ const url = "https://planetbase-api.onrender.com/api/events/create-events"
+  const config = {
+      headers: {
+        "Content-Type": "application/json",
+        'Authorization': `Bearer ${localStorage.getItem("token")}`,
+        "Accept": "application/json"
+      },
+    };
+    const body = JSON.stringify({
+      title: value.title,
+      categories: value.categories,
+      event: value.event,
+      guest: value.guest,
+      date: value.date,
+      status1: value.status1,
+      status2: value.status2,
+      price: value.price,
+      description: value.description,
+      sponsorship: value.sponsorship,
+    });
+    console.log(body, config);
+    // try{
+    //   const res = await Axios.post( url,body, config
+    //   );
+    //   console.log(res.data);}
+    //   catch(err){
+    //     console.log(err.response);
+    //   }
   }
 
   function onChange(e) {
@@ -180,7 +210,8 @@ function EditEvent() {
             </div>
           </div>
           <div className="update-event">
-            <button type="submit" className="btn-primary">
+            <button type="submit" className="btn-primary"
+            >
               <span>Save and continue</span>
             </button>
           </div>
