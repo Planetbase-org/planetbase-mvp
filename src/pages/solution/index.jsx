@@ -6,6 +6,9 @@ import Product1 from "../../assets/product-icon1.svg";
 import Product2 from "../../assets/product-icon2.svg";
 import Product3 from "../../assets/product-icon3.svg";
 import Product4 from "../../assets/product-icon4.svg";
+import Subscribe from '../../components/Subscribe/Subscribe';
+import ModalVideo from '../../components/Video/Video';
+import Footer from '../../components/Footer/Footer'
 
 function Solution() {
   return (
