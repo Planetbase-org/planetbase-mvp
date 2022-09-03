@@ -25,18 +25,18 @@ function Sponsor ({ cards, index }) {
   return (
     <>
       <Navbar />
-      <div class='sponsors'>
+      <div className="sponsors">
         <h2>Discover Events Where Your Target Audience Is</h2>
-        <div className='search-events sponsorship-search'>
+        <div className="search-events sponsorship-search">
           <span>
             <FiSearch />
           </span>
-          <input type='text' placeholder='Search for your event' />
+          <input type="text" placeholder="Search for your event" />
         </div>
         <div>
-          {' '}
-          <Link to='/sponsored-events'>
-            <button className='btn-primary'>
+          {" "}
+          <Link to="/sponsored-events">
+            <button className="btn-primary">
               <span>Listed Events</span>
             </button>
           </Link>
@@ -59,7 +59,7 @@ function Sponsor ({ cards, index }) {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Sponsor
+export default Sponsor;

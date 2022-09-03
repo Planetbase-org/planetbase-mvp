@@ -3,7 +3,6 @@ import EventLayout from "../../layouts/events-layout";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
 
-
 function EditEvent() {
   const navigate = useNavigate();
 
@@ -26,8 +25,8 @@ function EditEvent() {
   }
 
   const [value, setValue] = useState(getFormValues);
-  // const [checked1, setChecked1] = useState(false); 
-  // const [checked2, setChecked2] = useState(false); 
+  // const [checked1, setChecked1] = useState(false);
+  // const [checked2, setChecked2] = useState(false);
 
   // useEffect(() => {
   //   localStorage.setItem("event", JSON.stringify(checked1));
@@ -132,7 +131,7 @@ function EditEvent() {
             </div>
             <div className="form-control">
               <div className="radio">
-                <label>         
+                <label>
                   <input
                     type="checkbox"
                     name="status1"
@@ -151,7 +150,7 @@ function EditEvent() {
                     // value={checked2}
                     // onChange={onCheck2}
                   />
-                  <span class="checkmark"></span>
+                  <span className="checkmark"></span>
                   <p>Physical</p>
                 </label>
               </div>
