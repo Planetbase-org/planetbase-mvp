@@ -27,20 +27,21 @@ function Login() {
         console.log(res.data);
         navigate("/organizer");
         localStorage.setItem("token", res.data.token);
-        const { firstname, lastname } = res.data.message;
+        const { firstname, lastname } = res.data.organizer;
         localStorage.setItem("firstname", firstname);
         localStorage.setItem("lastname", lastname);
       })
       .catch((error) => {
-        localStorage.clear();
+        // const { message } = error.response.data;
+        console.error(error.response);
         const { message } = error.response.data;
-        console.error(message);
+        localStorage.clear();
         setTimeout(() => {
           setError("");
         }, 5000);
         setError(message);
       });
-  } 
+  }
 
   return (
     <Layout>
