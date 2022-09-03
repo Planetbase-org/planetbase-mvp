@@ -51,7 +51,7 @@ function MenuNav() {
             </Link>
           </li>
           <li>
-            <Link to="#" activeclassname="active">
+            <Link to="/resources" activeclassname="active">
               Resources
             </Link>
           </li>
