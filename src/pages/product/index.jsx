@@ -2,12 +2,12 @@ import React from "react";
 import "./style.css";
 import DetailsCard from "../../components/DetailsCard/DetailsCard";
 import Layout from "../../layouts/products-layout";
-import Product1 from "../../assets/product-icon1.svg";
-import Product2 from "../../assets/product-icon2.svg";
-import Product3 from "../../assets/product-icon3.svg";
-import Subscribe from '../../components/Subscribe/Subscribe';
-import ModalVideo from '../../components/Video/Video';
-import Footer from '../../components/Footer/Footer'
+import Product1 from "../../assets/product.png";
+import Product2 from "../../assets/product1.svg";
+import Product3 from "../../assets/product2.svg";
+import Subscribe from "../../components/Subscribe/Subscribe";
+import ModalVideo from "../../components/Video/Video";
+import Footer from "../../components/Footer/Footer";
 
 function Product() {
   return (
@@ -35,19 +35,20 @@ function Product() {
           <h4>Product</h4>
           <DetailsCard
             img={Product2}
-            header="Integration"
-            description="Connect planet base with your favorite applications and services"
-          />
+            header="Event Marketing"
+            description="Promote beautifully landing pages that drives registration"
+            />
+
           <DetailsCard
             img={Product3}
-            header="Integration"
-            description="Connect planet base with your favorite applications and services"
+            header="Get Sponsors"
+            description="Find events , sponsor events as well get your brand noticed."
           />
         </div>
       </div>
-        <ModalVideo />
-        <Subscribe/>
-        <Footer/>
+      <ModalVideo />
+      <Subscribe />
+      <Footer />
     </Layout>
   );
 }

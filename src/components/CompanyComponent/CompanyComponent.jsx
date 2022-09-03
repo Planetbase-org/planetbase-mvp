@@ -38,7 +38,7 @@ function CompanyComponent() {
           <DetailsCard
             img={Company3}
             header="Careers"
-            description="If you love solving big challenges,  let’s chat...."
+            description="If you love solving big challenges,  let's chat...."
           />
           <DetailsCard
             img={Company4}
