@@ -12,4 +12,5 @@ export { default as Payment } from './payment/index';
 export { default as EventProfile } from './dashboard/index';
 export { default as EditEvent } from './dashboard/edit';
 export { default as Resources} from './resources/index';
+export { default as Company} from './company/index';
 
