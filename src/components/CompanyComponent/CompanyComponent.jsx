@@ -1,8 +1,9 @@
 import React from "react";
 import DetailsCard from "../DetailsCard/DetailsCard";
-import Product1 from "../../assets/product-icon1.svg";
-import Product2 from "../../assets/product-icon2.svg";
-import Product3 from "../../assets/product-icon3.svg";
+import Company1 from "../../assets/company1.svg";
+import Company2 from "../../assets/company2.svg";
+import Company3 from "../../assets/company3.svg";
+import Company4 from "../../assets/company4.svg";
 import Layout from "../../layouts/products-layout";
 
 function CompanyComponent() {
@@ -25,24 +26,24 @@ function CompanyComponent() {
         <div className="product-details">
           <h4>Company</h4>
           <DetailsCard
-            img={Product2}
-            header="Integration"
-            description="Connect planet base with your favorite applications and services"
+            img={Company1}
+            header="Why PlanetBase"
+            description="Learn the benefits of creating your Events on  PlanetBase"
           />
           <DetailsCard
-            img={Product3}
-            header="Integration"
-            description="Connect planet base with your favorite applications and services"
+            img={Company2}
+            header="About Us"
+            description="See How we are  Re-imaging Events"
           />
           <DetailsCard
-            img={Product3}
-            header="Integration"
-            description="Connect planet base with your favorite applications and services"
+            img={Company3}
+            header="Careers"
+            description="If you love solving big challenges,  let’s chat...."
           />
           <DetailsCard
-            img={Product3}
-            header="Integration"
-            description="Connect planet base with your favorite applications and services"
+            img={Company4}
+            header="Our Mission"
+            description="Learn what fuels the planetbase engine"
           />
         </div>
       </div>
