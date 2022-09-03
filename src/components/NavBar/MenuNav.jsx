@@ -6,7 +6,10 @@ import Planetbase from '../../assets/planetbase.png';
 function MenuNav () {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const user = localStorage.getItem("firstname");
-
+  const onLogout = ()=> {
+    localStorage.removeItem("firstname");
+    // localStorage.clear();
+  }
   return (
     <nav className='navigation'>
       <Link to='/' className='brand-name'>
