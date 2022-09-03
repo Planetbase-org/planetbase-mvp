@@ -53,6 +53,7 @@ function Login() {
           placeholder="Email Address"
           value={email}
           onChange={handleEmail}
+          required
         />
         <input
           type="password"
@@ -60,6 +61,7 @@ function Login() {
           id="password"
           placeholder="Password"
           onChange={handlePassword}
+          required
         />
         <p>Forgot Password ?</p>
         <button type="submit" className="input-button">
