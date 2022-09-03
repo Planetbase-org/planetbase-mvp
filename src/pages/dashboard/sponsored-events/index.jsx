@@ -10,7 +10,7 @@ function SponsoredEvents() {
         <h2>Sponsored Events</h2>
         <div>
           <Link to="/payment">
-            <button class="btn-primary">
+            <button className="btn-primary">
               <span>Selected Events</span>
             </button>
           </Link>
