@@ -5,10 +5,9 @@ import Planetbase from "../../assets/planetbase.png";
 
 function MenuNav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-  const user = localStorage.getItem("firstname");
+  const token = localStorage.getItem("token");
   const onLogout = () => {
-    localStorage.removeItem("firstname");
-    // localStorage.clear();
+    localStorage.removeItem("token");
   };
   return (
     <nav className="navigation">
@@ -62,7 +61,7 @@ function MenuNav() {
           </li>
           <div>
             <li className="login">
-              {user ? (
+              {token ? (
                 <Link to="/login" activeclassname="active">
                   Logout
                 </Link>
@@ -79,7 +78,7 @@ function MenuNav() {
         </ul>
         <div className="createEvents">
           <li>
-            {user ? (
+            {token ? (
               <Link to="/login" activeclassname="active" onClick={onLogout}>
                 Logout
               </Link>

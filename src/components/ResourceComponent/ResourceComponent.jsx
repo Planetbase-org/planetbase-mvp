@@ -22,8 +22,8 @@ function ResourceComponent() {
           <h4>Agency</h4>
           <DetailsCard
             img={Product1}
-            header="Integration"
-            description="Connect planet base with your favorite applications and services"
+            header="Case Study"
+            description="See How Planet Base helps Teams achieve their even goals"
           />
         </div>
         <hr className="line" />
@@ -31,18 +31,13 @@ function ResourceComponent() {
           <h4>Product</h4>
           <DetailsCard
             img={Product2}
-            header="Integration"
-            description="Connect planet base with your favorite applications and services"
+            header="Blog"
+            description="Learn the latest practices &  stay ahead of the industry"
           />
           <DetailsCard
             img={Product3}
-            header="Integration"
-            description="Connect planet base with your favorite applications and services"
-          />
-           <DetailsCard
-            img={Product3}
-            header="Integration"
-            description="Connect planet base with your favorite applications and services"
+            header="Support"
+            description="Need a hand? lets get your answers to your questions"
           />
         </div>
       </div>
