@@ -184,7 +184,7 @@ function EditEvent() {
                 name="description"
                 id="description"
                 cols="30"
-                rows="10"
+                rows="7"
                 placeholder="Briefly describe what your event is all about"
                 value={value.description}
                 onChange={onChange}
@@ -196,7 +196,7 @@ function EditEvent() {
                 name="sponsorship"
                 id="sponsorship"
                 cols="30"
-                rows="10"
+                rows="7"
                 placeholder="Provide sponsor's benefit here"
                 value={value.sponsorship}
                 onChange={onChange}

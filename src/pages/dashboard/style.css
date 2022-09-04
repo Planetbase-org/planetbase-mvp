@@ -256,6 +256,10 @@ input {
   margin: 30px auto;
 }
 
+.description > textarea::placeholder {
+  text-align: center;
+}
+
 .form-upload {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -268,13 +272,12 @@ input {
 .upload {
   display: flex;
   flex-direction: column;
-  width: 70%;
   margin: 0 auto;
   position: relative;
 }
 
 .upload > img {
-  width: 90%;
+  width: 100%;
   height: 50vh;
   border: 2px solid #e8efff;
 }
@@ -296,7 +299,7 @@ input {
   background: #e8efff;
   font-size: 13px;
   padding: 59px 20px;
-  width: 65%;
+  width: 90%;
   height: 50vh;
 }
 
