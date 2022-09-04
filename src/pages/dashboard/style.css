@@ -280,12 +280,12 @@ input {
 }
 
 .upload-image {
-  width: 90%;
+  width: 296px;
   height: 50vh;
 }
 
 .upload-preview {
-  width: 90%;
+  width: 296px;
   height: 50vh;
   border: 2px solid #e8efff;
   display: grid;
@@ -390,7 +390,8 @@ input {
     font-size: 13px;
     padding: 59px 20px;
     margin-bottom: 30px;
-    height: 35vh;
+    height: 46vh;
+    width: 296px;
   }
 
   .form-control {
