@@ -350,6 +350,9 @@ input {
     display: block;
     text-align: center;
   }
+  .form-upload {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -380,7 +383,7 @@ input {
     background: #e8efff;
     font-size: 13px;
     padding: 59px 20px;
-    max-width: 70%;
+    margin-bottom: 30px;
   }
 
   .form-control {
@@ -412,7 +415,7 @@ input {
 
   .form-upload {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 60%;
     margin: 0 auto;
   }
