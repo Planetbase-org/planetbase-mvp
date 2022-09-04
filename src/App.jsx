@@ -21,8 +21,6 @@ function App() {
           <Route exact path="/support" element={<Support />}></Route>
           <Route exact path="/payment" element={<Payment />}></Route>
           <Route exact path="/products" element={<Product />}></Route>
-          <Route exact path="/resources" element={<Resources />}></Route>
-          <Route exact path="/company" element={<Company />}></Route>
         </Routes>
       </Router>
       <ToastContainer/>
