@@ -94,7 +94,7 @@ function EditEvent() {
         <form onSubmit={onSubmit} className="form">
           <div className="form-control">
             <div>
-              <p>Event title</p>
+              <p>Event Title</p>
               <input
                 type="text"
                 name="title"
@@ -104,7 +104,7 @@ function EditEvent() {
               />
             </div>
             <div>
-              <p>Event Organizer/host</p>
+              <p>Event Organizer/Host</p>
               <select
                 name="categories"
                 id="categories"
@@ -120,7 +120,7 @@ function EditEvent() {
           </div>
           <div className="form-control">
             <div>
-              <p>Event type/category</p>
+              <p>Event Type/Category</p>
               <input
                 type="text"
                 name="events"
@@ -130,7 +130,7 @@ function EditEvent() {
               />
             </div>
             <div>
-              <p>Scheduled date</p>
+              <p>Scheduled Date</p>
               <input
                 type="date"
                 id="date"
@@ -179,7 +179,7 @@ function EditEvent() {
           </div>
           <div>
             <div className="description">
-              <h1>Event Description</h1>
+              <p>Event Description</p>
               <textarea
                 name="description"
                 id="description"
@@ -191,7 +191,7 @@ function EditEvent() {
               ></textarea>
             </div>
             <div className="description">
-              <h1>Sponsorship Package</h1>
+              <p>Sponsorship Package</p>
               <textarea
                 name="sponsorship"
                 id="sponsorship"

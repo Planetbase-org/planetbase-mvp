@@ -236,6 +236,7 @@ input {
   top: -20px;
 }
 
+
 .description > p {
   font-weight: 600;
   font-size: 19px;
@@ -385,8 +386,23 @@ input {
 
   .price {
     flex-direction: row !important;
+    margin: auto 0;
+    align-items: center;
+    justify-content: space-between !important;
   }
 
+  #price {
+    width: 70%;
+  }
+
+  .radio {
+    display: block;
+  }
+
+  .radio > label {
+    margin: 10px 0px;
+  }
+  
   .form-control > div {
     width: 100%;
   }
