@@ -71,9 +71,11 @@ function MenuNav() {
                 </Link>
               )}
             </li>
-            <li>
-              <button className="loginBtnMobile">Create Events</button>
-            </li>
+            {token && (
+              <li>
+                <button className="loginBtnMobile">Create Events</button>
+              </li>
+            )}
           </div>
         </ul>
         <div className="createEvents">
@@ -88,11 +90,13 @@ function MenuNav() {
               </Link>
             )}
           </li>
-          <Link to="/create-event">
-            <button className="loginButton" type="button">
-              Create Events
-            </button>
-          </Link>
+          {token && (
+            <Link to="/create-event">
+              <button className="loginButton" type="button">
+                Create Events
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </nav>
