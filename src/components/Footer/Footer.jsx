@@ -3,14 +3,17 @@ import { Link } from "react-router-dom";
 import "./Footer.css"
 
 function Footer() {
+
+  const token = localStorage.getItem("token");
+
   return (
     <div className="footer">
       <div>
         <h3>Get Started with Planetbase</h3>
         <p>Pricing</p>
         <p>Contact us</p>
-        <p>Sign Up</p>
-        <p>Log in</p>
+        {token ? ("") :(<><p>Sign Up</p>
+        <p>Log in</p></>)}
       </div>
       <div>
         <h3>Company</h3>

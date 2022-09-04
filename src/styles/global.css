@@ -73,6 +73,7 @@ input {
   border: 1px solid #D9D9D9;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 
 .input-container > p{
