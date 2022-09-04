@@ -8,6 +8,11 @@
   font-weight: 400;
 }
 
+::file-selector-button {
+  display: none;
+}
+
+
 html, body {
   margin: 0;
   padding: 0;

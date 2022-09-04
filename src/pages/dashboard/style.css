@@ -270,10 +270,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 0.1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     place-items: center;
 }
 
@@ -289,6 +287,11 @@
     width: 90%;
     height: 50vh;
     border: 2px solid #17386E;
+}
+
+.upload-image {
+    width: 90%;
+    height: 50vh;
 }
 
 .upload-preview {

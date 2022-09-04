@@ -2,17 +2,18 @@ import React, { useState, useEffect } from "react";
 import EventLayout from "../../layouts/events-layout";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
+import { ImCloudUpload } from "react-icons/all";
 
 function EditEvent() {
-  const [image, setImage] = useState('');
+  const [image, setImage] = useState("");
 
   const navigate = useNavigate();
 
-  function convert2base64(e){
+  function convert2base64(e) {
     const file = e.target.files[0];
     const reader = new FileReader();
-    
-    reader.onloadend = function() {
+
+    reader.onloadend = function () {
       setImage(reader.result.toString());
     };
     reader.readAsDataURL(file);
@@ -48,12 +49,12 @@ function EditEvent() {
     e.preventDefault();
     navigate("/organizer");
     //Create event api call
- const url = "https://planetbase-api.onrender.com/api/events/create-events"
-  const config = {
+    const url = "https://planetbase-api.onrender.com/api/events/create-events";
+    const config = {
       headers: {
         "Content-Type": "application/json",
-        'Authorization': `Bearer ${localStorage.getItem("token")}`,
-        "Accept": "application/json"
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        Accept: "application/json",
       },
     };
     const body = JSON.stringify({
@@ -209,14 +210,23 @@ function EditEvent() {
             </div>
             <div className="form-upload">
               <div className="upload">
-                {image ? <img src={image} className="upload-image" /> 
-                : (<div className="upload-preview">
-                  <label>Upload Preview</label>
-                  </div>)}
+                {image ? (
+                  <img src={image} className="upload-image" />
+                ) : (
+                  <div className="upload-preview">
+                    <label>Upload Preview</label>
+                  </div>
+                )}
               </div>
               <div className="upload-instruction">
-
-              <input className="hidden" type="file" onChange={(e) => convert2base64(e)}/>
+                <span>
+                  <ImCloudUpload />
+                  <input
+                    className="hidden"
+                    type="file"
+                    onChange={(e) => convert2base64(e)}
+                  />
+                </span>
                 <p>
                   Give your event a visual expression to make it more
                   noticeable.
@@ -229,8 +239,7 @@ function EditEvent() {
             </div>
           </div>
           <div className="update-event">
-            <button type="submit" className="btn-primary"
-            >
+            <button type="submit" className="btn-primary">
               <span>Save and continue</span>
             </button>
           </div>
