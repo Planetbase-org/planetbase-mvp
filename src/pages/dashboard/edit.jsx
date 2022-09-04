@@ -4,7 +4,19 @@ import { useNavigate } from "react-router-dom";
 import Axios from "axios";
 
 function EditEvent() {
+  const [image, setImage] = useState('');
+
   const navigate = useNavigate();
+
+  function convert2base64(e){
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    
+    reader.onloadend = function() {
+      setImage(reader.result.toString());
+    };
+    reader.readAsDataURL(file);
+  }
 
   function getFormValues() {
     const storedValues = localStorage.getItem("events");
@@ -196,8 +208,15 @@ function EditEvent() {
               ></textarea>
             </div>
             <div className="form-upload">
-              <div className="upload"></div>
+              <div className="upload">
+                {image ? <img src={image} className="upload-image" /> 
+                : (<div className="upload-preview">
+                  <label>Upload Preview</label>
+                  </div>)}
+              </div>
               <div className="upload-instruction">
+
+              <input className="hidden" type="file" onChange={(e) => convert2base64(e)}/>
                 <p>
                   Give your event a visual expression to make it more
                   noticeable.

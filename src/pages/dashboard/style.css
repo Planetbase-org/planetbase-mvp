@@ -274,6 +274,7 @@
     grid-row-gap: 0px;
     margin: 0 auto;
     width: 80%;
+    place-items: center;
 }
 
 .upload {
@@ -285,9 +286,18 @@
 }
 
 .upload>img {
-    position: absolute;
+    width: 90%;
+    height: 50vh;
+    border: 2px solid #17386E;
 }
 
+.upload-preview {
+    width: 90%;
+    height: 50vh;
+    border: 2px solid #17386E;
+    display: grid;
+    place-items: center;
+}
 
 .upload-instruction {
     background: #E8EFFF;
@@ -460,4 +470,5 @@
         font-weight: 300;
         font-size: 15px;
     }
-}
+};
+
