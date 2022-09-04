@@ -1,459 +1,421 @@
-.form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 0.1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    margin: 0 auto;
-    width: 70%;
-}
-
 .event-container {
-    padding: 0 50px;
-    background: #fff;
-    overflow: scroll;
-    height: 100vh;
-    width: 90%;
-    margin: 0 auto;
+  padding: 0 50px;
+  background: #fff;
+  overflow: scroll;
+  height: 100vh;
+  width: 90%;
+  margin: 0 auto;
 }
 
-.event-container>h2 {
-    margin: 20px 0 30px 0;
-    font-weight: 400;
-    font-size: 30px;
-    font-weight: 500;
-    font-family: "Poppins";
-    color: rgba(0, 0, 0, 0.792);
+.event-container > h2 {
+  margin: 20px 0 30px 0;
+  font-weight: 400;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "Poppins";
+  color: rgba(0, 0, 0, 0.792);
 }
 
 .search-events {
-    display: flex;
-    border: 1px solid #EBEBEB;
-    width: 300px;
-    justify-content: center;
-    align-items: center;
-    background: #EBEBEB;
-    border-radius: 5px;
-    margin: 32px 0;
+  display: flex;
+  border: 1px solid #ebebeb;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  background: #ebebeb;
+  border-radius: 5px;
+  margin: 32px 0;
 }
 
-.search-events>span {
-    width: 10%;
-    text-align: center;
+.search-events > span {
+  width: 10%;
+  text-align: center;
 }
 
-.search-events>input {
-    border: none;
-    padding: 15px;
-    background: #EBEBEB;
-    outline: none;
-    font-size: 13px;
-    width: 70%;
+.search-events > input {
+  border: none;
+  padding: 15px;
+  background: #ebebeb;
+  outline: none;
+  font-size: 13px;
+  width: 70%;
 }
 
 .event-rows {
-    display: flex;
-    justify-content: space-between;
-    margin: 36px 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 36px 0;
 }
 
-.event-rows>img {
-    width: 30%;
+.event-rows > img {
+  width: 30%;
 }
 
-.event-rows>div>h3 {
-    font-weight: 400;
+.event-rows > div > h3 {
+  font-weight: 400;
 }
 
-.event-rows>div>div>p {
-    font-size: 15px;
-    font-weight: 400;
+.event-rows > div > div > p {
+  font-size: 15px;
+  font-weight: 400;
 }
 
-.event-form>h1 {
-    text-align: center;
-    font-size: 30px;
-    font-family: "Sora", sans-serif;
-    margin: 50px 0;
-    font-weight: 500;
+.event-form > h1 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Sora", sans-serif;
+  margin: 50px 0;
+  font-weight: 500;
 }
-
 
 .event-btn {
-    float: right;
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    align-items: end;
-    justify-content: flex-end;
+  float: right;
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
 }
 
-
-.event-btn>a {
-    padding: 10px 30px;
-    background: #17386E;
-    color: white;
-    font-weight: 600;
-    border-radius: 5px;
+.event-btn > a {
+  padding: 10px 30px;
+  background: #17386e;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
 }
 
 /**edit event form*/
 
+.form {
+  width: 70%;
+  margin: 0 auto;
+}
+
 .event-form {
-    background: #fff;
-    overflow: hidden;
+  background: #fff;
+  overflow: hidden;
 }
 
 .form-control {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
 
-
-.form-control>div>p {
-    /* margin: 15px 0; */
-    font-weight: 600;
-    font-size: 19px;
+.form-control > div {
+  width: 40%;
 }
 
 
-.form-control>div>input {
-    padding: 15px 30px;
-    border-radius: 5px;
-    border: 1px solid #24242461;
-    outline: none;
-    width: 100%;
-    font-size: 15px;
-    font-family: "Poppins";
-    font-weight: 500;
-    margin: 15px 10px 30px auto;
+.form-control > div > p {
+  font-weight: 600;
+  font-size: 19px;
 }
 
 
-.form-details>input {
-    width: 100%;
-    border: 1px solid grey;
+.form-control > div > input {
+  padding: 15px 30px;
+  border-radius: 5px;
+  border: 1px solid #24242461;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+  font-family: "Poppins";
+  font-weight: 500;
+  margin: 15px 10px 30px auto;
+} 
+
+
+.form-details > input {
+  width: 100%;
+  border: 1px solid grey;
 }
 
-.details {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-}
 
-.details>input,
+input,
 .price input {
-    width: 45%;
-    border: 1px solid #24242461;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: 700;
+  width: 45%;
+  border: 1px solid #24242461;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 #price {
-    width: 35%;
+  width: 35%;
 }
 
-
 .input-details {
-    background: #fff;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #24242461;
-    border-radius: 5px;
+  background: #fff;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #24242461;
+  border-radius: 5px;
 }
 
 .tags-form {
-    padding: 15px 30px;
-    border-radius: 5px;
-    border: 1px solid #24242461;
-    outline: none;
-    width: 100%;
-    font-size: 12px;
-    font-family: "Poppins";
-    font-weight: 700;
+  padding: 15px 30px;
+  border-radius: 5px;
+  border: 1px solid #24242461;
+  outline: none;
+  width: 100%;
+  font-size: 12px;
+  font-family: "Poppins";
+  font-weight: 700;
 }
 
 .tag {
-    display: flex;
+  display: flex;
 }
 
 .radio {
-    display: flex;
-    align-items: center;
-    margin: 15px
+  display: flex;
+  align-items: center;
+  margin: 15px;
 }
 
-.radio>label {
-    display: flex;
-    margin-right: 20px;
+.radio > label {
+  display: flex;
+  margin-right: 20px;
 }
 
-.radio>label>p {
-    font-weight: 700;
+.radio > label > p {
+  font-weight: 700;
 }
 
-.radio>label>input {
-    cursor: pointer;
-    margin-right: 10px;
+.radio > label > input {
+  cursor: pointer;
+  margin-right: 10px;
 }
 
 /**tags*/
 
 .container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 100%;
-    padding-left: 14px;
-    border-radius: 5px;
-    color: black
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 14px;
+  border-radius: 5px;
+  color: black;
 }
 
 .container input {
-    min-width: 30%;
-    border: 1px solid rgba(128, 128, 128, 0.913);
-    border-radius: 5px;
-    padding: 14px;
-    padding-left: 14px;
+  min-width: 30%;
+  border: 1px solid rgba(128, 128, 128, 0.913);
+  border-radius: 5px;
+  padding: 14px;
+  padding-left: 14px;
 }
 
 .select-events {
-    padding: 15px 30px;
-    border-radius: 5px;
-    border: 1px solid #24242461;
-    outline: none;
-    width: 100%;
-    font-size: 13px;
-    font-family: "Poppins";
-    font-weight: 500;
-    margin: 15px 10px 30px auto;
-    cursor: pointer;
-    background: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  border: 1px solid #24242461;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+  font-family: "Poppins";
+  font-weight: 500;
+  margin: 15px 10px 30px auto;
+  cursor: pointer;
+  background: #fff;
 }
 
 .description {
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: -20px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -20px;
 }
 
-.description>p {
-    font-weight: 600;
-    font-size: 19px;
+.description > p {
+  font-weight: 600;
+  font-size: 19px;
 }
 
-.description>textarea {
-    word-wrap: break-word;
-    resize: none;
-    width: 55%;
-    border-radius: 5px;
-    border: 1px solid gray;
-    outline: none;
-    font-size: 12px;
-    font-family: "Poppins";
-    font-weight: 700;
-    padding: 5px;
-    margin: 30px auto;
+.description > textarea {
+  word-wrap: break-word;
+  resize: none;
+  width: 55%;
+  border-radius: 5px;
+  border: 1px solid gray;
+  outline: none;
+  font-size: 12px;
+  font-family: "Poppins";
+  font-weight: 700;
+  padding: 5px;
+  margin: 30px auto;
 }
 
 .form-upload {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 0.1fr);
-    margin: 0 auto;
-    width: 70%;
-    place-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 0.1fr);
+  margin: 0 auto;
+  width: 70%;
+  place-items: center;
 }
 
 .upload {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    margin: 0 auto;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
 }
 
-.upload>img {
-    width: 90%;
-    height: 50vh;
-    border: 2px solid #17386E;
+.upload > img {
+  width: 90%;
+  height: 50vh;
+  border: 2px solid #e8efff;
 }
 
 .upload-image {
-    width: 90%;
-    height: 50vh;
+  width: 90%;
+  height: 50vh;
 }
 
 .upload-preview {
-    width: 90%;
-    height: 50vh;
-    border: 2px solid #17386E;
-    display: grid;
-    place-items: center;
+  width: 90%;
+  height: 50vh;
+  border: 2px solid #e8efff;
+  display: grid;
+  place-items: center;
 }
 
 .upload-instruction {
-    background: #E8EFFF;
-    font-size: 13px;
-    padding: 59px 20px;
-    width: 65%;
-    height: 50vh;
+  background: #e8efff;
+  font-size: 13px;
+  padding: 59px 20px;
+  width: 65%;
+  height: 50vh;
+}
+
+.upload-instruction > span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-hidden {
+  display: inline-block;
+  width: 100%;
+  padding: 120px 0 0 0;
+  height: 100px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698394-icon-130-cloud-upload-512.png")
+    center center no-repeat ;
+  border-radius: 20px;
+  background-size: 60px 60px;
+  cursor: pointer;
 }
 
 .update-event {
-    margin: 30px auto;
-    text-align: center;
+  margin: 30px auto;
+  text-align: center;
 }
 
-.update-event>a>button {
-    background: #17386E;
-    padding: 10px;
-    color: #fff;
-    font-weight: 700;
-    border-radius: 5px;
-}
-
-/* .upload-instruction > p {
-    font
-} */
-.tags-input-container {
-    border: 1px solid rgba(128, 128, 128, 0.913);
-    padding: .5em;
-    border-radius: 5px;
-    width: min(40vw, 300px);
-    margin-top: 1em;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .5em;
-}
-
-.tag-item {
-    background-color: rgb(9, 135, 239);
-    display: inline-block;
-    padding: .2em .65em;
-    border-radius: 20px;
-}
-
-.tag-item .close {
-    height: 10px;
-    width: 10px;
-    background-color: rgb(48, 48, 48);
-    color: #fff;
-    border-radius: 50%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: .5em;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.tags-input {
-    flex-grow: 1;
-    padding: .5em 0;
-    border: none;
-    outline: none;
-}
-
-.text {
-    font-size: 15px;
-    font-weight: 800;
-    color: #fff;
+.update-event > a > button {
+  background: #17386e;
+  padding: 10px;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 1110px) {
-    .event-container>h2 {
-        font-size: 24px;
-    }
+  .event-container > h2 {
+    font-size: 24px;
+  }
 
-    .event-btn>a {
-        padding: 10px 10px;
-        font-size: 13px;
-        width: 25%;
-        display: block;
-        text-align: center;
-    }
-
+  .event-btn > a {
+    padding: 10px 10px;
+    font-size: 13px;
+    width: 25%;
+    display: block;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 900px) {
-    .event-container {
-        overflow: scroll;
-    }
+  .event-container {
+    overflow: scroll;
+  }
 
-    .event-input {
-        display: flex;
-        justify-content: center;
-        margin: 0px auto;
-    }
+  .event-input {
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+  }
 
-    .search-events {
-        margin: 22px 0;
-        color: rgba(0, 0, 0, 0.792);
-    }
+  .search-events {
+    margin: 22px 0;
+    color: rgba(0, 0, 0, 0.792);
+  }
 
-    .event-container {
-        width: 86%;
-    }
+  .event-container {
+    width: 86%;
+  }
 
-    .event-rows>img {
-        width: 31%;
-    }
+  .event-rows > img {
+    width: 31%;
+  }
 
-    .upload-instruction {
-        background: #E8EFFF;
-        font-size: 13px;
-        padding: 59px 20px;
-        max-width: 70%;
-    }
+  .upload-instruction {
+    background: #e8efff;
+    font-size: 13px;
+    padding: 59px 20px;
+    max-width: 70%;
+  }
 
-    .form-upload {
-        display: flex;
-        flex-direction: column;
-        width: 60%;
-        margin: 0 auto;
-      }
+  .form-upload {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .event-container {
-        padding: 0 20px;
-    }
+  .event-container {
+    padding: 0 20px;
+  }
 
-    event-container>h2 {
-        font-size: 5.9vw;
-        margin-top: 36px;
-    }
+  event-container > h2 {
+    font-size: 5.9vw;
+    margin-top: 36px;
+  }
 
-    .event-rows {
-        flex-direction: column;
-    }
+  .event-rows {
+    flex-direction: column;
+  }
 
-    .event-rows>img {
-        width: 64%;
-        margin: 0 auto;
-    }
+  .event-rows > img {
+    width: 64%;
+    margin: 0 auto;
+  }
 
-    .event-rows>div {
-        margin: 15px 0
-    }
+  .event-rows > div {
+    margin: 15px 0;
+  }
 
-    .event-btn {
-        margin: 10px 0;
-    }
+  .event-btn {
+    margin: 10px 0;
+  }
 
-    /* .event-btn>a {
+  /* .event-btn>a {
         padding: 10px 10px;
         font-size: 13px;
         width: 50%;
@@ -461,18 +423,17 @@
         text-align: center;
     } */
 
-    .event-container {
-        width: 100%;
-    }
+  .event-container {
+    width: 100%;
+  }
 
-    .event-rows>div>h3 {
-        font-weight: 400;
-        font-size: 16px;
-    }
+  .event-rows > div > h3 {
+    font-weight: 400;
+    font-size: 16px;
+  }
 
-    .event-rows>div>div>p {
-        font-weight: 300;
-        font-size: 15px;
-    }
-};
-
+  .event-rows > div > div > p {
+    font-weight: 300;
+    font-size: 15px;
+  }
+} ;

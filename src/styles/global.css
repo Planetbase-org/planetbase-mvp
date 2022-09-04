@@ -12,6 +12,10 @@
   display: none;
 }
 
+::-webkit-file-upload-button {
+  display: none;
+}
+
 
 html, body {
   margin: 0;

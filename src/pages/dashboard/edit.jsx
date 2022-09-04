@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import EventLayout from "../../layouts/events-layout";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
-import { ImCloudUpload } from "react-icons/all";
 
 function EditEvent() {
   const [image, setImage] = useState("");
@@ -92,97 +91,92 @@ function EditEvent() {
     <EventLayout>
       <div className="event-form">
         <h1>List Your Upcoming Event</h1>
-        <form onSubmit={onSubmit}>
-          <div className="form">
-            <div className="form-control">
-              <div>
-                <p>Event title</p>
-                <input
-                  type="text"
-                  name="title"
-                  id="title"
-                  onChange={onChange}
-                  value={value.title}
-                />
-              </div>
-              <div>
-                <p>Event Organizer/host</p>
-                <select
-                  name="categories"
-                  id="categories"
-                  className="select-events"
-                  onChange={onChange}
-                >
-                  <option>Please choose one option</option>
-                  {options.map((option, index) => {
-                    return <option key={index}>{option}</option>;
-                  })}
-                </select>
-              </div>
+        <form onSubmit={onSubmit} className="form">
+          <div className="form-control">
+            <div>
+              <p>Event title</p>
+              <input
+                type="text"
+                name="title"
+                id="title"
+                onChange={onChange}
+                value={value.title}
+              />
             </div>
-            <div className="form-control">
-              <div>
-                <p>Event type/category</p>
-                <input
-                  type="text"
-                  name="events"
-                  id="events"
-                  onChange={onChange}
-                  value={value.events}
-                />
-              </div>{" "}
-              <div className="details">
-                <p>Scheduled date</p>
-                <input
-                  type="date"
-                  id="date"
-                  name="date"
-                  onChange={onChange}
-                  value={value.date}
-                />
-              </div>
-            </div>
-            <div className="form-control">
-              <div className="radio">
-                <label>
-                  <input
-                    type="checkbox"
-                    name="status1"
-                    id="status1"
-                    // value={checked1}
-                    // onChange={onCheck1}
-                  />
-                  <span className="checkmark"></span>
-                  <p>Online</p>
-                </label>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="status2"
-                    id="status2"
-                    // value={checked2}
-                    // onChange={onCheck2}
-                  />
-                  <span className="checkmark"></span>
-                  <p>Physical</p>
-                </label>
-              </div>
-            </div>
-            <div className="form-control">
-              <div className="price">
-                <p>Price</p>
-                <input
-                  type="text"
-                  placeholder="₦"
-                  id="price"
-                  name="price"
-                  onChange={onChange}
-                  value={value.price}
-                />
-              </div>
+            <div>
+              <p>Event Organizer/host</p>
+              <select
+                name="categories"
+                id="categories"
+                className="select-events"
+                onChange={onChange}
+              >
+                <option>Please choose one option</option>
+                {options.map((option, index) => {
+                  return <option key={index}>{option}</option>;
+                })}
+              </select>
             </div>
           </div>
-
+          <div className="form-control">
+            <div>
+              <p>Event type/category</p>
+              <input
+                type="text"
+                name="events"
+                id="events"
+                onChange={onChange}
+                value={value.events}
+              />
+            </div>
+            <div>
+              <p>Scheduled date</p>
+              <input
+                type="date"
+                id="date"
+                name="date"
+                onChange={onChange}
+                value={value.date}
+              />
+            </div>
+          </div>
+          <div className="form-control">
+            <div className="radio">
+              <label>
+                <input
+                  type="checkbox"
+                  name="status1"
+                  id="status1"
+                  // value={checked1}
+                  // onChange={onCheck1}
+                />
+                <span className="checkmark"></span>
+                <p>Online</p>
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="status2"
+                  id="status2"
+                  // value={checked2}
+                  // onChange={onCheck2}
+                />
+                <span className="checkmark"></span>
+                <p>Physical</p>
+              </label>
+            </div>
+            <div className="price">
+              <p>Price</p>
+              <input
+                type="text"
+                placeholder="₦"
+                id="price"
+                name="price"
+                onChange={onChange}
+                value={value.price}
+              />
+            </div>
+          </div>
           <div>
             <div className="description">
               <h1>Event Description</h1>
@@ -220,9 +214,8 @@ function EditEvent() {
               </div>
               <div className="upload-instruction">
                 <span>
-                  <ImCloudUpload />
                   <input
-                    className="hidden"
+                    className="file-hidden"
                     type="file"
                     onChange={(e) => convert2base64(e)}
                   />
