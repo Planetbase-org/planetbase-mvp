@@ -306,7 +306,8 @@
     background: #E8EFFF;
     font-size: 13px;
     padding: 59px 20px;
-    max-width: 50%;
+    width: 65%;
+    height: 50vh;
 }
 
 .update-event {
