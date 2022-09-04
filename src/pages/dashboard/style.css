@@ -135,8 +135,7 @@
 }
 
 
-input,
-.price input {
+input {
   width: 45%;
   border: 1px solid #24242461;
   padding: 10px;
@@ -147,7 +146,7 @@ input,
 }
 
 #price {
-  width: 35%;
+  width: 45%;
 }
 
 .input-details {
@@ -378,6 +377,18 @@ input,
     font-size: 13px;
     padding: 59px 20px;
     max-width: 70%;
+  }
+
+  .form-control {
+    flex-direction: column;
+  }
+
+  .price {
+    flex-direction: row !important;
+  }
+
+  .form-control > div {
+    width: 100%;
   }
 
   .form-upload {

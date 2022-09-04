@@ -140,7 +140,7 @@ function EditEvent() {
               />
             </div>
           </div>
-          <div className="form-control">
+          <div className="form-control price">
             <div className="radio">
               <label>
                 <input
@@ -165,7 +165,7 @@ function EditEvent() {
                 <p>Physical</p>
               </label>
             </div>
-            <div className="price">
+            <div>
               <p>Price</p>
               <input
                 type="text"
