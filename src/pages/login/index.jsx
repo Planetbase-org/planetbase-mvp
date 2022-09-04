@@ -27,9 +27,9 @@ function Login() {
         console.log(res.data);
         navigate("/organizer");
         localStorage.setItem("token", res.data.token);
-        const { firstname, lastname } = res.data.organizer;
-        localStorage.setItem("firstname", firstname);
-        localStorage.setItem("lastname", lastname);
+        // const { firstname, lastname } = res.data.organizer;
+        // localStorage.setItem("firstname", firstname);
+        // localStorage.setItem("lastname", lastname);
       })
       .catch((error) => {
         // const { message } = error.response.data;
