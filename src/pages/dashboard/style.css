@@ -405,7 +405,7 @@ input {
   }
 
   .price {
-    flex-direction: row !important;
+    flex-direction: column !important;
     margin: auto 0;
   }
 

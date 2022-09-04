@@ -23,12 +23,11 @@ function EditEvent() {
     if (!storedValues)
       return {
         title: "",
-        categories: {},
+        categories: "",
         event: "",
         guest: 0,
         date: "",
-        status1: false,
-        status2: false,
+        eventLocation: "",
         price: 0,
         description: "",
         sponsorship: "",
@@ -44,7 +43,7 @@ function EditEvent() {
   //   localStorage.setItem("event", JSON.stringify(checked1));
   // }, [checked1]);
 
-  async function onSubmit(e) {
+  function onSubmit(e) {
     e.preventDefault();
     navigate("/organizer");
     //Create event api call
@@ -53,20 +52,19 @@ function EditEvent() {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
-        Accept: "application/json",
       },
     };
     const body = JSON.stringify({
-      title: value.title,
-      categories: value.categories,
-      event: value.event,
-      guest: value.guest,
-      date: value.date,
-      status1: value.status1,
-      status2: value.status2,
+      eventTitle: value.eventTitle,
+      eventType: value.eventType,
+      eventOrganizer: value.eventOrganizer,
+      // numberOfGuests: value.numberOfGuests,
+      scheduledDate: value.scheduledDate,
+      eventLocation: value.eventLocation,
       price: value.price,
-      description: value.description,
-      sponsorship: value.sponsorship,
+      eventDesc: value.eventDesc,
+      sponsorshipPackage: value.sponsorshipPackage,
+      eventImage: image,
     });
     console.log(body, config);
     // try{
@@ -76,6 +74,13 @@ function EditEvent() {
     //   catch(err){
     //     console.log(err.response);
     //   }
+    Axios.post(url, body, config)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }
 
   function onChange(e) {
@@ -85,7 +90,7 @@ function EditEvent() {
     }));
   }
 
-  const options = ["Event", "Project"];
+  // const options = ["Event", "Project"];
 
   return (
     <EventLayout>
@@ -97,25 +102,22 @@ function EditEvent() {
               <p>Event Title</p>
               <input
                 type="text"
-                name="title"
-                id="title"
+                name="eventTitle"
+                id="eventTitle"
                 onChange={onChange}
-                value={value.title}
+                value={value.eventTitle}
               />
             </div>
             <div>
               <p>Event Organizer/Host</p>
-              <select
-                name="categories"
-                id="categories"
+              <input
+                type="text"
+                name="eventOrganizer"
+                id="eventOrganizer"
                 className="select-events"
                 onChange={onChange}
-              >
-                <option>Please choose one option</option>
-                {options.map((option, index) => {
-                  return <option key={index}>{option}</option>;
-                })}
-              </select>
+                placeholder="Event Organizer"
+              />
             </div>
           </div>
           <div className="form-control">
@@ -123,32 +125,46 @@ function EditEvent() {
               <p>Event Type/Category</p>
               <input
                 type="text"
-                name="events"
-                id="events"
+                name="eventType"
+                id="eventType"
                 onChange={onChange}
-                value={value.events}
+                value={value.eventType}
+                placeholder="Event Category"
               />
             </div>
             <div>
               <p>Scheduled Date</p>
               <input
                 type="date"
-                id="date"
-                name="date"
+                id="scheduledDate"
+                name="scheduledDate"
                 onChange={onChange}
-                value={value.date}
+                value={value.scheduledDate}
               />
             </div>
           </div>
           <div className="form-control price">
-            <div className="radio">
-              <label>
+            <div className="">
+              <p>Event Location</p>
+              <input
+                type="text"
+                placeholder="Event Location"
+                id="eventLocation"
+                name="eventLocation"
+                onChange={onChange}
+                value={value.eventLocation}
+              />
+              {/* <label>
                 <input
                   type="checkbox"
                   name="status1"
                   id="status1"
-                  // value={checked1}
-                  // onChange={onCheck1}
+                  value={value.status1}
+                  onChange={() => {
+                    if (status1) {
+                      setEventLocation("Online");
+                    }
+                  }}
                 />
                 <span className="checkmark"></span>
                 <p>Online</p>
@@ -158,12 +174,16 @@ function EditEvent() {
                   type="checkbox"
                   name="status2"
                   id="status2"
-                  // value={checked2}
-                  // onChange={onCheck2}
+                  value={value.status2}
+                  onChange={() => {
+                    if (status2) {
+                      setEventLocation("Physical");
+                    }
+                  }}
                 />
                 <span className="checkmark"></span>
                 <p>Physical</p>
-              </label>
+              </label> */}
             </div>
             <div>
               <p>Price</p>
@@ -181,24 +201,24 @@ function EditEvent() {
             <div className="description">
               <p>Event Description</p>
               <textarea
-                name="description"
-                id="description"
+                name="eventDesc"
+                id="eventDesc"
                 cols="30"
                 rows="7"
                 placeholder="Briefly describe what your event is all about"
-                value={value.description}
+                value={value.eventDesc}
                 onChange={onChange}
               ></textarea>
             </div>
             <div className="description">
               <p>Sponsorship Package</p>
               <textarea
-                name="sponsorship"
-                id="sponsorship"
+                name="sponsorshipPackage"
+                id="sponsorshipPackage"
                 cols="30"
                 rows="7"
                 placeholder="Provide sponsor's benefit here"
-                value={value.sponsorship}
+                value={value.sponsorshipPackage}
                 onChange={onChange}
               ></textarea>
             </div>
