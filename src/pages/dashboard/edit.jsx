@@ -48,7 +48,7 @@ function EditEvent() {
     e.preventDefault();
     navigate("/organizer");
     //Create event api call
-    const url = "https://planetbase-api.onrender.com/api/events/create-events";
+    const url = "https://planetbase-api.onrender.com/api/events/create-event";
     const config = {
       headers: {
         "Content-Type": "application/json",
