@@ -71,5 +71,5 @@ export const cards = [
     description: "Sponsor",
     sponsoredEvent:"hello"
 },
-    
 ];
+
