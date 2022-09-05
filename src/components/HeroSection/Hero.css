@@ -7,7 +7,8 @@
     background:
         linear-gradient(rgba(0, 0, 0, 0.7),
             rgba(0, 0, 0, 0.7)),
-        url(https://res.cloudinary.com/dputu7z0u/image/upload/v1660939818/Mask_group_2_hvbvv5.jpg);
+        url(https://res.cloudinary.com/dputu7z0u/image/upload/v1660939818/Mask_group_2_hvbvv5.jpg)  no-repeat center center fixed;
+         background-size: cover;
 }
 
 .hero-section>h1 {
