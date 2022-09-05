@@ -8,12 +8,15 @@ import Axios from "axios";
 function Card() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleModal = () => setIsOpen(!isOpen);
+  const [isLoading, setIsLoading] = useState(false);
   const [events, setEvents] = useState([]);
   const url = "https://planetbase-api.onrender.com/api/events/all-events";
   useEffect(() => {
+    setIsLoading(true);
     Axios.get(url)
       .then((res) => {
         setEvents(res.data.events);
+        setIsLoading(false);
       })
       .catch((err) => {
         console.error(err);
@@ -27,6 +30,7 @@ function Card() {
           <SponsorModal onClose={toggleModal} />
         </Modal>
       )}
+      {isLoading && <p>Loading...</p>}
       {events.map((listEvent) => (
         <div key={listEvent._id} className="sp-card" onClick={toggleModal}>
           <img src={listEvent.eventImage} alt="image" className="card-image" />
