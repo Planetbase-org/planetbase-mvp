@@ -5,12 +5,20 @@ import { SPONSOR_BID_INPUT} from '../../../utils/formField'
 import '../style.css'
 import FormInput from '../../../components/FormInput'
 import TextArea from '../../../components/TextArea'
+import axios from 'axios'
 
 function SponsorBid () {
+  const url = "https://planetbase-api.onrender.com/api/bid-event/create-bid/:id"
+
+  const onSubmit = (data) => {
+    e.preventDefault()
+    console.log(data)
+    // axios.post(url, data)
+  }
   return (
     <>
       <Nav />
-      <form className='sponsor-form'>
+      <form className='sponsor-form'  onSubmit={onSubmit}>
       <h2> Bid for Event</h2>
       <div>
         {
@@ -33,7 +41,9 @@ function SponsorBid () {
       />
       </div>
     
-        <button className='btn-primary'>
+        <button 
+        type='submit'
+        className='btn-primary'>
         Save and Continue
         </button>
       </form>
