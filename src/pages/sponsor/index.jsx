@@ -16,6 +16,7 @@ function Sponsor({ cards, index }) {
     Axios.get(url)
       .then((res) => {
         setEvents(res.data);
+        console.log(res.data.events);
       })
       .catch((err) => {
         console.log(err);
@@ -44,7 +45,7 @@ function Sponsor({ cards, index }) {
         {events.length > 0 ? (
           <div>
             {events.map((events, index) => (
-              <SponsorCard key={index} {...events} />
+              <SponsorCard key={events._id} {...events} />
             ))}
           </div>
         ) : (
