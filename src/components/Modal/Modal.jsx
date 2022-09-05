@@ -3,7 +3,8 @@ import "./Modal.css";
 
 function Modal({children, isOpen, onClose}) {
   return isOpen ? (
-    <div onClick={onClose} className="modal-layout">
+    <div className="modal-layout">
+      <button onClick={onClose}>x</button>
       {children}
     </div>
   ) : null; 

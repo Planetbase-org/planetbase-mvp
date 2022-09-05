@@ -1,85 +1,91 @@
 .modal-layout {
-    background: #afa5a5a9;
-    position: fixed;
-    z-index: 900000;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background: #afa5a5a9;
+  position: fixed;
+  z-index: 900000;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-layout > button {
+  cursor: pointer;
+  background: #17386e;
+  padding: 12px 15px;
+  border-radius: 56%;
+  color: white;
+  margin-bottom: 3px;
+  font-weight: 900;
 }
 
 .modal-layout > div {
-    width: 30%;
-    line-height: 146%;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.479);
-    height: 90vh;
-    overflow: scroll;
-  }
-  
+  width: 30%;
+  line-height: 146%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.479);
+  height: 90vh;
+  overflow: scroll;
+}
+
 .sponsor-image {
-    width: 100%;
-  }
+  width: 100%;
+}
 
 .modal-layout > div > h4 {
-    text-align: center;
-    margin: 10px 0;
-    font-family: "Sora", sans-serif;
-    font-weight: 600;
+  text-align: center;
+  margin: 10px 0;
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
 }
 
 .modal-layout > div > p {
-    text-align: center;
-    margin: 10px 0;
-    font-family: "Sora", sans-serif;
-    font-weight: 600;
-    font-size: 12px;
+  text-align: center;
+  margin: 10px 0;
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
 }
 
-
-
 .modal-layout > div > .address {
-    font-weight: 400;
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    margin: 13px 0;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  margin: 13px 0;
 }
 
 .modal-layout > div > h5 {
-    font-weight: 500;
-    font-family: "Poppins", sans-serif;
-    font-size: 17px;
-    margin: 13px 0;
-    text-align: center;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  margin: 13px 0;
+  text-align: center;
 }
 
 .modal-layout > div > p {
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  margin: 13px 0;
+}
+
+@media screen and (max-width: 900px) {
+  .modal-layout > div {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .modal-layout > div > p {
     font-weight: 400;
     font-family: "Poppins", sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     margin: 13px 0;
+  }
+
+  .modal-layout > div {
+    width: 60%;
+  }
 }
-
-@media screen and (max-width: 900px){
-    .modal-layout > div {
-        width: 50%;
-      }
-}
-
-@media screen and (max-width:600px){
-
-    .modal-layout > div > p {
-        font-weight: 400;
-        font-family: "Poppins", sans-serif;
-        font-size: 13px;
-        margin: 13px 0;
-      }
-
-      .modal-layout > div {
-        width: 60%;
-      }
-}
-

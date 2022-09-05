@@ -41,7 +41,7 @@ function Sponsor({ cards, index }) {
           </Link>
         </div>
         <br />
-        {events.leghth > 0 ? (
+        {events.length > 0 ? (
           <div>
             {events.map((events, index) => (
               <SponsorCard key={index} {...events} />
