@@ -9,30 +9,38 @@
   justify-content: center;
 }
 
-.modal-layout > button {
-  cursor: pointer;
-  background: #17386e;
-  padding: 12px 15px;
-  border-radius: 56%;
-  color: white;
-  margin-bottom: 3px;
-  font-weight: 900;
+.modal-layout > img{
+  border-radius: 50%;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  transition: .5s;
+  width: 60px;
+  margin-bottom: 10px;
 }
+
+.modal-layout >img:hover {
+  color: #17386e;
+  box-shadow: 0 0 5px #17386e;
+  text-shadow: 0 0 1px rgba(9, 248, 244, 0.439);
+}
+
 
 .modal-layout > div {
   width: 30%;
   line-height: 146%;
-  padding: 20px;
+  padding: 4px;
   background: #fff;
   border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.479);
   height: 90vh;
   overflow: scroll;
-  border-top: 3px solid white;
+  border-top: 7px solid white;
 }
 
 .sponsor-image {
-  width: 100%;
+  width: 80%;
+  object-fit: contain;
+  margin: 0 auto;
+  display: flex;
 }
 
 .modal-layout > div > h4 {
@@ -40,6 +48,7 @@
   margin: 10px 0;
   font-family: "Sora", sans-serif;
   font-weight: 600;
+  font-size: 30px;
 }
 
 .modal-layout > div > p {
@@ -72,6 +81,86 @@
   margin: 13px 0;
 }
 
+.create-bid {
+  margin: 0 auto;
+}
+
+.sponsor-btn {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.spon-btn {
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 45px;
+  width: 130px;
+  opacity: 1;
+  background-color: #17386e;
+  border: 1px solid #17386e;
+}
+
+.spon-btn .sponsor-span {
+  font-family:"Poppins",sans-serif;  
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+.spon-btn:hover {
+  animation: spon-btnrotate 0.7s ease-in-out both;
+}
+
+.spon-btn:hover .sponsor-span {
+  animation: spon-btnstorm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+@keyframes spon-btnrotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes spon-btnstorm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
 @media screen and (max-width: 900px) {
   .modal-layout > div {
     width: 50%;
@@ -90,3 +179,4 @@
     width: 60%;
   }
 }
+

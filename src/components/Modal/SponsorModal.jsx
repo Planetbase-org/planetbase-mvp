@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import "./Modal.css";
+
 const desc =
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit voluptatum odit nisi eos sequi sunt magnam! Ab veniam inventore voluptas molestias amet non doloribus sint excepturi, modi, cumque delectus doloremque!";
 const date = "12/12/2020";
@@ -22,10 +22,12 @@ function SponsorModal({
       <h5>Description</h5>
       <p>{eventDesc}</p>
       <p>{scheduledDate}</p>
-      <div>
-        <Link to="/sponsor-bid" className="signup-message">
-          <button className="btn-primary">Create Bid</button>
-        </Link>
+      <div className="sponsor-btn">
+      <Link to="/sponsor-bid">
+        <button class="spon-btn">
+          <span class="sponsor-span">Create Bid</span>
+        </button>
+      </Link>
       </div>
     </div>
   );
