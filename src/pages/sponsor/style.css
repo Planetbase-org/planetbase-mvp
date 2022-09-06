@@ -144,16 +144,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-.btn-primary {
-  background: #17386e;
-  color: #fff;
-  padding: 15px 28px;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 
 @media screen and (max-width:978px) {
   .sponsorships-layout {

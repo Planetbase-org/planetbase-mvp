@@ -114,6 +114,54 @@ input {
   color: #000;
 }
 
+
+.custom-btn {
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 45px;
+  width: 130px;
+  opacity: 1;
+  background-color: #17386e;
+  border: 1px solid #17386e;
+}
+
+.custom-btn .custom-span {
+  font-family:"Poppins", sans-serif;  
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+.custom-btn:hover {
+  animation: custom-btnrotate 0.7s ease-in-out both;
+}
+
+.custom-btn:hover .custom-span {
+  animation: custom-btnstorm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+
+.btn-primary {
+  background: #17386e;
+  color: #fff;
+  padding: 15px 28px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
 @media screen and (max-width: 900px) {
   .input-container > input {
     width: 40%;
