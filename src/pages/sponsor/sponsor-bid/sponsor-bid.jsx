@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import Nav from '../../../components/NavBar/Nav'
 import { SPONSOR_BID_INPUT} from '../../../utils/formField'
@@ -7,13 +7,34 @@ import FormInput from '../../../components/FormInput'
 import TextArea from '../../../components/TextArea'
 import axios from 'axios'
 
+// bidFrom (Name of the sponsor)
+// bidTo (Contains the user details of who created the event - organizerId)
+// email  (sponsor Email)
+// bidDate
+// bidAmount: number
+// bidDesc(Bid Description)
+
 function SponsorBid () {
   const url = "https://planetbase-api.onrender.com/api/bid-event/create-bid/:id"
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    bid: '',
+    description: '',
+  })
 
-  const onSubmit = (data) => {
+  const onSubmit = () => {
     e.preventDefault()
-    console.log(data)
-    // axios.post(url, data)
+    console.log()
+    // setFormData({
+    //   name: '',
+    //   email: '',
+    //   phone: '',
+    //   bid: '',
+    //   description: '',
+    // })
+    // axios.post(url, formData)
   }
   return (
     <>
