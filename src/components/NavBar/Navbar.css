@@ -83,6 +83,13 @@
     cursor: pointer;
 }
 
+
+.loginButton:hover,
+.menu-btn:hover{
+    color: #fff;
+    background: #17386eef;
+  }
+
 .createEvents, .navbar-brand {
     display: flex;
     align-items: center;

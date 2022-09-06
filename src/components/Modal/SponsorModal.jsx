@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import "./Modal.css";
 
 function SponsorModal({
@@ -19,10 +18,12 @@ function SponsorModal({
       <h5>Description</h5>
       <p>{eventDesc}</p>
       <p>{scheduledDate}</p>
-      <div>
-        <Link to="/sponsor-bid" className="signup-message">
-          <button className="btn-primary">Create Bid</button>
-        </Link>
+      <div className="sponsor-btn">
+      <Link to="/sponsor-bid">
+        <button class="custom-btn">
+          <span class="custom-span">Create Bid</span>
+        </button>
+      </Link>
       </div>
     </div>
   );
