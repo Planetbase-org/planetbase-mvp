@@ -36,10 +36,11 @@ function EditEvent() {
   }
 
   const [value, setValue] = useState(getFormValues);
+  const [isLoading, setIsLoading] = useState(false);
 
   function onSubmit(e) {
+    setIsLoading(true);
     e.preventDefault();
-    navigate("/organizer");
     //Create event api call
     const url = "https://planetbase-api.onrender.com/api/events/create-event";
     const config = {
@@ -61,19 +62,15 @@ function EditEvent() {
       eventImage: image,
     });
     console.log(body, config);
-    // try{
-    //   const res = await Axios.post( url,body, config
-    //   );
-    //   console.log(res.data);}
-    //   catch(err){
-    //     console.log(err.response);
-    //   }
     Axios.post(url, body, config)
       .then((res) => {
         console.log(res);
+        navigate("/organizer");
+        setIsLoading(false);
       })
       .catch((err) => {
         console.error(err);
+        setIsLoading(false);
       });
   }
 
@@ -83,8 +80,6 @@ function EditEvent() {
       [e.target.name]: e.target.value,
     }));
   }
-
-  // const options = ["Event", "Project"];
 
   return (
     <EventLayout>
@@ -148,36 +143,6 @@ function EditEvent() {
                 onChange={onChange}
                 value={value.eventLocation}
               />
-              {/* <label>
-                <input
-                  type="checkbox"
-                  name="status1"
-                  id="status1"
-                  value={value.status1}
-                  onChange={() => {
-                    if (status1) {
-                      setEventLocation("Online");
-                    }
-                  }}
-                />
-                <span className="checkmark"></span>
-                <p>Online</p>
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  name="status2"
-                  id="status2"
-                  value={value.status2}
-                  onChange={() => {
-                    if (status2) {
-                      setEventLocation("Physical");
-                    }
-                  }}
-                />
-                <span className="checkmark"></span>
-                <p>Physical</p>
-              </label> */}
             </div>
             <div>
               <p>Price</p>
@@ -247,7 +212,9 @@ function EditEvent() {
           </div>
           <div className="update-event">
             <button type="submit" className="btn-primary">
-              <span>Save and continue</span>
+              <span>
+                {isLoading ? "Creating Event..." : "Save and Continue"}
+              </span>
             </button>
           </div>
         </form>
