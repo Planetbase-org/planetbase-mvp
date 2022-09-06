@@ -22,7 +22,6 @@ function Card() {
     Axios.get(url)
       .then((res) => {
         setEvents(res.data.events);
-        console.log(res.data.events[1]);
         setIsLoading(false);
       })
       .catch((err) => {
@@ -46,34 +45,43 @@ function Card() {
           />
         </Modal>
       )}
-      {isLoading && <p>Loading...</p>}
-      {events.map((listEvent, index) => (
-        <div
-          key={listEvent._id}
-          className="sp-card"
-          onClick={() => {
-            toggleModal();
-            setEventTitle(listEvent.eventTitle);
-            setEventDesc(listEvent.eventDesc);
-            setEventImage(listEvent.eventImage);
-            setSponsorshipPackage(listEvent.sponsorshipPackage);
-            setScheduledDate(listEvent.scheduledDate);
-            setEventLocation(listEvent.eventLocation);
-          }}
-        >
-          <img src={listEvent.eventImage} alt="image" className="card-image" />
-          <p className="card-title">{listEvent.eventTitle}</p>
-          <p>{listEvent.eventDesc}</p>
-          <div className="card-content">
-            <p>{listEvent.sponsorshipPackage}</p>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        events.map((listEvent, index) => (
+          <div
+            key={listEvent._id}
+            className="sp-card"
+            onClick={() => {
+              toggleModal();
+              setEventTitle(listEvent.eventTitle);
+              setEventDesc(listEvent.eventDesc);
+              setEventImage(listEvent.eventImage);
+              setSponsorshipPackage(listEvent.sponsorshipPackage);
+              setScheduledDate(listEvent.scheduledDate);
+              setEventLocation(listEvent.eventLocation);
+              localStorage.setItem("organizerId", listEvent.organizerId);
+              console.log(listEvent.organizerId);
+            }}
+          >
             <img
-              className="card-tag"
-              src="https://cdn-icons.flaticon.com/png/512/3106/premium/3106777.png?token=exp=1660863227~hmac=d94e1ad1804d0087ad7818b50dd7d34c"
-              alt=""
+              src={listEvent.eventImage}
+              alt="image"
+              className="card-image"
             />
+            <p className="card-title">{listEvent.eventTitle}</p>
+            <p>{listEvent.eventDesc}</p>
+            <div className="card-content">
+              <p>{listEvent.sponsorshipPackage}</p>
+              <img
+                className="card-tag"
+                src="https://cdn-icons.flaticon.com/png/512/3106/premium/3106777.png?token=exp=1660863227~hmac=d94e1ad1804d0087ad7818b50dd7d34c"
+                alt=""
+              />
+            </div>
           </div>
-        </div>
-      ))}
+        ))
+      )}
     </>
   );
 }

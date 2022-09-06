@@ -2,10 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Modal.css";
 
-const desc =
-  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit voluptatum odit nisi eos sequi sunt magnam! Ab veniam inventore voluptas molestias amet non doloribus sint excepturi, modi, cumque delectus doloremque!";
-const date = "12/12/2020";
-
 function SponsorModal({
   eventTitle,
   eventDesc,

@@ -9,6 +9,7 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -18,12 +19,13 @@ function Login() {
   };
 
   function onSubmit(e) {
+    setIsLoading(true);
     e.preventDefault();
     const body = {
       email,
       password,
-    }
-    
+    };
+
     Axios.post("https://planetbase-api.onrender.com/api/auth/login", body)
       .then((res) => {
         console.log(res.data);
@@ -32,6 +34,7 @@ function Login() {
         const { firstname, lastname } = res.data.organizer;
         localStorage.setItem("firstname", firstname);
         localStorage.setItem("lastname", lastname);
+        setIsLoading(false);
       })
       .catch((error) => {
         // const { message } = error.response.data;
@@ -42,6 +45,7 @@ function Login() {
           setError("");
         }, 5000);
         setError(message);
+        setIsLoading(false);
       });
   }
 
@@ -65,9 +69,13 @@ function Login() {
           onChange={handlePassword}
           required
         />
-        <p>Forgot Password ?</p>
-        <button type="submit" className="input-button">
-          Sign In
+        {/* <p>Forgot Password ?</p> */}
+        <button
+          type="submit"
+          className="input-button"
+          disabled={isLoading ? true : false}
+        >
+          {isLoading ? "Signing In..." : "Sign In"}
         </button>
         <small>{error}</small>
       </form>
