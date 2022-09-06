@@ -28,6 +28,7 @@
   border: 1px solid rgba(0, 0, 0, 0.479);
   height: 90vh;
   overflow: scroll;
+  border-top: 3px solid white;
 }
 
 .sponsor-image {
