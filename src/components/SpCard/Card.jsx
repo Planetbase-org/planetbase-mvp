@@ -1,39 +1,76 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Card.css";
 import { cards } from "../../utils/sponsorslist";
 import Modal from "../Modal/Modal";
 import SponsorModal from "../Modal/SponsorModal";
+import Axios from "axios";
 
 function Card() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleModal = () => setIsOpen(!isOpen);
+  const [isLoading, setIsLoading] = useState(false);
+  const [events, setEvents] = useState([]);
+  const [eventTitle, setEventTitle] = useState("");
+  const [eventDesc, setEventDesc] = useState("");
+  const [eventImage, setEventImage] = useState("");
+  const [scheduledDate, setScheduledDate] = useState("");
+  const [eventLocation, setEventLocation] = useState("");
+  const [sponsorshipPackage, setSponsorshipPackage] = useState("");
+  const url = "https://planetbase-api.onrender.com/api/events/all-events";
+  useEffect(() => {
+    setIsLoading(true);
+    Axios.get(url)
+      .then((res) => {
+        setEvents(res.data.events);
+        console.log(res.data.events[1]);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
 
   return (
-    <>{
-      isOpen && (
-        <Modal isOpen={isOpen}  onClose={toggleModal}>
-          <SponsorModal onClose={toggleModal}/>
-        </Modal>
-      )
-    }
-      {cards.map((card, index) => (
-        <div key={index} className="sp-card" onClick={toggleModal}>
-          <img
-            src={card.img}
-            alt="image"
-            className="card-image"
+    <>
+      {isOpen && (
+        <Modal isOpen={isOpen} onClose={toggleModal}>
+          <SponsorModal
+            events={events}
+            onClose={toggleModal}
+            eventTitle={eventTitle}
+            eventDesc={eventDesc}
+            eventImage={eventImage}
+            sponsorshipPackage={sponsorshipPackage}
+            scheduledDate={scheduledDate}
+            eventLocation={eventLocation}
           />
-          <p className="card-title">{card.title}</p>
-          <p>{card.description}</p>
+        </Modal>
+      )}
+      {isLoading && <p>Loading...</p>}
+      {events.map((listEvent, index) => (
+        <div
+          key={listEvent._id}
+          className="sp-card"
+          onClick={() => {
+            toggleModal();
+            setEventTitle(listEvent.eventTitle);
+            setEventDesc(listEvent.eventDesc);
+            setEventImage(listEvent.eventImage);
+            setSponsorshipPackage(listEvent.sponsorshipPackage);
+            setScheduledDate(listEvent.scheduledDate);
+            setEventLocation(listEvent.eventLocation);
+          }}
+        >
+          <img src={listEvent.eventImage} alt="image" className="card-image" />
+          <p className="card-title">{listEvent.eventTitle}</p>
+          <p>{listEvent.eventDesc}</p>
           <div className="card-content">
-            <p>
-              {card.sponsoredEvent}
-            </p>
-              <img
-                className="card-tag"
-                src="https://cdn-icons.flaticon.com/png/512/3106/premium/3106777.png?token=exp=1660863227~hmac=d94e1ad1804d0087ad7818b50dd7d34c"
-                alt=""
-              />
+            <p>{listEvent.sponsorshipPackage}</p>
+            <img
+              className="card-tag"
+              src="https://cdn-icons.flaticon.com/png/512/3106/premium/3106777.png?token=exp=1660863227~hmac=d94e1ad1804d0087ad7818b50dd7d34c"
+              alt=""
+            />
           </div>
         </div>
       ))}

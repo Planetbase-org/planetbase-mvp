@@ -81,15 +81,16 @@ function Sponsor() {
 
   const [events, setEvents] = useState([]);
 
-  const fetchAllEvents = async () => {
-    const response = await Axios.get(url);
-   console.log(response.data)
-  };
-
- 
-   fetchAllEvents();
-
-console.log(events[0])
+  useEffect(() => {
+    Axios.get(url)
+      .then((res) => {
+        setEvents(res.data);
+        console.log(res.data.events);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <>
       <Navbar />
@@ -112,8 +113,9 @@ console.log(events[0])
         <br />
       
           <div>
-        <h1>Events</h1>
-   
+            {events.map((events, index) => (
+              <SponsorCard key={events._id} {...events} />
+            ))}
           </div>
         <div className="sponsor-btn-continue">
           <button className="btn-primary" type="submit">

@@ -36,12 +36,6 @@ function EditEvent() {
   }
 
   const [value, setValue] = useState(getFormValues);
-  // const [checked1, setChecked1] = useState(false);
-  // const [checked2, setChecked2] = useState(false);
-
-  // useEffect(() => {
-  //   localStorage.setItem("event", JSON.stringify(checked1));
-  // }, [checked1]);
 
   function onSubmit(e) {
     e.preventDefault();

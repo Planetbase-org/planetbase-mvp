@@ -6,7 +6,70 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
 
+// export function EventCard(event) {
+//   useEffect(() => {
+//     const token = localStorage.getItem("token");
+//     if (!token) {
+//       navigate("/login");
+//     } else {
+//       fetchAllEvents();
+//     }
+//   }, []);
+//   return (
+//     <div className="event-rows">
+//       <img src={event.eventImage} alt="a picture of an event image" />
+//       <div>
+//         <h3>Events</h3>
+//         <div>
+//           <p>{event.title}</p>
+//         </div>
+//       </div>
+//       <div>
+//         <h3>Date</h3>
+//         <div>
+//           <p>{event.date}</p>
+//         </div>
+//       </div>
+//       <div>
+//         <h3>Status</h3>
+//         <div>
+//           <p>{event.status1}</p>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
+export function NoEvents() {
+  return (
+    <div className="event-rows">
+      <img
+        src={
+          "https://res.cloudinary.com/dputu7z0u/image/upload/v1660863670/Rectangle_31_ad96pw.svg"
+        }
+        alt="a picture of an event image"
+      />
+      <div>
+        <h3>Events</h3>
+        <div>
+          <p>{"No Update"}</p>
+        </div>
+      </div>
+      <div>
+        <h3>Date</h3>
+        <div>
+          <p>{"No Date"}</p>
+        </div>
+      </div>
+      <div>
+        <h3>Status</h3>
+        <div>
+          <p>{"No Status"}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
 //
 function EventProfile() {
   const navigate = useNavigate();
@@ -40,7 +103,11 @@ function EventProfile() {
           </div>
         </div>
         <div>
-            <h1>Hello Events</h1>
+          {events.length > 0 ? (
+            events.map((event) => <EventCard {...event} />)
+          ) : (
+            <NoEvents />
+          )}
         </div>
         <div className="event-btn">
           <Link to="/create-event">Create Event</Link>
@@ -51,3 +118,34 @@ function EventProfile() {
 }
 
 export default EventProfile;
+
+export function EventCard(event) {
+  return (
+    <div className="event-rows">
+      <img
+        src={
+          "https://res.cloudinary.com/dputu7z0u/image/upload/v1660863670/Rectangle_31_ad96pw.svg"
+        }
+        alt="a picture of an event image"
+      />
+      <div>
+        <h3>Events</h3>
+        <div>
+          <p>{event.price}</p>
+        </div>
+      </div>
+      <div>
+        <h3>Date</h3>
+        <div>
+          <p>{"No Date"}</p>
+        </div>
+      </div>
+      <div>
+        <h3>Status</h3>
+        <div>
+          <p>{"No Status"}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
