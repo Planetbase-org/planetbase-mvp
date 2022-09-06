@@ -91,7 +91,7 @@
   margin: 10px 0;
 }
 
-.spon-btn {
+.custom-btn {
   position: relative;
   outline: none;
   text-decoration: none;
@@ -108,7 +108,7 @@
   border: 1px solid #17386e;
 }
 
-.spon-btn .sponsor-span {
+.custom-btn .custom-span {
   font-family:"Poppins",sans-serif;  
   color: #fff;
   font-size: 12px;
@@ -116,11 +116,11 @@
   letter-spacing: 0.7px;
 }
 
-.spon-btn:hover {
+.custom-btn:hover {
   animation: spon-btnrotate 0.7s ease-in-out both;
 }
 
-.spon-btn:hover .sponsor-span {
+.custom-btn:hover .custom-span {
   animation: spon-btnstorm 0.7s ease-in-out both;
   animation-delay: 0.06s;
 }

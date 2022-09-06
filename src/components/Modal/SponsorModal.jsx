@@ -24,8 +24,8 @@ function SponsorModal({
       <p>{scheduledDate}</p>
       <div className="sponsor-btn">
       <Link to="/sponsor-bid">
-        <button class="spon-btn">
-          <span class="sponsor-span">Create Bid</span>
+        <button class="custom-btn">
+          <span class="custom-span">Create Bid</span>
         </button>
       </Link>
       </div>
