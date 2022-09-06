@@ -158,9 +158,17 @@ input {
   font-family: "Poppins", sans-serif;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.2s;
+  text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
+  text-align: center;
+  box-sizing: border-box;
+  display: inline-block;
 }
 
-
+.btn-primary:hover {
+  color: #fff;
+  background: #17386eef;
+}
 
 @media screen and (max-width: 900px) {
   .input-container > input {

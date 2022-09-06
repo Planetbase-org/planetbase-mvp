@@ -67,11 +67,17 @@
     margin-top: 20px;
 }
 
+.hero-btn>a:last-of-type:hover{
+    color: #fff;
+    background: #0f6cc9c4;
+}
+
 .hero-btn>a:last-of-type {
     background: #0f6cc9;
     color: #fff;
     border: 1px solid #0f6cc9;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 @media screen and (max-width: 1290px) {

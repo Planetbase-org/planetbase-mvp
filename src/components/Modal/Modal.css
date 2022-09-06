@@ -34,6 +34,7 @@
   height: 90vh;
   overflow: scroll;
   border-top: 7px solid white;
+  transition: 0.5s;
 }
 
 .sponsor-image {
@@ -145,4 +146,12 @@
     width: 60%;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .modal-layout > div {
+    width: 80%;
+  }
+}
+
+
 
