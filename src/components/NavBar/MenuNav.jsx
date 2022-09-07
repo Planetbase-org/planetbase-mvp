@@ -70,11 +70,11 @@ function MenuNav() {
           <div>
             <li  className="">
               {token ? (
-                <Link to="/login" activeclassname="active" className="nav-links">
+                <Link to="/login" activeclassname="active" className="nav-links" onClick={onLogout}>
                   Logout
                 </Link>
               ) : (
-                <Link to="/login" activeclassname="active">
+                <Link to="/organizer" activeclassname="active">
                   Login
                 </Link>
               )}
