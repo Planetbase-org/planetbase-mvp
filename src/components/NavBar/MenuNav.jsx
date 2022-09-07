@@ -68,7 +68,7 @@ function MenuNav() {
               )}
             </li>
           <div>
-            <li  className="">
+            <li  className="nav-item">
               {token ? (
                 <Link to="/login" activeclassname="active" className="nav-links" onClick={onLogout}>
                   Logout
