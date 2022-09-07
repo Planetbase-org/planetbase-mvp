@@ -19,7 +19,7 @@
 
 .subscribe-header>h4 {
     font-size: 25px;
-    font-family: "Sora", sans-serif;
+    font-family: 'Public Sans', sans-serif;
     font-weight: 500;
     color: #000;
 }
@@ -51,7 +51,7 @@
     font-size: 20px;
     color: rgba(0, 0, 0, 0.824);
     font-weight: 400;
-    font-family: "Sora", sans-serif;
+    font-family: 'Public Sans', sans-serif;
     margin: 5px 0 0;
 }
 .parent-wrapper {
@@ -171,7 +171,7 @@
 
     .subscribe-header > h4 {
         font-size: 18px;
-        font-family: "Sora", sans-serif;
+        font-family: 'Public Sans', sans-serif;
         font-weight: 400;
         color: rgb(49, 47, 47);
       }

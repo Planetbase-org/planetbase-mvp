@@ -9,21 +9,20 @@
   justify-content: center;
 }
 
-.modal-layout > img{
+.modal-layout > img {
   border-radius: 50%;
   font-size: 30px;
   color: rgb(255, 255, 255);
-  transition: .5s;
+  transition: 0.5s;
   width: 60px;
   margin-bottom: 10px;
 }
 
-.modal-layout >img:hover {
+.modal-layout > img:hover {
   color: #17386e;
   box-shadow: 0 0 5px #17386e;
   text-shadow: 0 0 1px rgba(9, 248, 244, 0.439);
 }
-
 
 .modal-layout > div {
   width: 40%;
@@ -47,7 +46,7 @@
 .modal-layout > div > h4 {
   text-align: center;
   margin: 10px 0;
-  font-family: "Sora", sans-serif;
+  font-family: "Public Sans", sans-serif;
   font-weight: 600;
   font-size: 30px;
 }
@@ -55,7 +54,7 @@
 .modal-layout > div > p {
   text-align: center;
   margin: 10px 0;
-  font-family: "Sora", sans-serif;
+  font-family: "Public Sans", sans-serif;
   font-weight: 600;
   font-size: 12px;
 }
@@ -161,6 +160,3 @@
     width: 80%;
   }
 }
-
-
-

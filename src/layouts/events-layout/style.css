@@ -72,15 +72,15 @@
 }
 
 .user-name > p {
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: capitalize;
-  }
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
 
 @media screen and (max-width: 1110px) {
   .planetbase > p {
     font-size: 14px;
-    font-family: "Sora";
+    font-family: "Public Sans", sans-serif;
     font-weight: 400;
   }
 

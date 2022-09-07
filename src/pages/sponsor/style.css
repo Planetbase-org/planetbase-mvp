@@ -8,7 +8,7 @@
   font-weight: 500;
   font-size: 30px;
   color: rgba(0, 0, 0, 0.792);
-  margin: 20px 0;
+  margin: 20px 0;;
 }
 
 .page-header {
@@ -69,6 +69,8 @@
   margin: 0 auto;
 }
 
+
+
 .sponsorship-form-control > div {
   margin: 15px;
 }
@@ -123,6 +125,10 @@
   width: 50%;
   margin: 50px auto;
   background: #fff;
+}
+
+.sponsor-form > h2 {
+  text-align: center;
 }
 
 .sponsor-bid-control > div > input,

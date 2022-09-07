@@ -15,7 +15,7 @@
     margin-top: 130px;
     color: #fff;
     font-weight: 500;
-    font-family: "Sora", sans-serif;
+    font-family: 'Public Sans', sans-serif;
     font-size: 50px;
     line-height: 141.3%;
     text-transform: uppercase;
@@ -25,7 +25,7 @@
     color: #fff;
     font-weight: 500;
     font-size: 30px;
-    font-family: "Sora", sans-serif;
+    font-family: 'Public Sans', sans-serif;
     transition: 0.5s ease-in-out;
     margin: 19px 0;
 }
@@ -34,7 +34,7 @@
     color: #fff;
     font-weight: 800;
     font-size: 40px;
-    font-family: "Sora", sans-serif;
+    font-family: 'Public Sans', sans-serif;
     margin: 19px 0;
     transition: 0.5s ease-in-out;
 }
@@ -85,7 +85,7 @@
         margin-top: 130px;
         color: #fff;
         font-weight: 500;
-        font-family: "Sora", sans-serif;
+        font-family: 'Public Sans', sans-serif;
         font-size: 45px;
         line-height: 141.3%;
         text-transform: uppercase;

@@ -23,14 +23,14 @@
 .support-section>div>h1 {
     line-height: 143%;
     font-size: 50px;
-    font-family: "Sora";
+    font-family: 'Public Sans', sans-serif;
     font-weight: 500;
 }
 
 .support-section>div>p {
     font-size: 30px;
     line-height: 143%;
-    font-family: "Sora";
+    font-family: 'Public Sans', sans-serif;
     color: rgba(33, 31, 31, 0.83);
 }
 
@@ -38,7 +38,7 @@
     line-height: 203%;
     font-size: 19px;
     color: rgba(33, 31, 31, 0.83);
-    font-family: "Sora";
+    font-family: 'Public Sans', sans-serif;
 }
 
 .support-section>img {
