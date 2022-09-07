@@ -15,11 +15,11 @@ function EventLayout({ children }) {
           {/* <p>PLANETBASE</p> */}
         </Link>
         <div>
-          <Link to="#" className="message-btn">
+          {/* <Link to="#" className="message-btn">
             <FaEnvelope size="1.5em" />
             <span className="icon-btn-badge">2</span>
-          </Link>
-          <div className="username">
+          </Link> */}
+          <div className="user-name">
             <p>
               {/* {localStorage.getItem("firstname")}{" "}
               {localStorage.getItem("lastname")} */}
