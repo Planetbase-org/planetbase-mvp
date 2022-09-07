@@ -54,107 +54,6 @@
     font-family: "Sora", sans-serif;
     margin: 5px 0 0;
 }
-
-.subscribe-form {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    border: 2px solid #0F2560;
-}
-
-.subscribe-email-input {
-    outline: none;
-    width: 80%;
-    padding: 10px;
-    font-size: 15px;
-    border: none;
-    background: transparent;
-}
-
-.subscribe-form>.subscribe-btn {
-    padding: 12px 20px;
-    background: #0F2560;
-    color: #fff;
-    border: 1px solid #0F2560;
-    font-size: 13px;
-    height: 45px;
-    overflow: hidden;
-  }
-
-.subscribe-message-text {
-    font-size: 12px !important;
-    font-weight: bold;
-    color: rgba(23, 21, 21, 0.848);
-    font-family: 'Poppins';
-    margin: 14px 0;
-}
-
-
-@media screen and (max-width:900px) {
-    .subscribe {
-        overflow: hidden;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .subscribe-message>div {
-        width: 100%;
-        line-height: 123%;
-
-    }
-
-    .subscribe-form {
-        width: 50%;
-    }
-
-    .subscribe-message {
-        flex-direction: column;
-    }
-
-    .subscribe-header > h4 {
-        font-size: 18px;
-        font-family: "Sora", sans-serif;
-        font-weight: 400;
-        color: rgb(49, 47, 47);
-      }
-    .subscribe-form>.subscribe-btn {
-        width: 30%;
-    }
-    
-
-    .subscribe-message>div>h4 {
-        font-size: 15px;
-    }
-
-    .subscribe-message>div>p {
-        font-size: 14px;
-        color: rgba(27, 26, 26, 0.876);
-        font-weight: 400;
-    }
-
-    .subscribe-message-text {
-        width: 48%;
-        color: rgb(37, 36, 36);
-        font-family: 800;
-    }
-
-    .subscribe-email-input {
-        width: 50%;
-    }
-}
-
-@media screen and (max-width:600px) {
-
-    .subscribe-form {
-        width: 70%;
-      }
-
-    .subscribe-message-text {
-        width: 78%;
-    }
-}
-
 .parent-wrapper {
     position: relative;
     width: 93%;
@@ -248,3 +147,76 @@
         width: 38%;
       }
   }
+
+@media screen and (max-width:900px) {
+    .subscribe {
+        overflow: hidden;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .subscribe-message>div {
+        width: 100%;
+        line-height: 123%;
+
+    }
+
+    .subscribe-form {
+        width: 50%;
+    }
+
+    .subscribe-message {
+        flex-direction: column;
+    }
+
+    .subscribe-header > h4 {
+        font-size: 18px;
+        font-family: "Sora", sans-serif;
+        font-weight: 400;
+        color: rgb(49, 47, 47);
+      }
+    .subscribe-form>.subscribe-btn {
+        width: 30%;
+    }
+    
+
+    .subscribe-message>div>h4 {
+        font-size: 15px;
+    }
+
+    .subscribe-message>div>p {
+        font-size: 14px;
+        color: rgba(27, 26, 26, 0.876);
+        font-weight: 400;
+    }
+
+    .subscribe-message-text {
+        width: 48%;
+        color: rgb(37, 36, 36);
+        font-family: 800;
+    }
+
+    .subscribe-email-input {
+        width: 50%;
+    }
+
+    .parent-wrapper {
+        width: 38%;
+      }
+}
+
+@media screen and (max-width:600px) {
+
+    .subscribe-form {
+        width: 70%;
+      }
+
+    .subscribe-message-text {
+        width: 78%;
+    }
+
+    .parent-wrapper {
+        width: 60%;
+      }
+}
+
