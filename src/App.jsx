@@ -18,8 +18,11 @@ import {
   Company,
 } from "./pages/index";
 import SuccessPage from "./pages/sponsor/sponsor-bid/SuccessPage";
+import ReactGA from "react-ga";
 
 function App() {
+  const TRACKING_ID = "G-YNHY0F62PQ";
+  ReactGA.initialize(TRACKING_ID);
   return (
     <>
       <Router>

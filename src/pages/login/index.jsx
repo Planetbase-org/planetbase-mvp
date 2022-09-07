@@ -4,6 +4,7 @@ import { useState } from "react";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import useAnalyticsEventTracker from "../../useAnalytics";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -17,6 +18,7 @@ function Login() {
   const handlePassword = (e) => {
     setPassword(e.target.value);
   };
+  const gaEventTracker = useAnalyticsEventTracker("Login");
 
   function onSubmit(e) {
     setIsLoading(true);
@@ -74,6 +76,7 @@ function Login() {
           type="submit"
           className="input-button"
           disabled={isLoading ? true : false}
+          onClick={() => gaEventTracker("signup")}
         >
           {isLoading ? "Signing In..." : "Sign In"}
         </button>
