@@ -11,6 +11,16 @@
   margin: 20px 0;;
 }
 
+.input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px 0 30px auto;
+}
+
 .page-header {
   text-align: center;
   margin: 40px 0;
@@ -69,7 +79,9 @@
   margin: 0 auto;
 }
 
-
+.sponsorship-form > h2 {
+  text-align: center;
+}
 
 .sponsorship-form-control > div {
   margin: 15px;
@@ -128,7 +140,9 @@
 }
 
 .sponsor-form > h2 {
+  font-family: 'Public Sans', sans-serif;
   text-align: center;
+  margin: 20px 0;
 }
 
 .sponsor-bid-control > div > input,

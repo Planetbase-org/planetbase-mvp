@@ -15,6 +15,11 @@
   display: none;
 }
 
+:root {
+  scrollbar-color: #0f255f #0f255f;
+  scrollbar-width: auto;
+}
+
 html,
 body {
   margin: 0;
@@ -45,6 +50,8 @@ a {
 input {
   font-family: "Poppins";
 }
+
+
 
 .layout-container {
   overflow: scroll;
