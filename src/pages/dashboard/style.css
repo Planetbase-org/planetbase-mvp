@@ -14,6 +14,7 @@
   font-weight: 500;
   font-family: "Poppins";
   color: rgba(0, 0, 0, 0.792);
+  text-transform: uppercase;
 }
 
 .search-events {
@@ -471,8 +472,10 @@ input {
 
   .event-container {
     width: 100%;
+    overflow: visible;
+    background: white;
+    overflow: scroll;
   }
-
   .event-rows > div > h3 {
     font-weight: 400;
     font-size: 16px;
