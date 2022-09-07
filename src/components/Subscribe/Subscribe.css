@@ -49,10 +49,11 @@
 
 .subscribe-message>div>p {
     font-size: 20px;
-    color: rgba(0, 0, 0, 0.824);
+    color: rgba(0, 0, 0, 0.719);
     font-weight: 400;
     font-family: 'Public Sans', sans-serif;
     margin: 5px 0 0;
+    letter-spacing: 1px;
 }
 .parent-wrapper {
     position: relative;
