@@ -2,67 +2,75 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import Planetbase from "../../assets/planetbase.png";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function MenuNav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const handleClick = () => setIsNavExpanded(!isNavExpanded);
   const token = localStorage.getItem("token");
   const onLogout = () => {
     localStorage.removeItem("token");
   };
   return (
-    <nav className="navigation">
-      <Link to="/" className="brand-name">
-        <img src={Planetbase} alt="planetbase" />
-      </Link>
-      <button
-        className="hamburger"
-        onClick={() => {
-          setIsNavExpanded(!isNavExpanded);
-        }}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
-          viewBox="0 0 20 20"
-          fill="white"
-        >
-          <path
-            fillRule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </button>
-      <div
-        className={
-          isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
-        }
-      >
-        <ul>
-          <li>
-            <Link to="/products" activeclassname="active">
+    <nav className="navbar">
+      <div className="nav-container">
+        <Link to="/" className="brand-name nav-logo">
+          <img src={Planetbase} alt="planetbase" />
+        </Link>
+        <ul className={isNavExpanded ? "nav-menu active" : "nav-menu"}>
+          <li className="nav-item">
+            <Link
+              className="nav-links"
+              to="/products"
+              activeclassname="active"
+              onClick={handleClick}
+            >
               Product
             </Link>
           </li>
-          <li>
-            <Link to="/solutions" activeclassname="active">
+          <li className="nav-item">
+            <Link
+              className="nav-links"
+              to="/solutions"
+              activeclassname="active"
+              onClick={handleClick}
+            >
               Solutions
             </Link>
           </li>
-          <li>
-            <Link to="/resources" activeclassname="active">
+          <li className="nav-item">
+            <Link
+              className="nav-links"
+              to="/resources"
+              activeclassname="active"
+              onClick={handleClick}
+            >
               Resources
             </Link>
           </li>
-          <li>
-            <Link to="/company" activeclassname="active">
+          <li className="nav-item">
+            <Link
+              to="/company"
+              activeclassname="active"
+              className="nav-links"
+              onClick={handleClick}
+            >
               Company
             </Link>
           </li>
+          <li className="">
+              {token && (
+                <Link to="/create-event" activeclassname="active" className="nav-links">
+                  <button className="custom-btn" type="button">
+                    <span className="custom-span">Create Events</span>
+                  </button>
+                </Link>
+              )}
+            </li>
           <div>
-            <li className="login">
+            <li  className="">
               {token ? (
-                <Link to="/login" activeclassname="active">
+                <Link to="/login" activeclassname="active" className="nav-links">
                   Logout
                 </Link>
               ) : (
@@ -71,32 +79,10 @@ function MenuNav() {
                 </Link>
               )}
             </li>
-            {token && (
-              <li>
-                <button className="loginBtnMobile">Create Events</button>
-              </li>
-            )}
           </div>
         </ul>
-        <div className="createEvents">
-          <li>
-            {token ? (
-              <Link to="/login" activeclassname="active" onClick={onLogout}>
-                Logout
-              </Link>
-            ) : (
-              <Link to="/login" activeclassname="active">
-                Login
-              </Link>
-            )}
-          </li>
-          {token && (
-            <Link to="/create-event">
-              <button className="loginButton" type="button">
-                Create Events
-              </button>
-            </Link>
-          )}
+        <div onClick={handleClick} className="nav-icon">
+          {isNavExpanded ? <FaTimes /> : <FaBars />}
         </div>
       </div>
     </nav>
