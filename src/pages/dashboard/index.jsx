@@ -106,7 +106,9 @@ function EventProfile() {
             )}
           </div>
           <div className="event-btn">
-            <Link to="/create-event">Create Event</Link>
+            <Link to="/create-event" className="custom-btn">
+              <span className="custom-span">Create Event</span>
+              </Link>
           </div>
         </div>
       </EventLayout>
