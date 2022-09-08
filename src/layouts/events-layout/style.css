@@ -1,12 +1,15 @@
 .events-layout {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 50px;
-  padding-right: 50px;
-  border-bottom: 1px solid #8f8d8d8e;
   background: #fff;
-  height: 70px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.245);
+  justify-content: space-between;
 }
 
 .planetbase {
@@ -113,9 +116,6 @@
 @media screen and (max-width: 700px) {
   .events-layout > div {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 30%;
   }
 
   .message-btn {
