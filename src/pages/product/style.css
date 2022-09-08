@@ -4,6 +4,7 @@
   overflow-y: hidden;
   padding: 40px 50px 0 50px;
   justify-content: space-between;
+  scroll-behavior: smooth;
 }
 
 .product-details,
