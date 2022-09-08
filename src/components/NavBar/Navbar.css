@@ -104,7 +104,9 @@
 }
 
 @media screen and (max-width: 960px) {
-
+  .planetbase > img {
+    width: 118px;
+  }
 
   .nav-icon {
     font-size: 26px;
