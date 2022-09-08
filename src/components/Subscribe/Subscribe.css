@@ -68,18 +68,28 @@
   letter-spacing: 1px;
 }
 
+@media screen and (max-width:1111px){
+  .subscribe-message > div {
+    width: 41%;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .subscribe {
     overflow: hidden;
     padding-left: 16px;
     padding-right: 16px;
   }
+  
+  .policy {
+    margin: 12px 0;
+  }
 
   .subscribe-message > div {
     width: 100%;
     line-height: 123%;
+    margin: 16px;
   }
-
   .subscribe-form {
     width: 50%;
   }

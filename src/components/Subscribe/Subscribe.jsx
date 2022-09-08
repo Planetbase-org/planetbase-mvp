@@ -10,23 +10,15 @@ function Subscribe() {
       </div>
       <div className="subscribe-message">
         <div>
-          <h4>
-            Moving your events online really opens up the esteem of supporting
-            it
-          </h4>
-          <p>
-            Become a subscriber and become the first to receive Information.
-          </p>
+          <h4> Moving your events online really opens up the esteem of supporting it</h4>
+          <p>Become a subscriber and become the first to receive Information.</p>
         </div>
-        <div className="subscribe">
+        <div>
           <div className="subscribe-wrapper">
             <input type="text" placeholder="Enter email address"/>
             <button className="btn-primary">Subscribe</button>
           </div>
-          <h6 className='policy'>
-            By signing up, you agree to our Terms of Service and Privacy Policy.
-            You will receive offers from Planetbase
-          </h6>
+          <h6 className='policy'>By signing up, you agree to our Terms of Service and Privacy Policy.</h6>
         </div>
       </div>
     </section>
