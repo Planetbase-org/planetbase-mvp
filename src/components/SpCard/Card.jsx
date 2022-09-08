@@ -70,7 +70,7 @@ function Card() {
               className="card-image"
             />
             <p className="card-title">{listEvent.eventTitle}</p>
-            <p>{listEvent.eventDesc}</p>
+            <p className="card-desc">{listEvent.eventDesc}</p>
             <div className="card-content">
               <p>{listEvent.sponsorshipPackage}</p>
               <img

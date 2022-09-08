@@ -25,6 +25,10 @@
   font-size: 18px;
 }
 
+.card-desc {
+  font-size: 14px;
+}
+
 .card-content {
   display: flex;
   align-items: center;
