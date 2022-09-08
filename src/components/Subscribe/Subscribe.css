@@ -76,7 +76,6 @@
 
 @media screen and (max-width: 900px) {
   .subscribe {
-    overflow: hidden;
     padding-left: 16px;
     padding-right: 16px;
   }
