@@ -19,7 +19,8 @@
 }
 
 .planetbase > img {
-  width: 150px;
+  width: 100px;
+  object-fit: contain;
 }
 
 .planetbase > p {
