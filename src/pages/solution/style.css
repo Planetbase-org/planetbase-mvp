@@ -1,6 +1,6 @@
 .solution-layout {
     background: #fff;
-    overflow: hidden;
+    overflow: inherit;
 }
 
 .solution-layout>h4 {
