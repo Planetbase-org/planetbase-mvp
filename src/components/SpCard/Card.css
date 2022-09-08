@@ -29,13 +29,15 @@
   font-weight: 500;
   font-size: 18px;
   text-align: center;
+  margin: 10px auto;
 }
 
 .card-desc {
   font-size: 14px;
-  margin: 10px 0;
+  margin: 10px auto;
   text-align: center;
 }
+
 
 .card-content {
   display: flex;
