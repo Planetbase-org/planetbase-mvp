@@ -5,7 +5,7 @@ import Resource2 from "../../assets/resources2.svg";
 import Resource3 from "../../assets/resources3.svg";
 import Layout from "../../layouts/products-layout";
 
-function ResourceComponent() {
+function ResourceComponent({children}) {
   return (
     <Layout>
       <div className="product-section">
@@ -41,6 +41,7 @@ function ResourceComponent() {
           />
         </div>
       </div>
+      {children}
     </Layout>
   );
 }

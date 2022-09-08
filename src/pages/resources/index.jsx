@@ -7,10 +7,11 @@ import Footer from '../../components/Footer/Footer';
 function Resources() {
   return (
     <div>
-        <ResourcesComponent/>
+        <ResourcesComponent>
         <ModalVideo />
         <Subscribe/>
         <Footer/>
+        </ResourcesComponent>
     </div>
   )
 }
