@@ -1,7 +1,7 @@
 .product-section {
   display: flex;
   background: #fff;
-  overflow-y: hidden;
+  overflow-y: inherit;
   padding: 40px 50px 0 50px;
   justify-content: space-between;
   scroll-behavior: smooth;
