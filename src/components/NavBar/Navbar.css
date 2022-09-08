@@ -70,6 +70,7 @@
   border-bottom: 3px solid transparent;
   font-size: 16px;
 }
+
 .fa-code {
   margin-left: 1rem;
 }
@@ -87,16 +88,16 @@
   background: transparent;
   transition: width 0.7s ease, background-color 0.5s ease;
 }
-
+/* 
 .nav-item:hover:after {
   width: 100%;
-  background: rgba(0, 0, 0, 0.719);
+  background:#fff;
 }
 
 .nav-item .active {
-  color: rgba(0, 0, 0, 0.719);
-  border: 1px solid rgba(0, 0, 0, 0.719);
-}
+  color:#fff;
+  border: 1px solid#fff;
+} */
 
 .nav-icon {
   display: none;
