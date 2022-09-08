@@ -3,6 +3,7 @@ import "../style.css";
 const SponsorForm = ({
   bidFrom,
   email,
+  phoneNumber,
   bidDate,
   bidAmount,
   bidDesc,
@@ -21,6 +22,7 @@ const SponsorForm = ({
         placeholder="Your Company Name"
         onChange={changeState}
         value={bidFrom}
+        required
       />
       <label className="label">Email Address</label>
       <input
@@ -30,6 +32,17 @@ const SponsorForm = ({
         placeholder="yourcompany@mail.com"
         onChange={changeState}
         value={email}
+        required
+      />
+      <label className="label">Phone Number</label>
+      <input
+        type="text"
+        className="input"
+        name="phoneNumber"
+        placeholder="e.g 9999-999-9999"
+        onChange={changeState}
+        value={phoneNumber}
+        required
       />
       <label className="label">Bid Date</label>
       <input
@@ -38,6 +51,7 @@ const SponsorForm = ({
         name="bidDate"
         onChange={changeState}
         value={bidDate}
+        required
       />
       <label className="label">Bid Amount</label>
       <input
@@ -47,6 +61,7 @@ const SponsorForm = ({
         name="bidAmount"
         onChange={changeState}
         value={bidAmount}
+        required
       />
       <label className="label">Bid Description</label>
       <textarea
@@ -55,6 +70,7 @@ const SponsorForm = ({
         name="bidDesc"
         onChange={changeState}
         value={bidDesc}
+        required
       ></textarea>
       <button type="submit" className="btn-primary">
         {isLoading ? "Loading..." : "Save and Continue"}

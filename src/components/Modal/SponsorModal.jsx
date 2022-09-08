@@ -19,11 +19,11 @@ function SponsorModal({
       <p>{eventDesc}</p>
       <p>{scheduledDate}</p>
       <div className="sponsor-btn">
-      <Link to="/sponsor-bid">
-        <button class="custom-btn">
-          <span class="custom-span">Create Bid</span>
-        </button>
-      </Link>
+        <Link to="/sponsor-bid">
+          <button className="custom-btn">
+            <span className="custom-span">Create Bid</span>
+          </button>
+        </Link>
       </div>
     </div>
   );
