@@ -8,6 +8,7 @@
   position: sticky;
   top: 0;
   z-index: 20;
+  padding: 0 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.245);
   justify-content: space-between;
 }
@@ -19,8 +20,7 @@
 }
 
 .planetbase > img {
-  width: 100px;
-  object-fit: contain;
+  width: 150px;
 }
 
 .planetbase > p {
@@ -112,9 +112,16 @@
     align-items: center;
     width: 20%;
   }
+
 }
 
 @media screen and (max-width: 700px) {
+  
+  .planetbase > img {
+    width: 100px;
+    object-fit: contain;
+  }
+  
   .events-layout > div {
     display: flex;
   }
