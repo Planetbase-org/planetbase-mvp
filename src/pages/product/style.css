@@ -11,16 +11,14 @@
   width: 45%;
 }
 
-.card-details>h5 {
+.card-details > h5 {
   font-size: 14px;
   font-weight: 400;
   text-align: start;
 }
 
-
-
-.product>h4,
-.product-details>h4 {
+.product > h4,
+.product-details > h4 {
   font-size: 30px;
   font-weight: 500;
   margin: 16px 0;
@@ -34,13 +32,13 @@
   padding: 20px 15px;
 }
 
-.product-card>h3 {
+.product-card > h3 {
   font-size: 18px;
   font-weight: 500;
   margin: 5px 0;
 }
 
-.product-card>p {
+.product-card > p {
   font-size: 14px;
   font-weight: 400;
   margin: 5px 0;
@@ -52,8 +50,7 @@ hr {
   height: 80vh;
 }
 
-@media screen and (max-width:1110px) {
-
+@media screen and (max-width: 1110px) {
   .product-section {
     flex-direction: column;
   }
@@ -62,7 +59,8 @@ hr {
     width: 100%;
   }
 
-  .product>h4,   .product-details >h4 {
+  .product > h4,
+  .product-details > h4 {
     margin: 20px auto;
     font-size: 33px;
     text-align: center;
@@ -73,13 +71,13 @@ hr {
     margin: 0 auto;
   }
 
-  .card-details>h5 {
+  .card-details > h5 {
     font-size: 14px;
     font-weight: 400;
     text-align: start;
   }
 
-  .card-details>p {
+  .card-details > p {
     color: rgba(0, 0, 0, 0.792);
     width: 80%;
     margin: 5px 0;
@@ -97,7 +95,7 @@ hr {
   }
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width: 500px) {
   .product-section {
     padding: 40px 10px 0 10px;
   }
@@ -107,6 +105,6 @@ hr {
   }
 
   .card-details > p {
-    font-size: 13px; 
-   }
+    font-size: 13px;
+  }
 }
