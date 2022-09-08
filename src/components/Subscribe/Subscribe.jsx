@@ -21,7 +21,7 @@ function Subscribe() {
         <div className="subscribe">
           <div className="subscribe-wrapper">
             <input type="text" placeholder="Enter email address"/>
-            <button className="btn-primary">Submit</button>
+            <button className="btn-primary">Subscribe</button>
           </div>
           <h6 className='policy'>
             By signing up, you agree to our Terms of Service and Privacy Policy.
