@@ -381,10 +381,6 @@ input {
     color: rgba(0, 0, 0, 0.792);
   }
 
-  .event-container {
-    width: 86%;
-  }
-
   .event-rows > img {
     width: 31%;
   }
