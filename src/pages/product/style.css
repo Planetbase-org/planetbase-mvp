@@ -11,6 +11,13 @@
   width: 45%;
 }
 
+.card-details>h5 {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: start;
+}
+
+
 
 .product>h4,
 .product-details>h4 {
@@ -69,6 +76,7 @@ hr {
   .card-details>h5 {
     font-size: 14px;
     font-weight: 400;
+    text-align: start;
   }
 
   .card-details>p {
