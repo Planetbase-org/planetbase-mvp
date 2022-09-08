@@ -25,6 +25,12 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.245);
 }
 
+.nav-container:hover {
+  background: rgba(0, 0, 0, 0.6);
+  padding: auto;
+  width: 100%;
+  transition: 02s ease-in-out;
+}
 
 .brand-name > img {
   width: 110px;
@@ -39,14 +45,13 @@
   max-width: 1500px;
 }
 
-
 .nav-logo {
-  /* align-items: center;
-  margin-left: 20px; */
+  align-items: center;
+  margin-left: 20px;
   cursor: pointer;
-  /* text-decoration: none;
+  text-decoration: none;
   flex-grow: 1;
-  display: flex; */
+  display: flex;
 }
 
 .nav-menu {
@@ -98,10 +103,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  .nav-container {
-    justify-content: space-between;
-  }
-  
+
 
   .nav-icon {
     font-size: 26px;
@@ -158,4 +160,5 @@
     color: #17386e;
     border: 1px solid #17386e;
   }
+  
 }
