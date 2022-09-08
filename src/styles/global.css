@@ -52,7 +52,6 @@ input {
 }
 
 .layout-container {
-  overflow: scroll;
   height: 100vh;
   background: #fff;
 }
