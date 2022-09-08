@@ -369,10 +369,6 @@ input {
     width: 80%;
   }
 
-  .event-container {
-    overflow: scroll;
-  }
-
   .event-input {
     justify-content: center;
   }

@@ -149,6 +149,9 @@ export function EventCard({
           <p>Pending</p>
         </div>
       </div>
+      <div>
+        <span>delete</span>
+      </div>
     </div>
   );
 }
