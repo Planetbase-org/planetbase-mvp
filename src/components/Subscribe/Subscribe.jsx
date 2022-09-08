@@ -12,33 +12,21 @@ function Subscribe() {
         <div>
           <h4>
             Moving your events online really opens up the esteem of supporting
-            it.
+            it
           </h4>
           <p>
-            Become a subscriber and receive great tips on event regulation
-            updates sent to your inbox!.
+            Become a subscriber and become the first to receive Information.
           </p>
         </div>
-        <div>
-          <div class="parent-wrapper">
-            <span class="close-btn glyphicon glyphicon-remove"></span>
-            <div class="subscribe-wrapper">
-              <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
-              <input
-                type="email"
-                name="email"
-                class="subscribe-input"
-                placeholder="Your e-mail"
-              />
-              <div class="submit-btn">SUBMIT</div>
-            </div>
+        <div className="subscribe">
+          <div className="subscribe-wrapper">
+            <input type="text" placeholder="Enter email address"/>
+            <button className="btn-primary">Submit</button>
           </div>
-          {/* <p className="subscribe-message-text">
+          <h6 className='policy'>
             By signing up, you agree to our Terms of Service and Privacy Policy.
-            You will receive offers from Wimdu and agree that we may share your
-            hashed email address with third parties for the purpose of better
-            tailoring advertising to your needs.
-          </p> */}
+            You will receive offers from Planetbase
+          </h6>
         </div>
       </div>
     </section>
