@@ -37,6 +37,7 @@
   width: 100%;
   height: 80px;
   max-width: 1500px;
+  position: fixed;
 }
 
 .nav-logo {
