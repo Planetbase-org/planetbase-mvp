@@ -1,7 +1,6 @@
 .event-container {
   padding: 0 50px;
   background: #fff;
-  overflow: auto;
   height: 100vh;
   margin: 0 auto;
   scroll-behavior: smooth;
