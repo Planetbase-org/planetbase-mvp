@@ -51,10 +51,10 @@
   display: flex;
   justify-content: space-between;
   margin: 36px 0;
-  border: 1px solid rgba(0, 0, 0, 0.272);
   padding: 18px;
   border-radius: 5px;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .event-rows > img {
@@ -455,11 +455,13 @@ input {
 
   .event-rows {
     flex-direction: column;
-    margin: 0 auto;
     text-align: center;
-    margin-top: 40px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.427);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.427) !important;
+    border-radius: none !important;
+    margin: 36px 0;
+    border:none;
   }
+
 
   .event-rows > img {
     width: 64%;
