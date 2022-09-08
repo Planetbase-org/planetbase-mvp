@@ -59,6 +59,7 @@
 
 .event-rows > img {
   width: 25%;
+  object-fit: contain;
   max-height: 200px;
 }
 
@@ -387,6 +388,7 @@ input {
 
   .event-rows > img {
     width: 31%;
+    object-fit: contain;
   }
 
   .upload-instruction {
@@ -462,6 +464,7 @@ input {
 
   .event-rows > img {
     width: 64%;
+    object-fit: contain;
     margin: 0 auto;
   }
 
