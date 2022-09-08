@@ -46,7 +46,7 @@ function Product() {
           />
         </div>
       </div>
-      <ModalVideo />
+      {/* <ModalVideo /> */}
       <Subscribe />
       <Footer />
     </Layout>
