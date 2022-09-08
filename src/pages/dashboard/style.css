@@ -480,9 +480,7 @@ input {
 
   .event-container {
     width: 100%;
-    overflow: visible;
     background: white;
-    overflow: scroll;
   }
 
   .event-rows > div > h3 {
