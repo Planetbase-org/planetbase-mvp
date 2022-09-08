@@ -17,6 +17,11 @@
   text-transform: uppercase;
 }
 
+.event-input {
+  display: flex;
+  align-items: center;
+}
+
 .search-events {
   display: flex;
   border: 1px solid #ebebeb;
@@ -337,6 +342,21 @@ input {
   .form-upload {
     width: 80%;
   }
+
+  .event-input {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .event-btn {
+    float: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -349,9 +369,7 @@ input {
   }
 
   .event-input {
-    display: flex;
     justify-content: center;
-    margin: 0px auto;
   }
 
   .event-form > h1 {
@@ -420,6 +438,7 @@ input {
 }
 
 @media screen and (max-width: 600px) {
+
   .event-container {
     padding: 0 20px;
   }
@@ -427,8 +446,9 @@ input {
   .event-container > h2 {
     font-size: 5.9vw;
     margin-top: 36px;
+    font-weight: 500;
+    text-align: center;
   }
-
   .form-control > div > p {
     font-size: 16px;
     font-weight: 500;

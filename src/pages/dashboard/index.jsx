@@ -84,10 +84,17 @@ function EventProfile() {
         <div className="event-container">
           <br />
           <h2>{localStorage.getItem("firstname")}'s Organization Events</h2>
-          <div className="event-input">
-            <div className="search-events">
-              <FiSearch />
-              <input type="text" placeholder="Search for your event" />
+          <div>
+            <div className="event-input">
+              <div className="search-events">
+                <FiSearch />
+                <input type="text" placeholder="Search for your event" />
+              </div>
+              <div className="event-btn">
+                <Link to="/create-event" className="custom-btn">
+                  <span className="custom-span">Create Event</span>
+                </Link>
+              </div>
             </div>
           </div>
           <div>
@@ -104,11 +111,6 @@ function EventProfile() {
             ) : (
               <NoEvents />
             )}
-          </div>
-          <div className="event-btn">
-            <Link to="/create-event" className="custom-btn">
-              <span className="custom-span">Create Event</span>
-              </Link>
           </div>
         </div>
       </EventLayout>
