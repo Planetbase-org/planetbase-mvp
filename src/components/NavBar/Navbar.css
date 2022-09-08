@@ -8,9 +8,23 @@
   position: sticky;
   top: 0;
   z-index: 20;
-  padding: 0 20px;
+  padding: 0 6px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.245);
 }
+
+.nav {
+  background: #fff;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 0 6px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.245);
+}
+
 
 .brand-name > img {
   width: 110px;

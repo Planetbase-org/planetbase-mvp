@@ -5,7 +5,7 @@ import "./Navbar.css";
 
 function Nav() {
   return (
-    <nav className="navbar">
+    <nav className="nav">
       <div className="nav">
         <Link to="/" className="nav-logo brand-name">
           <img src={Planetbase} alt="planetbase" />
