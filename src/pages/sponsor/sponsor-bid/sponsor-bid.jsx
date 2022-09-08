@@ -10,12 +10,13 @@ function SponsorBid() {
   const [bidData, setBidData] = useState({
     bidFrom: "",
     email: "",
+    phoneNumber: "",
     bidDate: "",
     bidAmount: 0,
     bidDesc: "",
   });
   const [isLoading, setIsLoading] = useState(false);
-  const { bidFrom, email, bidDate, bidAmount, bidDesc } = bidData;
+  const { bidFrom, email, phoneNumber, bidDate, bidAmount, bidDesc } = bidData;
   const changeState = (e) => {
     setBidData((prevValue) => {
       return { ...prevValue, [e.target.name]: e.target.value };
@@ -26,11 +27,24 @@ function SponsorBid() {
   const onSubmit = (e) => {
     setIsLoading(true);
     e.preventDefault();
+    const createPayment = (id) => {
+      Axios.post(`https://planetbase-api.onrender.com/api/payment/${id}`)
+        .then((res) => {
+          const { data } = res.data.data;
+          console.log(data.link);
+          window.open(data.link);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
     console.log(bidData);
     Axios.post(url, bidData)
       .then((res) => {
         console.log(res);
-        navigate("/success");
+        // navigate("/success");
+        const { _id } = res.data.create_bid;
+        createPayment(_id);
         setIsLoading(false);
       })
       .catch((err) => {
@@ -44,6 +58,7 @@ function SponsorBid() {
       <SponsorForm
         bidFrom={bidFrom}
         email={email}
+        phoneNumber={phoneNumber}
         bidDate={bidDate}
         bidAmount={bidAmount}
         bidDesc={bidDesc}

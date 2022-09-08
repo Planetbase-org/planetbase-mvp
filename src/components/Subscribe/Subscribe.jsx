@@ -20,17 +20,17 @@ function Subscribe() {
           </p>
         </div>
         <div>
-          <div class="parent-wrapper">
-            <span class="close-btn glyphicon glyphicon-remove"></span>
-            <div class="subscribe-wrapper">
+          <div className="parent-wrapper">
+            <span className="close-btn glyphicon glyphicon-remove"></span>
+            <div className="subscribe-wrapper">
               <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
               <input
                 type="email"
                 name="email"
-                class="subscribe-input"
+                className="subscribe-input"
                 placeholder="Your e-mail"
               />
-              <div class="submit-btn">SUBMIT</div>
+              <div className="submit-btn">SUBMIT</div>
             </div>
           </div>
           {/* <p className="subscribe-message-text">
