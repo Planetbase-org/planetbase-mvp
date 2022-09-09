@@ -55,14 +55,6 @@ input {
   background: #fff;
 }
 
-.loading-text {
-  color: rgba(0, 0, 0, 0.756);
-  font-family: "Public Sans", sans-serif;
-  font-size: 35px;
-  transform: translateY(100px);
-  position: absolute;
-}
-
 .loader {
   background: rgb(255, 255, 255);
   background: radial-gradient(rgb(255, 255, 255), rgb(247, 243, 243));
@@ -75,6 +67,15 @@ input {
   z-index: 99999;
 }
 
+.loading-text {
+  color: rgba(0, 0, 0, 0.756);
+  font-family: "Public Sans", sans-serif;
+  font-size: 35px;
+  transform: translateY(100px);
+  position: absolute;
+}
+
+
 .loader-inner {
   bottom: 0;
   height: 60px;
@@ -84,7 +85,7 @@ input {
   right: 0;
   top: 0;
   width: 100px;
-  transform: translateY(10px);
+  transform: translateY(100px);
 }
 
 .loader-line-wrap {
