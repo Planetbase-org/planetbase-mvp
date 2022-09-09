@@ -85,7 +85,7 @@ input {
   right: 0;
   top: 0;
   width: 100px;
-  transform: translateY(90px);
+  transform: translateY(50px);
 }
 
 .loader-line-wrap {
