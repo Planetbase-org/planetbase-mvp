@@ -292,4 +292,8 @@ input {
   .checkbox-container {
     width: 70%;
   }
+
+  .loading-text {
+    font-size: 27px;
+  }
 }
