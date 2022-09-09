@@ -3,7 +3,6 @@ import Layout from "../../layouts/login-registration";
 import { useState } from "react";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import useAnalyticsEventTracker from "../../useAnalytics";
 
 function Login() {
@@ -11,6 +10,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [togglePass, setTogglePass] = useState(false);
   const navigate = useNavigate();
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -64,13 +64,19 @@ function Login() {
           required
         />
         <input
-          type="password"
+          type={togglePass ? "text" : "password"}
           name="password"
           id="password"
           placeholder="Password"
           onChange={handlePassword}
           required
         />
+        <small
+          style={{ textDecoration: "underline", cursor: "pointer" }}
+          onClick={() => setTogglePass(!togglePass)}
+        >
+          {togglePass ? "Hide" : "Show"} Password
+        </small>
         {/* <p>Forgot Password ?</p> */}
         <button
           type="submit"
