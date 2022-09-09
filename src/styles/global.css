@@ -59,7 +59,6 @@ input {
   color: rgba(0, 0, 0, 0.756);
   font-family: "Public Sans", sans-serif;
   font-size: 35px;
-  transform: translateY(100px);
 }
 
 .loader {
