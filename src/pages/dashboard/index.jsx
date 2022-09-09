@@ -74,44 +74,66 @@ function EventProfile() {
 
   if (isLoading) {
     return (
-      <h3 style={{ textAlign: "center", marginTop: "8rem" }}>
-        Fetching All Events... This may take some time
-      </h3>
+        <div class="loader">
+
+        <h3
+          className="loading-text"
+          style={{ textAlign: "center", marginTop: "8rem" }}
+        >
+          Fetching All Events... This may take some time
+        </h3>
+          <div class="loader-inner">
+            <div class="loader-line-wrap">
+              <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+              <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+              <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+              <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+              <div class="loader-line"></div>
+            </div>
+          </div>
+        </div>
     );
   } else {
     return (
       <EventLayout>
-        <div className="event-container">
-          <br />
-          <h2>{localStorage.getItem("firstname")}'s Organization Events</h2>
-          <div>
-            <div className="event-input">
-              <div className="search-events">
-                <FiSearch />
-                <input type="text" placeholder="Search for your event" />
-              </div>
-              <div className="event-btn">
-                <Link to="/create-event" className="custom-btn">
-                  <span className="custom-span">Create Event</span>
-                </Link>
-              </div>
+        <h2 className="event-organizer">
+          {localStorage.getItem("firstname")}'s Organization Events
+        </h2>
+        <div>
+          <div className="event-input">
+            <div className="search-events">
+              <FiSearch />
+              <input type="text" placeholder="Search for your event" />
+            </div>
+            <div className="event-btn">
+              <Link to="/create-event" className="custom-btn">
+                <span className="custom-span">Create Event</span>
+              </Link>
             </div>
           </div>
-          <div>
-            {events.length > 0 ? (
-              events.map((event) => (
-                <EventCard
-                  eventImage={event.eventImage}
-                  eventDate={event.scheduledDate}
-                  eventTitle={event.eventTitle}
-                  // eventDesc={event.eventDesc}
-                  key={event._id}
-                />
-              ))
-            ) : (
-              <NoEvents />
-            )}
-          </div>
+        </div>
+        <div>
+          {events.length > 0 ? (
+            events.map((event) => (
+              <EventCard
+                eventImage={event.eventImage}
+                eventDate={event.scheduledDate}
+                eventTitle={event.eventTitle}
+                // eventDesc={event.eventDesc}
+                key={event._id}
+              />
+            ))
+          ) : (
+            <NoEvents />
+          )}
         </div>
       </EventLayout>
     );
