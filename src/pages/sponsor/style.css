@@ -1,6 +1,5 @@
 .sponsors {
   background: #fff;
-  overflow: hidden;
   padding: 0 30px;
 }
 
@@ -35,7 +34,6 @@
 .sponsor-section {
   padding: 0 23px;
   background: #fff;
-  overflow: hidden;
   border-top: 1px solid rgba(142, 128, 128, 0.461);
 }
 
@@ -178,7 +176,6 @@
   .sponsorships-layout {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
@@ -201,7 +198,6 @@
   .sponsorships-layout {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 12px;
   }
