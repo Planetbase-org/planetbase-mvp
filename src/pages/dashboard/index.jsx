@@ -7,6 +7,13 @@ import { useNavigate } from "react-router-dom";
 import Axios from "axios";
 
 export function NoEvents() {
+  const token = localStorage.getItem("token");
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!token) {
+      navigate("/login");
+    }
+  }, []);
   return (
     <div className="event-rows">
       <img
@@ -45,21 +52,21 @@ function EventProfile() {
   const url = "https://planetbase-api.onrender.com/api/events/organizer-events";
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/login");
+    }
     window.scrollTo({
       top: 0,
       left: 0,
       behavior: "smooth",
     });
     setIsLoading(true);
-    const token = localStorage.getItem("token");
     const config = {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     };
-    if (!token) {
-      navigate("/login");
-    }
     Axios.get(url, config)
       .then((res) => {
         console.log(res.data.events);
@@ -74,32 +81,31 @@ function EventProfile() {
 
   if (isLoading) {
     return (
-        <div class="loader">
-
+      <div class="loader">
         <h3
           className="loading-text"
           style={{ textAlign: "center", marginTop: "8rem" }}
         >
           Fetching All Events... This may take some time
         </h3>
-          <div class="loader-inner">
-            <div class="loader-line-wrap">
-              <div class="loader-line"></div>
-            </div>
-            <div class="loader-line-wrap">
-              <div class="loader-line"></div>
-            </div>
-            <div class="loader-line-wrap">
-              <div class="loader-line"></div>
-            </div>
-            <div class="loader-line-wrap">
-              <div class="loader-line"></div>
-            </div>
-            <div class="loader-line-wrap">
-              <div class="loader-line"></div>
-            </div>
+        <div class="loader-inner">
+          <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+          </div>
+          <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+          </div>
+          <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+          </div>
+          <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+          </div>
+          <div class="loader-line-wrap">
+            <div class="loader-line"></div>
           </div>
         </div>
+      </div>
     );
   } else {
     return (

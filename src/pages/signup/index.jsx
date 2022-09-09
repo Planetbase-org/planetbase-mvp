@@ -1,14 +1,11 @@
 import React from "react";
 import SignUpComponent from "../../components/SignUpComponent/SignUpComponent";
 import Layout from "../../layouts/signup-registation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Axios from "axios";
-import { FaEye } from "react-icons/fa";
-// import { register, reset} from "../../redux/auth/authSlice"
-// import { useDispatch, useSelector } from 'react-redux';
+import { Link } from "react-router-dom";
 
 function SignUp() {
   const [formData, setFormData] = useState({
@@ -76,6 +73,15 @@ function SignUp() {
     <Layout>
       <SignUpComponent header="Sign up to Planetbase.">
         <p className="signup-header">Let's setup an account for you</p>
+        <p style={{ textAlign: "center" }}>
+          Already Have an Account?{" "}
+          <Link
+            to="/login"
+            style={{ textDecoration: "none", color: "#0F255F" }}
+          >
+            Login
+          </Link>
+        </p>
       </SignUpComponent>
       <form className="input-container" onSubmit={onSubmit}>
         <input
@@ -149,7 +155,7 @@ function SignUp() {
           style={{ textDecoration: "underline", cursor: "pointer" }}
           onClick={togglePassFunc}
         >
-          Show Password
+          {togglePass ? "Hide" : "Show"} Password
         </small>
         {error && (
           <small
