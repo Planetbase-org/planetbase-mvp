@@ -54,6 +54,7 @@
   width: 25%;
   object-fit: contain;
   max-height: 200px;
+  border-radius: 5px;
 }
 
 .event-rows > div > h3 {
@@ -390,6 +391,7 @@ input {
   .event-rows > img {
     width: 31%;
     object-fit: contain;
+    border-radius: 5px;
   }
 
   .upload-instruction {
