@@ -16,6 +16,8 @@
   transition: 0.5s;
   width: 60px;
   margin-bottom: 10px;
+  position: relative;
+  top: 0;
 }
 
 .modal-layout > img:hover {
