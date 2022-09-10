@@ -2,11 +2,15 @@
   background: #afa5a5a9;
   position: fixed;
   z-index: 900000;
-  inset: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .modal-layout > img {
