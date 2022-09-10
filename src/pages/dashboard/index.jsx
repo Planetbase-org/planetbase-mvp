@@ -84,7 +84,7 @@ function EventProfile() {
       <div class="loader">
         <h3
           className="loading-text"
-          style={{ textAlign: "center", marginTop: "8rem" }}
+          style={{ textAlign: "center", marginTop: "8rem", margin:"8rem auto" }}
         >
           Fetching All Events... This may take some time
         </h3>
@@ -121,7 +121,7 @@ function EventProfile() {
             </div>
             <div className="event-btn">
               <Link to="/create-event" className="custom-btn">
-                <span className="custom-span">Create Event</span>
+                <span className="custom-span">List Events</span>
               </Link>
             </div>
           </div>
