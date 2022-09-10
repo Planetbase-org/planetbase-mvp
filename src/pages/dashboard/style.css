@@ -304,6 +304,7 @@ input {
   border: 2px solid #e8efff;
   display: grid;
   place-items: center;
+  object-fit: contain;
 }
 
 .upload-instruction {
@@ -311,7 +312,6 @@ input {
   font-size: 13px;
   padding: 59px 20px;
   width: 90%;
-  height: 50vh;
   border-radius: 10px;
 }
 
@@ -351,10 +351,7 @@ input {
 }
 
 @media screen and (max-width: 1110px) {
-  .event-container > h2 {
-    /* font-size: 24px; */
-  }
-
+  
   .form-upload {
     width: 80%;
   }
@@ -400,11 +397,10 @@ input {
   }
 
   .upload-instruction {
-    background: #e8efff;
+    /* background: #e8efff; */
     font-size: 13px;
     padding: 59px 20px;
     margin-bottom: 30px;
-    height: 46vh;
     width: 296px;
   }
 
@@ -501,8 +497,3 @@ input {
   }
 }
 
-@media screen and (max-width: 400px) {
-  .upload-instruction {
-    height: 40vh;
-  }
-}
