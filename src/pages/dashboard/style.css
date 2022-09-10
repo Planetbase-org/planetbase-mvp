@@ -300,7 +300,6 @@ input {
 
 .upload-preview {
   width: 296px;
-  height: 50vh;
   border: 2px solid #e8efff;
   display: grid;
   place-items: center;
