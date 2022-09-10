@@ -218,15 +218,16 @@ input {
 
 .checkbox-container > input {
   background: #0f255f;
-  width: 20%;
+  width: 10%;
   cursor: pointer;
 }
 
 .checkbox-container > p {
   font-size: 12px;
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   color: rgba(0, 0, 0, 0.693);
+  text-align: center;
 }
 
 .custom-btn {
