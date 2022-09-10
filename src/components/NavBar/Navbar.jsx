@@ -42,7 +42,7 @@ function Navbar() {
               Company
             </Link>
           </li>
-          <li className="nav-item">
+          <li className="">
             {user ? (
               <button className="btn-primary" onClick={onLogout}>
                 Logout
