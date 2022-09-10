@@ -13,6 +13,13 @@
   justify-content: space-between;
 }
 
+.events-layout > h2 {
+  font-weight: 500;
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.792);
+  margin: 20px 0;
+}
+
 .planetbase {
   display: flex;
   color: black;
@@ -93,12 +100,12 @@
     padding-right: 10px;
   }
 
-  .events-layout > div {
+  /* .events-layout > div {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 17%;
-  }
+  } */
 
   .username > p {
     font-size: 16px;
@@ -106,25 +113,23 @@
 }
 
 @media screen and (max-width: 900px) {
-  .events-layout > div {
+  /* .events-layout > div {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 20%;
-  }
-
+  } */
 }
 
 @media screen and (max-width: 700px) {
-  
   .planetbase > img {
     width: 100px;
     object-fit: contain;
   }
-  
+/* 
   .events-layout > div {
     display: flex;
-  }
+  } */
 
   .message-btn {
     width: 40px;
@@ -137,12 +142,12 @@
 }
 
 @media screen and (max-width: 500px) {
-  .events-layout > div {
+  /* .events-layout > div {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 37%;
-  }
+  } */
 
   .message-btn {
     width: 40px;
