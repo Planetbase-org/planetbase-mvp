@@ -23,7 +23,7 @@
 .planetbase {
   display: flex;
   color: black;
-  width: 30%;
+  width: 10%;
 }
 
 .planetbase > img {
