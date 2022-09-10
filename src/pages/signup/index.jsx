@@ -112,7 +112,9 @@ function SignUp() {
           required
         />
         <small
+        className="password-notification"
           style={{
+            fontSize: "11px",
             textAlign: "center",
             marginLeft: "3rem",
             marginRight: "3rem",
@@ -164,7 +166,9 @@ function SignUp() {
             {error}
           </small>
         )}
-        <div className="checkbox-container">
+        <div className="checkbox-container"
+        style={{marginLeft: "3rem", marginRight: "3rem" }}
+        >
           <input
             type="checkbox"
             name="productUpdates"

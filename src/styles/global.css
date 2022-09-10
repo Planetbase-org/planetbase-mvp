@@ -20,6 +20,10 @@
   scrollbar-width: thin;
 }
 
+small {
+  color: rgba(0, 0, 0, 0.739);
+}
+
 html,
 body {
   margin: 0;
@@ -208,6 +212,10 @@ input {
   padding: 10px 0;
 }
 
+.password-notification {
+  width: 40%,
+}
+
 .checkbox-container > input {
   background: #0f255f;
   width: 20%;
@@ -215,10 +223,10 @@ input {
 }
 
 .checkbox-container > p {
-  font-size: 13px;
+  font-size: 12px;
   margin: 0 auto;
   width: 80%;
-  color: #000;
+  color: rgba(0, 0, 0, 0.693);
 }
 
 .custom-btn {
@@ -277,6 +285,9 @@ input {
 
 @media screen and (max-width: 900px) {
   .input-container > input {
+    width: 40%;
+  }
+  .checkbox-container {
     width: 40%;
   }
 }
