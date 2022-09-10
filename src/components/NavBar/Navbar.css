@@ -25,12 +25,12 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.245);
 }
 
-.nav-container:hover {
+/* .nav-container:hover {
   background: rgba(0, 0, 0, 0.6);
   padding: auto;
   width: 100%;
   transition: 02s ease-in-out;
-}
+} */
 
 .brand-name > img {
   width: 110px;
