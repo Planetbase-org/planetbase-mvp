@@ -9,9 +9,14 @@
   padding: 0 18px;
 }
 
+.event-all {
+  padding: 0 28px;
+}
+
 .event-input {
   display: flex;
   align-items: center;
+  padding: 0 18px;
 }
 
 .search-events {

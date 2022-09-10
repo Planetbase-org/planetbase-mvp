@@ -113,7 +113,7 @@ function EventProfile() {
         <h2 className="event-organizer">
           {localStorage.getItem("firstname")}'s Organization Events
         </h2>
-        <div>
+        <div className="event-all">
           <div className="event-input">
             <div className="search-events">
               <FiSearch />
@@ -126,7 +126,7 @@ function EventProfile() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="event-all">
           {events.length > 0 ? (
             events.map((event) => (
               <EventCard
