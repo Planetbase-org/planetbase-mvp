@@ -38,7 +38,7 @@
   background: #fff;
   border-radius: 5px;
   height: 90vh;
-  overflow: scroll;
+  overflow: auto;
   border-top: 7px solid white;
   transition: 0.5s;
 }
