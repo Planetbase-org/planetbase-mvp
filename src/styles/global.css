@@ -167,6 +167,7 @@ input {
   align-items: center;
   justify-items: center;
   background-color: #fff;
+  margin-bottom: 30px;
 }
 
 .input-container > input {
