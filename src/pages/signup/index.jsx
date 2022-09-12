@@ -111,20 +111,6 @@ function SignUp() {
           onChange={onChange}
           required
         />
-        <small
-        className="password-notification"
-          style={{
-            fontSize: "11px",
-            textAlign: "center",
-            marginLeft: "3rem",
-            marginRight: "3rem",
-          }}
-        >
-          Passwords must contain at least 8 characters, <br />
-          and must have at least one capital, one lower-case letter (Aa-Zz),{" "}
-          <br />
-          one special symbol (#, &, % etc), and one number (0-9)
-        </small>
         <input
           type={togglePass ? "text" : "password"}
           name="password"
@@ -153,6 +139,20 @@ function SignUp() {
           onChange={onChange}
           required
         />
+        <small
+        className="password-notification"
+          style={{
+            fontSize: "11px",
+            textAlign: "center",
+            marginLeft: "3rem",
+            marginRight: "3rem",
+          }}
+        >
+          Passwords must contain at least 8 characters, <br />
+          and must have at least one capital, one lower-case letter (Aa-Zz),{" "}
+          <br />
+          one special symbol (#, &, % etc), and one number (0-9)
+        </small>
         <small
           style={{ textDecoration: "underline", cursor: "pointer" }}
           onClick={togglePassFunc}

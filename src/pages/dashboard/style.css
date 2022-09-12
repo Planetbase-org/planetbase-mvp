@@ -120,6 +120,7 @@
 
 .form-control > div {
   width: 40%;
+  margin-bottom: 20px;
 }
 
 .form-control > div > p {
@@ -136,7 +137,7 @@
   font-size: 15px;
   font-family: "Poppins";
   font-weight: 500;
-  margin: 15px 10px 30px auto;
+  margin: 15px 10px 10px auto;
 }
 
 .form-details > input {

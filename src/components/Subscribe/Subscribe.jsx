@@ -5,20 +5,37 @@ import "./Subscribe.css";
 function Subscribe() {
   return (
     <section className="subscribe">
+      <div className="subscribe-message">
+        <div><br /><br /><br />
       <div className="subscribe-header">
         <img src={Planetbase} alt="" />
       </div>
-      <div className="subscribe-message">
-        <div>
-          <h4> Moving your events online really opens up the esteem of supporting it</h4>
-          <p>Become a subscriber and become the first to receive Information.</p>
+          <h4>
+            Moving your events online really opens up the esteem of supporting
+            it
+          </h4>
+          <p>
+            Become a subscriber and become the first to receive Information.
+          </p>
         </div>
         <div>
-          <div className="subscribe-wrapper">
-            <input type="text" placeholder="Enter email address"/>
-            <button className="btn-primary">Subscribe</button>
+          <div class="parent-wrapper">
+            <span class="close-btn glyphicon glyphicon-remove"></span>
+            <div class="subscribe-wrapper">
+              <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+              <input
+                type="email"
+                name="email"
+                class="subscribe-input"
+                placeholder="Enter Your Email Address"
+              />
+              <div class="submit-btn">SUBMIT</div>
+            </div>
           </div>
-          <h6 className='policy'>By signing up, you agree to our Terms of Service and Privacy Policy.</h6>
+
+          <h6 className="policy">
+            By signing up, you agree to our Terms of Service and Privacy Policy.
+          </h6>
         </div>
       </div>
     </section>

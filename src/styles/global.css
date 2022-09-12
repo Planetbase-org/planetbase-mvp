@@ -24,6 +24,11 @@ small {
   color: rgba(0, 0, 0, 0.739);
 }
 
+.required {
+  color: red;
+  margin-bottom: 50px;
+}
+
 html,
 body {
   margin: 0;
@@ -177,7 +182,7 @@ input {
 
 .input-container > input {
   width: 30%;
-  margin: 8px auto;
+  margin: 14px auto;
   padding: 10px 10px;
   outline: none;
   background: #d9d9d9;

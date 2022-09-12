@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Layout from "../../layouts/login-registration";
 import { useState } from "react";
 import Axios from "axios";
@@ -74,6 +74,7 @@ function Login() {
         <small
           style={{ textDecoration: "underline", cursor: "pointer" }}
           onClick={() => setTogglePass(!togglePass)}
+          className=""
         >
           {togglePass ? "Hide" : "Show"} Password
         </small>
