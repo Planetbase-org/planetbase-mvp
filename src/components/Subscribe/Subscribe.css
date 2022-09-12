@@ -138,10 +138,7 @@
   display: flex;
 }
 
-.subscribe-wrapper > input {
-  width: 338px;
-  margin-right: 10px;
-}
+
 
 .subscribe-message > div > h4 {
   font-size: 16px;
