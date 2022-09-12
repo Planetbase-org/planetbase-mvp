@@ -138,6 +138,7 @@
   font-family: "Poppins";
   font-weight: 500;
   margin: 15px 10px 10px auto;
+  cursor: text;
 }
 
 .form-details > input {
@@ -458,7 +459,7 @@ input {
   .event-rows {
     flex-direction: column;
     text-align: center;
-    margin: 36px 0;
+    margin: 45px 0;
   }
 
   .event-rows > img {
