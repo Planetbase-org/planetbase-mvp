@@ -82,12 +82,13 @@ function EventProfile() {
   if (isLoading) {
     return (
       <div class="loader">
+        <div>
         <h3
           className="loading-text"
-          style={{ textAlign: "center", marginTop: "8rem", margin:"8rem auto" }}
         >
           Fetching All Events... This may take some time
         </h3>
+        </div>
         <div class="loader-inner">
           <div class="loader-line-wrap">
             <div class="loader-line"></div>

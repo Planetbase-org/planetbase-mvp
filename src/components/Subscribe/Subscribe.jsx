@@ -34,7 +34,7 @@ function Subscribe() {
           </div>
 
           <h6 className="policy">
-            By signing up, you agree to our Terms of Service and Privacy Policy.
+            By subscribing to our news letter, you have agreed to our Terms of Service and Privacy Policy.
           </h6>
         </div>
       </div>

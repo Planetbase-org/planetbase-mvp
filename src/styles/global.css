@@ -82,10 +82,13 @@ input {
   color: rgba(0, 0, 0, 0.756);
   font-family: "Public Sans", sans-serif;
   font-size: 35px;
-  transform: translateY(60px);
-  position: absolute;
-  margin: 0 auto;
+  text-align: center;
+  margin-top: 14rem;
+  align-items: center;
+  justify-content: center;
 }
+/* 
+style={{ textAlign: "center", marginTop: "14rem", display: "flex", alignItems: "center", justifyContent: "center"}} */
 
 .loader-inner {
   bottom: 0;

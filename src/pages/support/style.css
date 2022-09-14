@@ -7,10 +7,10 @@
     border-top: 1px solid rgba(128, 128, 128, 0.556);
 }
 
-.support-signup-link{
-    display: none;
-}
 
+.support-signup>h1>span {
+    color:rgb(21, 64, 132)
+}
 
 .support-section>div {
     width: 60%;
@@ -77,10 +77,6 @@
         font-size: 20px;
     }
 
-    .support-signup>h1>span {
-        color:rgb(21, 64, 132)
-    }
-
     .support-signup>h1 {
         font-size: 28px;
     }
@@ -119,6 +115,7 @@
         width: 100%;
         font-size: 23px;
     }
+
 }
 
 
