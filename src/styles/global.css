@@ -26,7 +26,9 @@ small {
 
 .required {
   color: red;
-  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 html,
@@ -85,7 +87,6 @@ input {
   margin: 0 auto;
 }
 
-
 .loader-inner {
   bottom: 0;
   height: 60px;
@@ -99,9 +100,7 @@ input {
 }
 
 .loader-line-wrap {
-  animation: 
-  spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite
-;
+  animation: spin 2000ms cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
   box-sizing: border-box;
   height: 50px;
   left: 0;
@@ -123,11 +122,21 @@ input {
   top: 0;
   width: 100px;
 }
-.loader-line-wrap:nth-child(1) { animation-delay: -50ms; }
-.loader-line-wrap:nth-child(2) { animation-delay: -100ms; }
-.loader-line-wrap:nth-child(3) { animation-delay: -150ms; }
-.loader-line-wrap:nth-child(4) { animation-delay: -200ms; }
-.loader-line-wrap:nth-child(5) { animation-delay: -250ms; }
+.loader-line-wrap:nth-child(1) {
+  animation-delay: -50ms;
+}
+.loader-line-wrap:nth-child(2) {
+  animation-delay: -100ms;
+}
+.loader-line-wrap:nth-child(3) {
+  animation-delay: -150ms;
+}
+.loader-line-wrap:nth-child(4) {
+  animation-delay: -200ms;
+}
+.loader-line-wrap:nth-child(5) {
+  animation-delay: -250ms;
+}
 
 .loader-line-wrap:nth-child(1) .loader-line {
   border-color: hsl(0, 80%, 60%);
@@ -161,14 +170,14 @@ input {
 }
 
 @keyframes spin {
-  0%, 15% {
-  transform: rotate(0);
+  0%,
+  15% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-100% {
-  transform: rotate(360deg);
-}
-}
-
 
 /**input section **/
 .input-container {
@@ -219,7 +228,7 @@ input {
 }
 
 .password-notification {
-  width: 40%,
+  width: 40%;
 }
 
 .checkbox-container > input {
