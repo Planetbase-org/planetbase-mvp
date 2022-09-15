@@ -187,6 +187,7 @@ function SignUp() {
           type="submit"
           className="input-button"
           disabled={isLoading ? true : false}
+          style={ { cursor: isLoading ? 'not-allowed' : 'pointer' } }  
         >
           {isLoading ? "Signing Up..." : "Sign Up"}
         </button>

@@ -84,6 +84,7 @@ function Login() {
           className="input-button"
           disabled={isLoading ? true : false}
           onClick={() => gaEventTracker("signup")}
+          style={ { cursor: isLoading ? 'not-allowed' : 'pointer' } }  
         >
           {isLoading ? "Signing In..." : "Sign In"}
         </button>
