@@ -165,11 +165,10 @@ function EditEvent() {
               <p>Event Location</p>
               <input
                 type="text"
-                placeholder="Event Location"
                 id="eventLocation"
                 name="eventLocation"
                 onChange={onChange}
-                value={value.eventLocation}
+                value={value.scheduledDate}
                 {...register("eventLocation", { required: true })}
               />
               <span className="required">
