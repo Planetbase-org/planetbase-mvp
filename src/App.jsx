@@ -9,6 +9,7 @@ import {
   Support,
   EventProfile,
   EditEvent,
+  ConfirmEvent,
   Sponsor,
   SponsorPage,
   SponsorBid,
@@ -32,6 +33,7 @@ function App() {
           <Route exact path="/signup" element={<SignUp />} />
           <Route exact path="/organizer" element={<EventProfile />} />
           <Route exact path="/create-event" element={<EditEvent />} />
+          <Route exact path="/confirm-event" element={<ConfirmEvent />} />
           <Route exact path="/sponsor" element={<Sponsor />} />
           <Route exact path="/sponsor-page" element={<SponsorPage />} />
           <Route exact path="/sponsored-events" element={<SponsoredEvent />} />
