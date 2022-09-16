@@ -6,17 +6,17 @@
   font-family: "Poppins";
   color: rgba(0, 0, 0, 0.792);
   text-transform: capitalize;
-  padding: 0 18px;
+  padding: 0 30px;
 }
 
-.event-all {
+/* .event-all {
   padding: 0 28px;
-}
+} */
 
 .event-input {
   display: flex;
   align-items: center;
-  padding: 0 18px;
+  padding: 0 30px;
 }
 
 .search-events {
