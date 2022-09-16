@@ -1,8 +1,11 @@
 import React from 'react'
+import EventLayout from '../../../layouts/events-layout'
 
 function ConfirmEvent() {
   return (
-    <div>index</div>
+    <EventLayout>
+
+    </EventLayout>
   )
 }
 

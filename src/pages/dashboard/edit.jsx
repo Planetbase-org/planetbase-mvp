@@ -71,7 +71,7 @@ function EditEvent() {
     Axios.post(url, body, config)
       .then((res) => {
         console.log(res);
-        navigate("/organizer");
+        navigate("/confirm-event");
         setIsLoading(false);
       })
       .catch((err) => {
