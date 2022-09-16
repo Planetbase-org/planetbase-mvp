@@ -37,3 +37,15 @@
     text-align: end;
     margin-bottom: 30px;
   }
+
+  @media screen and (max-width: 600px) {
+    .confirm-event {
+        width: 90%;
+    }
+
+    .confirm-event > p,
+    .confirm-event > .sub > section > p {
+        font-size: 11px;
+    }
+    
+  }
