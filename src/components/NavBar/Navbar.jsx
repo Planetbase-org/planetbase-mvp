@@ -16,7 +16,8 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar">
+    <>
+      {user ? <nav className="navbar">
       <div className="nav-container">
       <Link to="/" className="brand-name nav-logo">
         <img src={Planetbase} alt="planetbase" />
@@ -58,7 +59,30 @@ function Navbar() {
           {isNavExpanded ? <FaTimes/> : <FaBars/>}
         </div>
       </div>
-    </nav>
+    </nav> : <nav className="navbar">
+      <div className="nav-container">
+      <Link to="/" className="brand-name nav-logo">
+        <img src={Planetbase} alt="planetbase" />
+      </Link>
+        <ul className={isNavExpanded ? "nav-menu active" : "nav-menu"}>
+          <li style={{marginTop: "16px"}}>
+            {user ? (
+              <button className="btn-primary" onClick={onLogout}>
+                Logout
+              </button>
+            ) : (
+              <Link to="/login">
+                <button className="btn-primary">Login</button>
+              </Link>
+            )}
+          </li>
+        </ul>
+        <div onClick={handleClick} className="nav-icon">
+          {isNavExpanded ? <FaTimes/> : <FaBars/>}
+        </div>
+      </div>
+    </nav>}
+    </>
   );
 }
 

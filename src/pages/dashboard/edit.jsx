@@ -45,8 +45,8 @@ function EditEvent() {
   const [isLoading, setIsLoading] = useState(false);
 
   function onSubmit(e) {
+    e.prevent.default();
     setIsLoading(true);
-    e.preventDefault();
     //Create event api call
     const url = "https://planetbase-api.onrender.com/api/events/create-event";
     const config = {
@@ -91,7 +91,7 @@ function EditEvent() {
     <EventLayout>
       <div className="event-form">
         <h1>List Your Upcoming Event</h1>
-        <form onSubmit={handleSubmit(onSubmit)} className="form">
+        <form onSubmit={onSubmit} className="form">
           <div className="form-control">
             <div>
               <p>Event Title</p>
