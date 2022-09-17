@@ -179,6 +179,7 @@ export function EventCard({
         </div>
       </div>
       <div>
+        <span><Link to="/confirm-event">edit</Link></span><br />
         <span>delete</span>
       </div>
     </div>
