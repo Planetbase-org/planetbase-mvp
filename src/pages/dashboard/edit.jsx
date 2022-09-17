@@ -236,11 +236,6 @@ function EditEvent() {
                     <label>Upload Preview</label>
                   </div>
                 )}
-
-                <span className="required">
-                  {errors.uploadImage?.type === "required" &&
-                    "event image is required"}
-                </span>
               </div>
               <div className="upload-instruction">
                 <span>
@@ -249,7 +244,6 @@ function EditEvent() {
                     type="file"
                     name="uploadImage"
                     onChange={(e) => convert2base64(e)}
-                    {...register("uploadImage", { required: true })}
                   />
                 </span>
                 <p>
