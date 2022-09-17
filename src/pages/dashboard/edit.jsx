@@ -6,12 +6,6 @@ import { useForm } from "react-hook-form";
 
 function EditEvent() {
   const [image, setImage] = useState("");
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-
   const navigate = useNavigate();
 
   function convert2base64(e) {
@@ -45,7 +39,7 @@ function EditEvent() {
   const [isLoading, setIsLoading] = useState(false);
 
   function onSubmit(e) {
-    e.prevent.default();
+    e.preventDefault();
     setIsLoading(true);
     //Create event api call
     const url = "https://planetbase-api.onrender.com/api/events/create-event";
@@ -71,7 +65,7 @@ function EditEvent() {
     Axios.post(url, body, config)
       .then((res) => {
         console.log(res);
-        navigate("/confirm-event");
+        navigate("/organizer");
         setIsLoading(false);
       })
       .catch((err) => {
@@ -102,12 +96,7 @@ function EditEvent() {
                 onChange={onChange}
                 placeholder="Event Title"
                 value={value.eventTitle}
-                {...register("eventTitle", { required: true })}
               />
-              <span className="required">
-                {errors.eventTitle?.type === "required" &&
-                  "event title is required"}
-              </span>
             </div>
             <div>
               <p>Event Organizer/Host</p>
@@ -119,12 +108,7 @@ function EditEvent() {
                 onChange={onChange}
                 placeholder="Event Organizer"
                 value={value.eventOrganizer}
-                {...register("eventOrganizer", { required: true })}
               />
-              <span className="required">
-                {errors.eventOrganizer?.type === "required" &&
-                  "event Host is required"}
-              </span>
             </div>
           </div>
           <div className="form-control">
@@ -137,12 +121,7 @@ function EditEvent() {
                 onChange={onChange}
                 value={value.eventType}
                 placeholder="Event Category"
-                {...register("eventType", { required: true })}
               />
-              <span className="required">
-                {errors.eventType?.type === "required" &&
-                  "Event Type is required"}
-              </span>
             </div>
             <div>
               <p>Scheduled Date</p>
@@ -152,12 +131,7 @@ function EditEvent() {
                 name="scheduledDate"
                 onChange={onChange}
                 value={value.scheduledDate}
-                {...register("scheduledDate", { required: true })}
               />
-              <span className="required">
-                {errors.scheduledDate?.type === "required" &&
-                  "Event Date is required"}
-              </span>
             </div>
           </div>
           <div className="form-control price">
@@ -168,13 +142,8 @@ function EditEvent() {
                 id="eventLocation"
                 name="eventLocation"
                 onChange={onChange}
-                value={value.scheduledDate}
-                {...register("eventLocation", { required: true })}
+                value={value.eventLocation}
               />
-              <span className="required">
-                {errors.eventLocation?.type === "required" &&
-                  "Event Location is required"}
-              </span>
             </div>
             <div>
               <p>Price</p>
@@ -185,11 +154,7 @@ function EditEvent() {
                 name="price"
                 onChange={onChange}
                 value={value.price}
-                // {...register("price", {required:true})}
               />
-              <span className="required">
-                {errors.price?.type === "required" && "Event Price is required"}
-              </span>
             </div>
           </div>
           <div>
@@ -203,12 +168,7 @@ function EditEvent() {
                 placeholder="Briefly describe what your event is all about"
                 value={value.eventDesc}
                 onChange={onChange}
-                {...register("eventDesc", { required: true })}
               ></textarea>
-              <span className="required">
-                {errors.eventDesc?.type === "required" &&
-                  "event Description is required"}
-              </span>
             </div>
             <div className="description">
               <p>Sponsorship Package</p>
@@ -220,12 +180,7 @@ function EditEvent() {
                 placeholder="Provide sponsor's benefit here"
                 value={value.sponsorshipPackage}
                 onChange={onChange}
-                {...register("sponsorshipPackage", { required: true })}
               ></textarea>
-              <span className="required">
-                {errors.sponsorshipPackage?.type === "required" &&
-                  "event Description is required"}
-              </span>
             </div>
             <div className="form-upload">
               <div className="upload">
