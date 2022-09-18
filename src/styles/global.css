@@ -228,12 +228,12 @@ style={{ textAlign: "center", marginTop: "14rem", display: "flex", alignItems: "
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%;
-  padding: 10px 0;
+  margin: 10px 0;
+  width: 80%;
 }
 
 .password-notification {
-  width: 40%;
+  margin: 10px auto;
 }
 
 .checkbox-container > input {
@@ -308,9 +308,7 @@ style={{ textAlign: "center", marginTop: "14rem", display: "flex", alignItems: "
   .input-container > input {
     width: 80%;
   }
-  .checkbox-container {
-    width: 40%;
-  }
+  
 }
 
 @media screen and (max-width: 600px) {
@@ -321,10 +319,6 @@ style={{ textAlign: "center", marginTop: "14rem", display: "flex", alignItems: "
   .input-container > button {
     width: 40%;
     cursor: pointer;
-  }
-
-  .checkbox-container {
-    width: 70%;
   }
 
   .loading-text {
