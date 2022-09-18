@@ -190,12 +190,11 @@ style={{ textAlign: "center", marginTop: "14rem", display: "flex", alignItems: "
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  background-color: #fff;
   margin-bottom: 30px;
 }
 
 .input-container > input {
-  width: 30%;
+  width: 80%;
   margin: 14px auto;
   padding: 10px 10px;
   outline: none;
@@ -205,6 +204,7 @@ style={{ textAlign: "center", marginTop: "14rem", display: "flex", alignItems: "
   font-size: 15px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  cursor: text;
 }
 
 .input-container > p {
@@ -306,7 +306,7 @@ style={{ textAlign: "center", marginTop: "14rem", display: "flex", alignItems: "
 
 @media screen and (max-width: 900px) {
   .input-container > input {
-    width: 40%;
+    width: 80%;
   }
   .checkbox-container {
     width: 40%;
