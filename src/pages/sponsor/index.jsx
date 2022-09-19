@@ -48,7 +48,7 @@ function Sponsor({ cards, index }) {
             ))}
           </div>
         ) : (
-          <SponsorCard cards={cards} index={index} />
+          <SponsorCard/>
         )}
 
         {/* <div className="sponsor-btn-continue">

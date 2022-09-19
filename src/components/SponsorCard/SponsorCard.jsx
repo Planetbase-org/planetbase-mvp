@@ -7,7 +7,7 @@ import Modal from "../Modal/Modal";
 import SponsorModal from "../Modal/SponsorModal";
 import Axios from "axios";
 
-function SponsorCard({ cards }) {
+function SponsorCard() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleModal = () => setIsOpen(!isOpen);
   const [isLoading, setIsLoading] = useState(false);
@@ -89,11 +89,11 @@ function SponsorCard({ cards }) {
               <p className="card-desc">{listEvent.eventDesc}</p>
               <div className="card-content">
                 <p className="card-desc">{listEvent.sponsorshipPackage}</p>
-                <img
+                {/* <img
                   className="card-tag"
                   src="https://cdn-icons.flaticon.com/png/512/3106/premium/3106777.png?token=exp=1660863227~hmac=d94e1ad1804d0087ad7818b50dd7d34c"
                   alt=""
-                />
+                /> */}
               </div>
             </div>
           ))}
