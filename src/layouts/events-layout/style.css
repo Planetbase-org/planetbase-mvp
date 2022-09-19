@@ -84,11 +84,11 @@
 }
 
 .user-name {
-  font-weight: 400;
+  font-weight: 500;
   text-transform: capitalize;
-  font-family: "Public Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   border-bottom-left-radius: 3px;
-  font-size: 30px;
+  font-size: 27px;
   color: black;
   display: grid;
   place-items: center;
