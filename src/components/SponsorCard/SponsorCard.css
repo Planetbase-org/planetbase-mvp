@@ -103,7 +103,7 @@
   }
   .loading__letter:nth-child(4) {
     animation-delay: 0.3s;;
-    color: hsl(120, 80%, 60%);
+    color: hsl(222, 60%, 39%);
   }
   .loading__letter:nth-child(5) {
     animation-delay: 0.4s;
