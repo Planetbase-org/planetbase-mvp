@@ -20,8 +20,7 @@
   color: rgb(255, 255, 255);
   transition: 0.5s;
   width: 60px;
-  margin-bottom: 10px;
-  position: relative;
+  position: absolute;
   top: 0;
 }
 
@@ -37,10 +36,11 @@
   padding: 4px;
   background: #fff;
   border-radius: 5px;
-  height: 90vh;
+  position: absolute;
   overflow: auto;
   border-top: 7px solid white;
   transition: 0.5s;
+  top: 65px;
 }
 
 .sponsor-image {
