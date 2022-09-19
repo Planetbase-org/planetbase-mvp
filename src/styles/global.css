@@ -89,8 +89,6 @@ input {
   align-items: center;
   justify-content: center;
 }
-/* 
-style={{ textAlign: "center", marginTop: "14rem", display: "flex", alignItems: "center", justifyContent: "center"}} */
 
 .loader-inner {
   bottom: 0;
@@ -307,6 +305,10 @@ style={{ textAlign: "center", marginTop: "14rem", display: "flex", alignItems: "
 @media screen and (max-width: 900px) {
   .input-container > input {
     width: 80%;
+  }
+
+  .loading-text {
+    margin-top: 8rem;
   }
   
 }
