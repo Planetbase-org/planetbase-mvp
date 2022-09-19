@@ -131,13 +131,13 @@
   @media screen and (max-width: 700px) {
     .loading__letter {
         font-size: 63px;
-        margin-top: 80px;
+        margin-top: 50px;
     }
   }
 
   @media screen and (max-width: 500px) {
     .loading__letter {
         font-size: 53px;
-        margin-top:70px;
+        margin-top: 40px;
     }
   }
