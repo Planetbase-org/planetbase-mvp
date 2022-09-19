@@ -10,6 +10,9 @@ function SponsorModal({
   eventLocation,
 }) {
   console.log(eventTitle);
+
+  const token = localStorage.getItem("token");
+
   return (
     <div>
       <img className="sponsor-image" src={eventImage} alt={eventTitle} />
@@ -18,13 +21,13 @@ function SponsorModal({
       <h5>Description</h5>
       <p>{eventDesc}</p>
       <p>{scheduledDate}</p>
-      <div className="sponsor-btn">
+     {token ?  <div className="sponsor-btn">
         <Link to="/sponsor-bid">
           <button className="custom-btn">
             <span className="custom-span">Create Bid</span>
           </button>
         </Link>
-      </div>
+      </div>: <p><Link to="/signup" className="signup-message" style={{fontSize: "16px",fontWeight:"500"}}>Sign Up</Link> to become a sponsor</p>}
     </div>
   );
 }
