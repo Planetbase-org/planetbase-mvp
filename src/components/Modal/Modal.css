@@ -137,7 +137,7 @@
 
 @media screen and (max-width: 1100px) {
   .modal-layout > div {
-    width: 60%;
+    width: 40%;
     height: 100vh;
   }
 }
@@ -159,7 +159,7 @@
 
   .modal-layout > div {
     width: 50%;
-    height: 77vh;
+    height: 82vh;
   }
 }
 
