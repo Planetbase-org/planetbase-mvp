@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import EventLayout from "../../layouts/events-layout";
-import { FiSearch } from "react-icons/all";
+import { FcEditImage, FcFullTrash, FiSearch } from "react-icons/all";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -179,8 +179,8 @@ export function EventCard({
         </div>
       </div>
       <div>
-        <span><Link to="/confirm-event">edit</Link></span><br />
-        <span>delete</span>
+        <span><Link to="/confirm-event"><FcEditImage size={30}/></Link></span><br />
+        <span><FcFullTrash size={30}/></span>
       </div>
     </div>
   );
