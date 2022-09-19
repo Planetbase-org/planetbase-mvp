@@ -31,7 +31,7 @@
 }
 
 .modal-layout > div {
-  width: 40%;
+  width: 30%;
   line-height: 146%;
   padding: 4px;
   background: #fff;
@@ -41,6 +41,7 @@
   border-top: 7px solid white;
   transition: 0.5s;
   top: 65px;
+  overflow: scroll;
 }
 
 .sponsor-image {

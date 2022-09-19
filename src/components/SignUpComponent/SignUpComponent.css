@@ -25,6 +25,13 @@
     text-decoration: none;
 }
 
+.signup-message:hover {
+    color: #0b4e56;
+    text-decoration: none;
+    transition: 0.3s ease-in;
+}
+
+
 
 .sign-up-section {
     display: flex;

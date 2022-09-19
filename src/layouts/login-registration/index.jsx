@@ -12,7 +12,7 @@ function Layout({ children }) {
         <div className="sign-in">
           <p className="signup-header">
             Sign in to access your account. <br />
-            Not registered?.
+            Not registered?
             <Link to="/signup" className="signup-message">
               {" "}
               Create an account.
