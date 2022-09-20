@@ -96,6 +96,7 @@ function EditEvent() {
                 onChange={onChange}
                 placeholder="Event Title"
                 value={value.eventTitle}
+                required
               />
             </div>
             <div>
@@ -108,6 +109,7 @@ function EditEvent() {
                 onChange={onChange}
                 placeholder="Event Organizer"
                 value={value.eventOrganizer}
+                required
               />
             </div>
           </div>
@@ -121,6 +123,7 @@ function EditEvent() {
                 onChange={onChange}
                 value={value.eventType}
                 placeholder="Event Category"
+                required
               />
             </div>
             <div>
@@ -131,6 +134,7 @@ function EditEvent() {
                 name="scheduledDate"
                 onChange={onChange}
                 value={value.scheduledDate}
+                required
               />
             </div>
           </div>
@@ -143,6 +147,7 @@ function EditEvent() {
                 name="eventLocation"
                 onChange={onChange}
                 value={value.eventLocation}
+                required
               />
             </div>
             <div>
@@ -154,6 +159,7 @@ function EditEvent() {
                 name="price"
                 onChange={onChange}
                 value={value.price}
+                required
               />
             </div>
           </div>
@@ -168,6 +174,7 @@ function EditEvent() {
                 placeholder="Briefly describe what your event is all about"
                 value={value.eventDesc}
                 onChange={onChange}
+                required
               ></textarea>
             </div>
             <div className="description">
@@ -180,6 +187,7 @@ function EditEvent() {
                 placeholder="Provide sponsor's benefit here"
                 value={value.sponsorshipPackage}
                 onChange={onChange}
+                required
               ></textarea>
             </div>
             <div className="form-upload">
@@ -199,6 +207,7 @@ function EditEvent() {
                     type="file"
                     name="uploadImage"
                     onChange={(e) => convert2base64(e)}
+                    required
                   />
                 </span>
                 <p>
@@ -214,9 +223,7 @@ function EditEvent() {
           </div>
           <div className="update-event">
             <button type="submit" className="btn-primary">
-              <span>
-                {isLoading ? "Creating Event..." : "Save and Continue"}
-              </span>
+              <span>{isLoading ? "Listing Event..." : "List Event"}</span>
             </button>
           </div>
         </form>

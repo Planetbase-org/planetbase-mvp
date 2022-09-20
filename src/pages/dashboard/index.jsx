@@ -81,29 +81,27 @@ function EventProfile() {
 
   if (isLoading) {
     return (
-      <div class="loader">
+      <div className="loader">
         <div>
-        <h3
-          className="loading-text"
-        >
-          Fetching All Events... This may take some time
-        </h3>
+          <h3 className="loading-text">
+            Fetching Events... This may take some time
+          </h3>
         </div>
-        <div class="loader-inner">
-          <div class="loader-line-wrap">
-            <div class="loader-line"></div>
+        <div className="loader-inner">
+          <div className="loader-line-wrap">
+            <div className="loader-line"></div>
           </div>
-          <div class="loader-line-wrap">
-            <div class="loader-line"></div>
+          <div className="loader-line-wrap">
+            <div className="loader-line"></div>
           </div>
-          <div class="loader-line-wrap">
-            <div class="loader-line"></div>
+          <div className="loader-line-wrap">
+            <div className="loader-line"></div>
           </div>
-          <div class="loader-line-wrap">
-            <div class="loader-line"></div>
+          <div className="loader-line-wrap">
+            <div className="loader-line"></div>
           </div>
-          <div class="loader-line-wrap">
-            <div class="loader-line"></div>
+          <div className="loader-line-wrap">
+            <div className="loader-line"></div>
           </div>
         </div>
       </div>
@@ -131,11 +129,11 @@ function EventProfile() {
           {events.length > 0 ? (
             events.map((event) => (
               <EventCard
-                eventImage={event.eventImage}
-                eventDate={event.scheduledDate}
-                eventTitle={event.eventTitle}
+                eventImage={event?.eventImage}
+                eventDate={event?.scheduledDate}
+                eventTitle={event?.eventTitle}
                 // eventDesc={event.eventDesc}
-                key={event._id}
+                key={event?._id}
               />
             ))
           ) : (
@@ -179,8 +177,15 @@ export function EventCard({
         </div>
       </div>
       <div>
-        <span><Link to="/confirm-event"><FcEditImage size={30}/></Link></span><br />
-        <span><FcFullTrash size={30}/></span>
+        {/* <span>
+          <Link to="/confirm-event">
+            <FcEditImage size={30} />
+          </Link>
+        </span> */}
+        <br />
+        {/* <span>
+          <FcFullTrash size={30} />
+        </span> */}
       </div>
     </div>
   );
