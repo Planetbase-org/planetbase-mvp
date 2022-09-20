@@ -66,7 +66,7 @@ function SponsorCard() {
         <div className="sponsorships-layout">
           {events.map((listEvent, index) => (
             <div
-              key={listEvent._id}                                           
+              key={listEvent._id}
               className="sp-card"
               onClick={() => {
                 toggleModal();
@@ -86,9 +86,17 @@ function SponsorCard() {
                 className="card-image"
               />
               <p className="card-title">{listEvent.eventTitle}</p>
-              <p className="card-desc">{listEvent.eventDesc}</p>
+              <p className="card-desc">
+                {listEvent.eventDesc.length > 50
+                  ? `${listEvent.eventDesc.substring(0, 100)}...`
+                  : listEvent.eventDesc}
+              </p>
               <div className="card-content">
-                <p className="card-desc">{listEvent.sponsorshipPackage}</p>
+                <p className="card-desc">
+                  {listEvent.sponsorshipPackage.length > 80
+                    ? `${listEvent.sponsorshipPackage.substring(0, 80)}...`
+                    : listEvent.sponsorshipPackage}
+                </p>
                 {/* <img
                   className="card-tag"
                   src="https://cdn-icons.flaticon.com/png/512/3106/premium/3106777.png?token=exp=1660863227~hmac=d94e1ad1804d0087ad7818b50dd7d34c"
