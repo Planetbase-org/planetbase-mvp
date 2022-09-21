@@ -1,75 +1,73 @@
-import React, {useState} from 'react'
-import { Link } from 'react-router-dom'
-import Nav from '../../../components/NavBar/Nav'
-import { SPONSOR_BID_INPUT} from '../../../utils/formField'
-import '../style.css'
-import FormInput from '../../../components/FormInput'
-import TextArea from '../../../components/TextArea'
-import axios from 'axios'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Nav from "../../../components/NavBar/Nav";
+import Axios from "axios";
+import SponsorForm from "./SponsorForm";
 
-// bidFrom (Name of the sponsor)
-// bidTo (Contains the user details of who created the event - organizerId)
-// email  (sponsor Email)
-// bidDate
-// bidAmount: number
-// bidDesc(Bid Description)
+function SponsorBid() {
+  const organizerId = localStorage.getItem("organizerId");
+  const url = `https://planetbase-api.onrender.com/api/bid-event/create-bid/${organizerId}`;
+  const [bidData, setBidData] = useState({
+    bidFrom: "",
+    email: "",
+    phoneNumber: "",
+    bidDate: "",
+    bidAmount: 0,
+    bidDesc: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const { bidFrom, email, phoneNumber, bidDate, bidAmount, bidDesc } = bidData;
+  const changeState = (e) => {
+    setBidData((prevValue) => {
+      return { ...prevValue, [e.target.name]: e.target.value };
+    });
+  };
+  const navigate = useNavigate();
 
-function SponsorBid () {
-  const url = "https://planetbase-api.onrender.com/api/bid-event/create-bid/:id"
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    bid: '',
-    description: '',
-  })
-
-  const onSubmit = () => {
-    e.preventDefault()
-    console.log()
-    // setFormData({
-    //   name: '',
-    //   email: '',
-    //   phone: '',
-    //   bid: '',
-    //   description: '',
-    // })
-    // axios.post(url, formData)
-  }
+  const onSubmit = (e) => {
+    setIsLoading(true);
+    e.preventDefault();
+    const createPayment = (id) => {
+      Axios.post(`https://planetbase-api.onrender.com/api/payment/${id}`)
+        .then((res) => {
+          const { data } = res.data.data;
+          console.log(data.link);
+          window.open(data.link);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    console.log(bidData);
+    Axios.post(url, bidData)
+      .then((res) => {
+        console.log(res);
+        // navigate("/success");
+        const { _id } = res.data.create_bid;
+        createPayment(_id);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setIsLoading(false);
+      });
+  };
   return (
     <>
       <Nav />
-      <form className='sponsor-form'  onSubmit={onSubmit}>
-      <h2> Bid for Event</h2>
-      <div>
-        {
-        SPONSOR_BID_INPUT.map((item, index) => {
-          return (
-            <FormInput
-              key={index}
-              type={item.type}
-              name={item.name}
-              placeholder={item.placeholder}
-              label={item.label}
-            />
-          )
-        })
-      }
-      <TextArea
-    placeholder='Tell us about your company'
-    name='bidDesc'
-    label='Bid Description'
+      <SponsorForm
+        bidFrom={bidFrom}
+        email={email}
+        phoneNumber={phoneNumber}
+        bidDate={bidDate}
+        bidAmount={bidAmount}
+        bidDesc={bidDesc}
+        changeState={changeState}
+        onSubmit={onSubmit}
+        isLoading={isLoading}
       />
-      </div>
-    
-        <button 
-        type='submit'
-        className='btn-primary'>
-        Save and Continue
-        </button>
-      </form>
     </>
-  )
+  );
 }
 
-export default SponsorBid
+export default SponsorBid;

@@ -1,28 +1,45 @@
-import React from 'react';
-import Planetbase from '../../assets/planetbase.png';
+import React from "react";
+import Planetbase from "../../assets/planetbase.png";
 import "./Subscribe.css";
 
 function Subscribe() {
   return (
     <section className="subscribe">
+      <div className="subscribe-message">
+        <div><br /><br /><br />
       <div className="subscribe-header">
         <img src={Planetbase} alt="" />
       </div>
-      <div className="subscribe-message">
-        <div>
-          <h4>Moving your events online really opens up the esteem of supporting it.</h4>
-          <p>Become a subscriber and receive great tips on event regulation updates sent to your inbox!.</p>
+          <h4>
+            Moving your events online really opens up the esteem of supporting
+            it
+          </h4>
+          <p>
+            Become a subscriber and become the first to receive Information.
+          </p>
         </div>
         <div>
-          <form className="subscribe-form">
-            <input type="text" placeholder='Enter email address' className='subscribe-email-input'/>
-            <button className='subscribe-btn'>Subscribe</button>
-          </form>
-          <p className='subscribe-message-text'>By signing up, you agree to our Terms of Service and Privacy Policy. You will receive offers from Wimdu and agree that we may share your hashed email address with third parties for the purpose of better tailoring advertising to your needs.</p>
+          <div class="parent-wrapper">
+            <span class="close-btn glyphicon glyphicon-remove"></span>
+            <div class="subscribe-wrapper">
+              <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+              <input
+                type="email"
+                name="email"
+                class="subscribe-input"
+                placeholder="Enter Your Email Address"
+              />
+              <div class="submit-btn">SUBMIT</div>
+            </div>
+          </div>
+
+          <h6 className="policy">
+            By subscribing to our news letter, you have agreed to our Terms of Service and Privacy Policy.
+          </h6>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Subscribe
+export default Subscribe;

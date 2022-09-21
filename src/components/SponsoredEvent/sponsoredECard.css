@@ -2,8 +2,6 @@
     border: 1px solid rgba(0, 0, 0, 0.374);
     border-radius: 5px;
     width: 34%;
-    overflow: scroll;
-    height: 450px;
     margin: 30px;
 }
 
@@ -48,4 +46,16 @@
 .sponsor > p > span {
     font-size: 16px;
     color: rgba(0, 0, 0, 0.793);
+}
+
+@media screen and (max-width:1100px) {
+    .spcard-container {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .spcard-container {
+        width: 80%
+    }
 }

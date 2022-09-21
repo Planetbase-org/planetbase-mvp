@@ -1,6 +1,5 @@
 .sponsors {
   background: #fff;
-  overflow: hidden;
   padding: 0 30px;
 }
 
@@ -11,24 +10,36 @@
   margin: 20px 0;
 }
 
+.input {
+  display: block;
+  width: 100%;
+  padding: 12px 6px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 10px 0 30px auto;
+  font-weight: 400;
+}
+
+.input::placeholder {
+  color: rgba(0, 0, 0, 0.792);
+}
+
 .page-header {
   text-align: center;
   margin: 40px 0;
   font-weight: 500;
-
 }
 
 .sponsor-section {
   padding: 0 23px;
   background: #fff;
-  overflow: hidden;
   border-top: 1px solid rgba(142, 128, 128, 0.461);
 }
 
 .sponsorships-layout {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 12px;
 }
@@ -67,6 +78,10 @@
   justify-content: space-between;
   width: 52%;
   margin: 0 auto;
+}
+
+.sponsorship-form > h2 {
+  text-align: center;
 }
 
 .sponsorship-form-control > div {
@@ -111,23 +126,35 @@
   justify-content: space-between;
 }
 
-
 .sponsor-bid-from > div,
-.sponsor-bid-control, .sponsor-bid-align > div {
+.sponsor-bid-control,
+.sponsor-bid-align > div {
   display: flex;
   justify-content: space-between;
 }
 
 .sponsor-form {
-  padding:10px 25px ;
+  padding: 10px 25px;
   width: 50%;
   margin: 50px auto;
   background: #fff;
+  border-radius: 10px;
+}
+
+.sponsor-form > h2 {
+  font-family: "Public Sans", sans-serif;
+  text-align: center;
+  margin: 20px 0;
+  color: rgba(0, 0, 0, 0.792);
+}
+
+.sponsor-form > label {
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
 }
 
 .sponsor-bid-control > div > input,
-.sponsor-bid-from > div > input
-{
+.sponsor-bid-from > div > input {
   padding: 10px 15px;
 }
 
@@ -138,47 +165,53 @@
   margin-bottom: 20px;
 }
 
- .form-text {
+.form-text {
   margin: 20px 0;
   font-weight: 800;
   font-family: "Poppins", sans-serif;
 }
 
-.btn-primary {
-  background: #17386e;
-  color: #fff;
-  padding: 15px 28px;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-
-@media screen and (max-width:978px) {
+@media screen and (max-width: 978px) {
   .sponsorships-layout {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    }
+  }
 
-    .sponsorship-form {
-      flex-direction: column;
-    }
+  .sponsor-form {
+    width: 80%;
+  }
 
-    .sponsorship-form-control > div {
-      margin: 15px 0;
-      width: 107%;
-    }
+  .sponsorship-form {
+    flex-direction: column;
+  }
+
+  .sponsorship-form-control > div {
+    margin: 15px 0;
+    width: 107%;
+  }
 }
 
-@media screen and (max-width:580px) {
+@media screen and (max-width: 580px) {
+  .sponsorships-layout {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 12px;
+  }
   .sponsors > h2 {
     font-size: 5.9vw;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.792);
     margin: 50px 0;
+  }
+
+  .sponsor-form {
+    padding: 10px 25px;
+    width: 90%;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 10px;
   }
 }

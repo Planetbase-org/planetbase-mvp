@@ -1,46 +1,19 @@
 import React, { useEffect } from "react";
 import EventLayout from "../../layouts/events-layout";
-import { FiSearch } from "react-icons/all";
+import { FcEditImage, FcFullTrash, FiSearch } from "react-icons/all";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
 
-// export function EventCard(event) {
-//   useEffect(() => {
-//     const token = localStorage.getItem("token");
-//     if (!token) {
-//       navigate("/login");
-//     } else {
-//       fetchAllEvents();
-//     }
-//   }, []);
-//   return (
-//     <div className="event-rows">
-//       <img src={event.eventImage} alt="a picture of an event image" />
-//       <div>
-//         <h3>Events</h3>
-//         <div>
-//           <p>{event.title}</p>
-//         </div>
-//       </div>
-//       <div>
-//         <h3>Date</h3>
-//         <div>
-//           <p>{event.date}</p>
-//         </div>
-//       </div>
-//       <div>
-//         <h3>Status</h3>
-//         <div>
-//           <p>{event.status1}</p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
 export function NoEvents() {
+  const token = localStorage.getItem("token");
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!token) {
+      navigate("/login");
+    }
+  }, []);
   return (
     <div className="event-rows">
       <img
@@ -74,77 +47,140 @@ export function NoEvents() {
 function EventProfile() {
   const navigate = useNavigate();
   const [events, setEvents] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(false);
 
-  const url = "https://planetbase-api.onrender.com/api/events/all-events";
-
-  const fetchAllEvents = async () => {
-    const response = await Axios.get(url);
-    setEvents(response.data);
-  };
+  const url = "https://planetbase-api.onrender.com/api/events/organizer-events";
 
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
       navigate("/login");
-    } else {
-      fetchAllEvents();
     }
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+    setIsLoading(true);
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    Axios.get(url, config)
+      .then((res) => {
+        console.log(res.data.events);
+        setEvents(res.data.events);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setIsLoading(false);
+      });
   }, []);
 
-  return (
-    <EventLayout>
-      <div className="event-container">
-        <br />
-        <h2>{localStorage.getItem("firstname")}'s Organization Events</h2>
-        <div className="event-input">
-          <div className="search-events">
-            <FiSearch />
-            <input type="text" placeholder="Search for your event" />
+  if (isLoading) {
+    return (
+      <div class="loader">
+        <div>
+        <h3
+          className="loading-text"
+        >
+          Fetching All Events... This may take some time
+        </h3>
+        </div>
+        <div class="loader-inner">
+          <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+          </div>
+          <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+          </div>
+          <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+          </div>
+          <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+          </div>
+          <div class="loader-line-wrap">
+            <div class="loader-line"></div>
           </div>
         </div>
-        <div>
+      </div>
+    );
+  } else {
+    return (
+      <EventLayout>
+        <h2 className="event-organizer">
+          {localStorage.getItem("firstname")}'s Organization Events
+        </h2>
+        <div className="event-all">
+          <div className="event-input">
+            <div className="search-events">
+              <FiSearch />
+              <input type="text" placeholder="Search for your event" />
+            </div>
+            <div className="event-btn">
+              <Link to="/create-event" className="custom-btn">
+                <span className="custom-span">List Events</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="event-all">
           {events.length > 0 ? (
-            events.map((event) => <EventCard {...event} />)
+            events.map((event) => (
+              <EventCard
+                eventImage={event.eventImage}
+                eventDate={event.scheduledDate}
+                eventTitle={event.eventTitle}
+                // eventDesc={event.eventDesc}
+                key={event._id}
+              />
+            ))
           ) : (
             <NoEvents />
           )}
         </div>
-        <div className="event-btn">
-          <Link to="/create-event">Create Event</Link>
-        </div>
-      </div>
-    </EventLayout>
-  );
+      </EventLayout>
+    );
+  }
 }
 
 export default EventProfile;
 
-export function EventCard(event) {
+export function EventCard({
+  eventImage,
+  key,
+  eventDate,
+  eventTitle,
+  eventDesc,
+}) {
   return (
-    <div className="event-rows">
-      <img
-        src={
-          "https://res.cloudinary.com/dputu7z0u/image/upload/v1660863670/Rectangle_31_ad96pw.svg"
-        }
-        alt="a picture of an event image"
-      />
+    <div className="event-rows" key={key}>
+      <img src={eventImage} alt="a picture of an event image" />
       <div>
         <h3>Events</h3>
         <div>
-          <p>{event.price}</p>
+          <p>{eventTitle}</p>
+          {/* <p>{eventDesc}</p> */}
         </div>
       </div>
       <div>
         <h3>Date</h3>
         <div>
-          <p>{"No Date"}</p>
+          <p>{eventDate}</p>
         </div>
       </div>
       <div>
         <h3>Status</h3>
         <div>
-          <p>{"No Status"}</p>
+          <p>Pending</p>
         </div>
+      </div>
+      <div>
+        <span><Link to="/confirm-event"><FcEditImage size={30}/></Link></span><br />
+        <span><FcFullTrash size={30}/></span>
       </div>
     </div>
   );

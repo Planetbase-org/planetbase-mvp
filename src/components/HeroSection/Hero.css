@@ -15,7 +15,7 @@
     margin-top: 130px;
     color: #fff;
     font-weight: 500;
-    font-family: "Sora", sans-serif;
+    font-family: 'Public Sans', sans-serif;
     font-size: 50px;
     line-height: 141.3%;
     text-transform: uppercase;
@@ -25,7 +25,7 @@
     color: #fff;
     font-weight: 500;
     font-size: 30px;
-    font-family: "Sora", sans-serif;
+    font-family: 'Public Sans', sans-serif;
     transition: 0.5s ease-in-out;
     margin: 19px 0;
 }
@@ -34,7 +34,7 @@
     color: #fff;
     font-weight: 800;
     font-size: 40px;
-    font-family: "Sora", sans-serif;
+    font-family: 'Public Sans', sans-serif;
     margin: 19px 0;
     transition: 0.5s ease-in-out;
 }
@@ -67,11 +67,17 @@
     margin-top: 20px;
 }
 
+.hero-btn>a:last-of-type:hover{
+    color: #fff;
+    background: #0f6cc9c4;
+}
+
 .hero-btn>a:last-of-type {
     background: #0f6cc9;
     color: #fff;
     border: 1px solid #0f6cc9;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 @media screen and (max-width: 1290px) {
@@ -79,7 +85,7 @@
         margin-top: 130px;
         color: #fff;
         font-weight: 500;
-        font-family: "Sora", sans-serif;
+        font-family: 'Public Sans', sans-serif;
         font-size: 45px;
         line-height: 141.3%;
         text-transform: uppercase;
@@ -208,7 +214,7 @@
 
     .hero-btn>a {
         padding: 15px;
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .hero-btn {

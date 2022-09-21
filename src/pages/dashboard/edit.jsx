@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import EventLayout from "../../layouts/events-layout";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
+import { useForm } from "react-hook-form";
 
 function EditEvent() {
   const [image, setImage] = useState("");
-
   const navigate = useNavigate();
 
   function convert2base64(e) {
@@ -36,10 +36,11 @@ function EditEvent() {
   }
 
   const [value, setValue] = useState(getFormValues);
+  const [isLoading, setIsLoading] = useState(false);
 
   function onSubmit(e) {
     e.preventDefault();
-    navigate("/organizer");
+    setIsLoading(true);
     //Create event api call
     const url = "https://planetbase-api.onrender.com/api/events/create-event";
     const config = {
@@ -61,19 +62,15 @@ function EditEvent() {
       eventImage: image,
     });
     console.log(body, config);
-    // try{
-    //   const res = await Axios.post( url,body, config
-    //   );
-    //   console.log(res.data);}
-    //   catch(err){
-    //     console.log(err.response);
-    //   }
     Axios.post(url, body, config)
       .then((res) => {
         console.log(res);
+        navigate("/organizer");
+        setIsLoading(false);
       })
       .catch((err) => {
         console.error(err);
+        setIsLoading(false);
       });
   }
 
@@ -83,8 +80,6 @@ function EditEvent() {
       [e.target.name]: e.target.value,
     }));
   }
-
-  // const options = ["Event", "Project"];
 
   return (
     <EventLayout>
@@ -99,6 +94,7 @@ function EditEvent() {
                 name="eventTitle"
                 id="eventTitle"
                 onChange={onChange}
+                placeholder="Event Title"
                 value={value.eventTitle}
               />
             </div>
@@ -111,6 +107,7 @@ function EditEvent() {
                 className="select-events"
                 onChange={onChange}
                 placeholder="Event Organizer"
+                value={value.eventOrganizer}
               />
             </div>
           </div>
@@ -142,42 +139,11 @@ function EditEvent() {
               <p>Event Location</p>
               <input
                 type="text"
-                placeholder="Event Location"
                 id="eventLocation"
                 name="eventLocation"
                 onChange={onChange}
                 value={value.eventLocation}
               />
-              {/* <label>
-                <input
-                  type="checkbox"
-                  name="status1"
-                  id="status1"
-                  value={value.status1}
-                  onChange={() => {
-                    if (status1) {
-                      setEventLocation("Online");
-                    }
-                  }}
-                />
-                <span className="checkmark"></span>
-                <p>Online</p>
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  name="status2"
-                  id="status2"
-                  value={value.status2}
-                  onChange={() => {
-                    if (status2) {
-                      setEventLocation("Physical");
-                    }
-                  }}
-                />
-                <span className="checkmark"></span>
-                <p>Physical</p>
-              </label> */}
             </div>
             <div>
               <p>Price</p>
@@ -231,6 +197,7 @@ function EditEvent() {
                   <input
                     className="file-hidden"
                     type="file"
+                    name="uploadImage"
                     onChange={(e) => convert2base64(e)}
                   />
                 </span>
@@ -247,7 +214,9 @@ function EditEvent() {
           </div>
           <div className="update-event">
             <button type="submit" className="btn-primary">
-              <span>Save and continue</span>
+              <span>
+                {isLoading ? "Creating Event..." : "Save and Continue"}
+              </span>
             </button>
           </div>
         </form>

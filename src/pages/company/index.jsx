@@ -7,10 +7,11 @@ import ModalVideo from '../../components/Video/Video';
 function Company() {
   return (
     <div>
-      <CompanyComponent />
+      <CompanyComponent>
       <ModalVideo />
       <Subscribe />
       <Footer />
+      </CompanyComponent>
     </div>
   );
 }

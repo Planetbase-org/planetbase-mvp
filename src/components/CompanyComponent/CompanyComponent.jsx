@@ -6,7 +6,7 @@ import Company3 from "../../assets/company3.svg";
 import Company4 from "../../assets/company4.svg";
 import Layout from "../../layouts/products-layout";
 
-function CompanyComponent() {
+function CompanyComponent({children}) {
   return (
     <Layout>
       <div className="product-section">
@@ -47,6 +47,7 @@ function CompanyComponent() {
           />
         </div>
       </div>
+      {children}
     </Layout>
   );
 }

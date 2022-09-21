@@ -1,196 +1,168 @@
-.navigation {
-    display: flex;
-    align-items: center;
-    position: sticky;
-    height: 70px;
-    width: 100%;
-    padding: 0.5rem 0rem;
-    background-color: #fff;
-    color: black;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.182);
+.navbar {
+  background: #fff;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 0 6px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.245);
 }
 
 .nav {
-    position: sticky;
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 0.7rem;
-    margin-top: 10px;
-    background: #fff;
-    margin: 0;
-    z-index: 100;
-    border-bottom: 1px solid rgba(101, 97, 97, 0.381);
+  background: #fff;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 0 6px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.245);
 }
 
-.nav > img {
-    margin-right: 15px;
-    border-radius: 100%;
-}
-
-.na > p {
-    font-size: 20px;
-    font-weight: 400;
-    font-style: normal;
-    font-family: "Poppins";
-    color: rgb(176, 20, 20);
-}
-
-.brand-name {
-    text-decoration: none;
-    color: black;
-    margin-left: 2rem;
-    width: 40%;
-}
-
-
-.navigation-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 60%;
-}
-
-.navigation-menu ul {
-    display: flex;
-    padding: 0;
-}
-
-.navigation-menu li {
-    list-style-type: none;
-    margin: 0 1rem;
-}
-
-.navigation-menu li a {
-    text-decoration: none;
-    width: 100%;
-    font-size: 16px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    color: rgb(20, 19, 19);
-}
-
-.loginButton,
-.menu-btn {
-    margin-right: 2rem;
-    background: #17386E;
-    color: #fff;
-    padding: 10px 30px;
-    border-radius: 3px;
-    border: #17386E;
-    font-size: 14px;
-    font-weight: 400;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.createEvents, .navbar-brand {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-brand > img {
-    margin-right: 10px;
-    width: 140px;
-  }
+/* .nav-container:hover {
+  background: rgba(0, 0, 0, 0.6);
+  padding: auto;
+  width: 100%;
+  transition: 02s ease-in-out;
+} */
 
 .brand-name > img {
-     width: 150px;
+  width: 110px;
 }
 
-.login {
-    display: none;
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  max-width: 1500px;
 }
 
-.loginBtnMobile,
-.menu-btn-mobile {
-    display: none !important;
-    background: #17386E;
-    color: #fff;
-    padding: 7px 19px;
-    border-radius: 3px;
-    border: #17386E;
+.nav-logo {
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  flex-grow: 1;
+  display: flex;
 }
 
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
+}
 
-.hamburger {
-    border: 0;
-    height: 40px;
-    width: 40px;
-    padding: 0.5rem;
-    border-radius: 50%;
-    background-color: #283b8b;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+.nav-links {
+  color: #000;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+  font-size: 16px;
+}
+
+.fa-code {
+  margin-left: 1rem;
+}
+
+.nav-item {
+  line-height: 40px;
+  margin-right: 1rem;
+}
+
+.nav-item:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: transparent;
+  transition: width 0.7s ease, background-color 0.5s ease;
+}
+/* 
+.nav-item:hover:after {
+  width: 100%;
+  background:#fff;
+}
+
+.nav-item .active {
+  color:#fff;
+  border: 1px solid#fff;
+} */
+
+.nav-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .planetbase > img {
+    width: 118px;
+  }
+
+  .nav-icon {
+    font-size: 26px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid #fff;
     position: absolute;
-    top: 50%;
-    right: 25px;
-    transform: translateY(-50%);
-    display: none;
-}
+    top: 80px;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
 
-.hamburger:hover {
-    background-color: #17386E;
-}
+  .nav-menu.active {
+    background: #fff;
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .nav-item .active {
+    color: #17386e;
+    border: none;
+  }
+  .nav-links {
+    padding: 1.5rem;
+    width: 100%;
+    display: table;
+    color: #000;
+  }
 
-@media screen and (max-width: 1100px) {
-    .hamburger {
-        display: block;
-    }
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #17386e;
+  }
+  .nav-item:hover:after {
+    width: 50%;
+    background: #17386e;
+    margin: 0 auto;
+  }
 
-    .navigation-menu {
-        flex-direction: column;
-    }
-
-    .navigation-menu ul {
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        height: calc(100vh - 60px);
-        background-color: white;
-        border-top: 1px solid black;
-        display: none;
-    }
-
-    .createEvents>li {
-        display: none;
-    }
-
-
-    .loginButton {
-        display: none;
-    }
-
-    .loginBtnMobile {
-        display: block !important;
-        text-align: center;
-        margin: auto;
-        color: #fff;
-        padding: 20px 50px;
-    }
-
-    .login {
-        display: block;
-    }
-
-    .navigation-menu li {
-        text-align: center;
-        margin: 49px;
-    }
-
-    .navigation-menu li a {
-        color: black;
-        width: 100%;
-        padding: 1.5rem 0;
-    }
-
-    .navigation-menu li:hover {
-        background-color: #eee;
-    }
-
-    .navigation-menu.expanded ul {
-        display: block;
-        z-index: 111111111;
-    }
+  .nav-item .active {
+    color: #17386e;
+    border: 1px solid #17386e;
+  }
+  
 }

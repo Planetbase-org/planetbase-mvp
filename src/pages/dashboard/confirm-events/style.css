@@ -1,0 +1,51 @@
+.confirm-event {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.confirm-event > section {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.confirm-event > .sub {
+    display: flex;
+    margin: 15px 0;
+    align-items: center;
+}
+
+.confirm-event > .sub > section:nth-child(2){
+    margin: 0 180px;
+}
+
+.confirm-event > section > img,
+.confirm-event > section > h5,
+.confirm-event > h5,
+.confirm-event > .sub > section > h5
+{
+    margin: 3px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.confirm-event > p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.confirm-event > .btn {
+    text-align: end;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .confirm-event {
+        width: 90%;
+    }
+
+    .confirm-event > p,
+    .confirm-event > .sub > section > p {
+        font-size: 11px;
+    }
+    
+  }

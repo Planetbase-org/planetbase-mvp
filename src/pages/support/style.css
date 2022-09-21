@@ -7,10 +7,10 @@
     border-top: 1px solid rgba(128, 128, 128, 0.556);
 }
 
-.support-signup-link{
-    display: none;
-}
 
+.support-signup>h1>span {
+    color:rgb(21, 64, 132)
+}
 
 .support-section>div {
     width: 60%;
@@ -23,14 +23,14 @@
 .support-section>div>h1 {
     line-height: 143%;
     font-size: 50px;
-    font-family: "Sora";
+    font-family: 'Public Sans', sans-serif;
     font-weight: 500;
 }
 
 .support-section>div>p {
     font-size: 30px;
     line-height: 143%;
-    font-family: "Sora";
+    font-family: 'Public Sans', sans-serif;
     color: rgba(33, 31, 31, 0.83);
 }
 
@@ -38,7 +38,7 @@
     line-height: 203%;
     font-size: 19px;
     color: rgba(33, 31, 31, 0.83);
-    font-family: "Sora";
+    font-family: 'Public Sans', sans-serif;
 }
 
 .support-section>img {
@@ -75,10 +75,6 @@
 
     .support-section>div>p {
         font-size: 20px;
-    }
-
-    .support-signup>h1>span {
-        color:rgb(21, 64, 132)
     }
 
     .support-signup>h1 {
@@ -119,6 +115,7 @@
         width: 100%;
         font-size: 23px;
     }
+
 }
 
 

@@ -103,7 +103,6 @@ function Sponsor() {
           <input type="text" placeholder="Search for your event" />
         </div>
         <div>
-          {" "}
           <Link to="/sponsored-events">
             <button className="btn-primary">
               <span>Listed Events</span>
@@ -117,11 +116,15 @@ function Sponsor() {
               <SponsorCard key={events._id} {...events} />
             ))}
           </div>
-        <div className="sponsor-btn-continue">
+        ) : (
+          <SponsorCard/>
+        )}
+
+        {/* <div className="sponsor-btn-continue">
           <button className="btn-primary" type="submit">
             <span>Continue</span>
           </button>
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -1,13 +1,11 @@
 import React from "react";
 import SignUpComponent from "../../components/SignUpComponent/SignUpComponent";
 import Layout from "../../layouts/signup-registation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Axios from "axios";
-// import { register, reset} from "../../redux/auth/authSlice"
-// import { useDispatch, useSelector } from 'react-redux';
+import { Link } from "react-router-dom";
 
 function SignUp() {
   const [formData, setFormData] = useState({
@@ -18,8 +16,14 @@ function SignUp() {
     confirmPass: "",
   });
   const [productUpdates, setProductUpdates] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const { firstname, lastname, email, password, confirmPass } = formData;
+  const [error, setError] = useState(null);
+  const [togglePass, setTogglePass] = useState(false);
+  const togglePassFunc = () => {
+    setTogglePass(!togglePass);
+  };
 
   const navigate = useNavigate();
 
@@ -29,11 +33,10 @@ function SignUp() {
       [e.target.name]: e.target.value,
     }));
   }
-  
-    function onSubmit(e) {
-      
-      e.preventDefault();
-      
+
+  function onSubmit(e) {
+    setIsLoading(true);
+    e.preventDefault();
     if (password !== confirmPass) {
       console.error("Passwords do not match");
     } else {
@@ -50,11 +53,18 @@ function SignUp() {
           const { token } = res.data;
           localStorage.setItem("firstname", firstname);
           localStorage.setItem("token", token);
+          setIsLoading(false);
           navigate("/organizer");
         })
         .catch((error) => {
           localStorage.clear();
-          console.error(error.message);
+          const { message } = error.response.data;
+          console.error(message);
+          setTimeout(() => {
+            setError(null);
+          }, 7000);
+          setError(message);
+          setIsLoading(false);
         });
     }
   }
@@ -62,73 +72,130 @@ function SignUp() {
   return (
     <Layout>
       <SignUpComponent header="Sign up to Planetbase.">
+        <div className="sign-in">
         <p className="signup-header">Let's setup an account for you</p>
-      </SignUpComponent>
-      <form className="input-container" onSubmit={onSubmit}>
-        <input
-          type="text"
-          name="firstname"
-          id="firstname"
-          placeholder="First Name"
-          value={firstname}
-          onChange={onChange}
-          required
-        />
-        <input
-          type="text"
-          name="lastname"
-          id="lastname"
-          placeholder="Last Name"
-          value={lastname}
-          onChange={onChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Email Address"
-          value={email}
-          onChange={onChange}
-          required
-        />
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Enter Password"
-          value={password}
-          onChange={onChange}
-          required
-        />
-        <input
-          type="password"
-          name="confirmPass"
-          id="password2"
-          placeholder="Confirm Password"
-          value={confirmPass}
-          onChange={onChange}
-          required
-        />
-        <div className="checkbox-container">
+        <p style={{ textAlign: "center" }}>
+          Already Have an Account?{" "}
+          <Link
+            to="/login"
+            style={{ textDecoration: "none", color: "#0F255F" }}
+          >
+            Login
+          </Link>
+        </p>
+        <form className="input-container" onSubmit={onSubmit}>
           <input
-            type="checkbox"
-            name="productUpdates"
-            id="productUpdates"
-            defaultChecked={productUpdates}
-            onChange={() => {
-              setProductUpdates(!productUpdates);
-              console.log(productUpdates);
-            }}
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder="First Name"
+            value={firstname}
+            onChange={onChange}
+            required
           />
-          <p>
-            Send me product updates and marketing communications from Planetbase
-          </p>
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="Last Name"
+            value={lastname}
+            onChange={onChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email Address"
+            value={email}
+            onChange={onChange}
+            required
+          />
+          <input
+            type={togglePass ? "text" : "password"}
+            name="password"
+            id="password"
+            placeholder="Enter Password"
+            value={password}
+            onChange={onChange}
+            required
+          />
+          {/* <span
+          style={{
+            position: "relative",
+            top: "2.5rem",
+            left: "10rem",
+            color: "grey",
+          }}
+        >
+          <FaEye />
+        </span> */}
+          <input
+            type={togglePass ? "text" : "password"}
+            name="confirmPass"
+            id="password2"
+            placeholder="Confirm Password"
+            value={confirmPass}
+            onChange={onChange}
+            required
+          />
+          <small
+            className="password-notification"
+            style={{
+              fontSize: "11px",
+              textAlign: "center",
+              marginLeft: "3rem",
+              marginRight: "3rem",
+            }}
+          >
+            Passwords must contain at least 8 characters, <br />
+            and must have at least one capital, one lower-case letter (Aa-Zz),{" "}
+            <br />
+            one special symbol (#, &, % etc), and one number (0-9)
+          </small>
+          <small
+            style={{ textDecoration: "underline", cursor: "pointer" }}
+            onClick={togglePassFunc}
+          >
+            {togglePass ? "Hide" : "Show"} Password
+          </small>
+          {error && (
+            <small
+              style={{ color: "red", marginLeft: "7rem", marginRight: "7rem" }}
+            >
+              {error}
+            </small>
+          )}
+          <div
+            className="checkbox-container"
+            style={{ marginLeft: "2rem", marginRight: "2rem" }}
+          >
+            <input
+              type="checkbox"
+              name="productUpdates"
+              id="productUpdates"
+              defaultChecked={productUpdates}
+              onChange={() => {
+                setProductUpdates(!productUpdates);
+                console.log(productUpdates);
+              }}
+            />
+            <p>
+              Send me product updates and marketing communications from
+              Planetbase
+            </p>
+          </div>
+          <button
+            type="submit"
+            className="input-button"
+            disabled={isLoading ? true : false}
+            style={{ cursor: isLoading ? "not-allowed" : "pointer" }}
+          >
+            {isLoading ? "Signing Up..." : "Sign Up"}
+          </button>
+        </form>
         </div>
-        <button type="submit" className="input-button">
-          Sign Up
-        </button>
-      </form>
+      </SignUpComponent>
     </Layout>
   );
 }

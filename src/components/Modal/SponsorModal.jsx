@@ -1,10 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import "./Modal.css";
-const desc =
-  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit voluptatum odit nisi eos sequi sunt magnam! Ab veniam inventore voluptas molestias amet non doloribus sint excepturi, modi, cumque delectus doloremque!";
-const date = "12/12/2020";
 
 function SponsorModal({
   eventTitle,
@@ -14,6 +10,9 @@ function SponsorModal({
   eventLocation,
 }) {
   console.log(eventTitle);
+
+  const token = localStorage.getItem("token");
+
   return (
     <div>
       <img className="sponsor-image" src={eventImage} alt={eventTitle} />
@@ -22,11 +21,13 @@ function SponsorModal({
       <h5>Description</h5>
       <p>{eventDesc}</p>
       <p>{scheduledDate}</p>
-      <div>
-        <Link to="/sponsor-bid" className="signup-message">
-          <button className="btn-primary">Create Bid</button>
+     {token ?  <div className="sponsor-btn">
+        <Link to="/sponsor-bid">
+          <button className="custom-btn">
+            <span className="custom-span">Create Bid</span>
+          </button>
         </Link>
-      </div>
+      </div>: <p><Link to="/signup" className="signup-message" style={{fontSize: "16px",fontWeight:"500"}}>Sign Up</Link> to become a sponsor</p>}
     </div>
   );
 }

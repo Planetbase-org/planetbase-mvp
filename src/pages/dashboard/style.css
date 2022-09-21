@@ -1,19 +1,22 @@
-.event-container {
-  padding: 0 50px;
-  background: #fff;
-  overflow: scroll;
-  height: 100vh;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.event-container > h2 {
-  margin: 20px 0 30px 0;
+.event-organizer {
+  margin-top: 54px;
   font-weight: 400;
   font-size: 30px;
   font-weight: 500;
   font-family: "Poppins";
   color: rgba(0, 0, 0, 0.792);
+  text-transform: capitalize;
+  padding: 0 30px;
+}
+
+/* .event-all {
+  padding: 0 28px;
+} */
+
+.event-input {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
 }
 
 .search-events {
@@ -38,17 +41,25 @@
   background: #ebebeb;
   outline: none;
   font-size: 13px;
-  width: 70%;
+  width: 84%;
 }
 
 .event-rows {
   display: flex;
   justify-content: space-between;
-  margin: 36px 0;
+  margin: 20px 0;
+  padding: 18px;
+  border-radius: 5px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .event-rows > img {
-  width: 30%;
+  width: 25%;
+  object-fit: contain;
+  max-height: 200px;
+  border-radius: 5px;
 }
 
 .event-rows > div > h3 {
@@ -62,27 +73,31 @@
 
 .event-form > h1 {
   text-align: center;
-  font-size: 30px;
-  font-family: "Sora", sans-serif;
-  margin: 50px 0;
+  font-size: 40px;
+  font-family: "Public Sans", sans-serif;
+  margin: 60px 0;
   font-weight: 500;
+  color: black;
+}
+
+.event-container {
+  background: #fff;
+  padding: 0 30px;
+}
+
+.event-container > h2 {
+  font-weight: 500;
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.792);
+  margin: 20px 0;
 }
 
 .event-btn {
   float: right;
-  margin-top: 50px;
   width: 100%;
   display: flex;
   align-items: end;
   justify-content: flex-end;
-}
-
-.event-btn > a {
-  padding: 10px 30px;
-  background: #17386e;
-  color: white;
-  font-weight: 600;
-  border-radius: 5px;
 }
 
 /**edit event form*/
@@ -106,6 +121,7 @@
 
 .form-control > div {
   width: 40%;
+  margin-bottom: 20px;
 }
 
 .form-control > div > p {
@@ -122,7 +138,8 @@
   font-size: 15px;
   font-family: "Poppins";
   font-weight: 500;
-  margin: 15px 10px 30px auto;
+  margin: 15px 10px 10px auto;
+  cursor: text;
 }
 
 .form-details > input {
@@ -250,6 +267,7 @@ input {
   padding: 5px;
   margin: 30px auto;
 }
+ 
 
 .description > textarea::placeholder {
   text-align: center;
@@ -286,10 +304,10 @@ input {
 
 .upload-preview {
   width: 296px;
-  height: 50vh;
   border: 2px solid #e8efff;
   display: grid;
   place-items: center;
+  object-fit: contain;
 }
 
 .upload-instruction {
@@ -297,7 +315,6 @@ input {
   font-size: 13px;
   padding: 59px 20px;
   width: 90%;
-  height: 50vh;
   border-radius: 10px;
 }
 
@@ -337,19 +354,23 @@ input {
 }
 
 @media screen and (max-width: 1110px) {
-  .event-container > h2 {
-    font-size: 24px;
-  }
-
-  .event-btn > a {
-    padding: 10px 10px;
-    font-size: 13px;
-    width: 25%;
-    display: block;
-    text-align: center;
-  }
   .form-upload {
     width: 80%;
+  }
+
+  .event-input {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .event-btn {
+    float: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -358,18 +379,12 @@ input {
     width: 80%;
   }
 
-  .event-container {
-    overflow: scroll;
-  }
-
   .event-input {
-    display: flex;
     justify-content: center;
-    margin: 0px auto;
   }
 
   .event-form > h1 {
-    font-size: 20px;
+    font-size: 35px;
   }
 
   .search-events {
@@ -377,20 +392,17 @@ input {
     color: rgba(0, 0, 0, 0.792);
   }
 
-  .event-container {
-    width: 86%;
-  }
-
   .event-rows > img {
     width: 31%;
+    object-fit: contain;
+    border-radius: 5px;
   }
 
   .upload-instruction {
-    background: #e8efff;
+    /* background: #e8efff; */
     font-size: 13px;
     padding: 59px 20px;
     margin-bottom: 30px;
-    height: 46vh;
     width: 296px;
   }
 
@@ -434,26 +446,31 @@ input {
 }
 
 @media screen and (max-width: 600px) {
-  .event-container {
-    padding: 0 20px;
+  .event-form > h1 {
+    font-size: 29px;
+    margin: 40px 0 20px;
   }
-
+  
   .event-container > h2 {
     font-size: 5.9vw;
     margin-top: 36px;
-  }
-
-  .form-control > div > p {
-    font-size: 16px;
     font-weight: 500;
+  }
+  .form-control > div > p {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
   }
 
   .event-rows {
     flex-direction: column;
+    text-align: center;
+    margin: 45px 0;
   }
 
   .event-rows > img {
     width: 64%;
+    object-fit: contain;
     margin: 0 auto;
   }
 
@@ -463,6 +480,8 @@ input {
 
   .event-btn {
     margin: 10px 0;
+    display: flex;
+    justify-content: center;
   }
 
   .form-upload {
@@ -471,10 +490,11 @@ input {
 
   .event-container {
     width: 100%;
+    background: white;
   }
 
   .event-rows > div > h3 {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
   }
 
@@ -482,11 +502,16 @@ input {
     font-weight: 300;
     font-size: 15px;
   }
-} 
 
-@media screen and (max-width: 400px) {
-  .upload-instruction {
-    height: 40vh;
+  #price {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .description > p {
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
   }
 }
 
