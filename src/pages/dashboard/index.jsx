@@ -5,6 +5,7 @@ import "./style.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
+import mixpanel from "../../utils/config";
 
 export function NoEvents() {
   const token = localStorage.getItem("token");
@@ -50,6 +51,9 @@ function EventProfile() {
   const [isLoading, setIsLoading] = React.useState(false);
 
   const url = "https://planetbase-api.onrender.com/api/events/organizer-events";
+  const listEvent = ()=>{
+    mixpanel.track("List Events");
+  }
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -119,7 +123,9 @@ function EventProfile() {
               <input type="text" placeholder="Search for your event" />
             </div>
             <div className="event-btn">
-              <Link to="/create-event" className="custom-btn">
+              <Link to="/create-event" className="custom-btn" 
+              onClick={listEvent}
+              >
                 <span className="custom-span">List Events</span>
               </Link>
             </div>

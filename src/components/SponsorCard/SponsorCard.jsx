@@ -31,6 +31,10 @@ function SponsorCard() {
       });
   }, []);
 
+  const shortenedCardDesc = listEvent.eventDesc.length > 50
+                  ? `${listEvent.eventDesc.substring(0, 100)}...`
+                  : listEvent.eventDesc
+
   return (
     <div>
       {isOpen && (
@@ -87,9 +91,7 @@ function SponsorCard() {
               />
               <p className="card-title">{listEvent.eventTitle}</p>
               <p className="card-desc">
-                {listEvent.eventDesc.length > 50
-                  ? `${listEvent.eventDesc.substring(0, 100)}...`
-                  : listEvent.eventDesc}
+                {shortenedCardDesc}
               </p>
               <div className="card-content">
                 <p className="card-desc">

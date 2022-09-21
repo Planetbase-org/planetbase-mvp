@@ -4,6 +4,7 @@ import { useState } from "react";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import useAnalyticsEventTracker from "../../useAnalytics";
+import mixpanel from "../../utils/config.js"
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -37,6 +38,9 @@ function Login() {
         localStorage.setItem("firstname", firstname);
         localStorage.setItem("lastname", lastname);
         setIsLoading(false);
+        mixpanel.track("Organizer Login", {
+          "Organizer Details": `${firstname} ${lastname} ${email}`,
+        });
       })
       .catch((error) => {
         // const { message } = error.response.data;

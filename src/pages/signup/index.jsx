@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import Axios from "axios";
 import { Link } from "react-router-dom";
+import mixpanel from '../../utils/config'
 
 function SignUp() {
   const [formData, setFormData] = useState({
@@ -55,6 +56,11 @@ function SignUp() {
           localStorage.setItem("token", token);
           setIsLoading(false);
           navigate("/organizer");
+
+          mixpanel.track("User Signed Up", {
+            "User Name": firstname,
+            "User Email": email,
+          });
         })
         .catch((error) => {
           localStorage.clear();

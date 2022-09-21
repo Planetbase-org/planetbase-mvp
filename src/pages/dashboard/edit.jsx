@@ -3,6 +3,7 @@ import EventLayout from "../../layouts/events-layout";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
 import { useForm } from "react-hook-form";
+import mixpanel from "../../utils/config.js";
 
 function EditEvent() {
   const [image, setImage] = useState("");
@@ -67,6 +68,18 @@ function EditEvent() {
         console.log(res);
         navigate("/organizer");
         setIsLoading(false);
+        mixpanel.track("Event Created", {
+          eventTitle: value.eventTitle,
+          eventType: value.eventType,
+          eventOrganizer: value.eventOrganizer,
+          // numberOfGuests: value.numberOfGuests,
+          scheduledDate: value.scheduledDate,
+          eventLocation: value.eventLocation,
+          price: value.price,
+          eventDesc: value.eventDesc,
+          sponsorshipPackage: value.sponsorshipPackage,
+          eventImage: image,
+        });
       })
       .catch((err) => {
         console.error(err);
