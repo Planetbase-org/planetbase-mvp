@@ -56,14 +56,14 @@
 
 .hero-btn>a {
     font-family: "Poppins";
-    padding: 20px 35px;
+    padding: 20px 25px;
     color: rgb(7, 48, 62);
     font-size: 16px;
     cursor: pointer;
     border: 1px solid rgb(7, 48, 62);
     background-color: #fff;
     text-decoration: none;
-    border-radius: 7px;
+    border-radius: 3px;
     margin-top: 20px;
 }
 
