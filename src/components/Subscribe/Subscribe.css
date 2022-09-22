@@ -33,7 +33,7 @@
   box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.5);
 }
 
-.close-btn {
+.parent-wrapper > span {
   margin: 20px;
   font-size: 18px;
   cursor: pointer;
@@ -115,7 +115,7 @@
 
 
 
-.subscribe-message {
+.subscribe {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -124,7 +124,7 @@
   bottom: 22px;
 }
 
-.subscribe-message > div {
+.subscribe > div {
   width: 38%;
 }
 
@@ -140,7 +140,7 @@
 
 
 
-.subscribe-message > div > h4 {
+.subscribe > div > h4 {
   font-size: 16px;
   font-weight: 400;
   text-align: start;
@@ -149,7 +149,7 @@
   margin: 14px 0;
 }
 
-.subscribe-message > div > p {
+.subscribe > div > p {
   font-size: 20px;
   color: rgba(0, 0, 0, 0.719);
   font-weight: 400;
@@ -159,7 +159,7 @@
 }
 
 @media screen and (max-width:1111px){
-  .subscribe-message > div {
+  .subscribe > div {
     width: 41%;
   }
 }
@@ -174,7 +174,7 @@
     margin: 12px 0;
   }
 
-  .subscribe-message > div {
+  .subscribe > div {
     width: 100%;
     line-height: 123%;
     margin: 16px;
@@ -183,7 +183,7 @@
     width: 50%;
   }
 
-  .subscribe-message {
+  .subscribe {
     flex-direction: column;
   }
 
@@ -197,17 +197,17 @@
     width: 30%;
   }
 
-  .subscribe-message > div > h4 {
+  .subscribe > div > h4 {
     font-size: 15px;
   }
 
-  .subscribe-message > div > p {
+  .subscribe > div > p {
     font-size: 14px;
     color: rgba(27, 26, 26, 0.876);
     font-weight: 400;
   }
 
-  .subscribe-message-text {
+  .subscribe-text {
     width: 48%;
     color: rgb(37, 36, 36);
     font-family: 800;
@@ -227,7 +227,7 @@
     width: 70%;
   }
 
-  .subscribe-message-text {
+  .subscribe-text {
     width: 78%;
   }
 
