@@ -286,16 +286,10 @@ input {
 .btn-primary {
   background: #17386e;
   color: #fff;
-  padding: 15px 28px;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-  border-radius: 5px;
+  padding: 9px 23px;
+  border-radius: 2px;
   cursor: pointer;
-  transition: all 0.2s;
-  text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
-  text-align: center;
-  box-sizing: border-box;
-  display: inline-block;
+  transition: 0.3s ease-in-out;
 }
 
 .btn-primary:hover {
@@ -316,7 +310,7 @@ input {
 
 @media screen and (max-width: 600px) {
   .input-container > input {
-    width: 70%;
+    width: 90%;
   }
 
   .input-container > button {

@@ -23,7 +23,7 @@ function MenuNav() {
               className="nav-links"
               to="/products"
               activeclassname="active"
-              onClick={handleClick}
+              // onClick={handleClick}
             >
               Product
             </Link>
@@ -33,7 +33,6 @@ function MenuNav() {
               className="nav-links"
               to="/solutions"
               activeclassname="active"
-              onClick={handleClick}
             >
               Solutions
             </Link>
@@ -43,7 +42,6 @@ function MenuNav() {
               className="nav-links"
               to="/resources"
               activeclassname="active"
-              onClick={handleClick}
             >
               Resources
             </Link>
@@ -53,12 +51,11 @@ function MenuNav() {
               to="/company"
               activeclassname="active"
               className="nav-links"
-              onClick={handleClick}
             >
               Company
             </Link>
           </li>
-          <li className="">
+          <li>
               {token && (
                 <Link to="/create-event" activeclassname="active" className="nav-links">
                   <button className="custom-btn" type="button">
@@ -67,19 +64,17 @@ function MenuNav() {
                 </Link>
               )}
             </li>
-          <div>
-            <li  className="">
+            <li>
               {token ? (
                 <Link to="/login" activeclassname="active" className="nav-links" onClick={onLogout}>
                   Logout
                 </Link>
               ) : (
-                <Link to="/organizer" activeclassname="active" className="nav-links">
+                <Link to="/organizer" activeclassname="active" className="nav-links btn-primary">
                   Login
                 </Link>
               )}
             </li>
-          </div>
         </ul>
         <div onClick={handleClick} className="nav-icon">
           {isNavExpanded ? <FaTimes /> : <FaBars />}
