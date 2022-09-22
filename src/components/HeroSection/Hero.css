@@ -50,20 +50,20 @@
     margin: 20px auto;
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    width: 37%;
 }
 
 
 .hero-btn>a {
     font-family: "Poppins";
-    padding: 20px 25px;
+    padding: 20px 35px;
     color: rgb(7, 48, 62);
     font-size: 16px;
     cursor: pointer;
     border: 1px solid rgb(7, 48, 62);
     background-color: #fff;
     text-decoration: none;
-    border-radius: 3px;
+    border-radius: 7px;
     margin-top: 20px;
 }
 
