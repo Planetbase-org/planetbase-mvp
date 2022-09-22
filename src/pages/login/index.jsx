@@ -41,7 +41,7 @@ function Login() {
       .catch((error) => {
         // const { message } = error.response.data;
         console.error(error.response);
-        const { message } = error.response.data;
+        const { message } = error?.response.data;
         localStorage.clear();
         setTimeout(() => {
           setError("");
@@ -50,9 +50,29 @@ function Login() {
         setIsLoading(false);
       });
   }
+  // const responseGoogle = async (response) => {
+  //   console.log(response);
+  // };
 
   return (
     <Layout>
+      <div style={{ textAlign: "center" }}>
+        {/* <GoogleLogin
+          clientId="429120308298-nqsa7pn2os1gs4uak2efcea72bsrumdu.apps.googleusercontent.com"
+          render={(renderProps) => (
+            <button
+              onClick={renderProps.onClick}
+              disabled={renderProps.disabled}
+            >
+              This is my custom Google button
+            </button>
+          )}
+          buttonText="Login"
+          onSuccess={responseGoogle}
+          onFailure={responseGoogle}
+          cookiePolicy="single_host_origin"
+        /> */}
+      </div>
       <form className="input-container" onSubmit={onSubmit}>
         <input
           type="email"
@@ -84,7 +104,7 @@ function Login() {
           className="input-button"
           disabled={isLoading ? true : false}
           onClick={() => gaEventTracker("signup")}
-          style={ { cursor: isLoading ? 'not-allowed' : 'pointer' } }  
+          style={{ cursor: isLoading ? "not-allowed" : "pointer" }}
         >
           {isLoading ? "Signing In..." : "Sign In"}
         </button>
